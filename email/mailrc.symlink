@@ -1,0 +1,13 @@
+account gmail {
+set folder=imaps://wainwright.ja@imap.gmail.com
+set password-wainwright.ja@imap.gmail.com="WSOGMM42[]"
+set record=+Sent
+set from="Josh Wainwright <wainwright.ja@gmail.com>"
+set smtp-use-starttls
+set smtp=smtp://smtp.gmail.com:587
+set smtp-auth=login
+set smtp-auth-user=wainwright.ja@gmail.com
+set smtp-auth-password="WSOGMM42[]"
+set autosort=date
+set headline="%>%a%m %18f %16d %4l/%-8o %i%s"
+}
