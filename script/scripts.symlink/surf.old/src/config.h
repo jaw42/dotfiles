@@ -1,1 +1,0 @@
-/home/josh/.scripts/surf/config.h
