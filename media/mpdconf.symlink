@@ -1,0 +1,14 @@
+db_file "/home/josh/.config/mpd/mpd.db"
+input {
+        plugin "curl"
+#       proxy "proxy.isp.com:8080"
+#       proxy_user "user"
+#       proxy_password "password"
+}
+log_file "/home/josh/.config/mpd/log"
+music_directory "/media/Music"
+pid_file "/home/josh/.config/mpd/mpd.pid"
+playlist_directory "/home/josh/.config/mpd/playlists"
+port "6600"
+state_file "/home/josh/.config/mpd/mpdstate"
+user "josh"

@@ -1,0 +1,3 @@
+$pdflatex = 'pdflatex -interaction=nonstopmode';
+#$pdflatex = 'pdflatex';
+$out_dir = 'build';
