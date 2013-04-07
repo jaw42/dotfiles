@@ -1,0 +1,12 @@
+--- surf.c.orig	Fri Jun 25 09:42:58 2010 +0200
++++ surf.c	Mon Jul 05 21:56:52 2010 +0100
+@@ -833,6 +833,9 @@
+ 			usage();
+ 		}
+ 	}
++#ifdef HOMEPAGE
++	arg.v = HOMEPAGE;
++#endif
+ 	if(i < argc)
+ 		arg.v = argv[i];
+ 	setup();
