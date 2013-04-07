@@ -1,0 +1,75 @@
+# A basic .muttrc for use with Gmail
+
+# Change the following six lines to match your Gmail account details
+set imap_user	= "wainwright.ja@gmail.com"
+set imap_pass	= "WSOGMM42[]"
+set smtp_url 	= "smtp://wainwright.ja@smtp.gmail.com:587/"
+set smtp_pass 	= $imap_pass
+set from 		= $imap_user
+set realname 	= "Josh Wainwright"
+
+set alias_file = "~/.mutt/aliases"
+set sort_alias = alias
+set reverse_alias = yes
+source $alias_file
+
+set editor = "nano"
+mailboxes "=imaps://imap.gmail.com/[Gmail]/Inbox"
+unset arrow_cursor
+set   fast_reply
+unset mark_old             # don't mark unread messages as Old
+unset menu_scroll          # scroll menu a page on last line
+set   pager_stop           # don't go to next message at end of message
+set   pager_index_lines="15"
+set   sleep_time = 0
+
+bind pager <up> previous-line
+bind pager <down> next-line
+
+# Basic config, you can leave this as is
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set imap_check_subscribed
+set hostname = gmail.com
+set mail_check = 120
+set timeout = 300
+set imap_keepalive = 300
+#set postponed = "+[GMail]/Drafts"
+set postponed="imaps://imap.gmail.com/[Gmail]/Drafts"
+#set record = "+[GMail]/Sent Mail"
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+set certificate_file=~/.mutt/certificates
+set move = no
+set include
+set sort = 'threads'
+set sort_aux = 'reverse-last-date-received'
+set auto_tag = yes
+
+set markers=no # don't put '+' at the beginning of wrapped lines
+
+ignore "Authentication-Results:"
+ignore "DomainKey-Signature:"
+ignore "DKIM-Signature:"
+
+hdr_order Date From To Cc
+alternative_order text/plain text/html *
+
+auto_view text/html
+
+bind editor <Tab> complete-query
+bind editor ^T complete
+bind editor <space> noop
+bind index G imap-fetch-mail
+
+# Gmail-style keyboard shortcuts
+macro index,pager y "<save-message>imaps://imap.gmail.com/[Gmail]/All Mail<enter>" "Gmail archive message"
+macro index,pager d "<save-message>imaps://imap.gmail.com/[Gmail]/Trash<enter>" "Gmail delete message"
+macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index,pager ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
+macro index,pager gs "<change-folder>=[Gmail]/Starred<enter>" "Go to starred messages"
+macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
+macro index,pager gm "<change-folder>=[Gmail]/Sent Mail<enter>" "Go to my sent messages"
+# -*-muttrc-*-
+
+source ~/.mutt/colors
