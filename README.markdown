@@ -1,25 +1,16 @@
-# holman does dotfiles
+# Josh does dotfiles
 
 ## dotfiles
 
 Your dotfiles are how you personalize your system. These are mine.
-
-I was a little tired of having long alias files and everything strewn about
-(which is extremely common on other dotfiles projects, too). That led to this
-project being much more topic-centric. I realized I could split a lot of things
-up into the main areas I used (Ruby, git, system libraries, and so on), so I
-structured the project accordingly.
-
-If you're interested in the philosophy behind why projects like these are
-awesome, you might want to [read my post on the
-subject](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
+(http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
 
 ## install
 
 Run this:
 
 ```sh
-git clone https://github.com/holman/dotfiles.git ~/.dotfiles
+git clone https://github.com/jaw42/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
 ```
@@ -45,9 +36,9 @@ symlinked without extension into `$HOME` when you run `script/bootstrap`.
 
 ## what's inside
 
-A lot of stuff. Seriously, a lot of stuff. Check them out in the file browser
-above and see what components may mesh up with you. Fork it, remove what you
-don't use, and build on what you do use.
+A lot of stuff. Check them out in the file browser above and see what
+components may mesh up with you. Fork it, remove what you don't use, and
+build on what you do use.
 
 ## components
 
@@ -85,3 +76,7 @@ weight of my changes and tweaks inspired me to finally roll my own. But Ryan's
 dotfiles were an easy way to get into bash customization, and then to jump ship
 to zsh a bit later. A decent amount of the code in these dotfiles stem or are
 inspired from Ryan's original project.
+
+This is a fork of [holman's](https://github.com/holman) fork of the above. Many
+thanks to him on doing the rest of the setup leg work. There'll naturally be
+many changes is configuration, but the majority of the work is not mine.
