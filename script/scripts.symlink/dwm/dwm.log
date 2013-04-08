@@ -1,328 +1,3 @@
-No bp log location saved, using default.
-[000:000] Browser XEmbed support present: 1
-[000:000] Browser toolkit is Gtk2.
-[000:001] Using Gtk2 toolkit
-No bp log location saved, using default.
-[000:021] No bp log location saved, using default.
-[000:022] Browser XEmbed support present: 1
-[000:022] Browser toolkit is Gtk2.
-[000:022] Using Gtk2 toolkit
-[000:000] No bp log location saved, using default.
-** Message: console message: https://plusone.google.com/u/0/_/+1/fastbutton?size=small&expandto=right&recommendations=false&source=google%3Areader&hl=en-US&origin=http%3A%2F%2Fwww.google.com&url=http%3A%2F%2Finconsolation.wordpress.com%2F2013%2F03%2F29%2Ftextmaze-lets-call-it-a-game%2F&gsrc=1p&jsh=m%3B%2F_%2Fabc-static%2F_%2Fjs%2Fgapi%2F__features__%2Frt%3Dj%2Fver%3D24Irvz2rJ1Q.en.%2Fsv%3D1%2Fam%3D!VvZ7oDep-coJNQTnkA%2Fd%3D1#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled&id=I0_1365323449193&parent=http%3A%2F%2Fwww.google.com @11: Error: Bad hint: missing: k
-
-
-** (luakit:770): CRITICAL **: void webkit_download_start(WebKitDownload*): assertion `priv->timer == NULL' failed
-
-** (file-roller:1269): WARNING **: Can't load fallback CSS resource: Failed to import: The resource at '/org/gnome/adwaita/gtk-fallback.css' does not exist
-
-(xfce4-terminal:1315): GLib-WARNING **: (gerror.c:390):g_error_new_valist: runtime check failed: (domain != 0)
-Failed to connect to session manager: Failed to connect to the session manager: SESSION_MANAGER environment variable not defined
-
-** (luakit:770): CRITICAL **: void webkit_download_start(WebKitDownload*): assertion `priv->timer == NULL' failed
-
-** (file-roller:1890): WARNING **: Can't load fallback CSS resource: Failed to import: The resource at '/org/gnome/adwaita/gtk-fallback.css' does not exist
-** Message: console message: https://plusone.google.com/u/0/_/+1/fastbutton?size=small&expandto=right&recommendations=false&source=google%3Areader&hl=en-US&origin=http%3A%2F%2Fwww.google.com&url=http%3A%2F%2Finconsolation.wordpress.com%2F2013%2F04%2F03%2Fbiew-or-is-it-beye%2F&gsrc=1p&jsh=m%3B%2F_%2Fabc-static%2F_%2Fjs%2Fgapi%2F__features__%2Frt%3Dj%2Fver%3D24Irvz2rJ1Q.en.%2Fsv%3D1%2Fam%3D!VvZ7oDep-coJNQTnkA%2Fd%3D1#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled&id=I1_1365324293373&parent=http%3A%2F%2Fwww.google.com @11: Error: Bad hint: missing: k
-
-<Window object at 0x87f6c5c (terminatorlib+window+Window at 0x86b49a0)> is not in registered window list
-** Message: console message: https://plusone.google.com/u/0/_/+1/fastbutton?size=small&expandto=right&recommendations=false&source=google%3Areader&hl=en-US&origin=http%3A%2F%2Fwww.google.com&url=http%3A%2F%2Finconsolation.wordpress.com%2F2013%2F04%2F05%2Ffbcmd-i-can-give-you-no-guidance%2F&gsrc=1p&jsh=m%3B%2F_%2Fabc-static%2F_%2Fjs%2Fgapi%2F__features__%2Frt%3Dj%2Fver%3D24Irvz2rJ1Q.en.%2Fsv%3D1%2Fam%3D!VvZ7oDep-coJNQTnkA%2Fd%3D1#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled&id=I2_1365324400638&parent=http%3A%2F%2Fwww.google.com @11: Error: Bad hint: missing: k
-
-** Message: console message: https://plusone.google.com/u/0/_/+1/fastbutton?size=small&expandto=right&recommendations=false&source=google%3Areader&hl=en-US&origin=http%3A%2F%2Fwww.google.com&url=http%3A%2F%2Finconsolation.wordpress.com%2F2013%2F04%2F07%2Fturses-again-no-guidance%2F&gsrc=1p&jsh=m%3B%2F_%2Fabc-static%2F_%2Fjs%2Fgapi%2F__features__%2Frt%3Dj%2Fver%3D24Irvz2rJ1Q.en.%2Fsv%3D1%2Fam%3D!VvZ7oDep-coJNQTnkA%2Fd%3D1#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled&id=I3_1365324464276&parent=http%3A%2F%2Fwww.google.com @11: Error: Bad hint: missing: k
-
-** Message: console message: https://plusone.google.com/u/0/_/+1/fastbutton?size=small&expandto=right&recommendations=false&source=google%3Areader&hl=en-US&origin=http%3A%2F%2Fwww.google.com&url=http%3A%2F%2Finconsolation.wordpress.com%2F2013%2F04%2F06%2Fcone-an-option-for-e-mail%2F&gsrc=1p&jsh=m%3B%2F_%2Fabc-static%2F_%2Fjs%2Fgapi%2F__features__%2Frt%3Dj%2Fver%3D24Irvz2rJ1Q.en.%2Fsv%3D1%2Fam%3D!VvZ7oDep-coJNQTnkA%2Fd%3D1#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled&id=I4_1365324472874&parent=http%3A%2F%2Fwww.google.com @11: Error: Bad hint: missing: k
-
-** Message: console message: https://plusone.google.com/u/0/_/+1/fastbutton?size=small&expandto=right&recommendations=false&source=google%3Areader&hl=en-US&origin=http%3A%2F%2Fwww.google.com&url=http%3A%2F%2Finconsolation.wordpress.com%2F2013%2F03%2F22%2Ffm-a-fast-mover-by-definition%2F&gsrc=1p&jsh=m%3B%2F_%2Fabc-static%2F_%2Fjs%2Fgapi%2F__features__%2Frt%3Dj%2Fver%3D24Irvz2rJ1Q.en.%2Fsv%3D1%2Fam%3D!VvZ7oDep-coJNQTnkA%2Fd%3D1#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled&id=I5_1365324637057&parent=http%3A%2F%2Fwww.google.com @11: Error: Bad hint: missing: k
-
-** Message: console message: https://apis.google.com/_/abc-static/_/js/gapi/googleapis_client,plusone/rt=j/ver=24Irvz2rJ1Q.en./sv=1/am=!VvZ7oDep-coJNQTnkA/d=1/cb=gapi.loaded_0 @94: Exception when calling callback "open" with exception "Error: o".
-
-** Message: console message: http://www.techrepublic.com/article/10-helpful-tips-for-mutt-e-mail-client-power-users/5968796 @90: ReferenceError: Can't find variable: cbsiSetDeferredLocalPage
-
-** Message: console message: http://www.techrepublic.com/article/10-helpful-tips-for-mutt-e-mail-client-power-users/5968796 @1028: ReferenceError: Can't find variable: cbsiGetDeferredAds
-
-** Message: console message: http://www.techrepublic.com/article/10-helpful-tips-for-mutt-e-mail-client-power-users/5968796 @1076: ReferenceError: Can't find variable: cbsiLoadOffer
-
-** Message: console message: http://connect.facebook.net/en_US/all.js @52: FB.getLoginStatus() called before calling FB.init().
-
-[3406:853] Starting client channel.
-[3406:853] Warning(clientchannel.cc:436): Unreadable or no port file.  Could not initiate GoogleTalkPlugin connection
-[3406:854] Warning(clientchannel.cc:411): Could not initiate GoogleTalkPlugin connection
-[3406:854] GoogleTalkPlugin not running. Starting new process...
-[3406:855] Warning(pluginutils.cc:251): Failed to get GoogleTalkPlugin path. Trying default.
-[3406:870] Started GoogleTalkPlugin, path=/opt/google/talkplugin/GoogleTalkPlugin
-[3406:880] Waiting for GoogleTalkPlugin to start...
-sh: lsb_release: command not found
-[3407:922] Attempting to connect to GoogleTalkPlugin...
-[3407:922] Read port file, port=44519
-[3407:923] Initiated connection to GoogleTalkPlugin
-[3408:023] Socket connection established
-[3408:023] ScheduleOnlineCheck: Online check in 5000ms
-[3408:184] Got cookie response, socket is authorized
-[3408:184] AUTHORIZED; socket handshake complete
-[3408:188] F->C: ["fs",{"pr":"a"}]
-[3408:465] F->C: ["mf","mf3.17","3.17.0.0",2,{"audioCodecs":[[103,"ISAC",1,0,16000],[104,"ISAC",1,0,32000],[9,"G722",1,64000,16000],[102,"ILBC",1,13300,8000],[0,"PCMU",1,64000,8000],[8,"PCMA",1,64000,8000],[107,"CN",1,0,48000],[106,"CN",1,0,32000],[105,"CN",1,0,16000],[13,"CN",1,0,8000],[127,"red",1,0,8000],[126,"telephone-event",1,0,8000]],"audioRtpHdrExts":[{"id":1,"uri":"urn:ietf:params:rtp-hdrext:ssrc-audio-level"}],"camDeviceName":"Video WebCam","caps":15,"cpuArchitecture":0,"cpuCacheSize":1048576,"cpuFamily":6,"cpuFlags":["sse2","ssse3"],"cpuHasSSE2":true,"cpuModel":23,"cpuSpeed":2200,"cpuStepping":10,"cpuVendor":"GenuineIntel","cpus":2,"cpusPhysical":2,"cryptoSuites":["AES_CM_128_HMAC_SHA1_80","AES_CM_128_HMAC_SHA1_32"],"dataChannelVersion":1,"effectsVersion":9,"gpuDescription":"","gpuDeviceId":0,"gpuDeviceName":"","gpuDriver":"","gpuDriverVersion":"","gpuVendorId":0,"machineModel":"Not available","remotingAssistanceAllowed":0,"remotingVersion":1,"renderer":2,"rtcpMux":true,"screencast":2,"screencastLocalPreview":1,"supportsConcurrentSessions":true,"transports":["i","gice"],"videoCodecs":[[99,"H264-SVC",640,360,30],[97,"H264",640,360,30],[98,"H263",640,360,30]],"videoRtpHdrExts":[{"id":2,"uri":"urn:ietf:params:rtp-hdrext:toffset"}]}]
-[3408:568] F->C: ["getdevicestate","15","1",["__default_device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Front speakers","HDA Intel, CONEXANT Analog - 4.0 Surround output to Front and Rear speakers","HDA Intel, CONEXANT Analog - 4.1 Surround output to Front, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 5.0 Surround output to Front, Center and Rear speakers","HDA Intel, CONEXANT Analog - 5.1 Surround output to Front, Center, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 7.1 Surround output to Front, Center, Side, Rear and Woofer speakers"],"0",["__default_device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Front speakers","HDA Intel, CONEXANT Analog - 4.0 Surround output to Front and Rear speakers","HDA Intel, CONEXANT Analog - 4.1 Surround output to Front, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 5.0 Surround output to Front, Center and Rear speakers","HDA Intel, CONEXANT Analog - 5.1 Surround output to Front, Center, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 7.1 Surround output to Front, Center, Side, Rear and Woofer speakers","HDA Intel, Conexant Digital - IEC958 (S/PDIF) Digital Audio Output","HDA Intel, HDMI 0 - HDMI Audio Output"],"0",["Video WebCam"]]
-[3413:054] HandleOnlineCheck: Starting check
-[3413:054] HandleOnlineCheck: OK; current state: 3
-** Message: console message: http://www.beckgoldsmith.co.uk/ @215: SyntaxError: Unexpected token '<'
-
-** Message: console message: https://www.facebook.com/dialog/oauth?client_id=20320310172&response_type=token%2Csigned_request%2Ccode&display=none&domain=www.beckgoldsmith.co.uk&origin=1&redirect_uri=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D21%23cb%3Dfc3feccec%26origin%3Dhttp%253A%252F%252Fwww.beckgoldsmith.co.uk%252Ff3acbf398%26domain%3Dwww.beckgoldsmith.co.uk%26relation%3Dparent&sdk=joey @1: Given URL is not permitted by the application configuration.: One or more of the given URLs is not allowed by the App's settings.  It must match the Website URL or Canvas URL, or the domain must be a subdomain of one of the App's domains.
-
-** Message: console message: http://s0.bcbits.com/tmpdata/cache/embedded_player_bundle_572bc390e5faaef0d44d2283b54dcc86.js @429: 10:42:28.334:
-
-** Message: console message: http://s0.bcbits.com/tmpdata/cache/embedded_player_bundle_572bc390e5faaef0d44d2283b54dcc86.js @429: 10:42:28.352:
-
-** Message: console message: http://s0.bcbits.com/tmpdata/cache/embedded_player_bundle_572bc390e5faaef0d44d2283b54dcc86.js @429: 10:42:28.353:
-
-** Message: console message: https://plusone.google.com/u/0/_/+1/fastbutton?size=small&expandto=right&recommendations=false&source=google%3Areader&hl=en-US&origin=http%3A%2F%2Fwww.google.com&url=http%3A%2F%2Finconsolation.wordpress.com%2F2013%2F04%2F05%2Fbonus-slmenu-in-action%2F&gsrc=1p&jsh=m%3B%2F_%2Fabc-static%2F_%2Fjs%2Fgapi%2F__features__%2Frt%3Dj%2Fver%3D24Irvz2rJ1Q.en.%2Fsv%3D1%2Fam%3D!VvZ7oDep-coJNQTnkA%2Fd%3D1#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled&id=I7_1365327789564&parent=http%3A%2F%2Fwww.google.com @11: Error: Bad hint: missing: k
-
-** Message: console message: https://plusone.google.com/u/0/_/+1/fastbutton?size=small&expandto=right&recommendations=false&source=google%3Areader&hl=en-US&origin=http%3A%2F%2Fwww.google.com&url=http%3A%2F%2Finconsolation.wordpress.com%2F2013%2F04%2F04%2Fquote-stock-info-at-the-cli%2F&gsrc=1p&jsh=m%3B%2F_%2Fabc-static%2F_%2Fjs%2Fgapi%2F__features__%2Frt%3Dj%2Fver%3D24Irvz2rJ1Q.en.%2Fsv%3D1%2Fam%3D!VvZ7oDep-coJNQTnkA%2Fd%3D1#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled&id=I8_1365327792063&parent=http%3A%2F%2Fwww.google.com @11: Error: Bad hint: missing: k
-
-** Message: console message: https://plusone.google.com/u/0/_/+1/fastbutton?size=small&expandto=right&recommendations=false&source=google%3Areader&hl=en-US&origin=http%3A%2F%2Fwww.google.com&url=http%3A%2F%2Finconsolation.wordpress.com%2F2013%2F04%2F02%2Fabcde-as-simple-as-that%2F&gsrc=1p&jsh=m%3B%2F_%2Fabc-static%2F_%2Fjs%2Fgapi%2F__features__%2Frt%3Dj%2Fver%3D24Irvz2rJ1Q.en.%2Fsv%3D1%2Fam%3D!VvZ7oDep-coJNQTnkA%2Fd%3D1#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled&id=I9_1365327796429&parent=http%3A%2F%2Fwww.google.com @11: Error: Bad hint: missing: k
-
-** Message: console message: https://plusone.google.com/u/0/_/+1/fastbutton?size=small&expandto=right&recommendations=false&source=google%3Areader&hl=en-US&origin=http%3A%2F%2Fwww.google.com&url=http%3A%2F%2Finconsolation.wordpress.com%2F2013%2F04%2F01%2Fw3m-this-is-not-an-april-fools-joke%2F&gsrc=1p&jsh=m%3B%2F_%2Fabc-static%2F_%2Fjs%2Fgapi%2F__features__%2Frt%3Dj%2Fver%3D24Irvz2rJ1Q.en.%2Fsv%3D1%2Fam%3D!VvZ7oDep-coJNQTnkA%2Fd%3D1#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled&id=I10_1365327798320&parent=http%3A%2F%2Fwww.google.com @11: Error: Bad hint: missing: k
-
-** Message: console message: https://plusone.google.com/u/0/_/+1/fastbutton?size=small&expandto=right&recommendations=false&source=google%3Areader&hl=en-US&origin=http%3A%2F%2Fwww.google.com&url=http%3A%2F%2Finconsolation.wordpress.com%2F2013%2F03%2F31%2Fvilistextum-stripping-out-the-code%2F&gsrc=1p&jsh=m%3B%2F_%2Fabc-static%2F_%2Fjs%2Fgapi%2F__features__%2Frt%3Dj%2Fver%3D24Irvz2rJ1Q.en.%2Fsv%3D1%2Fam%3D!VvZ7oDep-coJNQTnkA%2Fd%3D1#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled&id=I11_1365327800747&parent=http%3A%2F%2Fwww.google.com @11: Error: Bad hint: missing: k
-
-** Message: console message: https://plusone.google.com/u/0/_/+1/fastbutton?size=small&expandto=right&recommendations=false&source=google%3Areader&hl=en-US&origin=http%3A%2F%2Fwww.google.com&url=http%3A%2F%2Finconsolation.wordpress.com%2F2013%2F03%2F30%2Fvifm-the-name-should-tell-you-everything%2F&gsrc=1p&jsh=m%3B%2F_%2Fabc-static%2F_%2Fjs%2Fgapi%2F__features__%2Frt%3Dj%2Fver%3D24Irvz2rJ1Q.en.%2Fsv%3D1%2Fam%3D!VvZ7oDep-coJNQTnkA%2Fd%3D1#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled&id=I12_1365327802177&parent=http%3A%2F%2Fwww.google.com @11: Error: Bad hint: missing: k
-
-** Message: console message: https://plusone.google.com/u/0/_/+1/fastbutton?size=small&expandto=right&recommendations=false&source=google%3Areader&hl=en-US&origin=http%3A%2F%2Fwww.google.com&url=http%3A%2F%2Finconsolation.wordpress.com%2F2013%2F03%2F31%2Fvilistextum-stripping-out-the-code%2F&gsrc=1p&jsh=m%3B%2F_%2Fabc-static%2F_%2Fjs%2Fgapi%2F__features__%2Frt%3Dj%2Fver%3D24Irvz2rJ1Q.en.%2Fsv%3D1%2Fam%3D!VvZ7oDep-coJNQTnkA%2Fd%3D1#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled&id=I13_1365327803682&parent=http%3A%2F%2Fwww.google.com @11: Error: Bad hint: missing: k
-
-** Message: console message: https://plusone.google.com/u/0/_/+1/fastbutton?size=small&expandto=right&recommendations=false&source=google%3Areader&hl=en-US&origin=http%3A%2F%2Fwww.google.com&url=http%3A%2F%2Finconsolation.wordpress.com%2F2013%2F03%2F30%2Fvifm-the-name-should-tell-you-everything%2F&gsrc=1p&jsh=m%3B%2F_%2Fabc-static%2F_%2Fjs%2Fgapi%2F__features__%2Frt%3Dj%2Fver%3D24Irvz2rJ1Q.en.%2Fsv%3D1%2Fam%3D!VvZ7oDep-coJNQTnkA%2Fd%3D1#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled&id=I14_1365327808085&parent=http%3A%2F%2Fwww.google.com @11: Error: Bad hint: missing: k
-
-** Message: console message: https://plusone.google.com/u/0/_/+1/fastbutton?size=small&expandto=right&recommendations=false&source=google%3Areader&hl=en-US&origin=http%3A%2F%2Fwww.google.com&url=http%3A%2F%2Finconsolation.wordpress.com%2F2013%2F03%2F29%2Ftextmaze-lets-call-it-a-game%2F&gsrc=1p&jsh=m%3B%2F_%2Fabc-static%2F_%2Fjs%2Fgapi%2F__features__%2Frt%3Dj%2Fver%3D24Irvz2rJ1Q.en.%2Fsv%3D1%2Fam%3D!VvZ7oDep-coJNQTnkA%2Fd%3D1#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled&id=I15_1365327811602&parent=http%3A%2F%2Fwww.google.com @11: Error: Bad hint: missing: k
-
-** Message: console message: https://plusone.google.com/u/0/_/+1/fastbutton?size=small&expandto=right&recommendations=false&source=google%3Areader&hl=en-US&origin=http%3A%2F%2Fwww.google.com&url=http%3A%2F%2Finconsolation.wordpress.com%2F2013%2F03%2F28%2Fweatherspect-edutainment-i-suppose%2F&gsrc=1p&jsh=m%3B%2F_%2Fabc-static%2F_%2Fjs%2Fgapi%2F__features__%2Frt%3Dj%2Fver%3D24Irvz2rJ1Q.en.%2Fsv%3D1%2Fam%3D!VvZ7oDep-coJNQTnkA%2Fd%3D1#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled&id=I16_1365327812835&parent=http%3A%2F%2Fwww.google.com @11: Error: Bad hint: missing: k
-
-Failed to open VDPAU backend libvdpau_nvidia.so: cannot open shared object file: No such file or directory
-** Message: console message: https://www.google.com/contacts_v1/c/ui/js/4012749213-ContactUi.js @54: TypeError: Type error
-
-
-** (luakit:770): CRITICAL **: void webkit_download_start(WebKitDownload*): assertion `priv->timer == NULL' failed
-
-(xfce4-terminal:17631): GLib-WARNING **: (gerror.c:390):g_error_new_valist: runtime check failed: (domain != 0)
-Failed to connect to session manager: Failed to connect to the session manager: SESSION_MANAGER environment variable not defined
-[18661:18719:0407/111847:ERROR:connection.cc(733)] sqlite error 19, errno -2: PRIMARY KEY must be unique
-[18661:18688:0407/111847:ERROR:object_proxy.cc(624)] Failed to get name owner. Got org.freedesktop.DBus.Error.NameHasNoOwner: Could not get owner of name 'org.chromium.Mtpd': no such name
-[18661:18688:0407/111847:ERROR:object_proxy.cc(624)] Failed to get name owner. Got org.freedesktop.DBus.Error.NameHasNoOwner: Could not get owner of name 'org.chromium.Mtpd': no such name
-[18661:18661:0407/111848:ERROR:object_proxy.cc(529)] Failed to call method: org.chromium.Mtpd.EnumerateStorages: object_path= /org/chromium/Mtpd: org.freedesktop.DBus.Error.ServiceUnknown: The name org.chromium.Mtpd was not provided by any .service files
-[18666:18666:0407/111850:ERROR:render_sandbox_host_linux.cc(653)] sendmsg: Broken pipe
-[18661:18686:0407/111855:ERROR:non_ui_data_type_controller.cc(326)] Autofill, Sync Error: Failed to connect to syncer.
-** Message: console message: http://www.beckgoldsmith.co.uk/ @215: SyntaxError: Unexpected token '<'
-
-** Message: console message: https://www.facebook.com/dialog/oauth?client_id=20320310172&response_type=token%2Csigned_request%2Ccode&display=none&domain=www.beckgoldsmith.co.uk&origin=1&redirect_uri=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D21%23cb%3Df9f7ac5ec%26origin%3Dhttp%253A%252F%252Fwww.beckgoldsmith.co.uk%252Ff23de9aa94%26domain%3Dwww.beckgoldsmith.co.uk%26relation%3Dparent&sdk=joey @1: Given URL is not permitted by the application configuration.: One or more of the given URLs is not allowed by the App's settings.  It must match the Website URL or Canvas URL, or the domain must be a subdomain of one of the App's domains.
-
-** Message: console message: http://s0.bcbits.com/tmpdata/cache/embedded_player_bundle_572bc390e5faaef0d44d2283b54dcc86.js @429: 11:36:30.681:
-
-** Message: console message: http://s0.bcbits.com/tmpdata/cache/embedded_player_bundle_572bc390e5faaef0d44d2283b54dcc86.js @429: 11:36:30.699:
-
-** Message: console message: http://s0.bcbits.com/tmpdata/cache/embedded_player_bundle_572bc390e5faaef0d44d2283b54dcc86.js @429: 11:36:30.699:
-
-Failed to open /dev/tty: No such device or address
-Failed to open VDPAU backend libvdpau_nvidia.so: cannot open shared object file: No such file or directory
-Failed to open VDPAU backend libvdpau_nvidia.so: cannot open shared object file: No such file or directory
-Failed to open VDPAU backend libvdpau_nvidia.so: cannot open shared object file: No such file or directory
-Failed to open VDPAU backend libvdpau_nvidia.so: cannot open shared object file: No such file or directory
-Failed to open VDPAU backend libvdpau_nvidia.so: cannot open shared object file: No such file or directory
-** Message: console message: https://www.facebook.com/dialog/oauth?client_id=207766518608&response_type=token%2Csigned_request%2Ccode&display=none&domain=www.lunar-linux.org&origin=1&redirect_uri=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D21%23cb%3Df2687a4484%26origin%3Dhttp%253A%252F%252Fwww.lunar-linux.org%252Ff1214f5b9%26domain%3Dwww.lunar-linux.org%26relation%3Dparent&sdk=joey @1: Given URL is not permitted by the application configuration.: One or more of the given URLs is not allowed by the App's settings.  It must match the Website URL or Canvas URL, or the domain must be a subdomain of one of the App's domains.
-
-Failed to open VDPAU backend libvdpau_nvidia.so: cannot open shared object file: No such file or directory
-Failed to open VDPAU backend libvdpau_nvidia.so: cannot open shared object file: No such file or directory
-Failed to open VDPAU backend libvdpau_nvidia.so: cannot open shared object file: No such file or directory
-** Message: console message: http://www.beckgoldsmith.co.uk/ @215: SyntaxError: Unexpected token '<'
-
-** Message: console message: https://www.facebook.com/dialog/oauth?client_id=20320310172&response_type=token%2Csigned_request%2Ccode&display=none&domain=www.beckgoldsmith.co.uk&origin=1&redirect_uri=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D21%23cb%3Df2f6aa3348%26origin%3Dhttp%253A%252F%252Fwww.beckgoldsmith.co.uk%252Ff23d444e5c%26domain%3Dwww.beckgoldsmith.co.uk%26relation%3Dparent&sdk=joey @1: Given URL is not permitted by the application configuration.: One or more of the given URLs is not allowed by the App's settings.  It must match the Website URL or Canvas URL, or the domain must be a subdomain of one of the App's domains.
-
-** Message: console message: http://s0.bcbits.com/tmpdata/cache/embedded_player_bundle_572bc390e5faaef0d44d2283b54dcc86.js @429: 12:30:41.710:
-
-** Message: console message: http://s0.bcbits.com/tmpdata/cache/embedded_player_bundle_572bc390e5faaef0d44d2283b54dcc86.js @429: 12:30:41.728:
-
-** Message: console message: http://s0.bcbits.com/tmpdata/cache/embedded_player_bundle_572bc390e5faaef0d44d2283b54dcc86.js @429: 12:30:41.728:
-
-** Message: console message: http://objectmix.com/mutt/202475-when-reading-e-mail-mutt-how-can-i-scroll-line-line.html @15: ReferenceError: Can't find variable: GS_googleAddAdSenseService
-
-** Message: console message: http://objectmix.com/mutt/202475-when-reading-e-mail-mutt-how-can-i-scroll-line-line.html @18: ReferenceError: Can't find variable: GA_googleAddSlot
-
-** Message: console message: http://objectmix.com/mutt/202475-when-reading-e-mail-mutt-how-can-i-scroll-line-line.html @22: ReferenceError: Can't find variable: GA_googleFetchAds
-
-** Message: console message: http://objectmix.com/mutt/202475-when-reading-e-mail-mutt-how-can-i-scroll-line-line.html @89: ReferenceError: Can't find variable: GA_googleFillSlot
-
-** Message: console message: http://objectmix.com/mutt/202475-when-reading-e-mail-mutt-how-can-i-scroll-line-line.html @104: ReferenceError: Can't find variable: GA_googleFillSlot
-
-** Message: console message: http://objectmix.com/mutt/202475-when-reading-e-mail-mutt-how-can-i-scroll-line-line.html @286: ReferenceError: Can't find variable: GA_googleFillSlot
-
-Failed to open /dev/tty: No such device or address
-Failed to open /dev/tty: No such device or address
-No bp log location saved, using default.
-[000:000] Browser XEmbed support present: 1
-[000:000] Browser toolkit is Gtk2.
-[000:000] Using Gtk2 toolkit
-No bp log location saved, using default.
-[000:002] No bp log location saved, using default.
-[000:002] Browser XEmbed support present: 1
-[000:002] Browser toolkit is Gtk2.
-[000:002] Using Gtk2 toolkit
-[000:000] No bp log location saved, using default.
-
-(xfce4-terminal:8310): GLib-WARNING **: (gerror.c:390):g_error_new_valist: runtime check failed: (domain != 0)
-Failed to connect to session manager: Failed to connect to the session manager: SESSION_MANAGER environment variable not defined
-[956:786] Starting client channel.
-[956:787] Warning(clientchannel.cc:436): Unreadable or no port file.  Could not initiate GoogleTalkPlugin connection
-[956:788] Warning(clientchannel.cc:411): Could not initiate GoogleTalkPlugin connection
-[956:788] GoogleTalkPlugin not running. Starting new process...
-[956:788] Warning(pluginutils.cc:251): Failed to get GoogleTalkPlugin path. Trying default.
-[956:817] Started GoogleTalkPlugin, path=/opt/google/talkplugin/GoogleTalkPlugin
-[956:818] Waiting for GoogleTalkPlugin to start...
-sh: lsb_release: command not found
-[957:825] Attempting to connect to GoogleTalkPlugin...
-[957:825] Read port file, port=47433
-[957:826] Initiated connection to GoogleTalkPlugin
-[957:925] Socket connection established
-[957:925] ScheduleOnlineCheck: Online check in 5000ms
-[958:025] Got cookie response, socket is authorized
-[958:025] AUTHORIZED; socket handshake complete
-[958:031] F->C: ["fs",{"pr":"a"}]
-[958:127] F->C: ["mf","mf3.17","3.17.0.0",2,{"audioCodecs":[[103,"ISAC",1,0,16000],[104,"ISAC",1,0,32000],[9,"G722",1,64000,16000],[102,"ILBC",1,13300,8000],[0,"PCMU",1,64000,8000],[8,"PCMA",1,64000,8000],[107,"CN",1,0,48000],[106,"CN",1,0,32000],[105,"CN",1,0,16000],[13,"CN",1,0,8000],[127,"red",1,0,8000],[126,"telephone-event",1,0,8000]],"audioRtpHdrExts":[{"id":1,"uri":"urn:ietf:params:rtp-hdrext:ssrc-audio-level"}],"camDeviceName":"Video WebCam","caps":15,"cpuArchitecture":0,"cpuCacheSize":1048576,"cpuFamily":6,"cpuFlags":["sse2","ssse3"],"cpuHasSSE2":true,"cpuModel":23,"cpuSpeed":2200,"cpuStepping":10,"cpuVendor":"GenuineIntel","cpus":2,"cpusPhysical":2,"cryptoSuites":["AES_CM_128_HMAC_SHA1_80","AES_CM_128_HMAC_SHA1_32"],"dataChannelVersion":1,"effectsVersion":9,"gpuDescription":"","gpuDeviceId":0,"gpuDeviceName":"","gpuDriver":"","gpuDriverVersion":"","gpuVendorId":0,"machineModel":"Not available","remotingAssistanceAllowed":0,"remotingVersion":1,"renderer":2,"rtcpMux":true,"screencast":2,"screencastLocalPreview":1,"supportsConcurrentSessions":true,"transports":["i","gice"],"videoCodecs":[[99,"H264-SVC",640,360,30],[97,"H264",640,360,30],[98,"H263",640,360,30]],"videoRtpHdrExts":[{"id":2,"uri":"urn:ietf:params:rtp-hdrext:toffset"}]}]
-[958:228] F->C: ["getdevicestate","15","1",["__default_device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Front speakers","HDA Intel, CONEXANT Analog - 4.0 Surround output to Front and Rear speakers","HDA Intel, CONEXANT Analog - 4.1 Surround output to Front, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 5.0 Surround output to Front, Center and Rear speakers","HDA Intel, CONEXANT Analog - 5.1 Surround output to Front, Center, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 7.1 Surround output to Front, Center, Side, Rear and Woofer speakers"],"0",["__default_device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Front speakers","HDA Intel, CONEXANT Analog - 4.0 Surround output to Front and Rear speakers","HDA Intel, CONEXANT Analog - 4.1 Surround output to Front, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 5.0 Surround output to Front, Center and Rear speakers","HDA Intel, CONEXANT Analog - 5.1 Surround output to Front, Center, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 7.1 Surround output to Front, Center, Side, Rear and Woofer speakers","HDA Intel, Conexant Digital - IEC958 (S/PDIF) Digital Audio Output","HDA Intel, HDMI 0 - HDMI Audio Output"],"0",["Video WebCam"]]
-[962:976] HandleOnlineCheck: Starting check
-[962:976] HandleOnlineCheck: OK; current state: 3
-[1017:724] Starting client channel.
-[1017:724] Read port file, port=47433
-[1017:725] Initiated connection to GoogleTalkPlugin
-[1017:822] Socket connection established
-[1017:822] ScheduleOnlineCheck: Online check in 5000ms
-[1017:824] Got cookie response, socket is authorized
-[1017:824] AUTHORIZED; socket handshake complete
-[1017:876] F->C: ["fs",{"pr":"a"}]
-[1018:055] F->C: ["mf","mf3.17","3.17.0.0",2,{"audioCodecs":[[103,"ISAC",1,0,16000],[104,"ISAC",1,0,32000],[9,"G722",1,64000,16000],[102,"ILBC",1,13300,8000],[0,"PCMU",1,64000,8000],[8,"PCMA",1,64000,8000],[107,"CN",1,0,48000],[106,"CN",1,0,32000],[105,"CN",1,0,16000],[13,"CN",1,0,8000],[127,"red",1,0,8000],[126,"telephone-event",1,0,8000]],"audioRtpHdrExts":[{"id":1,"uri":"urn:ietf:params:rtp-hdrext:ssrc-audio-level"}],"camDeviceName":"Video WebCam","caps":15,"cpuArchitecture":0,"cpuCacheSize":1048576,"cpuFamily":6,"cpuFlags":["sse2","ssse3"],"cpuHasSSE2":true,"cpuModel":23,"cpuSpeed":2200,"cpuStepping":10,"cpuVendor":"GenuineIntel","cpus":2,"cpusPhysical":2,"cryptoSuites":["AES_CM_128_HMAC_SHA1_80","AES_CM_128_HMAC_SHA1_32"],"dataChannelVersion":1,"effectsVersion":9,"gpuDescription":"","gpuDeviceId":0,"gpuDeviceName":"","gpuDriver":"","gpuDriverVersion":"","gpuVendorId":0,"machineModel":"Not available","remotingAssistanceAllowed":0,"remotingVersion":1,"renderer":2,"rtcpMux":true,"screencast":2,"screencastLocalPreview":1,"supportsConcurrentSessions":true,"transports":["i","gice"],"videoCodecs":[[99,"H264-SVC",640,360,30],[97,"H264",640,360,30],[98,"H263",640,360,30]],"videoRtpHdrExts":[{"id":2,"uri":"urn:ietf:params:rtp-hdrext:toffset"}]}]
-[1018:169] F->C: ["getdevicestate","15","1",["__default_device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Front speakers","HDA Intel, CONEXANT Analog - 4.0 Surround output to Front and Rear speakers","HDA Intel, CONEXANT Analog - 4.1 Surround output to Front, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 5.0 Surround output to Front, Center and Rear speakers","HDA Intel, CONEXANT Analog - 5.1 Surround output to Front, Center, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 7.1 Surround output to Front, Center, Side, Rear and Woofer speakers"],"0",["__default_device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Front speakers","HDA Intel, CONEXANT Analog - 4.0 Surround output to Front and Rear speakers","HDA Intel, CONEXANT Analog - 4.1 Surround output to Front, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 5.0 Surround output to Front, Center and Rear speakers","HDA Intel, CONEXANT Analog - 5.1 Surround output to Front, Center, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 7.1 Surround output to Front, Center, Side, Rear and Woofer speakers","HDA Intel, Conexant Digital - IEC958 (S/PDIF) Digital Audio Output","HDA Intel, HDMI 0 - HDMI Audio Output"],"0",["Video WebCam"]]
-[1022:887] HandleOnlineCheck: Starting check
-[1022:887] HandleOnlineCheck: OK; current state: 3
-
-(luakit:8028): Gdk-CRITICAL **: IA__gdk_cursor_new_from_pixbuf: assertion `GDK_IS_PIXBUF (pixbuf)' failed
-
-(luakit:8028): Gdk-CRITICAL **: IA__gdk_cursor_new_from_pixbuf: assertion `GDK_IS_PIXBUF (pixbuf)' failed
-
-(luakit:8028): Gdk-CRITICAL **: IA__gdk_cursor_new_from_pixbuf: assertion `GDK_IS_PIXBUF (pixbuf)' failed
-
-(luakit:8028): Gdk-CRITICAL **: IA__gdk_cursor_new_from_pixbuf: assertion `GDK_IS_PIXBUF (pixbuf)' failed
-
-** (luakit:8028): CRITICAL **: void webkit_download_start(WebKitDownload*): assertion `priv->timer == NULL' failed
-
-** (evince:11408): WARNING **: Can't load fallback CSS resource: Failed to import: The resource at '/org/gnome/adwaita/gtk-fallback.css' does not exist
-** Message: console message: http://www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js @1834: TypeError: 'null' is not an object (evaluating 'a.firstChild')
-
-** Message: console message: https://cardiffmail13.cf.ac.uk/mail4/c1216997.nsf/iNotes/Mail/?OpenDocument&ui=dwa_lite_frame&l=en&CR&MX&TS=20130406T215949,97Z&charset=ISO-8859-1&charset=ISO-8859-1&ua=safari# @1: TypeError: 'undefined' is not an object (evaluating 'AAA.DSq.EKc.prototype.EYl['e-tab-$new-0:Ebu'].Esm')
-
-
-** (luakit:8028): CRITICAL **: void webkit_download_start(WebKitDownload*): assertion `priv->timer == NULL' failed
-
-** (evince:12343): WARNING **: Can't load fallback CSS resource: Failed to import: The resource at '/org/gnome/adwaita/gtk-fallback.css' does not exist
-** Message: console message:  @0: Unsafe JavaScript attempt to access frame with URL about:blank from frame with URL http://www.facebook.com/plugins/like.php?api_key=&locale=en_US&sdk=joey&channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D21%23cb%3Df5594b9f%26origin%3Dhttp%253A%252F%252Flifehacker.com%252Ff130535df%26domain%3Dlifehacker.com%26relation%3Dparent.parent&href=http%253A%252F%252Flifehacker.com%252F353087%252Fgetting-email-via-imap-into-gmail&node_type=link&width=126&font=lucida%20grande&layout=button_count&colorscheme=light&show_faces=false&send=false&extended_social_context=false. Domains, protocols and ports must match.
-
-
-** Message: console message:  @0: Unsafe JavaScript attempt to access frame with URL http://lifehacker.com/353087/getting-email-via-imap-into-gmail from frame with URL http://static.ak.facebook.com/connect/xd_arbiter.php?version=21#channel=fcafc764&origin=http%3A%2F%2Flifehacker.kinja.com&channel_path=%2F353087%3Fnosso%3D1%26fb_xd_fragment%23xd_sig%3Df28b99f52%26. Domains, protocols and ports must match.
-
-
-** Message: console message:  @0: Unsafe JavaScript attempt to access frame with URL http://lifehacker.com/353087/getting-email-via-imap-into-gmail from frame with URL https://s-static.ak.facebook.com/connect/xd_arbiter.php?version=21#channel=fcafc764&origin=http%3A%2F%2Flifehacker.kinja.com&channel_path=%2F353087%3Fnosso%3D1%26fb_xd_fragment%23xd_sig%3Df28b99f52%26. Domains, protocols and ports must match.
-
-
-** Message: console message: https://www.facebook.com/dialog/oauth?client_id=236575159691634&response_type=token%2Csigned_request%2Ccode&display=none&domain=lifehacker.com&origin=1&redirect_uri=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D21%23cb%3Df27c740c48%26origin%3Dhttp%253A%252F%252Flifehacker.com%252Ff130535df%26domain%3Dlifehacker.com%26relation%3Dparent&sdk=joey @1: Given URL is not permitted by the application configuration.: One or more of the given URLs is not allowed by the App's settings.  It must match the Website URL or Canvas URL, or the domain must be a subdomain of one of the App's domains.
-
-[12793:12853:0407/143122:ERROR:connection.cc(733)] sqlite error 19, errno -2: PRIMARY KEY must be unique
-[12793:12820:0407/143122:ERROR:object_proxy.cc(624)] Failed to get name owner. Got org.freedesktop.DBus.Error.NameHasNoOwner: Could not get owner of name 'org.chromium.Mtpd': no such name
-[12793:12820:0407/143122:ERROR:object_proxy.cc(624)] Failed to get name owner. Got org.freedesktop.DBus.Error.NameHasNoOwner: Could not get owner of name 'org.chromium.Mtpd': no such name
-[12793:12793:0407/143124:ERROR:object_proxy.cc(529)] Failed to call method: org.chromium.Mtpd.EnumerateStorages: object_path= /org/chromium/Mtpd: org.freedesktop.DBus.Error.ServiceUnknown: The name org.chromium.Mtpd was not provided by any .service files
-[12793:12833:0407/143301:ERROR:database.cc(215)] Metric to be added is invalid. Type: 7, Time: 13009815181152246, Value: 1.33716e+10. Ignoring.
-[2899:574] Starting client channel.
-[2899:574] Read port file, port=47433
-[2899:575] Initiated connection to GoogleTalkPlugin
-[2899:674] Socket connection established
-[2899:674] ScheduleOnlineCheck: Online check in 5000ms
-[2899:676] Got cookie response, socket is authorized
-[2899:676] AUTHORIZED; socket handshake complete
-[2899:684] F->C: ["fs",{"pr":"a"}]
-[2899:875] F->C: ["mf","mf3.17","3.17.0.0",2,{"audioCodecs":[[103,"ISAC",1,0,16000],[104,"ISAC",1,0,32000],[9,"G722",1,64000,16000],[102,"ILBC",1,13300,8000],[0,"PCMU",1,64000,8000],[8,"PCMA",1,64000,8000],[107,"CN",1,0,48000],[106,"CN",1,0,32000],[105,"CN",1,0,16000],[13,"CN",1,0,8000],[127,"red",1,0,8000],[126,"telephone-event",1,0,8000]],"audioRtpHdrExts":[{"id":1,"uri":"urn:ietf:params:rtp-hdrext:ssrc-audio-level"}],"camDeviceName":"Video WebCam","caps":15,"cpuArchitecture":0,"cpuCacheSize":1048576,"cpuFamily":6,"cpuFlags":["sse2","ssse3"],"cpuHasSSE2":true,"cpuModel":23,"cpuSpeed":2200,"cpuStepping":10,"cpuVendor":"GenuineIntel","cpus":2,"cpusPhysical":2,"cryptoSuites":["AES_CM_128_HMAC_SHA1_80","AES_CM_128_HMAC_SHA1_32"],"dataChannelVersion":1,"effectsVersion":9,"gpuDescription":"","gpuDeviceId":0,"gpuDeviceName":"","gpuDriver":"","gpuDriverVersion":"","gpuVendorId":0,"machineModel":"Not available","remotingAssistanceAllowed":0,"remotingVersion":1,"renderer":2,"rtcpMux":true,"screencast":2,"screencastLocalPreview":1,"supportsConcurrentSessions":true,"transports":["i","gice"],"videoCodecs":[[99,"H264-SVC",640,360,30],[97,"H264",640,360,30],[98,"H263",640,360,30]],"videoRtpHdrExts":[{"id":2,"uri":"urn:ietf:params:rtp-hdrext:toffset"}]}]
-[2899:975] F->C: ["getdevicestate","15","1",["__default_device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Front speakers","HDA Intel, CONEXANT Analog - 4.0 Surround output to Front and Rear speakers","HDA Intel, CONEXANT Analog - 4.1 Surround output to Front, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 5.0 Surround output to Front, Center and Rear speakers","HDA Intel, CONEXANT Analog - 5.1 Surround output to Front, Center, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 7.1 Surround output to Front, Center, Side, Rear and Woofer speakers"],"0",["__default_device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Front speakers","HDA Intel, CONEXANT Analog - 4.0 Surround output to Front and Rear speakers","HDA Intel, CONEXANT Analog - 4.1 Surround output to Front, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 5.0 Surround output to Front, Center and Rear speakers","HDA Intel, CONEXANT Analog - 5.1 Surround output to Front, Center, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 7.1 Surround output to Front, Center, Side, Rear and Woofer speakers","HDA Intel, Conexant Digital - IEC958 (S/PDIF) Digital Audio Output","HDA Intel, HDMI 0 - HDMI Audio Output"],"0",["Video WebCam"]]
-[2904:717] HandleOnlineCheck: Starting check
-[2904:717] HandleOnlineCheck: OK; current state: 3
-** Message: console message: https://cardiffmail13.cf.ac.uk/mail4/c1216997.nsf/iNotes/Mail/?OpenDocument&ui=dwa_frame&l=en&CR&MX&TS=20130407T132227,60Z&charset=ISO-8859-1&charset=ISO-8859-1&ua=safari# @1: TypeError: 'undefined' is not an object (evaluating 'AAA.DSq.EKc.prototype.EYl['e-tab-$new-2:Ebu'].Esm')
-
-** Message: console message: https://cardiffmail13.cf.ac.uk/mail4/c1216997.nsf/iNotes/Mail/?OpenDocument&ui=dwa_frame&l=en&CR&MX&TS=20130407T132227,60Z&charset=ISO-8859-1&charset=ISO-8859-1&ua=safari# @1: TypeError: 'undefined' is not an object (evaluating 'AAA.DSq.EKc.prototype.EYl['e-tab-E432F0908123FE4580257B46004AB4B0-1:Ebu'].Esm')
-
-** Message: console message: https://cardiffmail13.cf.ac.uk/mail4/c1216997.nsf/iNotes/Mail/?OpenDocument&ui=dwa_frame&l=en&CR&MX&TS=20130407T132227,60Z&charset=ISO-8859-1&charset=ISO-8859-1&ua=safari# @1: TypeError: 'undefined' is not an object (evaluating 'AAA.DSq.EKc.prototype.EYl['e-tab-$new-0:Ebu'].Esm')
-
-[12793:12833:0407/144526:ERROR:database.cc(215)] Metric to be added is invalid. Type: 7, Time: 13009815926409703, Value: 1.41169e+10. Ignoring.
-No bp log location saved, using default.
-[000:000] Browser XEmbed support present: 1
-[000:000] Browser toolkit is Gtk2.
-[000:000] Using Gtk2 toolkit
-No bp log location saved, using default.
-[000:002] No bp log location saved, using default.
-[000:002] Browser XEmbed support present: 1
-[000:002] Browser toolkit is Gtk2.
-[000:002] Using Gtk2 toolkit
-[000:000] No bp log location saved, using default.
-
-(luakit:14339): Gdk-CRITICAL **: IA__gdk_cursor_new_from_pixbuf: assertion `GDK_IS_PIXBUF (pixbuf)' failed
-[011:268] Starting client channel.
-[011:268] Warning(clientchannel.cc:436): Unreadable or no port file.  Could not initiate GoogleTalkPlugin connection
-[011:269] Warning(clientchannel.cc:411): Could not initiate GoogleTalkPlugin connection
-[011:269] GoogleTalkPlugin not running. Starting new process...
-[011:269] Warning(pluginutils.cc:251): Failed to get GoogleTalkPlugin path. Trying default.
-[011:294] Started GoogleTalkPlugin, path=/opt/google/talkplugin/GoogleTalkPlugin
-[011:294] Waiting for GoogleTalkPlugin to start...
-sh: lsb_release: command not found
-[012:353] Attempting to connect to GoogleTalkPlugin...
-[012:353] Read port file, port=39802
-[012:353] Initiated connection to GoogleTalkPlugin
-[012:354] Socket connection established
-[012:354] ScheduleOnlineCheck: Online check in 5000ms
-[012:485] Got cookie response, socket is authorized
-[012:485] AUTHORIZED; socket handshake complete
-[012:490] F->C: ["fs",{"pr":"a"}]
-[012:631] F->C: ["mf","mf3.17","3.17.0.0",2,{"audioCodecs":[[103,"ISAC",1,0,16000],[104,"ISAC",1,0,32000],[9,"G722",1,64000,16000],[102,"ILBC",1,13300,8000],[0,"PCMU",1,64000,8000],[8,"PCMA",1,64000,8000],[107,"CN",1,0,48000],[106,"CN",1,0,32000],[105,"CN",1,0,16000],[13,"CN",1,0,8000],[127,"red",1,0,8000],[126,"telephone-event",1,0,8000]],"audioRtpHdrExts":[{"id":1,"uri":"urn:ietf:params:rtp-hdrext:ssrc-audio-level"}],"camDeviceName":"Video WebCam","caps":15,"cpuArchitecture":0,"cpuCacheSize":1048576,"cpuFamily":6,"cpuFlags":["sse2","ssse3"],"cpuHasSSE2":true,"cpuModel":23,"cpuSpeed":2200,"cpuStepping":10,"cpuVendor":"GenuineIntel","cpus":2,"cpusPhysical":2,"cryptoSuites":["AES_CM_128_HMAC_SHA1_80","AES_CM_128_HMAC_SHA1_32"],"dataChannelVersion":1,"effectsVersion":9,"gpuDescription":"","gpuDeviceId":0,"gpuDeviceName":"","gpuDriver":"","gpuDriverVersion":"","gpuVendorId":0,"machineModel":"Not available","remotingAssistanceAllowed":0,"remotingVersion":1,"renderer":2,"rtcpMux":true,"screencast":2,"screencastLocalPreview":1,"supportsConcurrentSessions":true,"transports":["i","gice"],"videoCodecs":[[99,"H264-SVC",640,360,30],[97,"H264",640,360,30],[98,"H263",640,360,30]],"videoRtpHdrExts":[{"id":2,"uri":"urn:ietf:params:rtp-hdrext:toffset"}]}]
-[012:732] F->C: ["getdevicestate","15","1",["__default_device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Front speakers","HDA Intel, CONEXANT Analog - 4.0 Surround output to Front and Rear speakers","HDA Intel, CONEXANT Analog - 4.1 Surround output to Front, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 5.0 Surround output to Front, Center and Rear speakers","HDA Intel, CONEXANT Analog - 5.1 Surround output to Front, Center, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 7.1 Surround output to Front, Center, Side, Rear and Woofer speakers"],"0",["__default_device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Front speakers","HDA Intel, CONEXANT Analog - 4.0 Surround output to Front and Rear speakers","HDA Intel, CONEXANT Analog - 4.1 Surround output to Front, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 5.0 Surround output to Front, Center and Rear speakers","HDA Intel, CONEXANT Analog - 5.1 Surround output to Front, Center, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 7.1 Surround output to Front, Center, Side, Rear and Woofer speakers","HDA Intel, Conexant Digital - IEC958 (S/PDIF) Digital Audio Output","HDA Intel, HDMI 0 - HDMI Audio Output"],"0",["Video WebCam"]]
-[017:375] HandleOnlineCheck: Starting check
-[017:375] HandleOnlineCheck: OK; current state: 3
-[024:145] Starting client channel.
-[024:145] Read port file, port=39802
-[024:147] Initiated connection to GoogleTalkPlugin
-[024:246] Socket connection established
-[024:246] ScheduleOnlineCheck: Online check in 5000ms
-[024:247] Got cookie response, socket is authorized
-[024:247] AUTHORIZED; socket handshake complete
-[024:301] F->C: ["fs",{"pr":"a"}]
-[024:463] F->C: ["mf","mf3.17","3.17.0.0",2,{"audioCodecs":[[103,"ISAC",1,0,16000],[104,"ISAC",1,0,32000],[9,"G722",1,64000,16000],[102,"ILBC",1,13300,8000],[0,"PCMU",1,64000,8000],[8,"PCMA",1,64000,8000],[107,"CN",1,0,48000],[106,"CN",1,0,32000],[105,"CN",1,0,16000],[13,"CN",1,0,8000],[127,"red",1,0,8000],[126,"telephone-event",1,0,8000]],"audioRtpHdrExts":[{"id":1,"uri":"urn:ietf:params:rtp-hdrext:ssrc-audio-level"}],"camDeviceName":"Video WebCam","caps":15,"cpuArchitecture":0,"cpuCacheSize":1048576,"cpuFamily":6,"cpuFlags":["sse2","ssse3"],"cpuHasSSE2":true,"cpuModel":23,"cpuSpeed":2200,"cpuStepping":10,"cpuVendor":"GenuineIntel","cpus":2,"cpusPhysical":2,"cryptoSuites":["AES_CM_128_HMAC_SHA1_80","AES_CM_128_HMAC_SHA1_32"],"dataChannelVersion":1,"effectsVersion":9,"gpuDescription":"","gpuDeviceId":0,"gpuDeviceName":"","gpuDriver":"","gpuDriverVersion":"","gpuVendorId":0,"machineModel":"Not available","remotingAssistanceAllowed":0,"remotingVersion":1,"renderer":2,"rtcpMux":true,"screencast":2,"screencastLocalPreview":1,"supportsConcurrentSessions":true,"transports":["i","gice"],"videoCodecs":[[99,"H264-SVC",640,360,30],[97,"H264",640,360,30],[98,"H263",640,360,30]],"videoRtpHdrExts":[{"id":2,"uri":"urn:ietf:params:rtp-hdrext:toffset"}]}]
-[024:568] F->C: ["getdevicestate","15","1",["__default_device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Front speakers","HDA Intel, CONEXANT Analog - 4.0 Surround output to Front and Rear speakers","HDA Intel, CONEXANT Analog - 4.1 Surround output to Front, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 5.0 Surround output to Front, Center and Rear speakers","HDA Intel, CONEXANT Analog - 5.1 Surround output to Front, Center, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 7.1 Surround output to Front, Center, Side, Rear and Woofer speakers"],"0",["__default_device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Front speakers","HDA Intel, CONEXANT Analog - 4.0 Surround output to Front and Rear speakers","HDA Intel, CONEXANT Analog - 4.1 Surround output to Front, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 5.0 Surround output to Front, Center and Rear speakers","HDA Intel, CONEXANT Analog - 5.1 Surround output to Front, Center, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 7.1 Surround output to Front, Center, Side, Rear and Woofer speakers","HDA Intel, Conexant Digital - IEC958 (S/PDIF) Digital Audio Output","HDA Intel, HDMI 0 - HDMI Audio Output"],"0",["Video WebCam"]]
-[029:308] HandleOnlineCheck: Starting check
-[029:308] HandleOnlineCheck: OK; current state: 3
-** Message: console message: http://www.techrepublic.com/article/10-helpful-tips-for-mutt-e-mail-client-power-users/5968796 @91: ReferenceError: Can't find variable: cbsiSetDeferredLocalPage
-
-** Message: console message: http://www.techrepublic.com/article/10-helpful-tips-for-mutt-e-mail-client-power-users/5968796 @1029: ReferenceError: Can't find variable: cbsiGetDeferredAds
-
-** Message: console message: http://www.techrepublic.com/article/10-helpful-tips-for-mutt-e-mail-client-power-users/5968796 @1077: ReferenceError: Can't find variable: cbsiLoadOffer
-
-** Message: console message: http://connect.facebook.net/en_US/all.js @52: FB.getLoginStatus() called before calling FB.init().
-
-[974:753] Starting client channel.
-[974:753] Warning(clientchannel.cc:436): Unreadable or no port file.  Could not initiate GoogleTalkPlugin connection
-[974:754] Warning(clientchannel.cc:411): Could not initiate GoogleTalkPlugin connection
-[974:754] GoogleTalkPlugin not running. Starting new process...
-[974:754] Warning(pluginutils.cc:251): Failed to get GoogleTalkPlugin path. Trying default.
-[974:797] Started GoogleTalkPlugin, path=/opt/google/talkplugin/GoogleTalkPlugin
-[974:798] Waiting for GoogleTalkPlugin to start...
-sh: lsb_release: command not found
-[975:858] Attempting to connect to GoogleTalkPlugin...
-[975:858] Read port file, port=56432
-[975:858] Initiated connection to GoogleTalkPlugin
-[975:958] Socket connection established
-[975:958] ScheduleOnlineCheck: Online check in 5000ms
-[976:059] Got cookie response, socket is authorized
-[976:059] AUTHORIZED; socket handshake complete
-[976:063] F->C: ["fs",{"pr":"a"}]
-[976:160] F->C: ["mf","mf3.17","3.17.0.0",2,{"audioCodecs":[[103,"ISAC",1,0,16000],[104,"ISAC",1,0,32000],[9,"G722",1,64000,16000],[102,"ILBC",1,13300,8000],[0,"PCMU",1,64000,8000],[8,"PCMA",1,64000,8000],[107,"CN",1,0,48000],[106,"CN",1,0,32000],[105,"CN",1,0,16000],[13,"CN",1,0,8000],[127,"red",1,0,8000],[126,"telephone-event",1,0,8000]],"audioRtpHdrExts":[{"id":1,"uri":"urn:ietf:params:rtp-hdrext:ssrc-audio-level"}],"camDeviceName":"Video WebCam","caps":15,"cpuArchitecture":0,"cpuCacheSize":1048576,"cpuFamily":6,"cpuFlags":["sse2","ssse3"],"cpuHasSSE2":true,"cpuModel":23,"cpuSpeed":2200,"cpuStepping":10,"cpuVendor":"GenuineIntel","cpus":2,"cpusPhysical":2,"cryptoSuites":["AES_CM_128_HMAC_SHA1_80","AES_CM_128_HMAC_SHA1_32"],"dataChannelVersion":1,"effectsVersion":9,"gpuDescription":"","gpuDeviceId":0,"gpuDeviceName":"","gpuDriver":"","gpuDriverVersion":"","gpuVendorId":0,"machineModel":"Not available","remotingAssistanceAllowed":0,"remotingVersion":1,"renderer":2,"rtcpMux":true,"screencast":2,"screencastLocalPreview":1,"supportsConcurrentSessions":true,"transports":["i","gice"],"videoCodecs":[[99,"H264-SVC",640,360,30],[97,"H264",640,360,30],[98,"H263",640,360,30]],"videoRtpHdrExts":[{"id":2,"uri":"urn:ietf:params:rtp-hdrext:toffset"}]}]
-[976:261] F->C: ["getdevicestate","15","1",["__default_device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Front speakers","HDA Intel, CONEXANT Analog - 4.0 Surround output to Front and Rear speakers","HDA Intel, CONEXANT Analog - 4.1 Surround output to Front, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 5.0 Surround output to Front, Center and Rear speakers","HDA Intel, CONEXANT Analog - 5.1 Surround output to Front, Center, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 7.1 Surround output to Front, Center, Side, Rear and Woofer speakers"],"0",["__default_device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Front speakers","HDA Intel, CONEXANT Analog - 4.0 Surround output to Front and Rear speakers","HDA Intel, CONEXANT Analog - 4.1 Surround output to Front, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 5.0 Surround output to Front, Center and Rear speakers","HDA Intel, CONEXANT Analog - 5.1 Surround output to Front, Center, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 7.1 Surround output to Front, Center, Side, Rear and Woofer speakers","HDA Intel, Conexant Digital - IEC958 (S/PDIF) Digital Audio Output","HDA Intel, HDMI 0 - HDMI Audio Output"],"0",["Video WebCam"]]
-[981:013] HandleOnlineCheck: Starting check
-[981:014] HandleOnlineCheck: OK; current state: 3
 Cannot read userscripts: Error reading file '/home/josh/.config/dwb/userscripts': Is a directory
 Cannot read default: Error reading file '/home/josh/.config/dwb/default': Is a directory
 Adblock warning: Adblock option 'xmlhttprequest' isn't supported
@@ -940,204 +615,60 @@ Adblock warning: Rule ||ymages.org/prepop.php$image,~image,popup will be ignored
      9 > // Command to subscribe to a filterlist
     ...
 
+No bp log location saved, using default.
+[000:000] Browser XEmbed support present: 1
+[000:001] Browser toolkit is Gtk2.
+[000:002] Using Gtk2 toolkit
+No bp log location saved, using default.
+[000:026] No bp log location saved, using default.
+[000:026] Browser XEmbed support present: 1
+[000:026] Browser toolkit is Gtk2.
+[000:026] Using Gtk2 toolkit
+[000:000] No bp log location saved, using default.
 
-** (dwb:16007): CRITICAL **: gchar* webkit_dom_element_get_tag_name(WebKitDOMElement*): assertion `self' failed
+** (dwb:376): CRITICAL **: WebKitDOMHTMLHeadElement* WebKit::kit(WebCore::HTMLHeadElement*): assertion `obj' failed
 
-** (dwb:16007): CRITICAL **: WebKitDOMHTMLElement* WebKit::kit(WebCore::HTMLElement*): assertion `obj' failed
+** (dwb:376): CRITICAL **: adblock_apply_element_hider: assertion `G_IS_OBJECT(head)' failed
+
+(dwb:376): GLib-GObject-WARNING **: invalid uninstantiatable type `(null)' in cast to `GtkLabel'
+
+(dwb:376): Gtk-CRITICAL **: IA__gtk_label_set_markup: assertion `GTK_IS_LABEL (label)' failed
+
+** (dwb:376): CRITICAL **: WebKitDOMHTMLHeadElement* WebKit::kit(WebCore::HTMLHeadElement*): assertion `obj' failed
+
+** (dwb:376): CRITICAL **: adblock_apply_element_hider: assertion `G_IS_OBJECT(head)' failed
 No bp log location saved, using default.
 [000:000] Browser XEmbed support present: 1
 [000:000] Browser toolkit is Gtk2.
-[000:001] Using Gtk2 toolkit
+[000:000] Using Gtk2 toolkit
 No bp log location saved, using default.
 [000:002] No bp log location saved, using default.
-[000:003] Browser XEmbed support present: 1
-[000:003] Browser toolkit is Gtk2.
-[000:003] Using Gtk2 toolkit
+[000:002] Browser XEmbed support present: 1
+[000:002] Browser toolkit is Gtk2.
+[000:002] Using Gtk2 toolkit
 [000:000] No bp log location saved, using default.
-
-** (dwb:16007): CRITICAL **: WebKitDOMHTMLHeadElement* WebKit::kit(WebCore::HTMLHeadElement*): assertion `obj' failed
-
-** (dwb:16007): CRITICAL **: adblock_apply_element_hider: assertion `G_IS_OBJECT(head)' failed
-
-** (dwb:16007): CRITICAL **: WebKitDOMHTMLHeadElement* WebKit::kit(WebCore::HTMLHeadElement*): assertion `obj' failed
-
-** (dwb:16007): CRITICAL **: adblock_apply_element_hider: assertion `G_IS_OBJECT(head)' failed
-
-** (dwb:16007): CRITICAL **: WebKitDOMHTMLHeadElement* WebKit::kit(WebCore::HTMLHeadElement*): assertion `obj' failed
-
-** (dwb:16007): CRITICAL **: adblock_apply_element_hider: assertion `G_IS_OBJECT(head)' failed
-
-** (dwb:16007): CRITICAL **: WebKitDOMHTMLHeadElement* WebKit::kit(WebCore::HTMLHeadElement*): assertion `obj' failed
-
-** (dwb:16007): CRITICAL **: adblock_apply_element_hider: assertion `G_IS_OBJECT(head)' failed
-
-** (dwb:16007): CRITICAL **: WebKitDOMHTMLHeadElement* WebKit::kit(WebCore::HTMLHeadElement*): assertion `obj' failed
-
-** (dwb:16007): CRITICAL **: adblock_apply_element_hider: assertion `G_IS_OBJECT(head)' failed
-
-** (dwb:16007): CRITICAL **: gchar* webkit_dom_element_get_tag_name(WebKitDOMElement*): assertion `self' failed
-
-** (dwb:16007): CRITICAL **: WebKitDOMHTMLElement* WebKit::kit(WebCore::HTMLElement*): assertion `obj' failed
-
-** (dwb:16007): CRITICAL **: WebKitDOMHTMLHeadElement* WebKit::kit(WebCore::HTMLHeadElement*): assertion `obj' failed
-
-** (dwb:16007): CRITICAL **: adblock_apply_element_hider: assertion `G_IS_OBJECT(head)' failed
-
-** (dwb:16007): CRITICAL **: WebKitDOMHTMLHeadElement* WebKit::kit(WebCore::HTMLHeadElement*): assertion `obj' failed
-
-** (dwb:16007): CRITICAL **: adblock_apply_element_hider: assertion `G_IS_OBJECT(head)' failed
-
-(dwb:16007): GLib-GObject-WARNING **: invalid unclassed pointer in cast to `GtkLabel'
-
-(dwb:16007): Gtk-CRITICAL **: IA__gtk_label_set_markup: assertion `GTK_IS_LABEL (label)' failed
-
-** (dwb:16007): CRITICAL **: WebKitDOMHTMLHeadElement* WebKit::kit(WebCore::HTMLHeadElement*): assertion `obj' failed
-
-** (dwb:16007): CRITICAL **: adblock_apply_element_hider: assertion `G_IS_OBJECT(head)' failed
-
-** (dwb:16007): CRITICAL **: WebKitDOMHTMLHeadElement* WebKit::kit(WebCore::HTMLHeadElement*): assertion `obj' failed
-
-** (dwb:16007): CRITICAL **: adblock_apply_element_hider: assertion `G_IS_OBJECT(head)' failed
-
-** (dwb:16007): CRITICAL **: WebKitDOMHTMLHeadElement* WebKit::kit(WebCore::HTMLHeadElement*): assertion `obj' failed
-
-** (dwb:16007): CRITICAL **: adblock_apply_element_hider: assertion `G_IS_OBJECT(head)' failed
-
-** (dwb:16007): CRITICAL **: WebKitDOMHTMLHeadElement* WebKit::kit(WebCore::HTMLHeadElement*): assertion `obj' failed
-
-** (dwb:16007): CRITICAL **: adblock_apply_element_hider: assertion `G_IS_OBJECT(head)' failed
-
-** (dwb:16007): CRITICAL **: WebKitDOMHTMLHeadElement* WebKit::kit(WebCore::HTMLHeadElement*): assertion `obj' failed
-
-** (dwb:16007): CRITICAL **: adblock_apply_element_hider: assertion `G_IS_OBJECT(head)' failed
-
-** (dwb:16007): CRITICAL **: WebKitDOMHTMLHeadElement* WebKit::kit(WebCore::HTMLHeadElement*): assertion `obj' failed
-
-** (dwb:16007): CRITICAL **: adblock_apply_element_hider: assertion `G_IS_OBJECT(head)' failed
-
-** (dwb:16007): CRITICAL **: WebKitDOMHTMLHeadElement* WebKit::kit(WebCore::HTMLHeadElement*): assertion `obj' failed
-
-** (dwb:16007): CRITICAL **: adblock_apply_element_hider: assertion `G_IS_OBJECT(head)' failed
-** Message: console message: http://ubuntuforums.org/clientscript/vbulletin-core.js?v=420 @11: This browser is%s AJAX compatible
-
-** Message: console message: http://ubuntuforums.org/clientscript/vbulletin-core.js?v=420 @11: Fire vB_XHTML_Ready
-
-** Message: console message: http://ubuntuforums.org/clientscript/vbulletin-core.js?v=420 @11: Fetch Cookie :: %s (null)
-
-** Message: console message: http://ubuntuforums.org/clientscript/vbulletin-core.js?v=420 @11: Firing System Init
-
-
-(luakit:14339): Gdk-CRITICAL **: IA__gdk_cursor_new_from_pixbuf: assertion `GDK_IS_PIXBUF (pixbuf)' failed
-
-(luakit:14339): Gdk-CRITICAL **: IA__gdk_cursor_new_from_pixbuf: assertion `GDK_IS_PIXBUF (pixbuf)' failed
-[2730:870] Starting client channel.
-[2730:870] Warning(clientchannel.cc:436): Unreadable or no port file.  Could not initiate GoogleTalkPlugin connection
-[2730:871] Warning(clientchannel.cc:411): Could not initiate GoogleTalkPlugin connection
-[2730:871] GoogleTalkPlugin not running. Starting new process...
-[2730:871] Warning(pluginutils.cc:251): Failed to get GoogleTalkPlugin path. Trying default.
-[2730:913] Started GoogleTalkPlugin, path=/opt/google/talkplugin/GoogleTalkPlugin
-[2730:914] Waiting for GoogleTalkPlugin to start...
+[009:367] Starting client channel.
+[009:367] Warning(clientchannel.cc:436): Unreadable or no port file.  Could not initiate GoogleTalkPlugin connection
+[009:368] Warning(clientchannel.cc:411): Could not initiate GoogleTalkPlugin connection
+[009:368] GoogleTalkPlugin not running. Starting new process...
+[009:368] Warning(pluginutils.cc:251): Failed to get GoogleTalkPlugin path. Trying default.
+[009:389] Started GoogleTalkPlugin, path=/opt/google/talkplugin/GoogleTalkPlugin
+[009:390] Waiting for GoogleTalkPlugin to start...
 sh: lsb_release: command not found
-[2731:981] Attempting to connect to GoogleTalkPlugin...
-[2731:981] Read port file, port=42650
-[2731:981] Initiated connection to GoogleTalkPlugin
-[2731:982] Socket connection established
-[2731:982] ScheduleOnlineCheck: Online check in 5000ms
-[2732:081] Got cookie response, socket is authorized
-[2732:081] AUTHORIZED; socket handshake complete
-[2732:086] F->C: ["fs",{"pr":"a"}]
-[2732:182] F->C: ["mf","mf3.17","3.17.0.0",2,{"audioCodecs":[[103,"ISAC",1,0,16000],[104,"ISAC",1,0,32000],[9,"G722",1,64000,16000],[102,"ILBC",1,13300,8000],[0,"PCMU",1,64000,8000],[8,"PCMA",1,64000,8000],[107,"CN",1,0,48000],[106,"CN",1,0,32000],[105,"CN",1,0,16000],[13,"CN",1,0,8000],[127,"red",1,0,8000],[126,"telephone-event",1,0,8000]],"audioRtpHdrExts":[{"id":1,"uri":"urn:ietf:params:rtp-hdrext:ssrc-audio-level"}],"camDeviceName":"Video WebCam","caps":15,"cpuArchitecture":0,"cpuCacheSize":1048576,"cpuFamily":6,"cpuFlags":["sse2","ssse3"],"cpuHasSSE2":true,"cpuModel":23,"cpuSpeed":2200,"cpuStepping":10,"cpuVendor":"GenuineIntel","cpus":2,"cpusPhysical":2,"cryptoSuites":["AES_CM_128_HMAC_SHA1_80","AES_CM_128_HMAC_SHA1_32"],"dataChannelVersion":1,"effectsVersion":9,"gpuDescription":"","gpuDeviceId":0,"gpuDeviceName":"","gpuDriver":"","gpuDriverVersion":"","gpuVendorId":0,"machineModel":"Not available","remotingAssistanceAllowed":0,"remotingVersion":1,"renderer":2,"rtcpMux":true,"screencast":2,"screencastLocalPreview":1,"supportsConcurrentSessions":true,"transports":["i","gice"],"videoCodecs":[[99,"H264-SVC",640,360,30],[97,"H264",640,360,30],[98,"H263",640,360,30]],"videoRtpHdrExts":[{"id":2,"uri":"urn:ietf:params:rtp-hdrext:toffset"}]}]
-[2732:347] F->C: ["getdevicestate","15","1",["__default_device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Front speakers","HDA Intel, CONEXANT Analog - 4.0 Surround output to Front and Rear speakers","HDA Intel, CONEXANT Analog - 4.1 Surround output to Front, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 5.0 Surround output to Front, Center and Rear speakers","HDA Intel, CONEXANT Analog - 5.1 Surround output to Front, Center, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 7.1 Surround output to Front, Center, Side, Rear and Woofer speakers"],"0",["__default_device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Front speakers","HDA Intel, CONEXANT Analog - 4.0 Surround output to Front and Rear speakers","HDA Intel, CONEXANT Analog - 4.1 Surround output to Front, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 5.0 Surround output to Front, Center and Rear speakers","HDA Intel, CONEXANT Analog - 5.1 Surround output to Front, Center, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 7.1 Surround output to Front, Center, Side, Rear and Woofer speakers","HDA Intel, Conexant Digital - IEC958 (S/PDIF) Digital Audio Output","HDA Intel, HDMI 0 - HDMI Audio Output"],"0",["Video WebCam"]]
-[2737:104] HandleOnlineCheck: Starting check
-[2737:104] HandleOnlineCheck: OK; current state: 3
-[2875:178] Starting client channel.
-[2875:178] Warning(clientchannel.cc:436): Unreadable or no port file.  Could not initiate GoogleTalkPlugin connection
-[2875:179] Warning(clientchannel.cc:411): Could not initiate GoogleTalkPlugin connection
-[2875:179] GoogleTalkPlugin not running. Starting new process...
-[2875:179] Warning(pluginutils.cc:251): Failed to get GoogleTalkPlugin path. Trying default.
-[2875:222] Started GoogleTalkPlugin, path=/opt/google/talkplugin/GoogleTalkPlugin
-[2875:222] Waiting for GoogleTalkPlugin to start...
-sh: lsb_release: command not found
-[2876:264] Attempting to connect to GoogleTalkPlugin...
-[2876:264] Read port file, port=53042
-[2876:265] Initiated connection to GoogleTalkPlugin
-[2876:398] Socket connection established
-[2876:398] ScheduleOnlineCheck: Online check in 5000ms
-[2876:500] Got cookie response, socket is authorized
-[2876:500] AUTHORIZED; socket handshake complete
-[2876:503] F->C: ["fs",{"pr":"a"}]
-[2876:601] F->C: ["mf","mf3.17","3.17.0.0",2,{"audioCodecs":[[103,"ISAC",1,0,16000],[104,"ISAC",1,0,32000],[9,"G722",1,64000,16000],[102,"ILBC",1,13300,8000],[0,"PCMU",1,64000,8000],[8,"PCMA",1,64000,8000],[107,"CN",1,0,48000],[106,"CN",1,0,32000],[105,"CN",1,0,16000],[13,"CN",1,0,8000],[127,"red",1,0,8000],[126,"telephone-event",1,0,8000]],"audioRtpHdrExts":[{"id":1,"uri":"urn:ietf:params:rtp-hdrext:ssrc-audio-level"}],"camDeviceName":"Video WebCam","caps":15,"cpuArchitecture":0,"cpuCacheSize":1048576,"cpuFamily":6,"cpuFlags":["sse2","ssse3"],"cpuHasSSE2":true,"cpuModel":23,"cpuSpeed":2200,"cpuStepping":10,"cpuVendor":"GenuineIntel","cpus":2,"cpusPhysical":2,"cryptoSuites":["AES_CM_128_HMAC_SHA1_80","AES_CM_128_HMAC_SHA1_32"],"dataChannelVersion":1,"effectsVersion":9,"gpuDescription":"","gpuDeviceId":0,"gpuDeviceName":"","gpuDriver":"","gpuDriverVersion":"","gpuVendorId":0,"machineModel":"Not available","remotingAssistanceAllowed":0,"remotingVersion":1,"renderer":2,"rtcpMux":true,"screencast":2,"screencastLocalPreview":1,"supportsConcurrentSessions":true,"transports":["i","gice"],"videoCodecs":[[99,"H264-SVC",640,360,30],[97,"H264",640,360,30],[98,"H263",640,360,30]],"videoRtpHdrExts":[{"id":2,"uri":"urn:ietf:params:rtp-hdrext:toffset"}]}]
-[2876:702] F->C: ["getdevicestate","15","1",["__default_device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Front speakers","HDA Intel, CONEXANT Analog - 4.0 Surround output to Front and Rear speakers","HDA Intel, CONEXANT Analog - 4.1 Surround output to Front, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 5.0 Surround output to Front, Center and Rear speakers","HDA Intel, CONEXANT Analog - 5.1 Surround output to Front, Center, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 7.1 Surround output to Front, Center, Side, Rear and Woofer speakers"],"0",["__default_device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Front speakers","HDA Intel, CONEXANT Analog - 4.0 Surround output to Front and Rear speakers","HDA Intel, CONEXANT Analog - 4.1 Surround output to Front, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 5.0 Surround output to Front, Center and Rear speakers","HDA Intel, CONEXANT Analog - 5.1 Surround output to Front, Center, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 7.1 Surround output to Front, Center, Side, Rear and Woofer speakers","HDA Intel, Conexant Digital - IEC958 (S/PDIF) Digital Audio Output","HDA Intel, HDMI 0 - HDMI Audio Output"],"0",["Video WebCam"]]
-[2881:442] HandleOnlineCheck: Starting check
-[2881:442] HandleOnlineCheck: OK; current state: 3
+[010:929] Attempting to connect to GoogleTalkPlugin...
+[010:938] Warning(clientchannel.cc:436): Unreadable or no port file.  Could not initiate GoogleTalkPlugin connection
+[010:939] Warning(clientchannel.cc:411): Could not initiate GoogleTalkPlugin connection
+[010:939] Waiting for GoogleTalkPlugin to start...
+[012:032] Attempting to connect to GoogleTalkPlugin...
+[012:033] Read port file, port=47200
+[012:033] Initiated connection to GoogleTalkPlugin
+[012:172] Socket connection established
+[012:172] ScheduleOnlineCheck: Online check in 5000ms
+[012:310] Got cookie response, socket is authorized
+[012:310] AUTHORIZED; socket handshake complete
+[012:313] F->C: ["fs",{"pr":"a"}]
+[012:520] F->C: ["mf","mf3.17","3.17.0.0",2,{"audioCodecs":[[103,"ISAC",1,0,16000],[104,"ISAC",1,0,32000],[9,"G722",1,64000,16000],[102,"ILBC",1,13300,8000],[0,"PCMU",1,64000,8000],[8,"PCMA",1,64000,8000],[107,"CN",1,0,48000],[106,"CN",1,0,32000],[105,"CN",1,0,16000],[13,"CN",1,0,8000],[127,"red",1,0,8000],[126,"telephone-event",1,0,8000]],"audioRtpHdrExts":[{"id":1,"uri":"urn:ietf:params:rtp-hdrext:ssrc-audio-level"}],"camDeviceName":"Video WebCam","caps":15,"cpuArchitecture":0,"cpuCacheSize":1048576,"cpuFamily":6,"cpuFlags":["sse2","ssse3"],"cpuHasSSE2":true,"cpuModel":23,"cpuSpeed":2200,"cpuStepping":10,"cpuVendor":"GenuineIntel","cpus":2,"cpusPhysical":2,"cryptoSuites":["AES_CM_128_HMAC_SHA1_80","AES_CM_128_HMAC_SHA1_32"],"dataChannelVersion":1,"effectsVersion":9,"gpuDescription":"","gpuDeviceId":0,"gpuDeviceName":"","gpuDriver":"","gpuDriverVersion":"","gpuVendorId":0,"machineModel":"Not available","remotingAssistanceAllowed":0,"remotingVersion":1,"renderer":2,"rtcpMux":true,"screencast":2,"screencastLocalPreview":1,"supportsConcurrentSessions":true,"transports":["i","gice"],"videoCodecs":[[99,"H264-SVC",640,360,30],[97,"H264",640,360,30],[98,"H263",640,360,30]],"videoRtpHdrExts":[{"id":2,"uri":"urn:ietf:params:rtp-hdrext:toffset"}]}]
+[012:623] F->C: ["getdevicestate","15","1",["__default_device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Front speakers","HDA Intel, CONEXANT Analog - 4.0 Surround output to Front and Rear speakers","HDA Intel, CONEXANT Analog - 4.1 Surround output to Front, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 5.0 Surround output to Front, Center and Rear speakers","HDA Intel, CONEXANT Analog - 5.1 Surround output to Front, Center, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 7.1 Surround output to Front, Center, Side, Rear and Woofer speakers"],"0",["__default_device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Front speakers","HDA Intel, CONEXANT Analog - 4.0 Surround output to Front and Rear speakers","HDA Intel, CONEXANT Analog - 4.1 Surround output to Front, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 5.0 Surround output to Front, Center and Rear speakers","HDA Intel, CONEXANT Analog - 5.1 Surround output to Front, Center, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 7.1 Surround output to Front, Center, Side, Rear and Woofer speakers","HDA Intel, Conexant Digital - IEC958 (S/PDIF) Digital Audio Output","HDA Intel, HDMI 0 - HDMI Audio Output"],"0",["Video WebCam"]]
+[017:216] HandleOnlineCheck: Starting check
+[017:216] HandleOnlineCheck: OK; current state: 3
 Failed to open VDPAU backend libvdpau_nvidia.so: cannot open shared object file: No such file or directory
-[3078:931] Starting client channel.
-[3078:931] Warning(clientchannel.cc:436): Unreadable or no port file.  Could not initiate GoogleTalkPlugin connection
-[3078:932] Warning(clientchannel.cc:411): Could not initiate GoogleTalkPlugin connection
-[3078:932] GoogleTalkPlugin not running. Starting new process...
-[3078:932] Warning(pluginutils.cc:251): Failed to get GoogleTalkPlugin path. Trying default.
-[3078:988] Started GoogleTalkPlugin, path=/opt/google/talkplugin/GoogleTalkPlugin
-[3078:988] Waiting for GoogleTalkPlugin to start...
-sh: lsb_release: command not found
-[3079:991] Attempting to connect to GoogleTalkPlugin...
-[3079:991] Read port file, port=47760
-[3079:992] Initiated connection to GoogleTalkPlugin
-[3080:093] Socket connection established
-[3080:093] ScheduleOnlineCheck: Online check in 5000ms
-[3080:230] Got cookie response, socket is authorized
-[3080:230] AUTHORIZED; socket handshake complete
-[3080:233] F->C: ["fs",{"pr":"a"}]
-[3080:330] F->C: ["mf","mf3.17","3.17.0.0",2,{"audioCodecs":[[103,"ISAC",1,0,16000],[104,"ISAC",1,0,32000],[9,"G722",1,64000,16000],[102,"ILBC",1,13300,8000],[0,"PCMU",1,64000,8000],[8,"PCMA",1,64000,8000],[107,"CN",1,0,48000],[106,"CN",1,0,32000],[105,"CN",1,0,16000],[13,"CN",1,0,8000],[127,"red",1,0,8000],[126,"telephone-event",1,0,8000]],"audioRtpHdrExts":[{"id":1,"uri":"urn:ietf:params:rtp-hdrext:ssrc-audio-level"}],"camDeviceName":"Video WebCam","caps":15,"cpuArchitecture":0,"cpuCacheSize":1048576,"cpuFamily":6,"cpuFlags":["sse2","ssse3"],"cpuHasSSE2":true,"cpuModel":23,"cpuSpeed":2200,"cpuStepping":10,"cpuVendor":"GenuineIntel","cpus":2,"cpusPhysical":2,"cryptoSuites":["AES_CM_128_HMAC_SHA1_80","AES_CM_128_HMAC_SHA1_32"],"dataChannelVersion":1,"effectsVersion":9,"gpuDescription":"","gpuDeviceId":0,"gpuDeviceName":"","gpuDriver":"","gpuDriverVersion":"","gpuVendorId":0,"machineModel":"Not available","remotingAssistanceAllowed":0,"remotingVersion":1,"renderer":2,"rtcpMux":true,"screencast":2,"screencastLocalPreview":1,"supportsConcurrentSessions":true,"transports":["i","gice"],"videoCodecs":[[99,"H264-SVC",640,360,30],[97,"H264",640,360,30],[98,"H263",640,360,30]],"videoRtpHdrExts":[{"id":2,"uri":"urn:ietf:params:rtp-hdrext:toffset"}]}]
-[3080:703] F->C: ["getdevicestate","15","1",["__default_device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Front speakers","HDA Intel, CONEXANT Analog - 4.0 Surround output to Front and Rear speakers","HDA Intel, CONEXANT Analog - 4.1 Surround output to Front, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 5.0 Surround output to Front, Center and Rear speakers","HDA Intel, CONEXANT Analog - 5.1 Surround output to Front, Center, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 7.1 Surround output to Front, Center, Side, Rear and Woofer speakers"],"0",["__default_device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Front speakers","HDA Intel, CONEXANT Analog - 4.0 Surround output to Front and Rear speakers","HDA Intel, CONEXANT Analog - 4.1 Surround output to Front, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 5.0 Surround output to Front, Center and Rear speakers","HDA Intel, CONEXANT Analog - 5.1 Surround output to Front, Center, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 7.1 Surround output to Front, Center, Side, Rear and Woofer speakers","HDA Intel, Conexant Digital - IEC958 (S/PDIF) Digital Audio Output","HDA Intel, HDMI 0 - HDMI Audio Output"],"0",["Video WebCam"]]
-[3085:191] HandleOnlineCheck: Starting check
-[3085:191] HandleOnlineCheck: OK; current state: 3
-[3137:265] Starting client channel.
-[3137:265] Warning(clientchannel.cc:436): Unreadable or no port file.  Could not initiate GoogleTalkPlugin connection
-[3137:266] Warning(clientchannel.cc:411): Could not initiate GoogleTalkPlugin connection
-[3137:266] GoogleTalkPlugin not running. Starting new process...
-[3137:266] Warning(pluginutils.cc:251): Failed to get GoogleTalkPlugin path. Trying default.
-[3137:316] Started GoogleTalkPlugin, path=/opt/google/talkplugin/GoogleTalkPlugin
-[3137:317] Waiting for GoogleTalkPlugin to start...
-sh: lsb_release: command not found
-
-(luakit:14339): Gdk-CRITICAL **: IA__gdk_cursor_new_from_pixbuf: assertion `GDK_IS_PIXBUF (pixbuf)' failed
-[3138:455] Attempting to connect to GoogleTalkPlugin...
-[3138:456] Read port file, port=47777
-[3138:456] Initiated connection to GoogleTalkPlugin
-[3138:495] Socket connection established
-[3138:495] ScheduleOnlineCheck: Online check in 5000ms
-[3138:661] Got cookie response, socket is authorized
-[3138:662] AUTHORIZED; socket handshake complete
-[3138:664] F->C: ["fs",{"pr":"a"}]
-[3138:762] F->C: ["mf","mf3.17","3.17.0.0",2,{"audioCodecs":[[103,"ISAC",1,0,16000],[104,"ISAC",1,0,32000],[9,"G722",1,64000,16000],[102,"ILBC",1,13300,8000],[0,"PCMU",1,64000,8000],[8,"PCMA",1,64000,8000],[107,"CN",1,0,48000],[106,"CN",1,0,32000],[105,"CN",1,0,16000],[13,"CN",1,0,8000],[127,"red",1,0,8000],[126,"telephone-event",1,0,8000]],"audioRtpHdrExts":[{"id":1,"uri":"urn:ietf:params:rtp-hdrext:ssrc-audio-level"}],"camDeviceName":"Video WebCam","caps":15,"cpuArchitecture":0,"cpuCacheSize":1048576,"cpuFamily":6,"cpuFlags":["sse2","ssse3"],"cpuHasSSE2":true,"cpuModel":23,"cpuSpeed":2200,"cpuStepping":10,"cpuVendor":"GenuineIntel","cpus":2,"cpusPhysical":2,"cryptoSuites":["AES_CM_128_HMAC_SHA1_80","AES_CM_128_HMAC_SHA1_32"],"dataChannelVersion":1,"effectsVersion":9,"gpuDescription":"","gpuDeviceId":0,"gpuDeviceName":"","gpuDriver":"","gpuDriverVersion":"","gpuVendorId":0,"machineModel":"Not available","remotingAssistanceAllowed":0,"remotingVersion":1,"renderer":2,"rtcpMux":true,"screencast":2,"screencastLocalPreview":1,"supportsConcurrentSessions":true,"transports":["i","gice"],"videoCodecs":[[99,"H264-SVC",640,360,30],[97,"H264",640,360,30],[98,"H263",640,360,30]],"videoRtpHdrExts":[{"id":2,"uri":"urn:ietf:params:rtp-hdrext:toffset"}]}]
-[3138:863] F->C: ["getdevicestate","15","1",["__default_device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Front speakers","HDA Intel, CONEXANT Analog - 4.0 Surround output to Front and Rear speakers","HDA Intel, CONEXANT Analog - 4.1 Surround output to Front, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 5.0 Surround output to Front, Center and Rear speakers","HDA Intel, CONEXANT Analog - 5.1 Surround output to Front, Center, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 7.1 Surround output to Front, Center, Side, Rear and Woofer speakers"],"0",["__default_device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Front speakers","HDA Intel, CONEXANT Analog - 4.0 Surround output to Front and Rear speakers","HDA Intel, CONEXANT Analog - 4.1 Surround output to Front, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 5.0 Surround output to Front, Center and Rear speakers","HDA Intel, CONEXANT Analog - 5.1 Surround output to Front, Center, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 7.1 Surround output to Front, Center, Side, Rear and Woofer speakers","HDA Intel, Conexant Digital - IEC958 (S/PDIF) Digital Audio Output","HDA Intel, HDMI 0 - HDMI Audio Output"],"0",["Video WebCam"]]
-[3143:631] HandleOnlineCheck: Starting check
-[3143:631] HandleOnlineCheck: OK; current state: 3
-[3235:922] Starting client channel.
-[3235:922] Warning(clientchannel.cc:436): Unreadable or no port file.  Could not initiate GoogleTalkPlugin connection
-[3235:923] Warning(clientchannel.cc:411): Could not initiate GoogleTalkPlugin connection
-[3235:923] GoogleTalkPlugin not running. Starting new process...
-[3235:923] Warning(pluginutils.cc:251): Failed to get GoogleTalkPlugin path. Trying default.
-[3235:971] Started GoogleTalkPlugin, path=/opt/google/talkplugin/GoogleTalkPlugin
-[3235:972] Waiting for GoogleTalkPlugin to start...
-sh: lsb_release: command not found
-
-(luakit:14339): Gdk-CRITICAL **: IA__gdk_cursor_new_from_pixbuf: assertion `GDK_IS_PIXBUF (pixbuf)' failed
-
-(luakit:14339): Gdk-CRITICAL **: IA__gdk_cursor_new_from_pixbuf: assertion `GDK_IS_PIXBUF (pixbuf)' failed
-[3237:072] Attempting to connect to GoogleTalkPlugin...
-[3237:072] Read port file, port=37863
-[3237:073] Initiated connection to GoogleTalkPlugin
-[3237:215] Socket connection established
-[3237:215] ScheduleOnlineCheck: Online check in 5000ms
-[3237:407] Got cookie response, socket is authorized
-[3237:407] AUTHORIZED; socket handshake complete
-[3237:410] F->C: ["fs",{"pr":"a"}]
-[3237:509] F->C: ["mf","mf3.17","3.17.0.0",2,{"audioCodecs":[[103,"ISAC",1,0,16000],[104,"ISAC",1,0,32000],[9,"G722",1,64000,16000],[102,"ILBC",1,13300,8000],[0,"PCMU",1,64000,8000],[8,"PCMA",1,64000,8000],[107,"CN",1,0,48000],[106,"CN",1,0,32000],[105,"CN",1,0,16000],[13,"CN",1,0,8000],[127,"red",1,0,8000],[126,"telephone-event",1,0,8000]],"audioRtpHdrExts":[{"id":1,"uri":"urn:ietf:params:rtp-hdrext:ssrc-audio-level"}],"camDeviceName":"Video WebCam","caps":15,"cpuArchitecture":0,"cpuCacheSize":1048576,"cpuFamily":6,"cpuFlags":["sse2","ssse3"],"cpuHasSSE2":true,"cpuModel":23,"cpuSpeed":2200,"cpuStepping":10,"cpuVendor":"GenuineIntel","cpus":2,"cpusPhysical":2,"cryptoSuites":["AES_CM_128_HMAC_SHA1_80","AES_CM_128_HMAC_SHA1_32"],"dataChannelVersion":1,"effectsVersion":9,"gpuDescription":"","gpuDeviceId":0,"gpuDeviceName":"","gpuDriver":"","gpuDriverVersion":"","gpuVendorId":0,"machineModel":"Not available","remotingAssistanceAllowed":0,"remotingVersion":1,"renderer":2,"rtcpMux":true,"screencast":2,"screencastLocalPreview":1,"supportsConcurrentSessions":true,"transports":["i","gice"],"videoCodecs":[[99,"H264-SVC",640,360,30],[97,"H264",640,360,30],[98,"H263",640,360,30]],"videoRtpHdrExts":[{"id":2,"uri":"urn:ietf:params:rtp-hdrext:toffset"}]}]
-[3237:609] F->C: ["getdevicestate","15","1",["__default_device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Front speakers","HDA Intel, CONEXANT Analog - 4.0 Surround output to Front and Rear speakers","HDA Intel, CONEXANT Analog - 4.1 Surround output to Front, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 5.0 Surround output to Front, Center and Rear speakers","HDA Intel, CONEXANT Analog - 5.1 Surround output to Front, Center, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 7.1 Surround output to Front, Center, Side, Rear and Woofer speakers"],"0",["__default_device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Default Audio Device","HDA Intel, CONEXANT Analog - Front speakers","HDA Intel, CONEXANT Analog - 4.0 Surround output to Front and Rear speakers","HDA Intel, CONEXANT Analog - 4.1 Surround output to Front, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 5.0 Surround output to Front, Center and Rear speakers","HDA Intel, CONEXANT Analog - 5.1 Surround output to Front, Center, Rear and Subwoofer speakers","HDA Intel, CONEXANT Analog - 7.1 Surround output to Front, Center, Side, Rear and Woofer speakers","HDA Intel, Conexant Digital - IEC958 (S/PDIF) Digital Audio Output","HDA Intel, HDMI 0 - HDMI Audio Output"],"0",["Video WebCam"]]
-[3242:273] HandleOnlineCheck: Starting check
-[3242:273] HandleOnlineCheck: OK; current state: 3
-
-** (spacefm:21020): WARNING **: Can't load fallback CSS resource: Failed to import: The resource at '/org/gnome/adwaita/gtk-fallback.css' does not exist
-spacefm: No such property from XGetWindowProperty() _NET_CURRENT_DESKTOP
-<Window object at 0x9a2c874 (terminatorlib+window+Window at 0x998a1a0)> is not in registered window list
