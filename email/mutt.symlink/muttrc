@@ -2,7 +2,7 @@
 
 # Change the following six lines to match your Gmail account details
 set imap_user	= "wainwright.ja@gmail.com"
-set imap_pass	= "WSOGMM42[]"
+source ~/.muttpass
 set smtp_url 	= "smtp://wainwright.ja@smtp.gmail.com:587/"
 set smtp_pass 	= $imap_pass
 set from 		= $imap_user
