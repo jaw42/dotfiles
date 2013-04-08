@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Logout
+Comment=Simple text editor
+Exec=/home/josh/.config/xfce4/panel/sessionmenu/exitlogout.sh
+Icon=/usr/share/icons/elementary/actions/48/system-log-out.svg
+Terminal=false
+Type=Application
+MimeType=text/plain
+StartupNotify=true

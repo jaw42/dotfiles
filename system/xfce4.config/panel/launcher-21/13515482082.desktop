@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=Google Chrome
+GenericName=Web Browser
+Comment=Access the Internet
+Exec=google-chrome %U
+Terminal=false
+Icon=google-chrome
+Type=Application
+Categories=GTK;Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml+xml;text/mml;x-scheme-handler/http;x-scheme-handler/https;
+X-XFCE-Source=file:///usr/share/applications/chromium.desktop
+Path=
+StartupNotify=false

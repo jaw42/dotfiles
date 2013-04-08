@@ -1,0 +1,6 @@
+Command=.scripts/mailchecknotify
+UseLabel=0
+Text=(genmon)
+UpdatePeriod=120000
+Font=(default)
+

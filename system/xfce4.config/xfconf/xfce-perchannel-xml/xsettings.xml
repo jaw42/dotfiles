@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xsettings" version="1.0">
+  <property name="Net" type="empty">
+    <property name="ThemeName" type="string" value="Zukitwo"/>
+    <property name="IconThemeName" type="string" value="Faenza-Darkest"/>
+    <property name="DoubleClickTime" type="empty"/>
+    <property name="DoubleClickDistance" type="empty"/>
+    <property name="DndDragThreshold" type="empty"/>
+    <property name="CursorBlink" type="empty"/>
+    <property name="CursorBlinkTime" type="int" value="1202"/>
+    <property name="SoundThemeName" type="empty"/>
+    <property name="EnableEventSounds" type="bool" value="false"/>
+    <property name="EnableInputFeedbackSounds" type="bool" value="false"/>
+  </property>
+  <property name="Xft" type="empty">
+    <property name="DPI" type="empty"/>
+    <property name="Antialias" type="int" value="1"/>
+    <property name="Hinting" type="empty"/>
+    <property name="HintStyle" type="string" value="hintfull"/>
+    <property name="RGBA" type="empty"/>
+  </property>
+  <property name="Gtk" type="empty">
+    <property name="CanChangeAccels" type="bool" value="true"/>
+    <property name="ColorPalette" type="empty"/>
+    <property name="FontName" type="string" value="Droid Sans 9"/>
+    <property name="IconSizes" type="string" value="gtk-menu=24,24"/>
+    <property name="KeyThemeName" type="empty"/>
+    <property name="ToolbarStyle" type="string" value="icons"/>
+    <property name="ToolbarIconSize" type="empty"/>
+    <property name="IMPreeditStyle" type="empty"/>
+    <property name="IMStatusStyle" type="empty"/>
+    <property name="MenuImages" type="bool" value="true"/>
+    <property name="ButtonImages" type="bool" value="true"/>
+    <property name="MenuBarAccel" type="empty"/>
+    <property name="CursorThemeName" type="string" value="Premium-left"/>
+    <property name="CursorThemeSize" type="int" value="16"/>
+    <property name="IMModule" type="empty"/>
+  </property>
+</channel>

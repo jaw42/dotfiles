@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Sleep
+Comment=Simple text editor
+#Exec=/home/josh/.config/xfce4/panel/sessionmenu/exitsleep.sh
+Exec=sudo pm-suspend
+Icon=/usr/share/icons/elementary/actions/48/sleep.svg
+Terminal=false
+Type=Application
+MimeType=text/plain
+StartupNotify=true

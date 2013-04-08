@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Google Calendar
+Exec=google-chrome --app="https://www.google.com/calendar/render"
+Terminal=false
+Type=Application
+Icon=vcalendar
+Categories=Internet;Network;
+X-XFCE-Source=file:///usr/share/applications/calendar.desktop
+Comment=
+Path=
+StartupNotify=false

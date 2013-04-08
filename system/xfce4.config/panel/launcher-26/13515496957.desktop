@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Gmail
+Exec=google-chrome --app="https://mail.google.com/mail/u/0/?tab=cm#inbox"
+Terminal=false
+Type=Application
+Icon=gmail
+Categories=Internet;Network;
+X-XFCE-Source=file:///usr/share/applications/gmail.desktop
+Comment=
+Path=
+StartupNotify=false
