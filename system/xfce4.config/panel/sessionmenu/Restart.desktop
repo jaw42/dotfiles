@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Restart
+Comment=Restart the computer
+Exec=/home/josh/.config/xfce4/panel/sessionmenu/exitrestart.sh
+Icon=/usr/share/icons/elementary/actions/48/view-refresh.svg
+Terminal=false
+Type=Application
+MimeType=text/plain
+StartupNotify=true

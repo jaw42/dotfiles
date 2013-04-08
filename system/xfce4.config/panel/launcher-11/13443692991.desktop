@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=brightness
+Comment=Change the brightness of the screen
+Exec=/home/josh/.scripts/brightness.sh
+Icon=covergloobus-panel
+Path=
+Terminal=false
+StartupNotify=false

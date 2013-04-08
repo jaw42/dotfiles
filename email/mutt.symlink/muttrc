@@ -2,10 +2,13 @@
 
 # Change the following six lines to match your Gmail account details
 set imap_user	= "wainwright.ja@gmail.com"
+
+##Keep password out of repo##
 source ~/.muttpass
+
 set smtp_url 	= "smtp://wainwright.ja@smtp.gmail.com:587/"
-set smtp_pass 	= $imap_pass
-set from 		= $imap_user
+set smtp_pass 	= $imap_pass		# use same password as imap_user
+set from 		= $imap_user		# and the same username
 set realname 	= "Josh Wainwright"
 
 set alias_file = "~/.mutt/aliases"
@@ -15,13 +18,13 @@ source $alias_file
 
 set editor = "nano"
 mailboxes "=imaps://imap.gmail.com/[Gmail]/Inbox"
-unset arrow_cursor
+unset arrow_cursor			# uses a small arrow on left instead of highlighting the whole row.
 set   fast_reply
-unset mark_old             # don't mark unread messages as Old
-unset menu_scroll          # scroll menu a page on last line
-set   pager_stop           # don't go to next message at end of message
+unset mark_old				# don't mark unread messages as Old
+unset menu_scroll			# scroll menu a page on last line
+set   pager_stop			# don't go to next message at end of message
 set   pager_index_lines="15"
-set   sleep_time = 0
+set   sleep_time = 0		# speed up connection and change folder
 
 bind pager <up> previous-line
 bind pager <down> next-line
@@ -42,11 +45,11 @@ set message_cachedir=~/.mutt/cache/bodies
 set certificate_file=~/.mutt/certificates
 set move = no
 set include
-set sort = 'threads'
+set sort = 'threads'		# default sort method
 set sort_aux = 'reverse-last-date-received'
 set auto_tag = yes
 
-set markers=no # don't put '+' at the beginning of wrapped lines
+set markers=no 				# don't put '+' at the beginning of wrapped lines
 
 ignore "Authentication-Results:"
 ignore "DomainKey-Signature:"
@@ -57,8 +60,8 @@ alternative_order text/plain text/html *
 
 auto_view text/html
 
-bind editor <Tab> complete-query
-bind editor ^T complete
+#bind editor <Tab> complete-query
+#bind editor ^T complete
 bind editor <space> noop
 bind index G imap-fetch-mail
 
@@ -70,6 +73,5 @@ macro index,pager ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
 macro index,pager gs "<change-folder>=[Gmail]/Starred<enter>" "Go to starred messages"
 macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
 macro index,pager gm "<change-folder>=[Gmail]/Sent Mail<enter>" "Go to my sent messages"
-# -*-muttrc-*-
 
 source ~/.mutt/colors
