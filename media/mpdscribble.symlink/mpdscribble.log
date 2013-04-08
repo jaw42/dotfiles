@@ -13794,3 +13794,19 @@
 2013-04-06T17:51:09+0100 [last.fm] sending 'now playing' notification
 2013-04-06T17:51:09+0100 [last.fm] OK
 2013-04-06T23:14:42+0100 shutting down
+2013-04-08T10:49:45+0100 connected to mpd 0.17.0 at localhost
+2013-04-08T10:49:45+0100 starting mpdscribble (mdc 0.22)
+2013-04-08T10:49:45+0100 loaded 1 song from /home/josh/.mpdscribble/lastfm.journal
+2013-04-08T10:49:47+0100 [last.fm] handshake successful
+2013-04-08T10:49:47+0100 [last.fm] submitting 1 song
+2013-04-08T10:49:55+0100 new song detected (Dire Straits - Romeo and Juliet), id: 0, pos: 0
+2013-04-08T10:49:55+0100 [last.fm] OK
+2013-04-08T10:49:55+0100 [last.fm] sending 'now playing' notification
+2013-04-08T10:49:55+0100 [last.fm] OK
+2013-04-08T10:49:56+0100 new song detected (Dire Straits - Skateaway), id: 1, pos: 0
+2013-04-08T10:49:57+0100 [last.fm] sending 'now playing' notification
+2013-04-08T10:49:57+0100 [last.fm] OK
+2013-04-08T10:59:46+0100 [last.fm] saved 0 songs to /home/josh/.mpdscribble/lastfm.journal
+2013-04-08T11:02:12+0100 new song detected (Deacon Blue - Dignity), id: 6, pos: 0
+2013-04-08T11:02:13+0100 [last.fm] sending 'now playing' notification
+2013-04-08T11:02:13+0100 [last.fm] OK

@@ -1,3 +1,4 @@
+#a function that will display the files and folders in pwd sorted by size and displayed in human readable format
 function duf {
   du -sk "$@" | sort -n | while read size fname;
     do for unit in k M G T P E Z Y;

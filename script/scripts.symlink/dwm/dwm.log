@@ -672,3 +672,90 @@ sh: lsb_release: command not found
 [017:216] HandleOnlineCheck: Starting check
 [017:216] HandleOnlineCheck: OK; current state: 3
 Failed to open VDPAU backend libvdpau_nvidia.so: cannot open shared object file: No such file or directory
+
+** (spacefm:5552): WARNING **: Can't load fallback CSS resource: Failed to import: The resource at '/org/gnome/adwaita/gtk-fallback.css' does not exist
+spacefm: No such property from XGetWindowProperty() _NET_CURRENT_DESKTOP
+
+(spacefm:5552): Gtk-CRITICAL **: gtk_widget_event: assertion `WIDGET_REALIZED_FOR_EVENT (widget, event)' failed
+
+(spacefm:5552): Gtk-CRITICAL **: gtk_widget_event: assertion `WIDGET_REALIZED_FOR_EVENT (widget, event)' failed
+
+(spacefm:5552): Gtk-CRITICAL **: gtk_widget_event: assertion `WIDGET_REALIZED_FOR_EVENT (widget, event)' failed
+listen: bind to '0.0.0.0:6600' failed: Address already in use (continuing anyway, because binding to '[::]:6600' succeeded)
+daemon: cannot init supplementary groups of user "josh": Operation not permitted
+output: No "audio_output" defined in config file
+output: Attempt to detect audio output device
+output: Attempting to detect a alsa audio device
+output: Successfully detected a alsa audio device
+
+(spacefm:5552): Gtk-CRITICAL **: gtk_widget_event: assertion `WIDGET_REALIZED_FOR_EVENT (widget, event)' failed
+
+(spacefm:5552): Gtk-CRITICAL **: gtk_widget_event: assertion `WIDGET_REALIZED_FOR_EVENT (widget, event)' failed
+
+(spacefm:5552): Gtk-CRITICAL **: gtk_widget_event: assertion `WIDGET_REALIZED_FOR_EVENT (widget, event)' failed
+
+(spacefm:5552): Gtk-CRITICAL **: gtk_widget_event: assertion `WIDGET_REALIZED_FOR_EVENT (widget, event)' failed
+
+(spacefm:5552): Gtk-CRITICAL **: gtk_widget_event: assertion `WIDGET_REALIZED_FOR_EVENT (widget, event)' failed
+
+(spacefm:5552): Gtk-CRITICAL **: gtk_widget_event: assertion `WIDGET_REALIZED_FOR_EVENT (widget, event)' failed
+
+(spacefm:5552): Gtk-CRITICAL **: gtk_widget_event: assertion `WIDGET_REALIZED_FOR_EVENT (widget, event)' failed
+
+(spacefm:5552): Gtk-CRITICAL **: gtk_widget_event: assertion `WIDGET_REALIZED_FOR_EVENT (widget, event)' failed
+
+(spacefm:5552): Gtk-CRITICAL **: gtk_widget_event: assertion `WIDGET_REALIZED_FOR_EVENT (widget, event)' failed
+
+(spacefm:5552): Gtk-CRITICAL **: gtk_widget_event: assertion `WIDGET_REALIZED_FOR_EVENT (widget, event)' failed
+
+(spacefm:5552): Gtk-CRITICAL **: gtk_widget_event: assertion `WIDGET_REALIZED_FOR_EVENT (widget, event)' failed
+
+(spacefm:5552): Gtk-CRITICAL **: gtk_widget_event: assertion `WIDGET_REALIZED_FOR_EVENT (widget, event)' failed
+Failed to open VDPAU backend libvdpau_nvidia.so: cannot open shared object file: No such file or directory
+** Message: console message: http://s.ytimg.com/yts/jsbin/www-watch-extra-vflTE8ErJ.js @419: TypeError: 'undefined' is not an object (evaluating 'c.length')
+
+** Message: console message: http://www.beckgoldsmith.co.uk/ @215: SyntaxError: Unexpected token '<'
+
+** Message: console message: https://www.facebook.com/dialog/oauth?client_id=20320310172&response_type=token%2Csigned_request%2Ccode&display=none&domain=www.beckgoldsmith.co.uk&origin=1&redirect_uri=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D21%23cb%3Df2b21fed5c%26origin%3Dhttp%253A%252F%252Fwww.beckgoldsmith.co.uk%252Ff3d8ccbc1%26domain%3Dwww.beckgoldsmith.co.uk%26relation%3Dparent&sdk=joey @1: Given URL is not permitted by the application configuration.: One or more of the given URLs is not allowed by the App's settings.  It must match the Website URL or Canvas URL, or the domain must be a subdomain of one of the App's domains.
+
+** Message: console message: http://s0.bcbits.com/tmpdata/cache/embedded_player_bundle_572bc390e5faaef0d44d2283b54dcc86.js @429: 10:52:13.543:
+
+** Message: console message: http://s0.bcbits.com/tmpdata/cache/embedded_player_bundle_572bc390e5faaef0d44d2283b54dcc86.js @429: 10:52:13.642:
+
+** Message: console message: http://s0.bcbits.com/tmpdata/cache/embedded_player_bundle_572bc390e5faaef0d44d2283b54dcc86.js @429: 10:52:13.643:
+
+** Message: console message: https://www.facebook.com/dialog/oauth?client_id=20320310172&response_type=token%2Csigned_request%2Ccode&display=none&domain=www.beckgoldsmith.co.uk&origin=1&redirect_uri=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D21%23cb%3Df519d1e4%26origin%3Dhttp%253A%252F%252Fwww.beckgoldsmith.co.uk%252Ffb76594ec%26domain%3Dwww.beckgoldsmith.co.uk%26relation%3Dparent&sdk=joey @1: Given URL is not permitted by the application configuration.: One or more of the given URLs is not allowed by the App's settings.  It must match the Website URL or Canvas URL, or the domain must be a subdomain of one of the App's domains.
+
+** Message: console message: http://www.beckgoldsmith.co.uk/music/ @208: SyntaxError: Unexpected token '<'
+
+** Message: console message: https://www.facebook.com/dialog/oauth?client_id=20320310172&response_type=token%2Csigned_request%2Ccode&display=none&domain=www.beckgoldsmith.co.uk&origin=1&redirect_uri=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D21%23cb%3Df2948fa158%26origin%3Dhttp%253A%252F%252Fwww.beckgoldsmith.co.uk%252Ff3fd79be9c%26domain%3Dwww.beckgoldsmith.co.uk%26relation%3Dparent&sdk=joey @1: Given URL is not permitted by the application configuration.: One or more of the given URLs is not allowed by the App's settings.  It must match the Website URL or Canvas URL, or the domain must be a subdomain of one of the App's domains.
+
+** Message: console message:  @0: Unsafe JavaScript attempt to access frame with URL http://www.beckgoldsmith.co.uk/music/ from frame with URL https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F875988&show_artwork=true. Domains, protocols and ports must match.
+
+
+Failed to open VDPAU backend libvdpau_nvidia.so: cannot open shared object file: No such file or directory
+** Message: console message: http://s.ytimg.com/yts/jsbin/www-watch-extra-vflTE8ErJ.js @419: TypeError: 'undefined' is not an object (evaluating 'c.length')
+
+Failed to open VDPAU backend libvdpau_nvidia.so: cannot open shared object file: No such file or directory
+** Message: console message: http://s.ytimg.com/yts/jsbin/www-watch-extra-vflTE8ErJ.js @419: TypeError: 'undefined' is not an object (evaluating 'c.length')
+
+Failed to open VDPAU backend libvdpau_nvidia.so: cannot open shared object file: No such file or directory
+** Message: console message: http://s.ytimg.com/yts/jsbin/www-watch-extra-vflTE8ErJ.js @419: TypeError: 'undefined' is not an object (evaluating 'c.length')
+
+Failed to open VDPAU backend libvdpau_nvidia.so: cannot open shared object file: No such file or directory
+** Message: console message: http://s.ytimg.com/yts/jsbin/www-watch-extra-vflTE8ErJ.js @419: TypeError: 'undefined' is not an object (evaluating 'c.length')
+
+
+(spacefm:5552): Gtk-CRITICAL **: gtk_widget_event: assertion `WIDGET_REALIZED_FOR_EVENT (widget, event)' failed
+
+(spacefm:5552): Gtk-CRITICAL **: gtk_widget_event: assertion `WIDGET_REALIZED_FOR_EVENT (widget, event)' failed
+
+(spacefm:5552): Gtk-CRITICAL **: gtk_widget_event: assertion `WIDGET_REALIZED_FOR_EVENT (widget, event)' failed
+
+(spacefm:5552): Gtk-CRITICAL **: gtk_widget_event: assertion `WIDGET_REALIZED_FOR_EVENT (widget, event)' failed
+
+(spacefm:5552): Gtk-CRITICAL **: gtk_widget_event: assertion `WIDGET_REALIZED_FOR_EVENT (widget, event)' failed
+
+(spacefm:5552): Gtk-CRITICAL **: gtk_widget_event: assertion `WIDGET_REALIZED_FOR_EVENT (widget, event)' failed
+
+(spacefm:5552): Gtk-CRITICAL **: gtk_widget_event: assertion `WIDGET_REALIZED_FOR_EVENT (widget, event)' failed
