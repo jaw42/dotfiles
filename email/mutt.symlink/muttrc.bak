@@ -1,0 +1,124 @@
+# A basic .muttrc for use with Gmail
+
+# Gmail Account Details ------------------------------------------------------------
+set imap_user	= "wainwright.ja@gmail.com"						# Username of the email account
+set from 		= $imap_user									# Use same username for sent emails
+set realname 	= "Josh Wainwright"								# My name to add to sent emails
+set smtp_url 	= "smtp://wainwright.ja@smtp.gmail.com:587/"
+set smtp_pass 	= $imap_pass									# use same password as imap_user
+
+##Keep password out of repo##
+source ~/.mutt/.muttpass
+
+# Gmail Folder Setup ------------------------------------------------------------
+  set hostname = gmail.com
+mailboxes "=imaps://imap.gmail.com/[Gmail]/Inbox"		# The default location to load and check for new mails
+  set postponed="imaps://imap.gmail.com/[Gmail]/Drafts"	# Location for unfinished drafts
+# set record = "+[GMail]/Sent Mail"
+unset record											# Gmail automatically saves sent emails so unset this
+  set folder = "imaps://imap.gmail.com:993"
+  set spoolfile = "+INBOX"
+
+# Aliases (For Address Book) -----------------------------------------------------
+set alias_file = "~/.mutt/aliases"
+set sort_alias = alias
+set reverse_alias = yes
+source $alias_file
+
+# Header Options -----------------------------------------------------------------
+ignore *                                # ignore all headers
+unignore from: to: cc: date: subject:   # show only these
+unhdr_order *                           # some distros order things by default
+hdr_order from: to: cc: date: subject:  # and in this order
+alternative_order text/plain text/html *
+
+# Status Bar ---------------------------------------------------------------------
+set status_chars  = " *%A"
+set status_format = "---[ Folder: %f ]---[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]---%>-%?p?( %p postponed )?---"
+
+# Sidebar ------------------------------------------------------------------------
+unset sidebar_visible
+  set sidebar_delim     = ' |'
+  set sidebar_width     = 35
+  set sidebar_sort 	  = yes
+  set sidebar_shortpath = yes
+color sidebar_new color221 color233
+macro index b '<enter-command>toggle sidebar_visible<enter><refresh>'
+macro pager b '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
+ bind index,pager \CP sidebar-prev 		# Ctrl-n, Ctrl-p to select next, previous folder.
+ bind index,pager \CN sidebar-next 		# Ctrl-o to open selected folder.
+ bind index,pager \CO sidebar-open
+
+# Index View Settings ------------------------------------------------------------
+unset arrow_cursor			# uses a small arrow on left instead of highlighting the whole row.
+set uncollapse_jump         # don't collapse on an unread message
+set sort_re                 # thread based on regex
+set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
+
+
+# General Settings ---------------------------------------------------------------
+  set wait_key = no
+  set editor = "nano"
+  set fast_reply
+unset mark_old				# don't mark unread messages as Old
+unset menu_scroll			# scroll menu a page on last line
+  set pager_stop			# don't go to next message at end of message
+  set pager_index_lines="15"
+  set sleep_time = 0		# speed up connection and change folder
+  set markers=no 			# don't put '+' at the beginning of wrapped lines
+  set header_cache=~/.mutt/cache/headers
+  set message_cachedir=~/.mutt/cache/bodies
+  set certificate_file=~/.mutt/certificates
+  set move = no
+  set include
+  set sort = 'threads'		# default sort method
+  set sort_aux = 'reverse-last-date-received'
+  set auto_tag = yes
+  set send_charset="utf-8"
+  set index_format="%4C %Z %{%b %d} %-15.15L (%4c) %s"
+unset mark_old				# read/new is good enough for me
+  set beep_new             	# bell on new mails
+  set pipe_decode          	# strip headers and eval mimes when piping
+  set thorough_search      	# strip headers and eval mimes before searching
+
+auto_view text/html image/*
+
+# IMAP Options -------------------------------------------------------------------
+set imap_check_subscribed
+set mail_check = 120
+set timeout = 3
+set imap_keepalive = 300
+
+ignore "Authentication-Results:"
+ignore "DomainKey-Signature:"
+ignore "DKIM-Signature:"
+
+# KeyBindings -------------------------------------------------------------------
+
+bind index G imap-fetch-mail
+bind index <tab>    sync-mailbox
+bind index <space>  collapse-thread
+
+bind pager <up> previous-line
+bind pager <down> next-line
+
+#bind editor <Tab> complete-query
+#bind editor ^T complete
+bind editor <space> noop
+
+# Gmail-style keyboard shortcuts
+macro index,pager y "<save-message>imaps://imap.gmail.com/[Gmail]/All Mail<enter>" "Gmail archive message"
+macro index,pager d "<save-message>imaps://imap.gmail.com/[Gmail]/Trash<enter>" "Gmail delete message"
+macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index,pager ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
+macro index,pager gs "<change-folder>=[Gmail]/Starred<enter>" "Go to starred messages"
+macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
+macro index,pager gm "<change-folder>=[Gmail]/Sent Mail<enter>" "Go to my sent messages"
+
+macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox" # Saner copy/move dialogs
+macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
+
+# Colours -----------------------------------------------------------------------
+source ~/.mutt/colors
+
+source ~/.mutt/mailboxes
