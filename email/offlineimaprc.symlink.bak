@@ -1,0 +1,71 @@
+[general]
+
+accounts = JoshWainwright
+
+ui = Blinkenlights
+
+sync = false
+
+[mbnames]
+
+enabled = no
+filename = ~/Mutt/muttrc.mailboxes
+header = "mailboxes "
+peritem = "+%(accountname)s/%(foldername)s"
+sep = " "
+footer = "\n"
+
+
+[Account JoshWainwright]
+localrepository = JoshWainwright-Local
+remoterepository = JoshWainwright-Remote
+
+maxsize = 60000000
+
+
+axage = 300
+
+
+
+[Repository JoshWainwright-Local]
+
+type = Maildir
+
+localfolders = ~/.mail/JoshWainwright
+
+ep = /.
+
+
+[Repository JoshWainwright-Remote]
+type = Gmail
+
+emotehost = examplehost
+
+sl = yes
+
+emoteuser = wainwright.ja@gmail.com
+
+   remotepassfile = ~/.mutt/.imappass
+idlefolders = ['INBOX']
+maxconnections = 1
+
+ametrans = lambda folder: {'drafts':  '[Gmail]/Drafts',
+                            'sent':    '[Gmail]/Sent Mail',
+                            'flagged': '[Gmail]/Starred',
+                            'trash':   '[Gmail]/Trash',
+                            'archive': '[Gmail]/All Mail',
+                            }.get(folder, folder
+
+olderfilter = lambda folder: folder not in ['[Gmail]/Trash',
+                                             '[Gmail]/Spam',
+                                             ]
+
+
+
+
+[Repository GmailExample]
+
+type = Gmail
+
+emoteuser = username@gmail.com
+
