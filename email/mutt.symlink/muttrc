@@ -79,6 +79,7 @@ unset menu_scroll           # scroll menu a page on last line
   set markers=no            # don't put '+' at the beginning of wrapped lines
   set move = no
   set include
+  set imap_peek = no        # correct the mark as read in the archive folder properly
   set sort = 'threads'      # default sort method
   set sort_aux = 'reverse-last-date-received'
   set auto_tag = yes
@@ -89,7 +90,7 @@ unset mark_old              # read/new is good enough for me
   set pipe_decode           # strip headers and eval mimes when piping
   set thorough_search      	# strip headers and eval mimes before searching
 
-auto_view text/html
+auto_view text/html image/*
 
 # IMAP Options -------------------------------------------------------------------
 set imap_check_subscribed
@@ -111,32 +112,32 @@ source ~/.mutt/colors
 macro index S <tag-prefix><save-message>? "Save tagged messages"
 
 #Update mail with offlineimap
-macro index O "<shell-escape>offlineimap -q<enter>"        "run offlineimap to sync all mail"
-macro index o "<shell-escape>offlineimap -qf INBOX<enter>" "run offlineimap to sync inbox"
+macro index,index O "<shell-escape>offlineimap -qu basic | grep -v 'Skipping'<enter>"        "run offlineimap to sync all mail"
+macro index,index o "<shell-escape>offlineimap -qf INBOX<enter>" "run offlineimap to sync inbox"
 
 # Get me out off here
 macro index Q   ":set quit=yes\nqy"  "Quit mutt without asking"
 macro browser Q ":set quit=yes\nqqy" "Quit mutt without asking"
 
 # Moves
-bind index <up> previous-entry
-bind index <down> next-entry
+bind index  <up> previous-entry
+bind index  <down> next-entry
 macro index <right> <display-message>
 macro index <left> <sync-mailbox><change-folder>? "Go to the folder menu"
 
-bind index - previous-page
-bind index <space> next-page
+bind index  - previous-page
+bind index  <space> next-page
 
-macro pager   <left>     <exit>
-macro pager   <right>    <noop>
-macro pager   <up>       <previous-line>
-macro pager   <down>     <next-line>
+macro pager <left>     <exit>
+macro pager <right>    <noop>
+macro pager <up>       <previous-line>
+macro pager <down>     <next-line>
 
-macro pager   <pageup>   <previous-entry>
-macro pager   <pagedown> <next-entry>
+macro pager <pageup>   <previous-entry>
+macro pager <pagedown> <next-entry>
 
 #macro index   <tab>      <next-unread><enter>
-bind index <tab>    sync-mailbox
+bind index  <tab>    sync-mailbox
 
 macro browser <space>    <check-new>
 
@@ -145,7 +146,7 @@ macro browser <left>     <home><return> "Goto previous folder"
 
 #views
 bind index P collapse-all
-bind index \cp  collapse-thread
+bind index p  collapse-thread
 
 #commands
 bind index x sync-mailbox
@@ -160,9 +161,8 @@ bind compose <return> send-message
 macro index,pager y "<save-message>+josh-wainwright/[Gmail]/Archive<enter>" "Gmail archive message"
 macro index,pager gi "<change-folder>=josh-wainwright/INBOX<enter>" "Go to inbox"
 macro index,pager ga "<change-folder>=josh-wainwright/[Gmail]/Archive<enter>" "Go to all mail"
-macro index,pager gs "<change-folder>=josh-wainwright/[Gmail]/Starred<enter>" "Go to starred messages"
 macro index,pager gd "<change-folder>=josh-wainwright/[Gmail]/Drafts<enter>" "Go to drafts"
-macro index,pager gm "<change-folder>=josh-wainwright/[Gmail]/Sent Mail<enter>" "Go to my sent messages"
+macro index,pager gs "<change-folder>=josh-wainwright/[Gmail]/Sent<enter>" "Go to my sent messages"
 
 # If I would bind these the d button wouldn't work anymore.
 macro index,pager <delete> d
@@ -172,9 +172,3 @@ macro index,pager s <save-message>?
 macro index A "!$EDITOR ~/.mutt/aliases\n:source ~/.mutt/aliases\n" "Edit aliases file and reload it"
 macro pager A "!$EDITOR ~/.mutt/aliases\n:source ~/.mutt/aliases\n" "Edit aliases file and reload it"
 
-# I don't have a printer. Poor trees. :'(
-bind index p noop
-bind pager p noop
-
-macro index M "T \n;WN^t \n" "Mark all messages read"
-macro pager M "T \n;WN^t \n" "Mark all messages read"
