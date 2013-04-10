@@ -1,16 +1,29 @@
-/* See LICENSE file for copyright and license details. */
-#include <X11/XF86keysym.h>
-
-/* appearance */
-static const char font[]            = "-*-inconsolata-medium-r-*-*-14-*-*-*-*-*-*-*";
-// static const char font[]            = "-*-stlarch-medium-r-*-*-10-*-*-*-*-*-*-*"",""-*-inconsolata-medium-r-*-*-13-*-*-*-*-*-*-*";
+/*
 static const char normbordercolor[] = "#444444";
 static const char normbgcolor[]     = "#222222";
 static const char normfgcolor[]     = "#999999";
 static const char selbordercolor[]  = "#005577";
 static const char selbgcolor[]      = "#005577";
 static const char selfgcolor[]      = "#eeeeee";
+*/
+/* See LICENSE file for copyright and license details. */
+#include <X11/XF86keysym.h>
 
+/* appearance */
+static const char font[]            = "-*-inconsolata-medium-r-*-*-14-*-*-*-*-*-*-*";
+#define NUMCOLORS 9
+static const char colors[NUMCOLORS][ColLast][9] = {
+// border foreground background
+{ "#444444", "#999999", "#222222" }, // 0 = normal
+{ "#005577", "#eeeeee", "#005577" }, // 1 = selected
+{ "#212121", "#DC322F", "#222222" }, // 2 = red
+{ "#212121", "#A6E22E", "#222222" }, // 3 = green
+{ "#212121", "#FFFF55", "#222222" }, // 4 = yellow
+{ "#212121", "#1E6FA8", "#222222" }, // 5 = blue
+{ "#212121", "#EB2657", "#222222" }, // 6 = magenta
+{ "#212121", "#66D9EF", "#222222" }, // 7 = cyan
+{ "#212121", "#AAAAAA", "#222222" }, // 8 = grey
+};
 static const unsigned int panelpadding  = 4;    /* padding from fonts on panel */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
@@ -53,7 +66,8 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
+// static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
+static const char  *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", colors[0][ColBG], "-nf", colors[0][ColFG], "-sb", colors[1][ColBG], "-sf", colors[1][ColFG], NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static const char *volumedown[] = { "amixer", "-q", "set", "Master", "2%-", "unmute", NULL };

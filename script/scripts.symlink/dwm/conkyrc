@@ -35,15 +35,25 @@ cpu_avg_samples 2
 TEXT
 # { "full_text" : "${if_mpd_playing}${if_match ${mpd_status}=="playing"}♪ ${else}${if_match ${mpd_status}=="paused"}║ ${endif}${mpd_smart} ${mpd_bar}${else}MPD Off${endif}"
 
-[ ${if_mpd_playing}#
-${if_match "$mpd_status"=="Playing"}|> ${endif}#
-${if_match "$mpd_status"=="Paused"}|| ${endif}#
-${mpd_smart} ${mpd_bar}${else}MPD Off${endif} ]#
-#[ Mail:${execi 60 mailx -A gmail -H | grep " U " | wc -l} ]#
-[ Pac:${execi 60 pacman -Qu | wc -l} ]#
-[ (${addrs wlan0}) ${wireless_bitrate wlan0} ${wireless_link_qual_perc wlan0}% ]#
-[ ${fs_free /}(${fs_free_perc /}%) RAM ${memperc}% ]#
-[ ${uptime}    #
-${time %I:%M%P  %e %b'%g}#
+# [ ${if_mpd_playing}#
+# ${if_match "$mpd_status"=="Playing"}|> ${endif}#
+# ${if_match "$mpd_status"=="Paused"}|| ${endif}#
+# ${mpd_smart} ${mpd_bar}${else}MPD Off${endif} ]#
+# [ Mail:${execi 120 newmail} ]#
+# [ Pac:${execi 60 pacman -Qu | wc -l} ]#
+# [ (${addrs wlan0}) ${wireless_bitrate wlan0} ${wireless_link_qual_perc wlan0}% ]#
+# [ ${fs_free /}(${fs_free_perc /}%) RAM ${memperc}% ]#
+# [ ${uptime}  #
+# ${time %I:%M%P  %e %b'%g}#
 #${if_running dropbox}<>${endif}
 
+${if_mpd_playing}#
+${if_match "$mpd_status"=="Playing"}|> ${endif}#
+${if_match "$mpd_status"=="Paused"}|| ${endif}#
+${mpd_smart} ${mpd_bar}${else}MPD Off${endif} #
+][ Mail:${execi 120 newmail} #
+][ Pac:${execi 60 pacman -Qu | wc -l} #
+][ (${addrs wlan0}) ${wireless_bitrate wlan0} ${wireless_link_qual_perc wlan0}% #
+][ ${fs_free /}(${fs_free_perc /}%) RAM ${memperc}% #
+][ ${uptime}  #
+${time %I:%M%P  %e %b'%g}#

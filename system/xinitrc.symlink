@@ -16,7 +16,12 @@ xrdb -merge ~/.Xresources
 xset +fp /usr/share/fonts/local
 xset fp rehash
 
-conky -c ~/.scripts/dwm/conkyrc | while read -r; do xsetroot -name "$REPLY"; done &
+#conky -c ~/.scripts/dwm/conkyrc | while read -r; do xsetroot -name "$REPLY"; done &
+while true; do
+	~/.scripts/dwm/status.sh
+   #sleep 1m    # Update time every minute
+   sleep 10s
+done &
 exec ~/.scripts/dwm/startdwm
 #exec selectwm
 #exec goomwwm
