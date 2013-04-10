@@ -20,6 +20,7 @@ source=(http://dl.suckless.org/dwm/dwm-$pkgver.tar.gz
   dwm-6.0-panel_padding.patch
   dwm-6.0-deck.diff
   dwm-6.0-systray.diff
+  dwm-6.0-statuscolors.diff
   )
 
 build() {
@@ -27,7 +28,8 @@ build() {
   # patch -p1 -i ../dwm-6.0-statusallmons.diff
   patch -p1 -i ../dwm-6.0-panel_padding.patch
   patch -p1 -i ../dwm-6.0-deck.diff
-  patch -p1 -i ../dwm-6.0-systray.diff
+  # patch -p1 -i ../dwm-6.0-systray.diff
+  patch -p1 -i ../dwm-6.0-statuscolors.diff
   cp $srcdir/config.h config.h
   sed -i 's/CPPFLAGS =/CPPFLAGS +=/g' config.mk
   sed -i 's/^CFLAGS = -g/#CFLAGS += -g/g' config.mk
@@ -45,242 +47,79 @@ package() {
   install -m644 -D $srcdir/dwm.desktop $pkgdir/usr/share/xsessions/dwm.desktop
 }
 md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '8a211e58b0c8196be36cf90484631457'
-         '939f403a71b6e85261d09fc3412269ee'
-         '9e4e876a6f0ee77034694a223b2ca68a'
-         'b56a640d0b701b9d2a6416ed3d6fce6a'
-         'e4631fba6d4a255310b136da3118be3a')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '8a211e58b0c8196be36cf90484631457'
-         '939f403a71b6e85261d09fc3412269ee'
-         'b56a640d0b701b9d2a6416ed3d6fce6a'
-         'e4631fba6d4a255310b136da3118be3a')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '8a211e58b0c8196be36cf90484631457'
-         '939f403a71b6e85261d09fc3412269ee'
-         '9e4e876a6f0ee77034694a223b2ca68a'
-         'b56a640d0b701b9d2a6416ed3d6fce6a')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '615429d2b6679124c0301bfb2458451d'
-         '939f403a71b6e85261d09fc3412269ee'
-         '9e4e876a6f0ee77034694a223b2ca68a'
-         'b56a640d0b701b9d2a6416ed3d6fce6a')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '8a211e58b0c8196be36cf90484631457'
-         '939f403a71b6e85261d09fc3412269ee'
-         '9c0296d82cae8db9dfeece7e3b79bc54'
-         'b56a640d0b701b9d2a6416ed3d6fce6a')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '8a211e58b0c8196be36cf90484631457'
-         '939f403a71b6e85261d09fc3412269ee'
-         '929f7ec8597c1cc02e63c452f24f1b52')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '8a211e58b0c8196be36cf90484631457'
-         '939f403a71b6e85261d09fc3412269ee')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '8a211e58b0c8196be36cf90484631457'
-         '939f403a71b6e85261d09fc3412269ee'
-         '929f7ec8597c1cc02e63c452f24f1b52')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '929f7ec8597c1cc02e63c452f24f1b52'
-         '8a211e58b0c8196be36cf90484631457'
-         '939f403a71b6e85261d09fc3412269ee')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '929f7ec8597c1cc02e63c452f24f1b52'
-         '8a211e58b0c8196be36cf90484631457'
-         '939f403a71b6e85261d09fc3412269ee')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '929f7ec8597c1cc02e63c452f24f1b52'
-         '8a211e58b0c8196be36cf90484631457'
-         '939f403a71b6e85261d09fc3412269ee')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '8a211e58b0c8196be36cf90484631457'
-         '939f403a71b6e85261d09fc3412269ee'
-         'b56a640d0b701b9d2a6416ed3d6fce6a'
-         'e4631fba6d4a255310b136da3118be3a')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '8a211e58b0c8196be36cf90484631457'
-         '939f403a71b6e85261d09fc3412269ee'
-         'b56a640d0b701b9d2a6416ed3d6fce6a'
-         'e4631fba6d4a255310b136da3118be3a')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '8a211e58b0c8196be36cf90484631457'
-         '939f403a71b6e85261d09fc3412269ee'
-         'b56a640d0b701b9d2a6416ed3d6fce6a'
-         'e4631fba6d4a255310b136da3118be3a')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '8a211e58b0c8196be36cf90484631457'
-         '939f403a71b6e85261d09fc3412269ee'
-         'c1cc9337a7caa04a628449c9da900ccc')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '8a211e58b0c8196be36cf90484631457'
-         '939f403a71b6e85261d09fc3412269ee'
-         '1ad29b4d7cbae21a59aa4e279f40085a')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '1ad29b4d7cbae21a59aa4e279f40085a'
-         '8a211e58b0c8196be36cf90484631457'
-         '939f403a71b6e85261d09fc3412269ee')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         'e3893cd04307986a3f7f61ac3a5464ed'
-         '8a211e58b0c8196be36cf90484631457'
-         '939f403a71b6e85261d09fc3412269ee')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '8a211e58b0c8196be36cf90484631457'
-         '939f403a71b6e85261d09fc3412269ee'
-         'b56a640d0b701b9d2a6416ed3d6fce6a'
-         'e4631fba6d4a255310b136da3118be3a')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '8a211e58b0c8196be36cf90484631457'
-         '939f403a71b6e85261d09fc3412269ee'
-         'ec2d36c620ce830c599232956092da0b'
-         'b56a640d0b701b9d2a6416ed3d6fce6a'
-         'e4631fba6d4a255310b136da3118be3a')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '8a211e58b0c8196be36cf90484631457'
-         '939f403a71b6e85261d09fc3412269ee'
-         'ca5f7e9f39b049accf6dcf25c1baeb6f'
-         'b56a640d0b701b9d2a6416ed3d6fce6a'
-         'e4631fba6d4a255310b136da3118be3a')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '8a211e58b0c8196be36cf90484631457'
-         '939f403a71b6e85261d09fc3412269ee'
-         'ca5f7e9f39b049accf6dcf25c1baeb6f')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '00f8f1672a539a85e521e0df105be6c9'
-         '939f403a71b6e85261d09fc3412269ee'
-         'd8a22315671eac026d374a7234e7352c')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '00f8f1672a539a85e521e0df105be6c9'
-         '939f403a71b6e85261d09fc3412269ee'
-         'f6aa42817f1aa320454fddadc7a35df6')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         'cfc22bc1d9d1c3d61d018246c2f0489e'
-         '939f403a71b6e85261d09fc3412269ee'
-         'f6aa42817f1aa320454fddadc7a35df6')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         'cfc22bc1d9d1c3d61d018246c2f0489e'
-         '939f403a71b6e85261d09fc3412269ee'
-         '8ced3919bb31cb5418388b9c0168a04d')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         'cfc22bc1d9d1c3d61d018246c2f0489e'
-         '939f403a71b6e85261d09fc3412269ee'
-         'd70b08d39e578bc7d301c41a47004630')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         'f3d1de04cfd9b247529227f575d1d55d'
-         '939f403a71b6e85261d09fc3412269ee'
-         'd70b08d39e578bc7d301c41a47004630')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '1413600fb9877125467348fc27a96fc0'
-         '939f403a71b6e85261d09fc3412269ee'
-         'd70b08d39e578bc7d301c41a47004630')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         'f3d1de04cfd9b247529227f575d1d55d'
+         '1cf1cceb938a626f06ca76a91dbf9c3f'
          '939f403a71b6e85261d09fc3412269ee'
          'e4631fba6d4a255310b136da3118be3a'
          '168825c2b07ca8acb88bef9602b3de5e'
-         'd70b08d39e578bc7d301c41a47004630')
+         '529bcb065c6aa47740ef19b8987cb824'
+         '1cf1cceb938a626f06ca76a91dbf9c3f')
 md5sums=('8bb00d4142259beb11e13473b81c0857'
-         'd48aade0459708ed61c08637cb54bfee'
+         '1cf1cceb938a626f06ca76a91dbf9c3f'
          '939f403a71b6e85261d09fc3412269ee'
          'e4631fba6d4a255310b136da3118be3a'
          '168825c2b07ca8acb88bef9602b3de5e'
-         'd70b08d39e578bc7d301c41a47004630')
+         '529bcb065c6aa47740ef19b8987cb824'
+         '1cf1cceb938a626f06ca76a91dbf9c3f')
 md5sums=('8bb00d4142259beb11e13473b81c0857'
-         'd48aade0459708ed61c08637cb54bfee'
-         '939f403a71b6e85261d09fc3412269ee'
-         'b56a640d0b701b9d2a6416ed3d6fce6a'
-         'e4631fba6d4a255310b136da3118be3a'
-         '168825c2b07ca8acb88bef9602b3de5e'
-         'd70b08d39e578bc7d301c41a47004630')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         'd48aade0459708ed61c08637cb54bfee'
-         '939f403a71b6e85261d09fc3412269ee'
-         'b56a640d0b701b9d2a6416ed3d6fce6a'
-         'e4631fba6d4a255310b136da3118be3a'
-         '168825c2b07ca8acb88bef9602b3de5e'
-         '0cb27ea891f0b12c243a037c245b1886')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         'd48aade0459708ed61c08637cb54bfee'
-         '939f403a71b6e85261d09fc3412269ee'
-         'b56a640d0b701b9d2a6416ed3d6fce6a'
-         'e4631fba6d4a255310b136da3118be3a'
-         '168825c2b07ca8acb88bef9602b3de5e'
-         '8bf8bd8131f5832330909618bf9a8905')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         'd48aade0459708ed61c08637cb54bfee'
+         '1cf1cceb938a626f06ca76a91dbf9c3f'
          '939f403a71b6e85261d09fc3412269ee'
          'e4631fba6d4a255310b136da3118be3a'
          '168825c2b07ca8acb88bef9602b3de5e'
-         '529bcb065c6aa47740ef19b8987cb824')
+         '529bcb065c6aa47740ef19b8987cb824'
+         '1cf1cceb938a626f06ca76a91dbf9c3f')
 md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '7cc6eb75e0e5c3ed05050b7b8f20190a'
+         '1cf1cceb938a626f06ca76a91dbf9c3f'
          '939f403a71b6e85261d09fc3412269ee'
          'e4631fba6d4a255310b136da3118be3a'
          '168825c2b07ca8acb88bef9602b3de5e'
-         '529bcb065c6aa47740ef19b8987cb824')
+         '529bcb065c6aa47740ef19b8987cb824'
+         '1cf1cceb938a626f06ca76a91dbf9c3f')
 md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '0ca3bf5937cd52ff262a5c401279c55d'
+         '1cf1cceb938a626f06ca76a91dbf9c3f'
          '939f403a71b6e85261d09fc3412269ee'
          'e4631fba6d4a255310b136da3118be3a'
          '168825c2b07ca8acb88bef9602b3de5e'
-         '529bcb065c6aa47740ef19b8987cb824')
+         '529bcb065c6aa47740ef19b8987cb824'
+         'cfb6d7785b35a80e0f44a48a5036af8b')
 md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '0ca3bf5937cd52ff262a5c401279c55d'
+         '1cf1cceb938a626f06ca76a91dbf9c3f'
          '939f403a71b6e85261d09fc3412269ee'
          'e4631fba6d4a255310b136da3118be3a'
          '168825c2b07ca8acb88bef9602b3de5e'
-         '529bcb065c6aa47740ef19b8987cb824')
+         '529bcb065c6aa47740ef19b8987cb824'
+         'cfb6d7785b35a80e0f44a48a5036af8b')
 md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '0ca3bf5937cd52ff262a5c401279c55d'
+         '3cfd46591294bc477fb6293a68d2f5e8'
          '939f403a71b6e85261d09fc3412269ee'
          'e4631fba6d4a255310b136da3118be3a'
          '168825c2b07ca8acb88bef9602b3de5e'
-         '529bcb065c6aa47740ef19b8987cb824')
+         '529bcb065c6aa47740ef19b8987cb824'
+         'cfb6d7785b35a80e0f44a48a5036af8b')
 md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '7cc6eb75e0e5c3ed05050b7b8f20190a'
+         '0d8fa89d458a51f5fe3723ade3bc1852'
          '939f403a71b6e85261d09fc3412269ee'
          'e4631fba6d4a255310b136da3118be3a'
          '168825c2b07ca8acb88bef9602b3de5e'
-         '529bcb065c6aa47740ef19b8987cb824')
+         '529bcb065c6aa47740ef19b8987cb824'
+         'cfb6d7785b35a80e0f44a48a5036af8b')
 md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '7cc6eb75e0e5c3ed05050b7b8f20190a'
-         '939f403a71b6e85261d09fc3412269ee')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         'c71348d883637e9dc555815b491ef122'
-         '939f403a71b6e85261d09fc3412269ee')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '0c7756cb13f98980e02fdb7907e1eb46'
-         '939f403a71b6e85261d09fc3412269ee')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         'd1599b625d692150235390320938b74a'
-         '939f403a71b6e85261d09fc3412269ee')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         'e0f1fc8c117efb27a9833aa5a43a3ca3'
-         '939f403a71b6e85261d09fc3412269ee')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         'e0f1fc8c117efb27a9833aa5a43a3ca3'
-         '939f403a71b6e85261d09fc3412269ee')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         'ace7db2b45efc6445ec510ccfa0d2ae9'
+         '0d8fa89d458a51f5fe3723ade3bc1852'
          '939f403a71b6e85261d09fc3412269ee'
          'e4631fba6d4a255310b136da3118be3a'
          '168825c2b07ca8acb88bef9602b3de5e'
-         '529bcb065c6aa47740ef19b8987cb824')
+         '529bcb065c6aa47740ef19b8987cb824'
+         'cfb6d7785b35a80e0f44a48a5036af8b')
 md5sums=('8bb00d4142259beb11e13473b81c0857'
-         'e6b755289b8523c45c312a178352f696'
+         '7653044933093b67a69d33ced63033fd'
          '939f403a71b6e85261d09fc3412269ee'
          'e4631fba6d4a255310b136da3118be3a'
          '168825c2b07ca8acb88bef9602b3de5e'
-         '529bcb065c6aa47740ef19b8987cb824')
+         '529bcb065c6aa47740ef19b8987cb824'
+         'cfb6d7785b35a80e0f44a48a5036af8b')
 md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '0ca3bf5937cd52ff262a5c401279c55d'
+         'e9ba54eb2c86fcd11a7b7a232721a2f0'
          '939f403a71b6e85261d09fc3412269ee'
          'e4631fba6d4a255310b136da3118be3a'
          '168825c2b07ca8acb88bef9602b3de5e'
-         '529bcb065c6aa47740ef19b8987cb824')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '0ca3bf5937cd52ff262a5c401279c55d'
-         '939f403a71b6e85261d09fc3412269ee'
-         'e4631fba6d4a255310b136da3118be3a'
-         '168825c2b07ca8acb88bef9602b3de5e'
-         '529bcb065c6aa47740ef19b8987cb824')
+         '529bcb065c6aa47740ef19b8987cb824'
+         'cfb6d7785b35a80e0f44a48a5036af8b')
