@@ -12,6 +12,9 @@ filetype indent on
 
 set autoread
 
+"Show line numbers 
+set number
+
 """"""""""""""""""""""""""""""
 " => Status line
 """"""""""""""""""""""""""""""
@@ -69,6 +72,9 @@ set showmatch
 " How many tenths of a second to blink when matching brackets
 set mat=8
 
+" Give visual feedback when the <leader> key is pressed
+set showcmd
+
 " No annoying sound on errors
 set noerrorbells
 set novisualbell
@@ -117,3 +123,10 @@ function! HasPaste()
     en
     return ''
 endfunction
+
+"""""""""""""""""""""""""""""
+" => Keybindings
+"""""""""""""""""""""""""""""
+noremap <leader>o <Esc>:CommandT<CR>
+noremap <leader>O <Esc>:CommandTFlush<CR>
+noremap <leader>m <Ese>:CommandTBuffer<CR>
