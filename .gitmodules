@@ -1,6 +1,9 @@
-[submodule "system/vim.symlink/bundle/nerdtree"]
-	path = system/vim.symlink/bundle/nerdtree
-	url = git://github.com/scrooloose/nerdtree.git
-[submodule "system/vim.symlink/bundle/fugitive"]
-	path = system/vim.symlink/bundle/fugitive
-	url = git://github.com/tpope/vim-fugitive.git
+[submodule "system/vim.symlink/bundle/command-t"]
+	path = system/vim.symlink/bundle/command-t
+	url = git://git.wincent.com/command-t.git
+[submodule "system/vim.symlink/bundle/snipmate"]
+	path = system/vim.symlink/bundle/snipmate
+	url = git://github.com/msanders/snipmate.vim.git
+[submodule "system/vim.symlink/bundle/bufexplorer"]
+	path = system/vim.symlink/bundle/bufexplorer
+	url = git://github.com/corntrace/bufexplorer.git
