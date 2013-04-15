@@ -20,10 +20,10 @@ MiscHighlightUrls=TRUE
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
 ScrollingLines=2000
 TitleMode=TERMINAL_TITLE_REPLACE
-Encoding=UTF-8
 ColorForeground=#F2F2F2
 ColorBackground=#272822
 ColorPalette=#000000000000;#dcdc32322f2f;#A6E22E;#AA5500;#1E6FA8;#EB2657;#66D9EF;#AAAAAA;#555555;#FF3A36;#C6F666;#FFFF55;#77A6D9;#E86988;#9CD9E5;#F8F8F2
 TabActivityTimeout=5
 ColorCursor=#f2f2f2f2f2f2
+Encoding=UTF-8
 

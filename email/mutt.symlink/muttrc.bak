@@ -147,8 +147,8 @@ bind pager P noop # I don't have a printer. Save the trees :P
 bind compose <return> send-message
 
 # Gmail-style keyboard shortcuts
-macro index,pager y "<save-message>imaps://imap.gmail.com/[Gmail]/All Mail<enter>" "Gmail archive message"
-macro index,pager d "<save-message>imaps://imap.gmail.com/[Gmail]/Trash<enter>" "Gmail delete message"
+macro index,pager y "<enter-command>unset trash\n <delete-message>" "Gmail archive message"
+macro index,pager d "<enter-command>set trash=\"imaps://imap.googlemail.com/[GMail]/Bin\"\n <delete-message>" "Gmail delete message"
 macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox"
 macro index,pager ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
 macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"

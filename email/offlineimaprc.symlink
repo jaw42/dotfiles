@@ -1,5 +1,5 @@
 [general]
-ui = ttyui
+ui = basic
 # ui = Blinkenlights
 accounts = JoshWainwright
 # pythonfile=~/.mutt/offlineimap.py
@@ -9,7 +9,7 @@ fsync = False
 localrepository = JoshWainwright-Local
 remoterepository = JoshWainwright-Remote
 status_backend = sqlite
-#postsynchook = notmuch new
+postsynchook = notmuch new
 
 [Repository JoshWainwright-Local]
 type = Maildir
@@ -23,16 +23,12 @@ nametrans = lambda folder: {'[Gmail]/Drafts':  '[Gmail]/Drafts',
 sep = /
 
 [Repository JoshWainwright-Remote]
-maxconnections = 3
+maxconnections = 1
 type = Gmail
 remoteuser = wainwright.ja@gmail.com
 remotepassfile = ~/.mutt/.imappass
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 realdelete = no
-# nametrans = lambda foldername: re.sub ('^\[gmail\]', 'Gmail',
-#                                re.sub ('sent_mail', 'Sent',
-#                                re.sub ('starred', 'Flagged',
-#                                re.sub (' ', '_', foldername))))
 nametrans = lambda folder: {'[Gmail]/Drafts':   '[Gmail]/Drafts',
                            '[Gmail]/Sent Mail': '[Gmail]/Sent',
                            '[Gmail]/Starred':   '[Gmail]/Flagged',
@@ -42,6 +38,7 @@ nametrans = lambda folder: {'[Gmail]/Drafts':   '[Gmail]/Drafts',
 # folderfilter = lambda foldername: foldername not in '[Gmail]/Important'
 folderfilter = lambda folder: folder not in ['[Gmail]/Important',
                                             '[Gmail]/Spam',
+                                            '[Gmail]/All Mail',
                                             ]
 
 [mbnames]

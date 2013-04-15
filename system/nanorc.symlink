@@ -16,13 +16,13 @@
 ## ", ', ), >, ], and }.
 
 ## Use auto-indentation.
-# set autoindent
+set autoindent
 
 ## Backup files to filename~.
-# set backup
+set backup
 
 ## The directory to put unique backup files in.
-# set backupdir ""
+set backupdir "/tmp/"
 
 ## Do backwards searches by default.
 # set backwards
@@ -51,7 +51,7 @@ set brackets ""')>]}"
 ## If fill is 0 or less, the line length will be the screen width less
 ## this number.
 ##
-# set fill -8
+set fill -8
 
 ## Enable ~/.nano_history for saving and reading search/replace strings.
 # set historylog
@@ -60,7 +60,7 @@ set brackets ""')>]}"
 ## searches.  They cannot contain blank characters.  The former set must
 ## come before the latter set, and both must be in the same order.
 ##
-# set matchbrackets "(<[{)>]}"
+set matchbrackets "(<[{)>]}"
 
 ## Use the blank line below the titlebar as extra editing space.
 set morespace
@@ -91,7 +91,7 @@ set mouse
 # set nonewlines
 
 ## Don't wrap text at all.
-set nowrap
+#set nowrap
 
 ## Set operating directory.  nano will not read or write files outside
 ## this directory and its subdirectories.  Also, the current directory
@@ -108,7 +108,7 @@ set nowrap
 ## punctuation, optionally followed by closing brackets, can end
 ## sentences.
 ##
-# set punct "!.?"
+set punct "!.?"
 
 ## Do quick statusbar blanking.  Statusbar messages will disappear after
 ## 1 keystroke instead of 26.  Note that "const" overrides this.
@@ -118,7 +118,7 @@ set nowrap
 ## The email-quote string, used to justify email-quoted paragraphs.
 ## This is an extended regular expression if your system supports them,
 ## otherwise a literal string.  Default:
-# set quotestr "^([ 	]*[#:>\|}])+"
+set quotestr "^([ 	]*[#:>\|}])+"
 ## if you have extended regular expression support, otherwise:
 # set quotestr "> "
 
@@ -136,13 +136,13 @@ set nowrap
 ## will jump to that beginning (either forwards or backwards).  If the
 ## cursor is already at that position, it will jump to the true
 ## beginning of the line.
-# set smarthome
+set smarthome
 
 ## Use smooth scrolling as the default.
 set smooth
 
 ## Enable soft line wrapping (AKA full line display).
-# set softwrap
+set softwrap
 
 ## Use this spelling checker instead of the internal one.  This option
 ## does not properly have a default value.
@@ -153,7 +153,7 @@ set smooth
 # set suspend
 
 ## Use this tab size instead of the default; it must be greater than 0.
-# set tabsize 8
+set tabsize 4
 
 ## Convert typed tabs to spaces.
 # set tabstospaces
@@ -310,3 +310,6 @@ include "/usr/share/nano/pov.nanorc"
 
 ## XML-type files
 include "/usr/share/nano/xml.nanorc"
+
+## Mutt Emails
+include "~/.mutt/mutt.nanorc"

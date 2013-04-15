@@ -42,7 +42,7 @@ uncolor index "~F"
   color header     brightyellow  default "^from:"
   color header     yellow        default "^to:"
   color header     yellow        default "^cc:"
-  color header     brightblue          default "^date:"
+  color header     brightblue    default "^date:"
   color header     brightblue    default "^subject:"
 
 # message bodies
