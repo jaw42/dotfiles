@@ -19,6 +19,7 @@ xset fp rehash
 #conky -c ~/.scripts/dwm/conkyrc | while read -r; do xsetroot -name "$REPLY"; done &
 while true; do
 	~/.scripts/dwm/status.sh
+	xsetroot -name "$(cat /tmp/dwm_status_bar/content)"
    #sleep 1m    # Update time every minute
    sleep 10s
 done &
