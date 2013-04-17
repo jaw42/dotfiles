@@ -7,3 +7,6 @@
 [submodule "system/vim.symlink/bundle/Latex-Box"]
 	path = system/vim.symlink/bundle/Latex-Box
 	url = git://github.com/LaTeX-Box-Team/LaTeX-Box.git
+[submodule "system/vim.symlink/bundle/ctrlp.vim"]
+	path = system/vim.symlink/bundle/ctrlp.vim
+	url = git://github.com/kien/ctrlp.vim.git
