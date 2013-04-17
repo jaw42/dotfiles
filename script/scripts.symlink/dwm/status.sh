@@ -26,9 +26,14 @@ function open(){
 }
 
 function mpd(){
-	status=4
+    stat=$(mpc status | awk 'NR==2 {print $1}')
+    if [ "$stat"="[paused]" ]; then
+        stat_short="||"
+    else
+        stat_short=">"
+    fi
 	cur=$(mpc current -f "[[%artist% - ]%title%]|[%file%]" | head -n 1)
-	echo -ne " \x08$cur\x01" > /tmp/dwm_status_bar/mpd
+	echo -ne " \x08$stat_short $cur\x01" > /tmp/dwm_status_bar/mpd
 }
 
 function mail(){
