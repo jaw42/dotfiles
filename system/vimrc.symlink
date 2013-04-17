@@ -1,4 +1,6 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Pathogen
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype off " Pathogen needs to run before plugin indent on
 call pathogen#infect()
 call pathogen#helptags() " generate helptags for everything in 'runtimepath'
@@ -6,7 +8,23 @@ filetype plugin indent on
 
 set grepprg=grep\ -nH\ $*
 let g:tex_flavour = 'latex'
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugins
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Ctrl-p plugin
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+nmap ; :CtrlPBuffer<CR>
+"let g:ctrlp_map = '<leader>t'
+let g:ctrlp_match_window_bottom = 0
+let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_dotfiles = 0
+let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set history=700
 
@@ -143,9 +161,6 @@ nmap <leader>q :nohlsearch<CR>
 " Make j and k move to the next row on screen rather
 nmap j gj
 nmap k gk
-
-" Switch to previous buffer
-nmap <C-e> :e#<CR>
 
 " Switch to Next and Previous buffer
 nmap <C-n> :bnext<CR>
