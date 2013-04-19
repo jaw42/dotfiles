@@ -15,7 +15,6 @@ let g:tex_flavour = 'latex'
 
 " Ctrl-p plugin
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-nmap ; :CtrlPBuffer<CR>
 "let g:ctrlp_map = '<leader>t'
 let g:ctrlp_match_window_bottom = 0
 let g:ctrlp_match_window_reversed = 0
@@ -25,7 +24,7 @@ let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-
+set encoding=utf-8
 set history=700
 
 filetype plugin on
@@ -35,6 +34,9 @@ set autoread
 
 "Show line numbers 
 set number
+
+" Highlight the line the cursor is currently on
+set cursorline
 
 """"""""""""""""""""""""""""""
 " => Status line
@@ -65,6 +67,9 @@ set cmdheight=1
 
 " A buffer becomes hidden when it is abandoned
 set hid
+
+" Highlight problematic whitespace
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
 
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
@@ -102,6 +107,10 @@ set novisualbell
 set t_vb=
 set tm=500
 
+" Smooth scrolling with the mouse
+set mouse=a
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
@@ -116,13 +125,14 @@ set smarttab
 set shiftwidth=4
 set tabstop=4
 
-" Linebreak on 500 characters
-set lbr
-set tw=500
+" Don't break across words
+set linebreak
 
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
+" Wrap text but don't automatically add linebreaks.
+set textwidth=0 wrapmargin=0
 
 """"""""""""""""""""""""""""""
 " => Visual mode related

@@ -17,9 +17,10 @@ source=(http://dl.suckless.org/dwm/dwm-$pkgver.tar.gz
   config.h
   dwm.desktop
   # http://dwm.suckless.org/patches/dwm-6.0-statusallmons.diff
+  dwm-6.0-statusallmons.diff
   dwm-6.0-panel_padding.patch
   dwm-6.0-deck.diff
-  dwm-6.0-systray.diff
+  # dwm-6.0-systray.diff
   dwm-6.0-statuscolors.diff
   )
 
@@ -47,79 +48,16 @@ package() {
   install -m644 -D $srcdir/dwm.desktop $pkgdir/usr/share/xsessions/dwm.desktop
 }
 md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '1cf1cceb938a626f06ca76a91dbf9c3f'
+         'e9ba54eb2c86fcd11a7b7a232721a2f0'
          '939f403a71b6e85261d09fc3412269ee'
+         'b56a640d0b701b9d2a6416ed3d6fce6a'
          'e4631fba6d4a255310b136da3118be3a'
          '168825c2b07ca8acb88bef9602b3de5e'
-         '529bcb065c6aa47740ef19b8987cb824'
-         '1cf1cceb938a626f06ca76a91dbf9c3f')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '1cf1cceb938a626f06ca76a91dbf9c3f'
-         '939f403a71b6e85261d09fc3412269ee'
-         'e4631fba6d4a255310b136da3118be3a'
-         '168825c2b07ca8acb88bef9602b3de5e'
-         '529bcb065c6aa47740ef19b8987cb824'
-         '1cf1cceb938a626f06ca76a91dbf9c3f')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '1cf1cceb938a626f06ca76a91dbf9c3f'
-         '939f403a71b6e85261d09fc3412269ee'
-         'e4631fba6d4a255310b136da3118be3a'
-         '168825c2b07ca8acb88bef9602b3de5e'
-         '529bcb065c6aa47740ef19b8987cb824'
-         '1cf1cceb938a626f06ca76a91dbf9c3f')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '1cf1cceb938a626f06ca76a91dbf9c3f'
-         '939f403a71b6e85261d09fc3412269ee'
-         'e4631fba6d4a255310b136da3118be3a'
-         '168825c2b07ca8acb88bef9602b3de5e'
-         '529bcb065c6aa47740ef19b8987cb824'
-         '1cf1cceb938a626f06ca76a91dbf9c3f')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '1cf1cceb938a626f06ca76a91dbf9c3f'
-         '939f403a71b6e85261d09fc3412269ee'
-         'e4631fba6d4a255310b136da3118be3a'
-         '168825c2b07ca8acb88bef9602b3de5e'
-         '529bcb065c6aa47740ef19b8987cb824'
-         'cfb6d7785b35a80e0f44a48a5036af8b')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '1cf1cceb938a626f06ca76a91dbf9c3f'
-         '939f403a71b6e85261d09fc3412269ee'
-         'e4631fba6d4a255310b136da3118be3a'
-         '168825c2b07ca8acb88bef9602b3de5e'
-         '529bcb065c6aa47740ef19b8987cb824'
-         'cfb6d7785b35a80e0f44a48a5036af8b')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '3cfd46591294bc477fb6293a68d2f5e8'
-         '939f403a71b6e85261d09fc3412269ee'
-         'e4631fba6d4a255310b136da3118be3a'
-         '168825c2b07ca8acb88bef9602b3de5e'
-         '529bcb065c6aa47740ef19b8987cb824'
-         'cfb6d7785b35a80e0f44a48a5036af8b')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '0d8fa89d458a51f5fe3723ade3bc1852'
-         '939f403a71b6e85261d09fc3412269ee'
-         'e4631fba6d4a255310b136da3118be3a'
-         '168825c2b07ca8acb88bef9602b3de5e'
-         '529bcb065c6aa47740ef19b8987cb824'
-         'cfb6d7785b35a80e0f44a48a5036af8b')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '0d8fa89d458a51f5fe3723ade3bc1852'
-         '939f403a71b6e85261d09fc3412269ee'
-         'e4631fba6d4a255310b136da3118be3a'
-         '168825c2b07ca8acb88bef9602b3de5e'
-         '529bcb065c6aa47740ef19b8987cb824'
-         'cfb6d7785b35a80e0f44a48a5036af8b')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '7653044933093b67a69d33ced63033fd'
-         '939f403a71b6e85261d09fc3412269ee'
-         'e4631fba6d4a255310b136da3118be3a'
-         '168825c2b07ca8acb88bef9602b3de5e'
-         '529bcb065c6aa47740ef19b8987cb824'
          'cfb6d7785b35a80e0f44a48a5036af8b')
 md5sums=('8bb00d4142259beb11e13473b81c0857'
          'e9ba54eb2c86fcd11a7b7a232721a2f0'
          '939f403a71b6e85261d09fc3412269ee'
+         'b56a640d0b701b9d2a6416ed3d6fce6a'
          'e4631fba6d4a255310b136da3118be3a'
          '168825c2b07ca8acb88bef9602b3de5e'
-         '529bcb065c6aa47740ef19b8987cb824'
          'cfb6d7785b35a80e0f44a48a5036af8b')
