@@ -90,6 +90,10 @@ set incsearch
 " Don't redraw while executing macros (good performance config)
 set lazyredraw 
 
+" Don't create swp files
+set noswapfile
+set nobackup
+
 " For regular expressions turn magic on
 set magic
 
