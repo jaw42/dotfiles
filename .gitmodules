@@ -13,3 +13,9 @@
 [submodule "system/vim.symlink/bundle/nerdtree.vim"]
 	path = system/vim.symlink/bundle/nerdtree
     url = git://github.com/scrooloose/nerdtree.git
+[submodule "system/vim.symlink/bundle/multiple-cursors.vim"]
+	path = system/vim.symlink/bundle/multiple-cursors.vim
+	url = git://github.com/terryma/vim-multiple-cursors.git
+[submodule "system/vim.symlink/bundle/gmail.vim"]
+	path = system/vim.symlink/bundle/gmail.vim
+	url = git://github.com/yuratomo/gmail.vim.git
