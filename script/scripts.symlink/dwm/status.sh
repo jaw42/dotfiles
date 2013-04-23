@@ -27,11 +27,16 @@ function open(){
 
 function mpd(){
     stat=$(mpc status | awk 'NR==2 {print $1}')
-    if [ "$stat"="[paused]" ]; then
-        stat_short="||"
-    else
-        stat_short=">"
-    fi
+    case "$stat" in
+        "[paused]") stat_short="||" ;;
+        "[playing]") stat_short=">" ;;
+        *) stat_short="_" ;;
+    esac
+#    if [ "$stat"=="[paused]" ]; then
+#        stat_short="||"
+#    else
+#        stat_short=">"
+#    fi
 	cur=$(mpc current -f "[[%artist% - ]%title%]|[%file%]" | head -n 1)
 	echo -ne " \x08$stat_short $cur\x01" > /tmp/dwm_status_bar/mpd
 }
@@ -73,14 +78,26 @@ function int(){
 
 function dte(){
 	# up=$(awk '{printf("%dd %02dh %02dm",($1/60/60/24),($1/60/60%24),($1/60%60))}' /proc/uptime)
-	up=$(awk '{
-		if (($1/60/60/24) -eq 0)
-			printf("%02dh %02dm",($1/60/60%24),($1/60%60));
-		else if (($1/60/60/24) -ge 3)
-			printf("\x03%dd\x01 %02dh %02dm",($1/60/60/24),($1/60/60%24),($1/60%60));
-		else
-			printf("%dd %02dh %02dm",($1/60/60/24),($1/60/60%24),($1/60%60));
-		}' /proc/uptime)
+    read seconds tmp < /proc/uptime
+    seconds=${seconds%.*}
+    days=$(($seconds/60/60/24))
+    hours=$(($seconds/60/60%24))
+    minutes=$(($seconds/60%60))
+    if [[ $days -eq 0 ]]; then
+        up=$hours"h "$minutes"m"
+    elif [[ $days -gt 7 ]]; then
+        up="\x03"$days"d\x01 "$hours"h "$minutes"m"
+    else
+        up=$days"d "$hours"h "$minutes"m"
+    fi
+#	up=$(awk '{
+#		if (($1/60/60/24) -eq 0)
+#			printf("%02dh %02dm",($1/60/60%24),($1/60%60));
+#		else if (($1/60/60/24) -ge 3)
+#			printf("\x03%dd\x01 %02dh %02dm",($1/60/60/24),($1/60/60%24),($1/60%60));
+#		else
+#			printf("%dd %02dh %02dm",($1/60/60/24),($1/60/60%24),($1/60%60));
+#		}' /proc/uptime)
 	tme=$(date "+%l:%M:%S%P")
 	dte=$(date "+%e %b'%g")
 	echo -ne " \x06Up:\x01$up \x08$tme\x01 $dte" > /tmp/dwm_status_bar/dte
