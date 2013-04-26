@@ -46,6 +46,7 @@ function mail(){
 	unread=$(find ~/.mail/ -type f -regex '.*/cur/.*2,[^S]*$' | wc -l);
 	if [ "$new" -ne 0 ]; then
 		echo -ne " \x04M:\x01$unread-$new" > /tmp/dwm_status_bar/mail
+        notify-send "New messages availible"
 	else
 		> /tmp/dwm_status_bar/mail
 	fi
