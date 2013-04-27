@@ -42,3 +42,5 @@ done
 unset config_files
 
 PATH="${PATH}:/home/josh/.gem/ruby/2.0.0/bin"
+
+export VMAIL_BROWSER='jumanji'
