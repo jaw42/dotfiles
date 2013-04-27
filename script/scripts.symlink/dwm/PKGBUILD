@@ -17,20 +17,18 @@ source=(http://dl.suckless.org/dwm/dwm-$pkgver.tar.gz
   config.h
   dwm.desktop
   # http://dwm.suckless.org/patches/dwm-6.0-statusallmons.diff
-  dwm-6.0-statusallmons.diff
+  dwm-6.0-statusallmons_josh.diff
   dwm-6.0-panel_padding.patch
   dwm-6.0-deck.diff
-  # dwm-6.0-systray.diff
   dwm-6.0-statuscolors.diff
   )
 
 build() {
   cd $srcdir/$pkgname-$pkgver
-  # patch -p1 -i ../dwm-6.0-statusallmons.diff
   patch -p1 -i ../dwm-6.0-panel_padding.patch
   patch -p1 -i ../dwm-6.0-deck.diff
-  # patch -p1 -i ../dwm-6.0-systray.diff
   patch -p1 -i ../dwm-6.0-statuscolors.diff
+  patch -p1 -i ../dwm-6.0-statusallmons_josh.diff
   cp $srcdir/config.h config.h
   sed -i 's/CPPFLAGS =/CPPFLAGS +=/g' config.mk
   sed -i 's/^CFLAGS = -g/#CFLAGS += -g/g' config.mk
@@ -47,17 +45,4 @@ package() {
   install -m644 -D README $pkgdir/usr/share/doc/$pkgname/README
   install -m644 -D $srcdir/dwm.desktop $pkgdir/usr/share/xsessions/dwm.desktop
 }
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         'e9ba54eb2c86fcd11a7b7a232721a2f0'
-         '939f403a71b6e85261d09fc3412269ee'
-         'b56a640d0b701b9d2a6416ed3d6fce6a'
-         'e4631fba6d4a255310b136da3118be3a'
-         '168825c2b07ca8acb88bef9602b3de5e'
-         'cfb6d7785b35a80e0f44a48a5036af8b')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         'e9ba54eb2c86fcd11a7b7a232721a2f0'
-         '939f403a71b6e85261d09fc3412269ee'
-         'b56a640d0b701b9d2a6416ed3d6fce6a'
-         'e4631fba6d4a255310b136da3118be3a'
-         '168825c2b07ca8acb88bef9602b3de5e'
-         'cfb6d7785b35a80e0f44a48a5036af8b')
+
