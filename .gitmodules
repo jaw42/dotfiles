@@ -1,21 +1,28 @@
 [submodule "system/vim.symlink/bundle/snipmate"]
 	path = system/vim.symlink/bundle/snipmate
 	url = git://github.com/msanders/snipmate.vim.git
+    ignore = dirty
 [submodule "system/vim.symlink/bundle/bufexplorer"]
 	path = system/vim.symlink/bundle/bufexplorer
 	url = git://github.com/corntrace/bufexplorer.git
+    ignore = dirty
 [submodule "system/vim.symlink/bundle/Latex-Box"]
 	path = system/vim.symlink/bundle/Latex-Box
 	url = git://github.com/LaTeX-Box-Team/LaTeX-Box.git
+    ignore = dirty
 [submodule "system/vim.symlink/bundle/ctrlp.vim"]
 	path = system/vim.symlink/bundle/ctrlp.vim
     url = git://github.com/kien/ctrlp.vim.git
+    ignore = dirty
 [submodule "system/vim.symlink/bundle/nerdtree.vim"]
 	path = system/vim.symlink/bundle/nerdtree
     url = git://github.com/scrooloose/nerdtree.git
+    ignore = dirty
 [submodule "system/vim.symlink/bundle/multiple-cursors.vim"]
 	path = system/vim.symlink/bundle/multiple-cursors.vim
 	url = git://github.com/terryma/vim-multiple-cursors.git
+    ignore = dirty
 [submodule "system/vim.symlink/bundle/gmail.vim"]
 	path = system/vim.symlink/bundle/gmail.vim
 	url = git://github.com/yuratomo/gmail.vim.git
+    ignore = dirty
