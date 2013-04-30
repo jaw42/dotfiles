@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/josh/dotfiles/zsh'
+let g:netrw_dirhist_2='/home/josh/dotfiles/vim.symlink'
+let g:netrw_dirhist_3='/home/josh/dotfiles/vim.symlink/bundle/nerdtree/.git'
+let g:netrw_dirhist_4='/home/josh/dotfiles/vim.symlink/bundle/ctrlp.vim/.git'
