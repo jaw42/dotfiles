@@ -35,7 +35,7 @@
  		strcpy(stext, "dwm-"VERSION);
 -	drawbar(selmon);
 +    for (m = mons; m; m = m->next) {
-+    	drawbar(selmon);
++    	drawbar(m);
 +    }
  }
  

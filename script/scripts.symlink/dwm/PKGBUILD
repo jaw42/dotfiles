@@ -46,3 +46,59 @@ package() {
   install -m644 -D $srcdir/dwm.desktop $pkgdir/usr/share/xsessions/dwm.desktop
 }
 
+md5sums=('8bb00d4142259beb11e13473b81c0857'
+         'e9ba54eb2c86fcd11a7b7a232721a2f0'
+         '939f403a71b6e85261d09fc3412269ee'
+         '2906f2bf39b0b34d2791aae17d56aa40'
+         'e4631fba6d4a255310b136da3118be3a'
+         '168825c2b07ca8acb88bef9602b3de5e'
+         'cfb6d7785b35a80e0f44a48a5036af8b')
+md5sums=('8bb00d4142259beb11e13473b81c0857'
+         'e9ba54eb2c86fcd11a7b7a232721a2f0'
+         '939f403a71b6e85261d09fc3412269ee'
+         '2906f2bf39b0b34d2791aae17d56aa40'
+         'e4631fba6d4a255310b136da3118be3a'
+         '168825c2b07ca8acb88bef9602b3de5e'
+         'cfb6d7785b35a80e0f44a48a5036af8b')
+md5sums=('8bb00d4142259beb11e13473b81c0857'
+         'e9ba54eb2c86fcd11a7b7a232721a2f0'
+         '939f403a71b6e85261d09fc3412269ee'
+         '2906f2bf39b0b34d2791aae17d56aa40'
+         'e4631fba6d4a255310b136da3118be3a'
+         '168825c2b07ca8acb88bef9602b3de5e'
+         'cfb6d7785b35a80e0f44a48a5036af8b')
+md5sums=('8bb00d4142259beb11e13473b81c0857'
+         'e9ba54eb2c86fcd11a7b7a232721a2f0'
+         '939f403a71b6e85261d09fc3412269ee'
+         '2906f2bf39b0b34d2791aae17d56aa40'
+         'e4631fba6d4a255310b136da3118be3a'
+         '168825c2b07ca8acb88bef9602b3de5e'
+         'cfb6d7785b35a80e0f44a48a5036af8b')
+md5sums=('8bb00d4142259beb11e13473b81c0857'
+         'e9ba54eb2c86fcd11a7b7a232721a2f0'
+         '939f403a71b6e85261d09fc3412269ee'
+         '2906f2bf39b0b34d2791aae17d56aa40'
+         'e4631fba6d4a255310b136da3118be3a'
+         '168825c2b07ca8acb88bef9602b3de5e'
+         'cfb6d7785b35a80e0f44a48a5036af8b')
+md5sums=('8bb00d4142259beb11e13473b81c0857'
+         '3d189a54c6064fabb6103742df24933b'
+         '939f403a71b6e85261d09fc3412269ee'
+         '2906f2bf39b0b34d2791aae17d56aa40'
+         'e4631fba6d4a255310b136da3118be3a'
+         '168825c2b07ca8acb88bef9602b3de5e'
+         'cfb6d7785b35a80e0f44a48a5036af8b')
+md5sums=('8bb00d4142259beb11e13473b81c0857'
+         '3d189a54c6064fabb6103742df24933b'
+         '939f403a71b6e85261d09fc3412269ee'
+         '2906f2bf39b0b34d2791aae17d56aa40'
+         'e4631fba6d4a255310b136da3118be3a'
+         '168825c2b07ca8acb88bef9602b3de5e'
+         'cfb6d7785b35a80e0f44a48a5036af8b')
+md5sums=('8bb00d4142259beb11e13473b81c0857'
+         '3d189a54c6064fabb6103742df24933b'
+         '939f403a71b6e85261d09fc3412269ee'
+         '2906f2bf39b0b34d2791aae17d56aa40'
+         'e4631fba6d4a255310b136da3118be3a'
+         '168825c2b07ca8acb88bef9602b3de5e'
+         'cfb6d7785b35a80e0f44a48a5036af8b')
