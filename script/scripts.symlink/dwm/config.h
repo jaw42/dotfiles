@@ -27,7 +27,6 @@ static const char colors[NUMCOLORS][ColLast][9] = {
 static const unsigned int panelpadding  = 4;    /* padding from fonts on panel */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
-static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const Bool showsystray       = True;     /* False means no systray */
 static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = True;     /* False means bottom bar */
@@ -68,7 +67,7 @@ static const Layout layouts[] = {
 /* commands */
 // static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char  *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", colors[0][ColBG], "-nf", colors[0][ColFG], "-sb", colors[1][ColBG], "-sf", colors[1][ColFG], NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "xfce4-terminal", NULL };
 
 static const char *volumedown[] = { "amixer", "-q", "set", "Master", "2%-", "unmute", NULL };
 static const char *volumeup[] = { "amixer", "-q", "set", "Master", "2%+", "unmute", NULL };

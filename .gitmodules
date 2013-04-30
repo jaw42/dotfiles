@@ -26,3 +26,6 @@
 	path = system/vim.symlink/bundle/gmail.vim
 	url = git://github.com/yuratomo/gmail.vim.git
     ignore = dirty
+[submodule "system/vim.symlink/bundle/vimoutliner"]
+	path = system/vim.symlink/bundle/vimoutliner
+	url = git://github.com/vimoutliner/vimoutliner.git

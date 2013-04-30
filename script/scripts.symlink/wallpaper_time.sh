@@ -3,11 +3,11 @@
 hour=$(date +%-H)
 day=$(date +%j)
 
-if [[ $hour -ge 5 && $hour -lt 9 ]]; then
+if [[ $hour -ge 5 && $hour -lt 10 ]]; then
     echo -n "Dawn"
     state=dawn
     number=1
-elif [[ $hour -ge 9 && $hour -lt 16 ]]; then
+elif [[ $hour -ge 10 && $hour -lt 16 ]]; then
     echo -n "Day"
     state=day
     number=2

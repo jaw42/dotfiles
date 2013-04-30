@@ -19,10 +19,14 @@
 # 	}
 
 minute=$(date +%M)
+bigSec=$(date +%s)
 
 function open(){
-	opn=$(lsof | wc -l)
-	echo -ne " $opn" > /tmp/dwm_status_bar/open
+   # if [[ $minute%5 -eq 0 ]]; then
+    if [[ $bigSec%300 -eq 0 ]]; then
+        opn=$(lsof | wc -l)
+        echo -ne " $opn" > /tmp/dwm_status_bar/open
+    fi
 }
 
 function mpd(){
@@ -32,38 +36,39 @@ function mpd(){
         "[playing]") stat_short=">" ;;
         *) stat_short="_" ;;
     esac
-#    if [ "$stat"=="[paused]" ]; then
-#        stat_short="||"
-#    else
-#        stat_short=">"
-#    fi
 	cur=$(mpc current -f "[[%artist% - ]%title%]|[%file%]" | head -n 1)
+   # cur=$($cur_messy | tr -d '\177-\377')
 	echo -ne " \x08$stat_short $cur\x01" > /tmp/dwm_status_bar/mpd
 }
 
 function mail(){
-	new=$(find ~/.mail/ -type f -wholename '*/new/*' | wc -l);
-	unread=$(find ~/.mail/ -type f -regex '.*/cur/.*2,[^S]*$' | wc -l);
-	if [ "$new" -ne 0 ]; then
-		echo -ne " \x04M:\x01$unread-$new" > /tmp/dwm_status_bar/mail
-        notify-send "New messages availible"
-	else
-		> /tmp/dwm_status_bar/mail
-	fi
+    if [[ $minute%10 -eq 0 ]]; then
+        new=$(curl -n --silent "https://mail.google.com/mail/feed/atom" | sed -n -e 's/.*<fullcount>\(.*\)<\/fullcount>.*/\1/p')
+        # new=$(find ~/.mail/ -type f -wholename '*/new/*' | wc -l);
+        unread=$(find ~/.mail/ -type f -regex '.*/cur/.*2,[^S]*$' | wc -l);
+        if [ "$new" -ne 0 ]; then
+            echo -ne " \x04M:\x01$unread-$new" > /tmp/dwm_status_bar/mail
+            notify-send "New messages availible"
+        else
+            > /tmp/dwm_status_bar/mail
+        fi
+    fi
 }
 
 function pac(){
-	pup="$(pacman -Qqu | wc -l)"
-	if [ "$pup" -ne 0 ]; then
-	    echo -ne " \x04P:\x01$pup" > /tmp/dwm_status_bar/pac
-	else
-		> /tmp/dwm_status_bar/pac
-	fi
+    if [[ $minute%2 -eq 0 ]]; then
+        pup="$(pacman -Qqu | wc -l)"
+        if [ "$pup" -ne 0 ]; then
+            echo -ne " \x04P:\x01$pup" > /tmp/dwm_status_bar/pac
+        else
+            > /tmp/dwm_status_bar/pac
+        fi
+    fi
 }
 
 function hdd(){
-		disk=$(df /dev/sda7 --output=pcent | tail -n 1 | tr -d " ")
-		echo -ne " \x06H:\x01$disk" > /tmp/dwm_status_bar/hdd
+    disk=$(df /dev/sda7 --output=pcent | tail -n 1 | tr -d " ")
+    echo -ne " \x06H:\x01$disk" > /tmp/dwm_status_bar/hdd
 }
 
 function int(){
