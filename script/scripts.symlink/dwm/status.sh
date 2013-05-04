@@ -46,8 +46,28 @@ function mpd(){
 	echo -ne " \x08$stat_short $cur\x01" > /tmp/dwm_status_bar/mpd
 }
 
+function rdog(){
+    read rawdog_unread updated < /tmp/rawdog_feeds
+    if [ "$rawdog_unread" -ne 0 ]; then
+        echo -ne " \x04R:\x01$rawdog_unread" > /tmp/dwm_status_bar/rdog
+    else
+        > /tmp/dwm_status_bar/rdog
+    fi
+}
+
+function grd(){
+    if [[ $bigSec%600 -eq 0 ]]; then
+        unread=$(~/greaderunread.sh)
+        if [ "$unread" -ne 0 ]; then
+            echo -ne " \x04U:\x01$unread" > /tmp/dwm_status_bar/grd
+        else
+            > /tmp/dwm_status_bar/grd
+        fi
+    fi
+}
+
 function mail(){
-    if [[ $minute%10 -eq 0 ]]; then
+    if [[ $bigSec%600 -eq 0 ]]; then
         new=$(curl -n --silent "https://mail.google.com/mail/feed/atom" | sed -n -e 's/.*<fullcount>\(.*\)<\/fullcount>.*/\1/p')
         # new=$(find ~/.mail/ -type f -wholename '*/new/*' | wc -l);
         unread=$(find ~/.mail/ -type f -regex '.*/cur/.*2,[^S]*$' | wc -l);
@@ -131,7 +151,7 @@ fi
 
 > /tmp/dwm_status_bar/content
 
-for file in  mpd open pac mail hdd int dte
+for file in  mpd open pac rdog grd mail hdd int dte
 do
 	if [ ! -f "/tmp/dwm_status_bar/$file" ];
 	then
