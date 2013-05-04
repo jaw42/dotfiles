@@ -21,6 +21,11 @@
 minute=$(date +%M)
 bigSec=$(date +%s)
 
+function removeUnprintable(){
+    clean=$(echo "$1" | tr 'āáǎàēéěèīíǐìú' 'aaaaeeeeiiiu' )
+    echo $clean
+}
+
 function open(){
    # if [[ $minute%5 -eq 0 ]]; then
     if [[ $bigSec%300 -eq 0 ]]; then
@@ -36,8 +41,8 @@ function mpd(){
         "[playing]") stat_short=">" ;;
         *) stat_short="_" ;;
     esac
-	cur=$(mpc current -f "[[%artist% - ]%title%]|[%file%]" | head -n 1)
-   # cur=$($cur_messy | tr -d '\177-\377')
+	curMessy=$(mpc current -f "[[%artist% - ]%title%]|[%file%]" | head -n 1)
+    cur=$(removeUnprintable "$curMessy" )
 	echo -ne " \x08$stat_short $cur\x01" > /tmp/dwm_status_bar/mpd
 }
 

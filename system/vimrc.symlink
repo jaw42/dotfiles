@@ -180,6 +180,6 @@ nmap k gk
 nmap <C-n> :bnext<CR>
 nmap <C-p> :bprev<CR>
 
-" Change size of window
+" Change size of window split
 nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
