@@ -10,3 +10,4 @@ internet/dwb.config/default/history
 internet/dwb.config/default/*.history
 internet/dwb.config/default/session
 internet/dwb.config/default/cookies*
+media/mpdscribble.symlink/lastfm.journal
