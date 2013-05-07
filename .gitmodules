@@ -22,3 +22,6 @@
 	path = vim.symlink/bundle/Latex-Box.vim
 	url = git://github.com/LaTeX-Box-Team/LaTeX-Box.git
     ignore = dirty
+[submodule "vim.symlink/bundle/instant-markdown.vim"]
+	path = vim.symlink/bundle/instant-markdown.vim
+	url = git://github.com/suan/vim-instant-markdown.git
