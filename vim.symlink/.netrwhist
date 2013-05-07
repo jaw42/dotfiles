@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/home/josh/dotfiles/zsh'
 let g:netrw_dirhist_2='/home/josh/dotfiles/vim.symlink'
 let g:netrw_dirhist_3='/home/josh/dotfiles/vim.symlink/bundle/nerdtree/.git'
@@ -7,3 +7,4 @@ let g:netrw_dirhist_4='/home/josh/dotfiles/vim.symlink/bundle/ctrlp.vim/.git'
 let g:netrw_dirhist_5='/home/josh/dotfiles/script/scripts.symlink/ical2rem.rb'
 let g:netrw_dirhist_6='/home/josh/.vmail/default'
 let g:netrw_dirhist_7='/home/josh/dotfiles'
+let g:netrw_dirhist_8='/home/josh/.rawdog/templates'

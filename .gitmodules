@@ -22,4 +22,3 @@
 	path = vim.symlink/bundle/Latex-Box.vim
 	url = git://github.com/LaTeX-Box-Team/LaTeX-Box.git
     ignore = dirty
-
