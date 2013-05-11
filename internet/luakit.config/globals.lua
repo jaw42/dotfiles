@@ -1,7 +1,7 @@
 -- Global variables for luakit
 globals = {
-    homepage            = "http://luakit.org/",
- -- homepage            = "http://github.com/mason-larobina/luakit",
+ -- homepage            = "http://luakit.org/",
+    homepage            = "https://www.google.com",
     scroll_step         = 40,
     zoom_step           = 0.1,
     max_cmd_history     = 100,
@@ -10,7 +10,7 @@ globals = {
     default_window_size = "800x600",
 
  -- Disables loading of hostnames from /etc/hosts (for large host files)
- -- load_etc_hosts      = false,
+    load_etc_hosts      = false,
  -- Disables checking if a filepath exists in search_open function
  -- check_filepath      = false,
 }

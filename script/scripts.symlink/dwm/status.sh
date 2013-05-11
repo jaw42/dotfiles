@@ -67,13 +67,14 @@ function grd(){
 }
 
 function mail(){
-    if [[ $bigSec%600 -eq 0 ]]; then
+    if [[ $bigSec%200 -eq 0 ]]; then
         new=$(curl -n --silent "https://mail.google.com/mail/feed/atom" | sed -n -e 's/.*<fullcount>\(.*\)<\/fullcount>.*/\1/p')
         # new=$(find ~/.mail/ -type f -wholename '*/new/*' | wc -l);
-        unread=$(find ~/.mail/ -type f -regex '.*/cur/.*2,[^S]*$' | wc -l);
+        # unread=$(find ~/.mail/ -type f -regex '.*/cur/.*2,[^S]*$' | wc -l);
         if [ "$new" -ne 0 ]; then
-            echo -ne " \x04M:\x01$unread-$new" > /tmp/dwm_status_bar/mail
-            notify-send "New messages availible"
+            echo -ne " \x04M:\x01$new" > /tmp/dwm_status_bar/mail
+            details=$(curl -n --silent "https://mail.google.com/mail/feed/atom" | sed -n -e 's/.*<title>\(.*\)<\/title>.*/\1/p' -e 's/.*<name>\(.*\)<\/name>.*/\t\1/p' | tail -n+2)
+            notify-send "<b>New messages availible</b>\n$details"
         else
             > /tmp/dwm_status_bar/mail
         fi
@@ -151,7 +152,7 @@ fi
 
 > /tmp/dwm_status_bar/content
 
-for file in  mpd open pac rdog grd mail hdd int dte
+for file in  mpd open pac rdog mail hdd int dte
 do
 	if [ ! -f "/tmp/dwm_status_bar/$file" ];
 	then
