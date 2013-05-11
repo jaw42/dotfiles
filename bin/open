@@ -6,31 +6,38 @@
 # ---------------------------------------------------------
 
 # Genres -----------
-Genre_array=(video pdf web image word)
+Genre_array=(text video pdf web image word spreadsheet)
 
 # Programs ---------
-        video=mplayer
+   text_fast=gvim
+text_complex=subl
 
-     pdf_fast=zathura
-  pdf_complex=evince
+       video=mplayer
 
-     web_fast=luakit
-  web_complex=google-chrome
+    pdf_fast=zathura
+ pdf_complex=evince
 
-        image=fehviewer
+    web_fast=jumanji
+ web_complex=google-chrome
 
-         word=abiword
+       image=fehviewer
+ 
+        word=abiword
+
+ spreadsheet=gnumeric
 
 # File types -------
-video_array=(mpg mpeg avi webm)
-pdf_array=(pdf)
-web_array=(html htm)
-image_array=(jpg jpeg png bmp)
-word_array=(docx doc odf rtf)
+       text_array=(txt )
+      video_array=(mpg mpeg avi webm)
+        pdf_array=(pdf)
+        web_array=(html htm)
+      image_array=(jpg jpeg png bmp)
+       word_array=(docx doc odf rtf)
+spreadsheet_array=(gnumeric xls xlsx)
 
 # Other Options ----
-default=fast #fast/complex
-verbose_output=false #true/false
+default=fast # fast/complex
+verbose_output=false # true/false
 
 # --------------------------------------------------------
 # Program
@@ -58,7 +65,37 @@ verbose() {
     fi
 }
 
-while getopts ":fcv" opt; do
+dump() {
+    if $dumpOutput; then
+        2> /dev/null 
+    fi
+}
+
+helpOutput() {
+    cat << 'EOF'
+
+Usage:
+  open [options] <file|url>
+
+Options:
+  -f     use the "fast" program
+  -c     use the "complex" program
+  -v     output debugging info
+  -d     dump output error messages so they are not displayed
+                ****Does not yet work****
+  -h     print this help message
+EOF
+}
+
+if [[ $# -eq 0 ]]; then
+    helpOutput
+    exit
+fi
+
+# --------------------------------------------------------------
+# Options Handler
+# --------------------------------------------------------------
+while getopts ":fcvhd" opt; do
     case $opt in
         f)
             echo "Fast option selected"
@@ -66,12 +103,19 @@ while getopts ":fcv" opt; do
             complex=false
             ;;
         c)
-            echo "Complex option"
+            echo "Complex option selected"
             complex=true
             fast=false
             ;;
         v)
+            echo "Verbose option selected"
             verbose_output=true
+            ;;
+        h)
+            helpOutput
+            ;;
+        d) 
+            dumpOutput=true
             ;;
         \?)
             echo "Unkown option: -$OPTARG. Defaulting to fast"
@@ -79,14 +123,37 @@ while getopts ":fcv" opt; do
 done
 
 shift $((OPTIND-1))
+
+# --------------------------------------------------------------
+# URL Handler
+# --------------------------------------------------------------
+#regex='(https?|ftp|file)://[-A-Za-z0-9\+&@#/%?=~_|!:,.;]*[-A-Za-z0-9\+&@#/%=~_|]'
+regex='((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[.\!\/\\w]*))?)'
+
+if  echo "$1" | grep -q -P $regex ; then
+    if $fast; then
+        verbose "Found url, using web browser - $web_fast"
+        $web_fast "$1"
+    else
+        verbose "Found url, using web browser - $web_complex"
+        $web_complex "$1"
+    fi
+    exit
+fi
+
+# --------------------------------------------------------------
+# File parser and handler
+#   This is admittedly fantastically difficult to understand,
+#+  used for flexibility. New genres with new filetypes can be
+#+  added by the user easily without changing anything here.
+# --------------------------------------------------------------
 ext=${1##*.}
 ext=${ext,,}
 verbose "Extension is $ext"
-
 for fileType in "${Genre_array[@]}" ; do
     fileType_array="$fileType""_array[@]"
     
-    verbose "Checking genre $fileType ..." n
+    verbose "Checking genre $fileType ..." 
 
     if in_array $ext "${!fileType_array}"; then
         verbose "Found extension $ext in genre $fileType"
@@ -97,18 +164,26 @@ for fileType in "${Genre_array[@]}" ; do
         do_fast="$fileType""_fast"
         do_complex="$fileType""_complex"
 
-        verbose "Filetype = $fileType"
+        if [ -z ${!do_fast} ] | [ -z ${!do_complex} ]; then
+            do_fast="$fileType"
+            do_complex="$fileType"
+        fi
 
+        verbose "Filetype = $fileType"
         if [[ $fast ]]; then
+            verbose "Executing ${!do_fast}"
             ${!do_fast} "$1"
         elif [[ $complex ]]; then
+            verbose "Executing ${!do_complex}"
             ${!do_complex} "$1"
         else
             verbose "No fast/complex option given, using default - $default"
             if [[ -z ${!do_default} ]]; then
-                ${!fileType} "$1"
+                verbose "Executing ${!do_fast}"
+                ${!fileType} "$1" 
             else
-                ${!do_default} "$1"
+                verbose "Executing ${!do_complex}"
+                ${!do_default} "$1" 
             fi
         fi
         break

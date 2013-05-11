@@ -43,6 +43,12 @@ require "window"
 -- Load users webview class
 -- ("$XDG_CONFIG_HOME/luakit/webview.lua" or "/etc/xdg/luakit/webview.lua")
 require "webview"
+webview.init_funcs.window_decision = function (view, w)
+    view:add_signal("new-window-decision", function (v, uri, reason)
+        w:new_tab(uri)
+        return true
+    end)
+end
 
 -- Load users mode configuration
 -- ("$XDG_CONFIG_HOME/luakit/modes.lua" or "/etc/xdg/luakit/modes.lua")
@@ -99,6 +105,7 @@ require "bookmarks_chrome"
 -- Add download support
 require "downloads"
 require "downloads_chrome"
+downloads.default_dir = os.getenv("HOME") .. "/Downloads"
 
 -- Example using xdg-open for opening downloads / showing download folders
 --downloads.add_signal("open-file", function (file, mime)
