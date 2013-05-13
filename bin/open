@@ -6,32 +6,44 @@
 # ---------------------------------------------------------
 
 # Genres -----------
-Genre_array=(text video pdf web image word spreadsheet)
+Genre_array=(text video audio pdf web image word spreadsheet)
 
 # Programs ---------
-   text_fast=gvim
-text_complex=subl
+#   text_fast=gvim
+#text_complex=subl
+#
+#       video=mplayer
+#       audio=mplayer
+#
+#    pdf_fast=zathura
+# pdf_complex=evince
+#
+#    web_fast=luakit
+# web_complex=google-chrome
+#
+#       image=fehviewer
+#
+#        word=abiword
+#
+# spreadsheet=gnumeric
 
-       video=mplayer
-
-    pdf_fast=zathura
- pdf_complex=evince
-
-    web_fast=jumanji
- web_complex=google-chrome
-
-       image=fehviewer
- 
-        word=abiword
-
- spreadsheet=gnumeric
+#     Genre=("fast"     "complex"       )
+       text=(gvim       subl            )
+      video=(mplayer                    )
+      audio=(mplayer                    )
+        pdf=(zathura    evince          )
+        web=(luakit     google-chrome   )
+      image=(fehviewer  mirage          )
+       word=(abiword                    )
+spreadsheet=(gnumeric                   )
 
 # File types -------
        text_array=(txt )
       video_array=(mpg mpeg avi webm)
+      audio_array=(mp3 ogg vorbis m4a m4b)
         pdf_array=(pdf)
         web_array=(html htm)
-      image_array=(jpg jpeg png bmp)
+      image_array=(jpg jpeg png bmp gif tiff svg)
        word_array=(docx doc odf rtf)
 spreadsheet_array=(gnumeric xls xlsx)
 
@@ -65,12 +77,15 @@ verbose() {
     fi
 }
 
-dump() {
+dumpFunc() {
     if $dumpOutput; then
-        2> /dev/null 
+        dump="2> /dev/null"
     fi
 }
 
+# --------------------------------------------------------
+# Usage details
+# --------------------------------------------------------
 helpOutput() {
     cat << 'EOF'
 
@@ -98,17 +113,17 @@ fi
 while getopts ":fcvhd" opt; do
     case $opt in
         f)
-            echo "Fast option selected"
+            verbose "Fast option selected"
             fast=true
             complex=false
             ;;
         c)
-            echo "Complex option selected"
+            verbose "Complex option selected"
             complex=true
             fast=false
             ;;
         v)
-            echo "Verbose option selected"
+            verbose "Verbose option selected"
             verbose_output=true
             ;;
         h)
@@ -116,6 +131,8 @@ while getopts ":fcvhd" opt; do
             ;;
         d) 
             dumpOutput=true
+            dumpFunc
+            verbose "Dumping output to null"
             ;;
         \?)
             echo "Unkown option: -$OPTARG. Defaulting to fast"
@@ -146,6 +163,9 @@ fi
 #   This is admittedly fantastically difficult to understand,
 #+  used for flexibility. New genres with new filetypes can be
 #+  added by the user easily without changing anything here.
+#
+# Genre_array[0] = fast
+# Genre_array[1] = complex
 # --------------------------------------------------------------
 ext=${1##*.}
 ext=${ext,,}
@@ -157,39 +177,51 @@ for fileType in "${Genre_array[@]}" ; do
 
     if in_array $ext "${!fileType_array}"; then
         verbose "Found extension $ext in genre $fileType"
-        
-        if [[ default=="fast" ]]; then
-            do_default="$fileType""_fast"
-        fi
-        do_fast="$fileType""_fast"
-        do_complex="$fileType""_complex"
 
-        if [ -z ${!do_fast} ] | [ -z ${!do_complex} ]; then
-            do_fast="$fileType"
-            do_complex="$fileType"
-        fi
+        do_fast=$fileType[0]
+        do_complex=$fileType[1]
 
         verbose "Filetype = $fileType"
-        if [[ $fast ]]; then
+        if $fast; then
             verbose "Executing ${!do_fast}"
-            ${!do_fast} "$1"
-        elif [[ $complex ]]; then
+            eval ${!do_fast} "\"$1\"" $dump
+        elif $complex; then
             verbose "Executing ${!do_complex}"
-            ${!do_complex} "$1"
+            eval ${!do_complex} "\"$1\"" $dump
         else
             verbose "No fast/complex option given, using default - $default"
-            if [[ -z ${!do_default} ]]; then
+            if [[ $default=="fast" ]]; then
                 verbose "Executing ${!do_fast}"
-                ${!fileType} "$1" 
+                eval ${!do_fast} "\"$1\"" $dump
             else
                 verbose "Executing ${!do_complex}"
-                ${!do_default} "$1" 
+                eval ${!do_complex} "\"$1\"" $dump
             fi
         fi
-        break
+        exit 0
     else
         verbose "nope"
     fi
 done
+echo "Filetype not recognised"
 
+# ------------------------------------------------------------
+# If no extension is given, or the extension is not recognised
+#+  then use the mimetype of the file.
+# ------------------------------------------------------------
+mimeType=$(file --mime-type -b "$1")
 
+# Delete from string everything after "/"
+mimeType=${mimeType%/*}
+echo "Mime-type is $mimeType"
+
+do_fast=$mimeType[0]
+do_complex=$mimeType[1]
+
+if $fast; then
+    verbose "Executing ${!do_fast}"
+    eval ${!do_fast} "\"$1\"" $dump
+elif $complex; then
+    verbose "Executing ${!do_complex}"
+    eval ${!do_complex} "\"$1\"" $dump
+fi
