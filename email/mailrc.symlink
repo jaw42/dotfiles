@@ -1,13 +1,41 @@
 account gmail {
-set folder=imaps://wainwright.ja@imap.gmail.com
-set password-wainwright.ja@imap.gmail.com="WSOGMM42[]"
-set record=+Sent
-set from="Josh Wainwright <wainwright.ja@gmail.com>"
-set smtp-use-starttls
-set smtp=smtp://smtp.gmail.com:587
-set smtp-auth=login
-set smtp-auth-user=wainwright.ja@gmail.com
-set smtp-auth-password="WSOGMM42[]"
+    set folder=imaps://wainwright.ja@imap.gmail.com
+    set password-wainwright.ja@imap.gmail.com="WSOGMM42[]"
+    set from="Josh Wainwright <wainwright.ja@gmail.com>"
+    set sendmail="/usr/bin/msmtp"
+    set message-sendmail-extra-arguments="-a gmail1"
+    set smtp-use-starttls
+    set smtp=smtp://smtp.gmail.com:587
+    set smtp-auth=login
+    set smtp-auth-user=wainwright.ja@gmail.com
+    set smtp-auth-password="WSOGMM42[]"
+}
+
+retain to from date subject cc 
 set autosort=date
-set headline="%>%a%m %18f %16d %4l/%-8o %i%s"
+set prompt=": "
+set autothread
+set headline="%>%a%m %20f %16d %4l/%-8o %i%s"
+set quiet
+set EDITOR=vim
+set pipe-application/pdf=zathura
+set imap-cache=/tmp
+set imap-list-depth=5
+set bsdcompat
+
+# HTML Mail
+set pipe-text/html="lynx -dump -force_html /dev/stdin"
+
+# PDF Attachments
+set pipe-application/pdf="cat >/tmp/mailx$$.pdf; \
+           open /tmp/mailx$$.pdf; rm /tmp/mailx$$.pdf"
+
+define allmail {
+    folder "+[Gmail]/All Mail"
+}
+
+define html {
+    write "/tmp/temp_mail.html"
+    !open "/tmp/temp_mail.html"
+    !rm "/tmp/temp_mail.html"
 }
