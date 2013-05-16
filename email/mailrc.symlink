@@ -9,13 +9,20 @@ account gmail {
     set smtp-auth=login
     set smtp-auth-user=wainwright.ja@gmail.com
     set smtp-auth-password="WSOGMM42[]"
+    shortcut all "+[Gmail]/All Mail"
+    shortcut in "+INBOX"
+    shortcut bin "+[Gmail]/Bin"
+    shortcut sent "+[Gmail]/Sent Mail"
+    shortcut spam "+[Gmail]/Spam"
+    shortcut drafts "+[Gmail]/Drafts"
+    shortcut bham "+Birmingham_Uni/jaw097@bham.ac.uk"
 }
 
 retain to from date subject cc 
 set autosort=date
 set prompt=": "
 set autothread
-set headline="%>%a%m %20f %16d %4l/%-8o %i%s"
+set headline="%>%a%m %24f | %16d %4l/%-8o|  %i%-s"
 set quiet
 set EDITOR=vim
 set pipe-application/pdf=zathura
@@ -24,7 +31,7 @@ set imap-list-depth=5
 set bsdcompat
 
 # HTML Mail
-set pipe-text/html="lynx -dump -force_html /dev/stdin"
+set pipe-text/html="lynx -dump -force_html -stdin"
 
 # PDF Attachments
 set pipe-application/pdf="cat >/tmp/mailx$$.pdf; \

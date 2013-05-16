@@ -20,3 +20,6 @@ paclist() {
 
 # Print a calendar for the next week using the width of the terminal as max
 alias calw='rem -w$COLUMNS,0,1 -m -c+1'
+
+alias mailx='mailx -vA gmail'
+alias mail='mailx -A gmail'
