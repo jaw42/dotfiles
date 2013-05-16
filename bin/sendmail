@@ -1,6 +1,9 @@
 #!/bin/bash
 
 addressBook=~/.mutt/aliases
+    
+echo "Some text that is new"
+
 while [ ${#addresses[@]} -eq 0 ]; do
     if [[ $# -eq 0 ]]; then
         echo -n "Search: "
@@ -10,9 +13,11 @@ while [ ${#addresses[@]} -eq 0 ]; do
         name="$1"
     fi
 
+    echo "Something new"
+
     addresses=($(cat $addressBook | grep "$name" | sed 's/.*<\(.*\)>.*/\1/' ))
     IFS=$'\n'
-    names=($(cat .mutt/aliases | grep "$name" | awk '{print $3 " " $4}'))
+    names=($(cat $addressBook | grep "$name" | awk '{print $3 " " $4}'))
     unset IFS
 
     num=0
@@ -29,6 +34,10 @@ while [ ${#addresses[@]} -eq 0 ]; do
         echo "$sendTo"
     else
         sendTo=${addresses[0]}
+    fi
+
+    if [[ ${#addresses[@]} -eq 0 ]];then
+        echo "Name not found, please search again"
     fi
 done
 
