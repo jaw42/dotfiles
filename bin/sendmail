@@ -1,0 +1,40 @@
+#!/bin/bash
+
+addressBook=~/.mutt/aliases
+while [ ${#addresses[@]} -eq 0 ]; do
+    if [[ $# -eq 0 ]]; then
+        echo -n "Search: "
+        read name; 
+        echo -e ""
+    else
+        name="$1"
+    fi
+
+    addresses=($(cat $addressBook | grep "$name" | sed 's/.*<\(.*\)>.*/\1/' ))
+    IFS=$'\n'
+    names=($(cat .mutt/aliases | grep "$name" | awk '{print $3 " " $4}'))
+    unset IFS
+
+    num=0
+
+    for i in ${addresses[@]}; do
+        echo -e "$num ${names[$num]} \t$i"
+        num=$(($num+1))
+    done
+
+    if [[ ${#addresses[@]} -gt 1 ]]; then
+        echo -ne "\nSelect an address: "
+        read addressNum
+        sendTo=${addresses[$addressNum]}
+        echo "$sendTo"
+    else
+        sendTo=${addresses[0]}
+    fi
+done
+
+echo -e "-------------------- $sendTo --------------------"
+#for i in {1..$COLUMNS};do echo -n "=";done
+
+echo -n "Subject: "
+read subject
+mailx -s "$subject" "$sendTo"
