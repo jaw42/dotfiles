@@ -13,8 +13,6 @@ while [ ${#addresses[@]} -eq 0 ]; do
         name="$1"
     fi
 
-    echo "Something new"
-
     addresses=($(cat $addressBook | grep "$name" | sed 's/.*<\(.*\)>.*/\1/' ))
     IFS=$'\n'
     names=($(cat $addressBook | grep "$name" | awk '{print $3 " " $4}'))
