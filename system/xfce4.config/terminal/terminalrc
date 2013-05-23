@@ -17,7 +17,6 @@ MiscTabCloseButtons=TRUE
 MiscTabCloseMiddleClick=TRUE
 MiscTabPosition=GTK_POS_TOP
 MiscHighlightUrls=TRUE
-ScrollingBar=TERMINAL_SCROLLBAR_NONE
 ScrollingLines=2000
 ColorForeground=#F2F2F2
 ColorBackground=#272822
@@ -26,4 +25,5 @@ TabActivityTimeout=5
 ColorCursor=#f2f2f2f2f2f2
 Encoding=UTF-8
 TitleMode=TERMINAL_TITLE_REPLACE
+ScrollingBar=TERMINAL_SCROLLBAR_NONE
 
