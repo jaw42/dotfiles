@@ -543,4 +543,4 @@
 		status "(c) Øyvind Kolås 2001-2003    pippin@users.sourceforge.net"
 	end
 	
-	macro m_about
+	#macro m_about

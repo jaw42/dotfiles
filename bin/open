@@ -6,26 +6,7 @@
 # ---------------------------------------------------------
 
 # Genres -----------
-Genre_array=(text video audio pdf web image word spreadsheet)
-
-# Programs ---------
-#   text_fast=gvim
-#text_complex=subl
-#
-#       video=mplayer
-#       audio=mplayer
-#
-#    pdf_fast=zathura
-# pdf_complex=evince
-#
-#    web_fast=luakit
-# web_complex=google-chrome
-#
-#       image=fehviewer
-#
-#        word=abiword
-#
-# spreadsheet=gnumeric
+Genre_array=(text video audio pdf web image word spreadsheet svg)
 
 #     Genre=("fast"     "complex"       )
        text=(gvim       subl            )
@@ -36,16 +17,22 @@ Genre_array=(text video audio pdf web image word spreadsheet)
       image=(fehviewer  mirage          )
        word=(abiword                    )
 spreadsheet=(gnumeric                   )
+    archive=(file-roller                )
 
 # File types -------
-       text_array=(txt )
-      video_array=(mpg mpeg avi webm)
-      audio_array=(mp3 ogg vorbis m4a m4b)
+       text_array=(txt tex sh markdown zsh)
+      video_array=(mpg mpeg avi webm m4v swf wmv mp4 flv)
+      audio_array=(mp3 ogg vorbis m4a m4b aif wma wav)
         pdf_array=(pdf)
-        web_array=(html htm)
-      image_array=(jpg jpeg png bmp gif tiff svg)
-       word_array=(docx doc odf rtf)
-spreadsheet_array=(gnumeric xls xlsx)
+        web_array=(html htm xml)
+      image_array=(jpg jpeg png bmp gif tiff)
+       word_array=(docx doc odf rtf abw odt rtf)
+spreadsheet_array=(gnumeric xls xlsx csv dat)
+    archive_array=(zip rar bz tar)
+
+# Exceptions
+    svg=(rsvg-view-3)
+    svg_array=(svg)
 
 # Other Options ----
 default=fast # fast/complex

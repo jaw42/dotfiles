@@ -43,7 +43,8 @@ function mpd(){
     esac
 	curMessy=$(mpc current -f "[[%artist% - ]%title%]|[%file%]" | head -n 1)
     cur=$(removeUnprintable "$curMessy" )
-	echo -ne " \x08$stat_short $cur\x01" > /tmp/dwm_status_bar/mpd
+    perc=$(mpc | awk 'NR==2 {print $4}')
+	echo -ne " \x08$stat_short $perc $cur\x01" > /tmp/dwm_status_bar/mpd
 }
 
 function rdog(){

@@ -16,19 +16,30 @@ account gmail {
     shortcut spam "+[Gmail]/Spam"
     shortcut drafts "+[Gmail]/Drafts"
     shortcut bham "+Birmingham_Uni/jaw097@bham.ac.uk"
+    shortcut home "+Home"
 }
 
+set showlast
 retain to from date subject cc 
 set autosort=date
-set prompt=": "
+set prompt="=> "
 set autothread
 set headline="%>%a%m %24f | %16d %4l/%-8o|  %i%-s"
 set quiet
 set EDITOR=vim
+set PAGER=less
+set crt=20
 set pipe-application/pdf=zathura
 set imap-cache=/tmp
 set imap-list-depth=5
 set bsdcompat
+set sendcharsets="utf-8"
+set flipr
+set bsdannounce
+set header
+
+#Plain Text Mail
+set pipe-text/plain="fold -s | less"
 
 # HTML Mail
 set pipe-text/html="lynx -dump -force_html -stdin"
@@ -36,6 +47,10 @@ set pipe-text/html="lynx -dump -force_html -stdin"
 # PDF Attachments
 set pipe-application/pdf="cat >/tmp/mailx$$.pdf; \
            open /tmp/mailx$$.pdf; rm /tmp/mailx$$.pdf"
+
+# Image Attachments
+set pipe-image/jpeg="cat >/tmp/mailx$$.jpg; \
+           open /tmp/mailx$$.jpg; rm /tmp/mailx$$.jpg"
 
 define allmail {
     folder "+[Gmail]/All Mail"
