@@ -1,0 +1,5 @@
+#!/bin/sh
+
+CMD=$(xlsclients | awk '{print $2}' | dmenu -nb '#545043' -nf '#D2C7A7' -sb '#D2C7A7' -sf '#545043')
+
+xdotool search -classname "$CMD" windowactivate --
