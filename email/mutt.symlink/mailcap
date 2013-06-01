@@ -1,12 +1,12 @@
 text/html;              links %s; nametemplate=%s.html
 text/html;              links -dump %s; nametemplate=%s.html; copiousoutput
 
-image/*;                fehviewer %s
-image/jpg;				feh %s
+image/*;                open -f %s
+image/jpg;				open -f %s
 
-application/pdf;        evince %s
-application/pdf;        zathura %s
+application/pdf;        open -f %s
+application/pdf;        open -f %s
 
-application/msword;     abiword %s
+application/msword;     open -f %s
 
 
