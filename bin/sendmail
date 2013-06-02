@@ -1,46 +1,73 @@
 #!/bin/bash
 
 addressBook=~/.mutt/aliases
-    
-echo "Some text that is new"
+research=true
+notFound=false
 
-while [ ${#addresses[@]} -eq 0 ]; do
-    if [[ $# -eq 0 ]]; then
-        echo -n "Search: "
-        read name; 
-        echo -e ""
-    else
-        name="$1"
-    fi
+function search {
+    echo -n "Search: "
+    read name; 
+    echo -e ""
+}
 
-    addresses=($(cat $addressBook | grep "$name" | sed 's/.*<\(.*\)>.*/\1/' ))
-    IFS=$'\n'
-    names=($(cat $addressBook | grep "$name" | awk '{print $3 " " $4}'))
-    unset IFS
+while $research ; do
+#    while [ ${#addresses[@]} -eq 0 ] ; do
+    while $notFound || $research ; do
 
-    num=0
+        if [[ $# -eq 0 ]]; then
+            search
+        else
+            name="$1"
+        fi
 
-    for i in ${addresses[@]}; do
-        echo -e "$num ${names[$num]} \t$i"
-        num=$(($num+1))
+        addresses=($(cat $addressBook | grep "$name" | sed 's/.*<\(.*\)>.*/\1/' ))
+        IFS=$'\n'
+        names=($(cat $addressBook | grep "$name" | awk '{print $3 " " $4}'))
+        unset IFS
+
+        num=0
+
+        for i in ${addresses[@]}; do
+            echo -e "$num ${names[$num]} \t$i"
+            num=$(($num+1))
+        done
+
+        if [[ ${#addresses[@]} -gt 1 ]]; then
+            echo -ne "\nSelect an address: "
+            read addressNum
+            sendTo=${addresses[$addressNum]}
+            sendToArray=("${sendToArray[@]}" "${addresses[$addressNum]}")
+            echo "$sendTo"
+        else
+            sendTo=${addresses[0]}
+            sendToArray=("${sendToArray[@]}" "${addresses[$addressNum]}")
+        fi
+
+        if [[ ${#addresses[@]} -eq 0 ]];then
+            echo "Name not found, please search again"
+            notFound=true
+        fi
+        research=false
     done
 
-    if [[ ${#addresses[@]} -gt 1 ]]; then
-        echo -ne "\nSelect an address: "
-        read addressNum
-        sendTo=${addresses[$addressNum]}
-        echo "$sendTo"
-    else
-        sendTo=${addresses[0]}
-    fi
-
-    if [[ ${#addresses[@]} -eq 0 ]];then
-        echo "Name not found, please search again"
-    fi
+    echo -en "\nSearch again? [y/N] "
+    read yesno
+    case $yesno in
+        Y|y|yes|Yes)
+            echo "searching again"
+            research=true;;
+        N|n|no|No|*)
+            echo "not searching"
+            research=false;;
+    esac
+    echo "end of research loop"
 done
 
-echo -e "-------------------- $sendTo --------------------"
+echo -e "--------------------------------------------------------------------------------"
 #for i in {1..$COLUMNS};do echo -n "=";done
+
+#sendTo=echo ${sendToArray[@]}
+sendTo=$(IFS=, ; echo "${sendToArray[*]}")
 
 echo -n "Subject: "
 read subject
