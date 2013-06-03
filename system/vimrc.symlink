@@ -35,6 +35,9 @@ set autoread
 "Show line numbers 
 set number
 
+let g:indentLine_char = ':'
+let g:indentLine_color_term = 239
+
 " Highlight the line the cursor is currently on
 set cursorline
 
