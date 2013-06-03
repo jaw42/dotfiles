@@ -13,7 +13,7 @@ Genre_array=(text video audio pdf web image word spreadsheet svg)
       video=(mplayer                    )
       audio=(mplayer                    )
         pdf=(zathura    evince          )
-        web=(luakit     google-chrome   )
+        web=(luakit     google-chrome  jumanji )
       image=(fehviewer  mirage          )
        word=(abiword                    )
 spreadsheet=(gnumeric                   )
@@ -80,13 +80,15 @@ Usage:
   open [options] <file|url>
 
 Options:
-  -f     use the "fast" program
-  -c     use the "complex" program
-  -v     output debugging info
-  -d     dump output error messages so they are not displayed
-                ****Does not yet work****
-  -h     print this help message
+  -f    use the "fast" program
+  -c    use the "complex" program
+  -v    output debugging info
+  -d    dump output error messages so they are not displayed
+  -w    open a web url
+  -h    print this help message
+
 EOF
+    exit
 }
 
 if [[ $# -eq 0 ]]; then
@@ -94,10 +96,11 @@ if [[ $# -eq 0 ]]; then
     exit
 fi
 
+webParse=false
 # --------------------------------------------------------------
 # Options Handler
 # --------------------------------------------------------------
-while getopts ":fcvhd" opt; do
+while getopts ":fcvhdw" opt; do
     case $opt in
         f)
             verbose "Fast option selected"
@@ -121,6 +124,9 @@ while getopts ":fcvhd" opt; do
             dumpFunc
             verbose "Dumping output to null"
             ;;
+        w)
+            webParse=true
+            ;;
         \?)
             echo "Unkown option: -$OPTARG. Defaulting to fast"
     esac
@@ -131,16 +137,15 @@ shift $((OPTIND-1))
 # --------------------------------------------------------------
 # URL Handler
 # --------------------------------------------------------------
-#regex='(https?|ftp|file)://[-A-Za-z0-9\+&@#/%?=~_|!:,.;]*[-A-Za-z0-9\+&@#/%=~_|]'
-regex='((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[.\!\/\\w]*))?)'
-
-if  echo "$1" | grep -q -P $regex ; then
+if $webParse ; then
     if $fast; then
         verbose "Found url, using web browser - $web_fast"
-        $web_fast "$1"
+        #$web_fast "$1"
+        eval ${web[2]} "\"$1\"" $dump
     else
         verbose "Found url, using web browser - $web_complex"
-        $web_complex "$1"
+        #$web_complex "$1"
+        eval ${web[1]} "\"$1\"" $dump
     fi
     exit
 fi
@@ -156,6 +161,25 @@ fi
 # --------------------------------------------------------------
 ext=${1##*.}
 ext=${ext,,}
+
+if [[ $# -eq 2 ]]; then
+    for genre in "${Genre_array[@]}"; do
+        if [[ $genre = $1 ]]; then
+            do_fast=$genre[0]
+            do_complex=$genre[1]
+
+            if $fast; then
+                verbose "Executing ${!do_fast}"
+                eval ${!do_fast} "\"$2\"" $dump
+            elif $complex; then
+                verbose "Executing ${!do_complex}"
+                eval ${!do_complex} "\"$2\"" $dump
+            fi
+        fi
+    done
+    exit
+fi
+
 verbose "Extension is $ext"
 for fileType in "${Genre_array[@]}" ; do
     fileType_array="$fileType""_array[@]"
