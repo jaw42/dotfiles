@@ -1,7 +1,8 @@
 #!/bin/bash
 
 addressBook=~/.mutt/aliases
-research=true
+research=false
+firstrun=true
 notFound=false
 
 function search {
@@ -10,11 +11,11 @@ function search {
     echo -e ""
 }
 
-while $research ; do
+while $research || $firstrun; do
 #    while [ ${#addresses[@]} -eq 0 ] ; do
-    while $notFound || $research ; do
+    while $notFound || $firstrun || $research; do
 
-        if [[ $# -eq 0 ]]; then
+        if [[ $# -eq 0 ]] || $research; then
             search
         else
             name="$1"
@@ -46,7 +47,10 @@ while $research ; do
         if [[ ${#addresses[@]} -eq 0 ]];then
             echo "Name not found, please search again"
             notFound=true
+        else
+            notFound=false
         fi
+        firstrun=false
         research=false
     done
 
@@ -54,21 +58,17 @@ while $research ; do
     read yesno
     case $yesno in
         Y|y|yes|Yes)
-            echo "searching again"
             research=true;;
         N|n|no|No|*)
-            echo "not searching"
             research=false;;
     esac
-    echo "end of research loop"
 done
 
 echo -e "--------------------------------------------------------------------------------"
-#for i in {1..$COLUMNS};do echo -n "=";done
 
-#sendTo=echo ${sendToArray[@]}
+echo ${sendToArray[@]}
 sendTo=$(IFS=, ; echo "${sendToArray[*]}")
 
 echo -n "Subject: "
 read subject
-mailx -s "$subject" "$sendTo"
+mailx -v -s "$subject" "$sendTo"

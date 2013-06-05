@@ -1,14 +1,13 @@
 account gmail {
     set folder=imaps://wainwright.ja@imap.gmail.com
-    set password-wainwright.ja@imap.gmail.com="WSOGMM42[]"
+    #set password-wainwright.ja@imap.gmail.com=
     set from="Josh Wainwright <wainwright.ja@gmail.com>"
-    set sendmail="/usr/bin/msmtp"
-    set message-sendmail-extra-arguments="-a gmail1"
+    set message-sendmail-extra-arguments="-a gmail"
     set smtp-use-starttls
     set smtp=smtp://smtp.gmail.com:587
     set smtp-auth=login
     set smtp-auth-user=wainwright.ja@gmail.com
-    set smtp-auth-password="WSOGMM42[]"
+    #set smtp-auth-password=
     shortcut all "+[Gmail]/All Mail"
     shortcut in "+INBOX"
     shortcut bin "+[Gmail]/Bin"
@@ -19,6 +18,19 @@ account gmail {
     shortcut home "+Home"
 }
 
+account bham {
+    set folder=imaps://jaw097@mail.bham.ac.uk
+    #set password-jaw097@mail.bham.ac.uk=
+    set from="Josh Wainwright <jaw097@bham.ac.uk>
+    set message-sendmail-extra-arguments="-a bham"
+    set smtp=smtp://auth-smtp.bham.ac.uk:587
+    set smtp-use-starttls
+    set smtp-auth=login
+    set smtp-auth-user=jaw097
+    #set smtp-auth-password=
+}
+
+set sendmail="/usr/bin/msmtp"
 set ttycharset=utf8
 set showlast
 retain to from date subject cc 
@@ -64,3 +76,4 @@ define html {
     !rm "/tmp/temp_mail.html"
 }
 
+source ~/.mailpass
