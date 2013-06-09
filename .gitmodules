@@ -10,10 +10,6 @@
 	path = vim.symlink/bundle/multiple-cursors.vim
 	url = git://github.com/terryma/vim-multiple-cursors.git
     ignore = dirty
-[submodule "vim.symlink/bundle/gmail.vim"]
-	path = vim.symlink/bundle/gmail.vim
-	url = git://github.com/yuratomo/gmail.vim.git
-    ignore = dirty
 [submodule "vim.symlink/bundle/snipmate.vim"]
 	path = vim.symlink/bundle/snipmate.vim
 	url = git://github.com/msanders/snipmate.vim
