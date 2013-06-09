@@ -40,7 +40,7 @@ set autothread
 set headline="%>%a%m %24f | %16d %4l/%-8o|  %i%-s"
 set quiet
 set EDITOR=vim
-set PAGER=less
+set PAGER=vimpager
 #set crt=20
 set pipe-application/pdf=zathura
 set imap-cache=/tmp

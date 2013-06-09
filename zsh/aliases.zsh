@@ -1,7 +1,6 @@
 alias reload!='. ~/.zshrc'
 
 alias ls='ls --color=auto'
-alias cp="rsync -poghb --backup-dir=/tmp/rsync -e /dev/null --progress --"
 alias mv='mv -i -v'
 alias rm='rm -v'
 alias less='less -F'
@@ -35,3 +34,7 @@ alias play-dvd='mplayer -nocache -dvd-device /dev/sr0 -mouse-movements dvdnav://
 
 
 alias vless='vim -u /usr/share/vim/vim73/macros/less.vim'  
+
+# Vim
+alias gvim='gvim --remote-tab-silent'
+alias vim='vim --remote-tab-silent'

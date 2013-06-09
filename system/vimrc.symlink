@@ -30,6 +30,7 @@ set history=700
 filetype plugin on
 filetype indent on
 
+"Auto read when a file changes from the outside
 set autoread
 
 "Show line numbers 
@@ -54,7 +55,7 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set 7 lines to the cursor - when moving vertically using j/k
-set so=7
+set scrolloff=7
 
 " Turn on the WiLd menu
 set wildmenu
@@ -92,10 +93,6 @@ set incsearch
 
 " Don't redraw while executing macros (good performance config)
 set lazyredraw 
-
-" Don't create swp files
-set noswapfile
-set nobackup
 
 " For regular expressions turn magic on
 set magic
@@ -141,6 +138,8 @@ set wrap "Wrap lines
 " Wrap text but don't automatically add linebreaks.
 set textwidth=0 wrapmargin=0
 
+"set guioptions=ac
+
 """"""""""""""""""""""""""""""
 " => Visual mode related
 """"""""""""""""""""""""""""""
@@ -150,7 +149,14 @@ vnoremap <silent> * :call VisualSelection('f')<CR>
 vnoremap <silent> # :call VisualSelection('b')<CR>
 
 syntax on
-colorscheme molokai
+set synmaxcol=2048
+
+if has('gui_running')
+    colorscheme molokai
+else
+    colorscheme monokai
+endif
+
 highlight Normal ctermbg=235
 
 
@@ -163,8 +169,29 @@ function! HasPaste()
 endfunction
 
 """""""""""""""""""""""""""""
+" => Files and filetypes
+"""""""""""""""""""""""""""""
+" Use unix as the standard filetype
+set ffs=unix,dos,mac
+
+" Don't create swp files
+set noswapfile
+set nobackup
+
+
+"""""""""""""""""""""""""""""
 " => Keybindings
 """""""""""""""""""""""""""""
+" Make j and k move to the next row on screen rather
+nmap j gj
+nmap k gk
+
+" Tab completion of commands
+imap <Tab> <C-P>
+
+" Fast saving
+nmap <leader>w :w!<cr>
+
 noremap <leader>o <Esc>:CommandT<CR>
 noremap <leader>O <Esc>:CommandTFlush<CR>
 noremap <leader>m <Ese>:CommandTBuffer<CR>
@@ -175,10 +202,6 @@ nmap <leader>l :setlocal number!<CR>
 " Unset highlighting of a search
 nmap <leader>q :nohlsearch<CR>
 
-" Make j and k move to the next row on screen rather
-nmap j gj
-nmap k gk
-
 " Switch to Next and Previous buffer
 nmap <C-n> :bnext<CR>
 nmap <C-p> :bprev<CR>
@@ -186,3 +209,6 @@ nmap <C-p> :bprev<CR>
 " Change size of window split
 nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
+
+nmap <C-V> "+gP
+imap <C-V> <ESC><C-V>a
