@@ -10,6 +10,7 @@ fi
 
 for config in $pacnew; do
   # Diff original and new configuration to merge
+  #sudo meld ${config%\.*} $config 2> /dev/null &
   sudo meld ${config%\.*} $config &
   wait
   # Remove .pacnew file?
