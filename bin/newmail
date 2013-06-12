@@ -1,3 +1,0 @@
-new=$(find ~/.mail/ -type f -wholename '*/new/*' | wc -l);
-unread=$(find ~/.mail/ -type f -regex '.*/cur/.*2,[^S]*$' | wc -l);
-echo -e $unread:$new
