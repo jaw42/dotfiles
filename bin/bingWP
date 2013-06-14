@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 # wp - Set National Geographic 'picture of the day' as XFCE wallpaper
 # Author : Jaseem Abid <jaseemabid@gmail.com>
 
@@ -26,6 +26,10 @@ for html in $today $Previous; do
 
     ## echo "Scraping the link"
     link=$(cat index.html | grep "Download Wallpaper" |  grep -Po 'http.*.jpg')
+    if [[ $link = "" ]]; then
+        echo "Download link not availible, using smaller image"
+        link=$(cat index.html | grep -A3 "Go to the previous" | tail -n1 | grep -Po 'http.*.jpg')
+    fi
 
     echo "Downloading the image"
     if $todayNow; then
@@ -92,5 +96,5 @@ if [ -e 0.jpg -a -e 1.jpg ]; then
     nitrogen --restore
 else
     echo "Error, pictures not downloaded."
-    return 1
+    exit 1
 fi
