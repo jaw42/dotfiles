@@ -21,3 +21,6 @@
 [submodule "vim.symlink/bundle/instant-markdown.vim"]
 	path = vim.symlink/bundle/instant-markdown.vim
 	url = git://github.com/suan/vim-instant-markdown.git
+[submodule "vim.symlink/bundle/indentLine.vim"]
+	path = vim.symlink/bundle/indentLine.vim
+	url = git://github.com/Yggdroot/indentLine.git
