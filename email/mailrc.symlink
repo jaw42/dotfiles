@@ -14,7 +14,7 @@ account gmail {
     shortcut sent "+[Gmail]/Sent Mail"
     shortcut spam "+[Gmail]/Spam"
     shortcut drafts "+[Gmail]/Drafts"
-    shortcut bham "+Birmingham_Uni/jaw097@bham.ac.uk"
+    shortcut bham "+Birmingham_Uni/jaw097@bham
     shortcut home "+Home"
 }
 
@@ -41,8 +41,6 @@ set headline="%>%a%m %24f | %16d %4l/%-8o|  %i%-s"
 set quiet
 set EDITOR=vim
 set PAGER=vimpager
-#set crt=20
-set pipe-application/pdf=zathura
 set imap-cache=/tmp
 set imap-list-depth=5
 set bsdcompat
@@ -50,6 +48,7 @@ set sendcharsets="utf-8"
 set flipr
 set bsdannounce
 set header
+set pipe-application/pdf=zathura
 
 #Plain Text Mail
 set pipe-text/plain="sed -n '/On.*wrote:/q;p'"
