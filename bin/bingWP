@@ -5,9 +5,13 @@
 # Make cache directory
 dir=~/Pictures/BingPics
 [ -d $dir ] || mkdir $dir
-
-## CD to cache dir
-cd $dir
+if [ -d $dir ]; then
+    cd $dir
+    rm 0.jpg 1.jpg
+else
+    mkdir $dir
+    cd $dir
+fi
 
 ## Delete index file if it exists
 #[ -e index.html ] || rm index.html
