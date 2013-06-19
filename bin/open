@@ -34,6 +34,9 @@ spreadsheet_array=(gnumeric xls xlsx csv dat)
     svg=(rsvg-view-3)
     svg_array=(svg)
 
+# Other Programs
+    terminal=(lilyterm  terminator)
+
 # Other Options ----
 default=fast # fast/complex
 verbose_output=false # true/false
@@ -77,7 +80,7 @@ helpOutput() {
     cat << 'EOF'
 
 Usage:
-  open [options] <file|url>
+  open [options] <file|url|prgram>
 
 Options:
   -f    use the "fast" program
@@ -85,11 +88,39 @@ Options:
   -v    output debugging info
   -d    dump output error messages so they are not displayed
   -w    open a web url
+  -t    open the specified program genre defined program
   -h    print this help message
+
+Configuration:
+  * The script is configured at the moment, from within the script its self.
+  * A number of arrays are defined at the top of the script file. Each array 
+    corresponds to a filetype, or "genre", and contains 1 or 2 elements, each 
+    of which is the executable name of a program. 
+      * The first is the fast program - designed to be a quick to open, usually
+        lower on features, that is used to simply view the file specifier.
+      * The second is the complex program - intended to be a more feature rich 
+        program for editing the file, but which is likely to take longer to 
+        start.
+
+Examples:
+    open example.html
+        Use the default web browser to view the file example.html.
+
+    open -c example.pdf
+        Use the complex pdf viewer to view the file example.pdf.
+
+    open -tvf terminal
+        Open the fast terminal with verbose program information printed to 
+        stdout.
+
+Bugs:
+    Contact wainwright.ja@gmail.com
 
 EOF
     exit
 }
+
+# --------------------------------------------------------------
 
 if [[ $# -eq 0 ]]; then
     helpOutput
@@ -97,10 +128,11 @@ if [[ $# -eq 0 ]]; then
 fi
 
 webParse=false
+programSpecify=false
 # --------------------------------------------------------------
 # Options Handler
 # --------------------------------------------------------------
-while getopts ":fcvhdw" opt; do
+while getopts ":fcvhdwt" opt; do
     case $opt in
         f)
             verbose "Fast option selected"
@@ -127,12 +159,29 @@ while getopts ":fcvhdw" opt; do
         w)
             webParse=true
             ;;
+        t)
+            programSpecify=true
+            ;;
         \?)
             echo "Unkown option: -$OPTARG. Defaulting to fast"
     esac
 done
 
 shift $((OPTIND-1))
+
+# --------------------------------------------------------------
+# Program Specifying
+# --------------------------------------------------------------
+if $programSpecify ; then
+    if $fast; then
+        prog="$1[0]"
+    else
+        prog="$1[1]"
+    fi
+    verbose "Executing specified program genre - ${!prog}"
+    eval ${!prog}
+    exit
+fi
 
 # --------------------------------------------------------------
 # URL Handler
