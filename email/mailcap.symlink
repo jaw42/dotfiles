@@ -8,5 +8,3 @@ application/pdf;        open -f %s
 application/pdf;        open -f %s
 
 application/msword;     open -f %s
-
-

@@ -4,6 +4,8 @@
 set imap_user	= "wainwright.ja@gmail.com"						# Username of the email account
 set from 		= $imap_user									# Use same username for sent emails
 set realname 	= "Josh Wainwright"								# My name to add to sent emails
+set reverse_name
+alternates "jaw097@bham.ac.uk|wainwright.ja@gmail.com"
 
 ##Keep password out of repo##
 source ~/.mutt/.muttpass
@@ -26,6 +28,9 @@ set alias_file = "~/.mutt/aliases"
 set sort_alias = alias
 set reverse_alias = yes
 source $alias_file
+
+# Reply from the address to which the email was sent.
+send-hook '~t ^jaw097@bham\.ac\.uk$' 'my_hdr From: jaw097@bham.ac.uk'
 
 # Header Options -----------------------------------------------------------------
 set edit_headers = yes
@@ -132,14 +137,15 @@ bind pager P noop # I don't have a printer. Save the trees :P
 bind compose <return> send-message
 
 # Gmail-style keyboard shortcuts
-macro index,pager y "<enter-command>unset trash\n <delete-message>" "Gmail archive message"
-macro index,pager d "<enter-command>set trash=\"imaps://imap.googlemail.com/[GMail]/Bin\"\n <delete-message>" "Gmail delete message"
+#macro index,pager y "<enter-command>unset trash\n <delete-message>" "Gmail archive message"
+#macro index,pager d "<enter-command>set trash=\"imaps://imap.googlemail.com/[GMail]/Bin\"\n <delete-message>" "Gmail delete message"
+macro index,pager d "<save-message>=[Gmail]/Bin<enter>"
+bind index,pager e delete-message
 macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox"
-macro index,pager ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
+macro index,pager ga "<change-folder>=[Gmail]/All<quote-char> Mail<enter>" "Go to all mail"
 macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
 macro index,pager gs "<change-folder>=[Gmail]/Sent Mail<enter>" "Go to my sent messages"
 
-macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox" # Saner copy/move dialogs
-macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
-
-
+macro index c "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox" # Saner copy/move dialogs
+macro index s "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
+bind index,pager S save-message
