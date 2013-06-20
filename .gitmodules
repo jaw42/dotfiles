@@ -6,10 +6,6 @@
 	path = vim.symlink/bundle/nerdtree.vim
 	url = git://github.com/scrooloose/nerdtree.git
     ignore = dirty
-[submodule "vim.symlink/bundle/multiple-cursors.vim"]
-	path = vim.symlink/bundle/multiple-cursors.vim
-	url = git://github.com/terryma/vim-multiple-cursors.git
-    ignore = dirty
 [submodule "vim.symlink/bundle/snipmate.vim"]
 	path = vim.symlink/bundle/snipmate.vim
 	url = git://github.com/msanders/snipmate.vim
