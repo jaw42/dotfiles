@@ -1,6 +1,11 @@
 
 Xcursor*theme: Adwaita
 
+! Xterm settings ----------------------------------
+
+XTerm*locale: true
+XTerm*faceName: Inconsolatanti:alias=falsea
+XTerm*faceSize: 10
 ! terminal colors ----------------------------------
 
 ! Monokai scheme
