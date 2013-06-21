@@ -207,6 +207,9 @@
 		
 		bind ^S save_state
 		bind .. sort
+
+        bind ^R save_state
+        bind .. "sort -r"
 		
 		bind backspace	backspace
 		bind backspace2	backspace
@@ -535,7 +538,7 @@
 		menu "Level" "------------" ""
 		menu "Level" "sort      ^S" "sort -a"
 		menu "Level" "sort (desc.)" "sort -d"
-		menu "Level" "shuffle     " "sort -r"
+		menu "Level" "shuffle   ^R" "sort -r"
 #####
 	context main
 	macro define m_about
