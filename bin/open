@@ -6,7 +6,7 @@
 # ---------------------------------------------------------
 
 # Genres -----------
-Genre_array=(text video audio pdf web image word spreadsheet svg)
+Genre_array=(text video audio pdf web image word spreadsheet archive svg)
 
 #     Genre=("fast"     "complex"       )
        text=(gvim       subl            )
@@ -35,7 +35,7 @@ spreadsheet_array=(gnumeric xls xlsx csv dat)
     svg_array=(svg)
 
 # Other Programs
-    terminal=(lilyterm  terminator)
+    terminal=(xterm  terminator)
 
 # Other Options ----
 default=fast # fast/complex
@@ -81,6 +81,8 @@ helpOutput() {
 
 Usage:
   open [options] <file|url|prgram>
+  open [options] <program-genre>
+  open -h
 
 Options:
   -f    use the "fast" program
@@ -109,9 +111,9 @@ Examples:
     open -c example.pdf
         Use the complex pdf viewer to view the file example.pdf.
 
-    open -tvf terminal
+    open -tvfd terminal
         Open the fast terminal with verbose program information printed to 
-        stdout.
+        stdout and dump any error messages from the terminal to /dev/null.
 
 Bugs:
     Contact wainwright.ja@gmail.com
@@ -189,11 +191,9 @@ fi
 if $webParse ; then
     if $fast; then
         verbose "Found url, using web browser - $web_fast"
-        #$web_fast "$1"
         eval ${web[2]} "\"$1\"" $dump
     else
         verbose "Found url, using web browser - $web_complex"
-        #$web_complex "$1"
         eval ${web[1]} "\"$1\"" $dump
     fi
     exit
@@ -211,7 +211,10 @@ fi
 ext=${1##*.}
 ext=${ext,,}
 
-if [[ $# -eq 2 ]]; then
+# if the user has specified a genre to use, then there must be
+# two arguments - genre and file.
+#if [[ $# -eq 2 ]]; then
+if in_array "$1" "${Genre_array[@]}"; then
     for genre in "${Genre_array[@]}"; do
         if [[ $genre = $1 ]]; then
             do_fast=$genre[0]
