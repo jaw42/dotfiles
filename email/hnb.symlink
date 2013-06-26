@@ -10,21 +10,27 @@
 	>]>
 
 <tree>
-<node type="todo" done="no"><data>--Todo--</data>
-	<node type="todo" done="no"><data>Learn python</data></node>
-	<node done="no" type="todo"><data>Kindle wallpapers</data></node>
-	<node type="todo" done="yes"><data>City small group instead of Student+</data></node>
-	<node type="todo" done="no"><data>Take guarantor forms to landlord and get email of contract</data></node>
-	<node done="yes" type="todo"><data>Open source ipod classic alterntive</data>
-		<node done="yes" type="todo"><data>Creative zen?</data></node>
-		<node done="no" type="todo"><data>Cownen iAudio?</data></node>
+<node done="no" type="todo"><data>--Todo--</data>
+	<node type="todo" done="no"><data>Contact steven gaunt re training week</data></node>
+	<node done="no" type="todo"><data>Learn python</data></node>
+	<node type="todo" done="no"><data>Kindle wallpapers</data></node>
+	<node done="yes" type="todo"><data>City small group instead of Student+</data></node>
+	<node type="todo" done="no"><data>Catch up with Helen</data></node>
+	<node type="todo" done="no"><data>Get in touch with Simon</data></node>
+	<node done="no" type="todo"><data>Take guarantor forms to landlord and get email of contract</data></node>
+	<node type="todo" done="yes"><data>Open source ipod classic alterntive</data>
+		<node type="todo" done="yes"><data>Creative zen?</data></node>
+		<node type="todo" done="no"><data>Cownen iAudio?</data></node>
 	</node>
-	<node done="no" type="todo"><data>Get in touch with Simon</data></node>
-	<node type="todo" done="no"><data>Sort out tty character settings and colours</data></node>
-	<node type="todo" done="yes"><data>Check out safety razor</data></node>
-	<node done="yes" type="todo"><data>Cancel Severn Trent water monthly payments</data></node>
+	<node done="yes" type="todo"><data>Change pillow case</data></node>
+	<node done="no" type="todo"><data>Sort out tty character settings and colours</data></node>
+	<node type="todo" done="yes"><data>Cancel Severn Trent water monthly payments</data></node>
+	<node done="yes" type="todo"><data>Mutt pipe to stdinOpen or similar keybinding </data></node>
+	<node done="no" type="todo"><data>Sara groves - when the saints go marching in</data></node>
+	<node type="todo" done="no"><data>Norah jones</data></node>
+	<node done="yes" type="todo"><data>Check out safety razor</data></node>
 </node>
-<node done="no" type="todo"><data>Ideas/projects</data>
+<node type="todo" done="no"><data>Ideas/projects</data>
 	<node><data>Raspberry Pi</data>
 		<node><data>RSS Server</data>
 			<node><data>TinyTinyRSS</data></node>
@@ -43,70 +49,70 @@
 		<node><data>Sort out internet on RPi - wicd etc</data></node>
 		<node><data>Raspberry pi timelapse camera - webcam</data></node>
 	</node>
-	<node type="todo" done="no"><data>Usb remote control for computer - map to mpc toggle</data></node>
-	<node type="todo" done="no"><data>&quot;Open&quot; script</data>
-		<node type="todo" done="yes"><data>basic functionality</data></node>
-		<node type="todo" done="yes"><data>fast/complex option</data></node>
-		<node done="yes" type="todo"><data>ability to define the type of program to open with</data>
+	<node done="no" type="todo"><data>Usb remote control for computer - map to mpc toggle</data></node>
+	<node done="no" type="todo"><data>&quot;Open&quot; script</data>
+		<node done="yes" type="todo"><data>basic functionality</data></node>
+		<node done="yes" type="todo"><data>fast/complex option</data></node>
+		<node type="todo" done="yes"><data>ability to define the type of program to open with</data>
 			<node><data>$ open web file</data></node>
 			<node><data>$ open image file</data></node>
 			<node><data>$ open video file</data></node>
 		</node>
-		<node type="todo" done="yes"><data>include default for files with no extension</data></node>
-		<node type="todo" done="yes"><data>parse url and open with browser</data></node>
-		<node type="todo" done="yes"><data>find filetype from mime for those without extension</data>
+		<node done="yes" type="todo"><data>include default for files with no extension</data></node>
+		<node done="yes" type="todo"><data>parse url and open with browser</data></node>
+		<node done="yes" type="todo"><data>find filetype from mime for those without extension</data>
 			<node><data>file --mime-type -b $1</data>
 				<node><data>mimetype output - brief to remove compression info</data></node>
 			</node>
 		</node>
-		<node type="todo" done="yes"><data>add help info</data></node>
-		<node type="todo" done="yes"><data>exception handling</data>
+		<node done="yes" type="todo"><data>add help info</data></node>
+		<node done="yes" type="todo"><data>exception handling</data>
 			<node><data>eg svg has specific program associated</data></node>
 		</node>
-		<node done="yes" type="todo"><data>add flag for opening web page - open -fw www.example.com</data></node>
-		<node type="todo" done="no"><data>open multiple files</data>
-			<node type="todo" done="no"><data>open *.pdf</data></node>
+		<node type="todo" done="yes"><data>add flag for opening web page - open -fw www.example.com</data></node>
+		<node done="no" type="todo"><data>open multiple files</data>
+			<node done="no" type="todo"><data>open *.pdf</data></node>
 		</node>
 	</node>
-	<node type="todo" done="no"><data>Rawdog</data>
-		<node type="todo" done="yes"><data>mark unread</data></node>
-		<node type="todo" done="yes"><data>set read color based on item title instead of hash - which seems to change on reload of feeds</data>
+	<node done="no" type="todo"><data>Rawdog</data>
+		<node done="yes" type="todo"><data>mark unread</data></node>
+		<node done="yes" type="todo"><data>set read color based on item title instead of hash - which seems to change on reload of feeds</data>
 			<node><data>getting there, but seems to miss one or two articles on load</data></node>
 		</node>
-		<node type="todo" done="yes"><data>keyboard navigation</data></node>
-		<node done="yes" type="todo"><data>persistent read highlighting</data></node>
-		<node type="todo" done="yes"><data>&quot;You&apos;ve reached the end&quot; notification</data>
+		<node done="yes" type="todo"><data>keyboard navigation</data></node>
+		<node type="todo" done="yes"><data>persistent read highlighting</data></node>
+		<node done="yes" type="todo"><data>&quot;You&apos;ve reached the end&quot; notification</data>
 			<node><data>Closes automatically</data></node>
 			<node><data>Not alert()</data></node>
 		</node>
-		<node type="todo" done="no"><data>mark all read</data></node>
-		<node type="todo" done="no"><data>load articles on expand</data>
-			<node type="todo" done="no"><data>or some other way to highlight read articles faster</data>
-				<node done="yes" type="todo"><data>currently stripping out images and replacing with link to image works amazingly well</data></node>
+		<node done="no" type="todo"><data>mark all read</data></node>
+		<node done="no" type="todo"><data>load articles on expand</data>
+			<node done="no" type="todo"><data>or some other way to highlight read articles faster</data>
+				<node type="todo" done="yes"><data>currently stripping out images and replacing with link to image works amazingly well</data></node>
 			</node>
 		</node>
-		<node done="no" type="todo"><data>open article being read on back in browser</data>
-			<node done="no" type="todo"><data>would need some way to &quot;display&quot; items based on url</data>
-				<node done="no" type="todo"><data>www.blablar.com/#this_item</data></node>
+		<node type="todo" done="no"><data>open article being read on back in browser</data>
+			<node type="todo" done="no"><data>would need some way to &quot;display&quot; items based on url</data>
+				<node type="todo" done="no"><data>www.blablar.com/#this_item</data></node>
 			</node>
 		</node>
-		<node type="todo" done="no"><data>The verge full RSS feed (from freely?) to rawdog</data></node>
+		<node done="no" type="todo"><data>The verge full RSS feed (from freely?) to rawdog</data></node>
 	</node>
-	<node type="todo" done="no"><data>Mailx</data>
-		<node type="todo" done="yes"><data>Search emails by name</data>
-			<node done="yes" type="todo"><data>sendmail</data></node>
+	<node done="no" type="todo"><data>Mailx</data>
+		<node done="yes" type="todo"><data>Search emails by name</data>
+			<node type="todo" done="yes"><data>sendmail</data></node>
 		</node>
-		<node type="todo" done="yes"><data>Wrapper aroud mutt alias file to search for name, select email address and send message to that address</data></node>
-		<node type="todo" done="yes"><data>If returns more than 1 address, select which one to use</data></node>
-		<node type="todo" done="yes"><data>Add multiple to: addresses</data></node>
-		<node type="todo" done="no"><data>From file manager email this file plugin - mailx</data></node>
+		<node done="yes" type="todo"><data>Wrapper aroud mutt alias file to search for name, select email address and send message to that address</data></node>
+		<node done="yes" type="todo"><data>If returns more than 1 address, select which one to use</data></node>
+		<node done="yes" type="todo"><data>Add multiple to: addresses</data></node>
+		<node done="no" type="todo"><data>From file manager email this file plugin - mailx</data></node>
 	</node>
-	<node type="todo" done="no"><data>Gist (or similar) to hnb</data>
-		<node done="yes" type="todo"><data>Add item to hnb from gist or similar location</data>
-			<node done="no" type="todo"><data>Using FileBin - www.paste.xinu.at</data></node>
+	<node done="no" type="todo"><data>Gist (or similar) to hnb</data>
+		<node type="todo" done="yes"><data>Add item to hnb from gist or similar location</data>
+			<node type="todo" done="no"><data>Using FileBin - www.paste.xinu.at</data></node>
 		</node>
-		<node done="no" type="todo"><data>Allow specifying location</data></node>
-		<node type="todo" done="no"><data>Some way to not have to remove the files from online, nice to let them build up</data></node>
+		<node type="todo" done="no"><data>Allow specifying location</data></node>
+		<node done="no" type="todo"><data>Some way to not have to remove the files from online, nice to let them build up</data></node>
 	</node>
 </node>
 <node><data>Git Repos</data>
@@ -355,7 +361,7 @@
 			<node><data>For while from life&apos;s fever my God sets me free,</data></node>
 			<node><data>Jehovah Tsidkenu my death-song shall be.</data></node>
 		</node>
-		<node type="todo" done="no"><data>Abide with me</data>
+		<node done="no" type="todo"><data>Abide with me</data>
 			<node><data>Abide with me; fast falls the eventide;</data></node>
 			<node><data>The darkness deepens; Lord with me abide.</data></node>
 			<node><data>When other helpers fail and comforts flee,</data></node>
@@ -396,7 +402,7 @@
 			<node><data>Heaven&apos;s morning breaks, and earth&apos;s vain shadows flee;</data></node>
 			<node><data>In life, in death, O Lord, abide with me.</data></node>
 		</node>
-		<node type="todo" done="no"><data>I cannot tell</data>
+		<node done="no" type="todo"><data>I cannot tell</data>
 			<node><data>I cannot tell why He, whom angels worship,</data></node>
 			<node><data>Should set His love upon the sons of men,</data></node>
 			<node><data>Or why, as Shepherd, He should seek the wand’rers,</data></node>
@@ -920,10 +926,10 @@
 		</node>
 	</node>
 </node>
-<node type="todo" done="no"><data>Things to Buy</data>
-	<node type="todo" done="no"><data>iPod nano - Brodie</data></node>
-	<node done="no" type="todo"><data>Get nexus case</data></node>
-	<node type="todo" done="no"><data>Running shorts</data></node>
+<node done="no" type="todo"><data>Things to Buy</data>
+	<node done="no" type="todo"><data>iPod nano - Brodie</data></node>
+	<node type="todo" done="no"><data>Get nexus case</data></node>
+	<node done="no" type="todo"><data>Running shorts</data></node>
 </node>
 <node><data>Needed for House</data>
 	<node><data>standing drying rack</data></node>
@@ -979,34 +985,61 @@
 		<node><data>Bible</data></node>
 	</node>
 </node>
-<node done="no" type="todo"><data>2013 July</data>
-	<node done="yes" type="todo"><data>Thu 04</data></node>
-	<node done="no" type="todo"><data>Fri 05 </data></node>
-	<node done="no" type="todo"><data>Sat_06 </data></node>
-	<node type="todo" done="no"><data>Sun_07 </data></node>
-	<node done="no" type="todo"><data>Mon 08 </data></node>
-	<node done="no" type="todo"><data>Tue 09 </data></node>
-	<node done="no" type="todo"><data>Wed 10 </data></node>
-	<node done="no" type="todo"><data>Thu 11 </data></node>
-	<node done="no" type="todo"><data>Fri 12 </data></node>
-	<node done="no" type="todo"><data>Sat_13 </data></node>
-	<node done="no" type="todo"><data>Sun_14 </data></node>
-	<node done="no" type="todo"><data>Mon 15 </data></node>
-	<node done="no" type="todo"><data>Tue 16 </data></node>
-	<node done="no" type="todo"><data>Wed 17 </data></node>
-	<node done="no" type="todo"><data>Thu 18 </data></node>
-	<node done="no" type="todo"><data>Fri 19 </data></node>
-	<node done="no" type="todo"><data>Sat_20 </data></node>
-	<node done="no" type="todo"><data>Sun_21 </data></node>
-	<node done="no" type="todo"><data>Mon 22 </data></node>
-	<node done="no" type="todo"><data>Tue 23 </data></node>
-	<node type="todo" done="no"><data>Wed 24 </data></node>
-	<node done="no" type="todo"><data>Thu 25 </data></node>
-	<node done="no" type="todo"><data>Fri 26 </data></node>
-	<node done="no" type="todo"><data>Sat_27 </data></node>
-	<node done="no" type="todo"><data>Sun_28 </data></node>
-	<node done="no" type="todo"><data>Mon 29 </data></node>
-	<node done="no" type="todo"><data>Tue 30 </data></node>
-	<node done="no" type="todo"><data>Wed 31 </data></node>
+<node done="no" type="todo"><data>2013 June</data>
+	<node done="yes" type="todo"><data>Thu 06 </data></node>
+	<node done="no" type="todo"><data>Fri 07 </data></node>
+	<node type="todo" done="no"><data>Sat_08 </data></node>
+	<node done="no" type="todo"><data>Sun_09 </data></node>
+	<node type="todo" done="no"><data>Mon 10 </data></node>
+	<node done="no" type="todo"><data>Tue 11 </data></node>
+	<node done="no" type="todo"><data>Wed 12 </data></node>
+	<node done="no" type="todo"><data>Thu 13 </data></node>
+	<node done="no" type="todo"><data>Fri 14 </data></node>
+	<node done="no" type="todo"><data>Sat_15 </data></node>
+	<node done="no" type="todo"><data>Sun_16 </data></node>
+	<node done="no" type="todo"><data>Mon 17 </data></node>
+	<node done="no" type="todo"><data>Tue 18 </data></node>
+	<node done="no" type="todo"><data>Wed 19 </data></node>
+	<node done="no" type="todo"><data>Thu 20 </data></node>
+	<node done="no" type="todo"><data>Fri 21 </data></node>
+	<node done="yes" type="todo"><data>Sat_22 </data></node>
+	<node done="no" type="todo"><data>Sun_23 </data></node>
+	<node done="no" type="todo"><data>Mon 24 </data></node>
+	<node done="no" type="todo"><data>Tue 25 </data></node>
+	<node done="no" type="todo"><data>Wed 26 </data></node>
+	<node done="no" type="todo"><data>Thu 27 </data></node>
+	<node done="no" type="todo"><data>Fri 28 </data></node>
+	<node done="no" type="todo"><data>Sat_29 </data></node>
+	<node type="todo" done="no"><data>Sun_30 </data></node>
+</node>
+<node type="todo" done="no"><data>2013 July</data>
+	<node type="todo" done="no"><data>Thu 04</data></node>
+	<node type="todo" done="no"><data>Fri 05 </data></node>
+	<node type="todo" done="no"><data>Sat_06 </data></node>
+	<node done="no" type="todo"><data>Sun_07 </data></node>
+	<node type="todo" done="no"><data>Mon 08 </data></node>
+	<node type="todo" done="no"><data>Tue 09 </data></node>
+	<node type="todo" done="no"><data>Wed 10 </data></node>
+	<node type="todo" done="no"><data>Thu 11 </data></node>
+	<node type="todo" done="no"><data>Fri 12 </data></node>
+	<node type="todo" done="no"><data>Sat_13 </data></node>
+	<node type="todo" done="no"><data>Sun_14 </data></node>
+	<node type="todo" done="no"><data>Mon 15 </data></node>
+	<node type="todo" done="no"><data>Tue 16 </data></node>
+	<node type="todo" done="no"><data>Wed 17 </data></node>
+	<node type="todo" done="no"><data>Thu 18 </data></node>
+	<node type="todo" done="no"><data>Fri 19 </data></node>
+	<node type="todo" done="no"><data>Sat_20 </data></node>
+	<node type="todo" done="no"><data>Sun_21 </data></node>
+	<node type="todo" done="no"><data>Mon 22 </data></node>
+	<node type="todo" done="no"><data>Tue 23 </data></node>
+	<node done="no" type="todo"><data>Wed 24 </data></node>
+	<node type="todo" done="no"><data>Thu 25 </data></node>
+	<node type="todo" done="no"><data>Fri 26 </data></node>
+	<node type="todo" done="no"><data>Sat_27 </data></node>
+	<node type="todo" done="no"><data>Sun_28 </data></node>
+	<node type="todo" done="no"><data>Mon 29 </data></node>
+	<node type="todo" done="no"><data>Tue 30 </data></node>
+	<node type="todo" done="no"><data>Wed 31 </data></node>
 </node>
 </tree>

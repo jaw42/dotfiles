@@ -87,6 +87,9 @@ ignore "Authentication-Results:"
 ignore "DomainKey-Signature:"
 ignore "DKIM-Signature:"
 
+# Mailing Lists ----------------------------------------------------------------
+subscribe mutt-users arch-announce hnb-general nail-devel
+
 # Colours -----------------------------------------------------------------------
 source ~/.mutt/colors
 
@@ -97,6 +100,8 @@ source ~/.mutt/colors
 # Get me out off here
 macro index Q   ":set quit=yes\nqy"  "Quit mutt without asking"
 macro browser Q ":set quit=yes\nqqy" "Quit mutt without asking"
+
+bind index,browser,pager,compose q exit
 
 # Moves
 bind index  <up> previous-entry
@@ -130,6 +135,7 @@ bind index p  collapse-thread
 #commands
 bind index x sync-mailbox
 macro pager x <sync-mailbox>q
+bind index,pager X imap-fetch-mail
 
 bind pager \n noop
 bind pager P noop # I don't have a printer. Save the trees :P
@@ -139,8 +145,8 @@ bind compose <return> send-message
 # Gmail-style keyboard shortcuts
 #macro index,pager y "<enter-command>unset trash\n <delete-message>" "Gmail archive message"
 #macro index,pager d "<enter-command>set trash=\"imaps://imap.googlemail.com/[GMail]/Bin\"\n <delete-message>" "Gmail delete message"
-macro index,pager d "<save-message>=[Gmail]/Bin<enter>"
-bind index,pager e delete-message
+macro index,pager d "<save-message>=[Gmail]/Bin<enter>" "Move message to trash"
+macro index,pager e delete-message "Archive message"
 macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox"
 macro index,pager ga "<change-folder>=[Gmail]/All<quote-char> Mail<enter>" "Go to all mail"
 macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
@@ -149,3 +155,8 @@ macro index,pager gs "<change-folder>=[Gmail]/Sent Mail<enter>" "Go to my sent m
 macro index c "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox" # Saner copy/move dialogs
 macro index s "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
 bind index,pager S save-message
+
+# Use stdinOpen to open html part of email in browser
+macro index,pager V "<view-attachments><search>html<enter><pipe-entry>stdinOpen<enter><exit>" "Open html email in std browser"
+
+
