@@ -28,7 +28,7 @@ function removeUnprintable(){
 
 function open(){
    # if [[ $minute%5 -eq 0 ]]; then
-    if [[ $bigSec%300 -eq 0 ]]; then
+    if [ $bigSec%300 = 0 ]; then
         opn=$(lsof | wc -l)
         echo -ne " $opn" > /tmp/dwm_status_bar/open
     fi
@@ -52,43 +52,43 @@ function rdog(){
     if [ "$rawdog_unread" -ne 0 ]; then
         echo -ne " \x04R:\x01$rawdog_unread" > /tmp/dwm_status_bar/rdog
     else
-        > /tmp/dwm_status_bar/rdog
+        echo "" > /tmp/dwm_status_bar/rdog
     fi
 }
 
 function grd(){
-    if [[ $bigSec%600 -eq 0 ]]; then
+    if [ $bigSec%600 = 0 ]; then
         unread=$(~/greaderunread.sh)
         if [ "$unread" -ne 0 ]; then
             echo -ne " \x04U:\x01$unread" > /tmp/dwm_status_bar/grd
         else
-            > /tmp/dwm_status_bar/grd
+            echo "" > /tmp/dwm_status_bar/grd
         fi
     fi
 }
 
 function mail(){
-    if [[ $bigSec%200 -eq 0 ]]; then
+    if [ $bigSec%600 = 0 ] || [[ "$1" -eq "now" ]]; then
         new=$(curl -n --silent "https://mail.google.com/mail/feed/atom" | sed -n -e 's/.*<fullcount>\(.*\)<\/fullcount>.*/\1/p')
         # new=$(find ~/.mail/ -type f -wholename '*/new/*' | wc -l);
         # unread=$(find ~/.mail/ -type f -regex '.*/cur/.*2,[^S]*$' | wc -l);
         if [ "$new" -ne 0 ]; then
             echo -ne " \x04M:\x01$new" > /tmp/dwm_status_bar/mail
             details=$(curl -n --silent "https://mail.google.com/mail/feed/atom" | sed -n -e 's/.*<title>\(.*\)<\/title>.*/\1/p' -e 's/.*<name>\(.*\)<\/name>.*/\t\1/p' | tail -n+2)
-            notify-send "<b>New messages availible</b>\n$details"
+            #notify-send "<b>New messages availible</b>\n$details"
         else
-            > /tmp/dwm_status_bar/mail
+            echo "" > /tmp/dwm_status_bar/mail
         fi
     fi
 }
 
 function pac(){
-    if [[ $minute%2 -eq 0 ]]; then
+    if [ $minute%2 = 0 ]; then
         pup="$(pacman -Qqu | wc -l)"
         if [ "$pup" -ne 0 ]; then
             echo -ne " \x04P:\x01$pup" > /tmp/dwm_status_bar/pac
         else
-            > /tmp/dwm_status_bar/pac
+            echo "" > /tmp/dwm_status_bar/pac
         fi
     fi
 }
@@ -151,7 +151,7 @@ then
     touch /tmp/dwm_status_bar/content
 fi
 
-> /tmp/dwm_status_bar/content
+echo "" > /tmp/dwm_status_bar/content
 
 for file in  mpd open pac rdog mail hdd int dte
 do
