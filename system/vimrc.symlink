@@ -22,6 +22,52 @@ let g:ctrlp_working_path_mode = 0
 let g:ctrlp_dotfiles = 0
 let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Functions
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! <SID>TrimBlankLines()
+  :silent! %!cat -s
+endfunction
+
+" Remove empty line at the end of page
+function! <SID>TrimEndLines()
+  let save_cursor = getpos(".")
+  :silent! %s#\($\n\s*\)\+\%$##
+  call setpos('.', save_cursor)
+endfunction
+
+" Remove trailing spaces
+function! <SID>StripTrailingWhitespaces()
+  " Preparation: save last search, and cursor position.
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " Do the business:
+  %s/\s\+$//e
+  " Clean up: restore previous search history, and cursor position
+  let @/=_s
+  call cursor(l, c)
+endfunction
+" from an idea by michael naumann
+function! VisualSearch(direction) range
+  let l:saved_reg = @"
+  execute "normal! vgvy"
+
+  let l:pattern = escape(@", '\\/.*$^~[]')
+  let l:pattern = substitute(l:pattern, "\n$", "", "")
+
+  if a:direction == 'b'
+    execute "normal ?" . l:pattern . "^M"
+  elseif a:direction == 'gv'
+    call CmdLine("vimgrep " . '/'. l:pattern . '/' . ' **/*.')
+  elseif a:direction == 'f'
+    execute "normal /" . l:pattern . "^M"
+  endif
+
+  let @/ = l:pattern
+  let @" = l:saved_reg
+endfunction
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 set encoding=utf-8
@@ -33,7 +79,7 @@ filetype indent on
 "Auto read when a file changes from the outside
 set autoread
 
-"Show line numbers 
+"Show line numbers
 set number
 
 let g:indentLine_char = ':'
@@ -48,14 +94,18 @@ set cursorline
 " Always show the status line
 set laststatus=2
 
-" Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+" Format the status line --- Now in separate plugin
+"set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Specify the behavior when switching between buffers
+set switchbuf=usetab
+set stal=2
+
 " Set 7 lines to the cursor - when moving vertically using j/k
-set scrolloff=7
+set scrolloff=3
 
 " Turn on the WiLd menu
 set wildmenu
@@ -72,8 +122,10 @@ set cmdheight=1
 " A buffer becomes hidden when it is abandoned
 set hid
 
-" Highlight problematic whitespace
-set listchars=tab:>.,trail:.,extends:#,nbsp:.
+" Show “invisible” characters
+"set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+set lcs=tab:·\ ,trail:▸,nbsp:_
+set list
 
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
@@ -82,23 +134,23 @@ set whichwrap+=<,>,h,l
 " Ignore case when searching
 set ignorecase
 
-" When searching try to be smart about cases 
+" When searching try to be smart about cases
 set smartcase
 
 " Highlight search results
 set hlsearch
 
 " Makes search act like search in modern browsers
-set incsearch 
+set incsearch
 
 " Don't redraw while executing macros (good performance config)
-set lazyredraw 
+set lazyredraw
 
 " For regular expressions turn magic on
 set magic
 
 " Show matching brackets when text indicator is over them
-set showmatch 
+set showmatch
 " How many tenths of a second to blink when matching brackets
 set mat=8
 
@@ -113,8 +165,21 @@ set tm=500
 
 " Smooth scrolling with the mouse
 set mouse=a
-map <ScrollWheelUp> <C-Y>
-map <ScrollWheelDown> <C-E>
+
+" Undo
+set undofile
+set undodir=~/.vim/undodir
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => UI
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Gvim
+if has("gui_running")
+	set guioptions-=m     "remove menu bar
+	set guioptions-=T     "remove tool bar
+	set guioptions-=r     "remove left scroll
+	set guioptions-=l     "remove right scroll
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
@@ -128,36 +193,53 @@ set expandtab
 " Be smart when using tabs
 set smarttab
 
-" 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
-
 " Don't break across words
 set linebreak
+
+" Wrap text but don't automatically add linebreaks.
+set textwidth=80 wrapmargin=0
 
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
-" Wrap text but don't automatically add linebreaks.
-set textwidth=0 wrapmargin=0
+
+set noexpandtab
+set copyindent
+set preserveindent
+set softtabstop=0
+set shiftwidth=4
+set tabstop=2
+
+"Don't add empty new lines at the end of files
+set noeol
 
 "set guioptions=ac
+
+" Auto remove when saving
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre * :call <SID>TrimEndLines()
+" autocmd BufWritePre * :call <SID>TrimBlankLines()
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
 """"""""""""""""""""""""""""""
-" Visual mode pressing * or # searches for the current selection
-" Super useful! From an idea by Michael Naumann
-vnoremap <silent> * :call VisualSelection('f')<CR>
-vnoremap <silent> # :call VisualSelection('b')<CR>
+"  In visual mode when you press * or # to search for the current selection
+vnoremap <silent> * :call VisualSearch('f')<CR>
+vnoremap <silent> # :call VisualSearch('b')<CR>
+
+" When you press gv you vimgrep after the selected text
+vnoremap <silent> gv :call VisualSearch('gv')<CR>
+
+" Replace selected text
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>>
 
 syntax on
 set synmaxcol=2048
 
 if has('gui_running')
-    colorscheme molokai
+	colorscheme molokai
 else
-    colorscheme monokai
+	colorscheme monokai
 endif
 
 highlight Normal ctermbg=235
@@ -165,10 +247,10 @@ highlight Normal ctermbg=235
 
 " Returns true if paste mode is enabled
 function! HasPaste()
-    if &paste
-        return 'PASTE MODE  '
-    en
-    return ''
+	if &paste
+		return 'PASTE MODE  '
+	en
+	return ''
 endfunction
 
 """""""""""""""""""""""""""""
@@ -181,16 +263,20 @@ set ffs=unix,dos,mac
 set noswapfile
 set nobackup
 
-
 """""""""""""""""""""""""""""
 " => Keybindings
 """""""""""""""""""""""""""""
+nnoremap ; :
+
 " Make j and k move to the next row on screen rather
 nmap j gj
 nmap k gk
 
+map <leader>rc :e! ~/.vimrc<CR>
+au! bufwritepost .vimrc source ~/.vimrc
+
 " Tab completion of commands
-imap <Tab> <C-P>
+imap <Tab> <C-N>
 
 " Fast saving
 nmap <leader>w :w!<cr>
@@ -200,7 +286,7 @@ noremap <leader>O <Esc>:CommandTFlush<CR>
 noremap <leader>m <Ese>:CommandTBuffer<CR>
 
 " Toggle line numbers for the current file
-nmap <leader>l :setlocal number!<CR> 
+nmap <leader>l :setlocal number!<CR>
 
 " Unset highlighting of a search
 nmap <leader>q :nohlsearch<CR>
@@ -216,16 +302,15 @@ nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 nmap <leader>v "+gP
 imap <leader>v <ESC>"+gPa
 
-
 "           Scroll Wheel = Up/Down 4 lines
 "   Shift + Scroll Wheel = Up/Down 1 page
 " Control + Scroll Wheel = Up/Down 1/2 page
- noremap <ScrollWheelUp>     6<C-Y>
- noremap <ScrollWheelDown>   6<C-E>
- noremap <S-ScrollWheelUp>   <C-Y>
- noremap <S-ScrollWheelDown> <C-E>
- noremap <C-ScrollWheelUp>   <C-U>
- noremap <C-ScrollWheelDown> <C-D>
+noremap <ScrollWheelUp>     6<C-Y>
+noremap <ScrollWheelDown>   6<C-E>
+noremap <S-ScrollWheelUp>   <C-Y>
+noremap <S-ScrollWheelDown> <C-E>
+noremap <C-ScrollWheelUp>   <C-U>
+noremap <C-ScrollWheelDown> <C-D>
 inoremap <ScrollWheelUp>     <C-O>4<C-Y>
 inoremap <ScrollWheelDown>   <C-O>4<C-E>
 inoremap <S-ScrollWheelUp>   <C-O><C-Y>
