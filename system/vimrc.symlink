@@ -119,6 +119,9 @@ map <ScrollWheelDown> <C-E>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Use and read modelines in files
+set modeline
+
 " Use spaces instead of tabs
 set expandtab
 
@@ -210,5 +213,22 @@ nmap <C-p> :bprev<CR>
 nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 
-nmap <C-V> "+gP
-imap <C-V> <ESC><C-V>a
+nmap <leader>v "+gP
+imap <leader>v <ESC>"+gPa
+
+
+"           Scroll Wheel = Up/Down 4 lines
+"   Shift + Scroll Wheel = Up/Down 1 page
+" Control + Scroll Wheel = Up/Down 1/2 page
+ noremap <ScrollWheelUp>     6<C-Y>
+ noremap <ScrollWheelDown>   6<C-E>
+ noremap <S-ScrollWheelUp>   <C-Y>
+ noremap <S-ScrollWheelDown> <C-E>
+ noremap <C-ScrollWheelUp>   <C-U>
+ noremap <C-ScrollWheelDown> <C-D>
+inoremap <ScrollWheelUp>     <C-O>4<C-Y>
+inoremap <ScrollWheelDown>   <C-O>4<C-E>
+inoremap <S-ScrollWheelUp>   <C-O><C-Y>
+inoremap <S-ScrollWheelDown> <C-O><C-E>
+inoremap <C-ScrollWheelUp>   <C-O><C-U>
+inoremap <C-ScrollWheelDown> <C-O><C-D>
