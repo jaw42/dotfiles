@@ -68,13 +68,15 @@ function grd(){
 }
 
 function mail(){
-    if [ $bigSec%600 = 0 ] || [[ "$1" -eq "now" ]]; then
-        new=$(curl -n --silent "https://mail.google.com/mail/feed/atom" | sed -n -e 's/.*<fullcount>\(.*\)<\/fullcount>.*/\1/p')
+if [ $((bigSec%120)) = 0 ]; then
+        notify-send "Mail updated $((bigSec%120))"
+        feed=$(nice -n 19 curl -n --silent "https://mail.google.com/mail/feed/atom")
+        new=$(echo $feed | sed -n -e 's/.*<fullcount>\(.*\)<\/fullcount>.*/\1/p')
         # new=$(find ~/.mail/ -type f -wholename '*/new/*' | wc -l);
         # unread=$(find ~/.mail/ -type f -regex '.*/cur/.*2,[^S]*$' | wc -l);
         if [ "$new" -ne 0 ]; then
             echo -ne " \x04M:\x01$new" > /tmp/dwm_status_bar/mail
-            details=$(curl -n --silent "https://mail.google.com/mail/feed/atom" | sed -n -e 's/.*<title>\(.*\)<\/title>.*/\1/p' -e 's/.*<name>\(.*\)<\/name>.*/\t\1/p' | tail -n+2)
+            details=$(echo $feed | sed -n -e 's/.*<title>\(.*\)<\/title>.*/\1/p' -e 's/.*<name>\(.*\)<\/name>.*/\t\1/p' | tail -n+2)
             #notify-send "<b>New messages availible</b>\n$details"
         else
             echo "" > /tmp/dwm_status_bar/mail
@@ -83,7 +85,8 @@ function mail(){
 }
 
 function pac(){
-    if [ $minute%2 = 0 ]; then
+    if [ $((bigSec%120)) = 0 ]; then
+        notify-send "Pacman has been run!!!!"
         pup="$(pacman -Qqu | wc -l)"
         if [ "$pup" -ne 0 ]; then
             echo -ne " \x04P:\x01$pup" > /tmp/dwm_status_bar/pac
