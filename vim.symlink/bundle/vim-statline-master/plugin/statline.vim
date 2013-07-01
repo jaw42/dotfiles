@@ -1,13 +1,13 @@
 " ============================================================================
-" File:		   statline.vim
-" Maintainer:  Miller Medeiros <http://blog.millermedeiros.com/>
-" Description: Add useful info to the statusline and basic error checking.
-" Last Change: 2011-11-10
-" License:	   This program is free software. It comes without any warranty,
-"			   to the extent permitted by applicable law. You can redistribute
-"			   it and/or modify it under the terms of the Do What The Fuck You
-"			   Want To Public License, Version 2, as published by Sam Hocevar.
-"			   See http://sam.zoy.org/wtfpl/COPYING for more details.
+" File:				statline.vim
+" Maintainer: Miller Medeiros <http://blog.millermedeiros.com/>
+" Description:Add useful info to the statusline and basic error checking.
+" Last Change:2011-11-10
+" License:		This program is free software. It comes without any warranty,
+"							to the extent permitted by applicable law. You can redistribute
+"							it and/or modify it under the terms of the Do What The Fuck You
+"							Want To Public License, Version 2, as published by Sam Hocevar.
+"							See http://sam.zoy.org/wtfpl/COPYING for more details.
 " ============================================================================
 
 if exists("g:loaded_statline_plugin")
