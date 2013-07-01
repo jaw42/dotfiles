@@ -19,55 +19,91 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_match_window_bottom = 0
 let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_working_path_mode = 0
-let g:ctrlp_dotfiles = 0
+let g:ctrlp_dotfiles = 1
 let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
 
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlPMixed'
+
+" default to opening in new tab
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<c-t>'],
+    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+    \ }
+
+" UltiSnips Plugin
+let g:UltiSnipsSnippetsDir = "~/.vim/bundle/ultisnips.vim/UltiSnips"
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! <SID>TrimBlankLines()
-  :silent! %!cat -s
+	:silent! %!cat -s
 endfunction
 
 " Remove empty line at the end of page
 function! <SID>TrimEndLines()
-  let save_cursor = getpos(".")
-  :silent! %s#\($\n\s*\)\+\%$##
-  call setpos('.', save_cursor)
+	let save_cursor = getpos(".")
+	:silent! %s#\($\n\s*\)\+\%$##
+	call setpos('.', save_cursor)
 endfunction
 
 " Remove trailing spaces
 function! <SID>StripTrailingWhitespaces()
-  " Preparation: save last search, and cursor position.
-  let _s=@/
-  let l = line(".")
-  let c = col(".")
-  " Do the business:
-  %s/\s\+$//e
-  " Clean up: restore previous search history, and cursor position
-  let @/=_s
-  call cursor(l, c)
+	" Preparation: save last search, and cursor position.
+	let _s=@/
+	let l = line(".")
+	let c = col(".")
+	" Do the business:
+	%s/\s\+$//e
+	" Clean up: restore previous search history, and cursor position
+	let @/=_s
+	call cursor(l, c)
 endfunction
 " from an idea by michael naumann
 function! VisualSearch(direction) range
-  let l:saved_reg = @"
-  execute "normal! vgvy"
+	let l:saved_reg = @"
+	execute "normal! vgvy"
 
-  let l:pattern = escape(@", '\\/.*$^~[]')
-  let l:pattern = substitute(l:pattern, "\n$", "", "")
+	let l:pattern = escape(@", '\\/.*$^~[]')
+	let l:pattern = substitute(l:pattern, "\n$", "", "")
 
-  if a:direction == 'b'
-    execute "normal ?" . l:pattern . "^M"
-  elseif a:direction == 'gv'
-    call CmdLine("vimgrep " . '/'. l:pattern . '/' . ' **/*.')
-  elseif a:direction == 'f'
-    execute "normal /" . l:pattern . "^M"
-  endif
+	if a:direction == 'b'
+		execute "normal ?" . l:pattern . "^M"
+	elseif a:direction == 'gv'
+		call CmdLine("vimgrep " . '/'. l:pattern . '/' . ' **/*.')
+	elseif a:direction == 'f'
+		execute "normal /" . l:pattern . "^M"
+	endif
 
-  let @/ = l:pattern
-  let @" = l:saved_reg
+	let @/ = l:pattern
+	let @" = l:saved_reg
 endfunction
 
+" Smart tab completion and tab insert
+function! Smart_TabComplete()
+	let line = getline('.')                         " current line
+
+	let substr = strpart(line, -1, col('.')+1)      " from the start of the current
+		                                              " line to one character right
+		                                              " of the cursor
+	let substr = matchstr(substr, "[^ \t]*$")       " word till cursor
+	if (strlen(substr)==0)                          " nothing to match on empty string
+		return "\<tab>"
+	endif
+	let has_period = match(substr, '\.') != -1      " position of period, if any
+	let has_slash = match(substr, '\/') != -1       " position of slash, if any
+	if (!has_period && !has_slash)
+		return "\<C-X>\<C-P>"                         " existing text matching
+	elseif ( has_slash )
+		return "\<C-X>\<C-F>"                         " file matching
+	else
+		return "\<C-X>\<C-O>"                         " plugin matching
+	endif
+endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 set encoding=utf-8
@@ -82,8 +118,8 @@ set autoread
 "Show line numbers
 set number
 
-let g:indentLine_char = ':'
-let g:indentLine_color_term = 239
+"let g:indentLine_char = ':'
+"let g:indentLine_color_term = 239
 
 " Highlight the line the cursor is currently on
 set cursorline
@@ -188,7 +224,7 @@ endif
 set modeline
 
 " Use spaces instead of tabs
-set expandtab
+"set expandtab
 
 " Be smart when using tabs
 set smarttab
@@ -207,7 +243,7 @@ set noexpandtab
 set copyindent
 set preserveindent
 set softtabstop=0
-set shiftwidth=4
+set shiftwidth=0
 set tabstop=2
 
 "Don't add empty new lines at the end of files
@@ -273,10 +309,11 @@ nmap j gj
 nmap k gk
 
 map <leader>rc :e! ~/.vimrc<CR>
-au! bufwritepost .vimrc source ~/.vimrc
+au! bufwritepost .vimrc source ~/.vimrc | echo "vimrc has been sourced"
 
 " Tab completion of commands
-imap <Tab> <C-N>
+"imap <Tab> <C-N>
+"inoremap <tab> <c-r>=Smart_TabComplete()<CR>
 
 " Fast saving
 nmap <leader>w :w!<cr>

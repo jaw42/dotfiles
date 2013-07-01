@@ -6,19 +6,13 @@
 	path = vim.symlink/bundle/nerdtree.vim
 	url = git://github.com/scrooloose/nerdtree.git
     ignore = dirty
-[submodule "vim.symlink/bundle/snipmate.vim"]
-	path = vim.symlink/bundle/snipmate.vim
-	url = git://github.com/msanders/snipmate.vim
-    ignore = dirty
 [submodule "vim.symlink/bundle/Latex-Box.vim"]
 	path = vim.symlink/bundle/Latex-Box.vim
 	url = git://github.com/LaTeX-Box-Team/LaTeX-Box.git
     ignore = dirty
-[submodule "vim.symlink/bundle/instant-markdown.vim"]
-	path = vim.symlink/bundle/instant-markdown.vim
-	url = git://github.com/suan/vim-instant-markdown.git
-    ignore = dirty
-[submodule "vim.symlink/bundle/indentLine.vim"]
-	path = vim.symlink/bundle/indentLine.vim
-	url = git://github.com/Yggdroot/indentLine.git
-    ignore = dirty
+[submodule "vim.symlink/bundle/supertab.vim"]
+	path = vim.symlink/bundle/supertab.vim
+	url = https://github.com/ervandew/supertab.git
+[submodule "vim.symlink/bundle/ultisnips.vim"]
+	path = vim.symlink/bundle/ultisnips.vim
+	url = https://github.com/SirVer/ultisnips.git
