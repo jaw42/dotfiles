@@ -44,7 +44,7 @@ alternative_order text/plain text/html *
    set status_format = "---[ Folder: %f ]---[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]---%>-%?p?( %p postponed )?-----(%s)-"
 
 # Index View Settings ------------------------------------------------------------
- unset arrow_cursor			# uses a small arrow on left instead of highlighting the whole row.
+ unset arrow_cursor            # uses a small arrow on left instead of highlighting the whole row.
    set uncollapse_jump         # don't collapse on an unread message
    set sort_re                 # thread based on regex
    set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
@@ -99,5 +99,3 @@ source ~/.mutt/colors
 
 #source ~/.mutt/mailboxes
 source ~/.mutt/keybindings
-
-
