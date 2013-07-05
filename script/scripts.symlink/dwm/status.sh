@@ -63,14 +63,14 @@ function mpd(){
 	echo -ne " \x08$stat_short $perc $cur\x01" > /tmp/dwm_status_bar/mpd
 }
 
-function rdog(){
-	read rawdog_unread updated < /tmp/rawdog_feeds
-	if [ "$rawdog_unread" -ne 0 ]; then
-		echo -ne " \x04R:\x01$rawdog_unread" > /tmp/dwm_status_bar/rdog
-	else
-		echo "" > /tmp/dwm_status_bar/rdog
-	fi
-}
+#function rdog(){
+#	read rawdog_unread updated < /tmp/rawdog_feeds
+#	if [ "$rawdog_unread" -ne 0 ]; then
+#		echo -ne " \x04R:\x01$rawdog_unread" > /tmp/dwm_status_bar/rdog
+#	else
+#		echo "" > /tmp/dwm_status_bar/rdog
+#	fi
+#}
 
 function grd(){
 	if testTimeNow 600; then

@@ -296,8 +296,14 @@ endfunction
 set ffs=unix,dos,mac
 
 " Don't create swp files
-set noswapfile
-set nobackup
+"set noswapfile
+"set nobackup
+
+" backup to ~/.tmp
+set backup
+set backupdir=/var/tmp,/tmp
+set directory=/var/tmp,/tmp
+set writebackup
 
 """""""""""""""""""""""""""""
 " => Keybindings
