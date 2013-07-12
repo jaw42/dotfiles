@@ -5,8 +5,6 @@
 macro index Q   ":set quit=yes\nqy"  "Quit mutt without asking"
 macro browser Q ":set quit=yes\nqqy" "Quit mutt without asking"
 
-bind index,pager q quit
-
 # Moves
 bind index  <up> previous-entry
 bind index  <down> next-entry
@@ -58,7 +56,7 @@ bind compose <return> send-message
 
 # Gmail-style keyboard shortcuts
 #macro index,pager d "<save-message>=[Gmail]/Bin<enter>" "Move message to trash"
-macro index,pager d "<save-message>=[Gmail]/Bin" "Move message to trash"
+macro index,pager d "<save-message>=[Gmail]/Bin<enter>" "Move message to trash"
 macro index,pager e "<delete-message>" "Archive message"
 macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox"
 macro index,pager ga "<change-folder>=[Gmail]/All<quote-char> Mail<enter>" "Go to all mail"
@@ -71,4 +69,3 @@ bind index,pager S save-message
 
 # Use stdinOpen to open html part of email in browser
 macro index,pager V "<view-attachments><search>html<enter><pipe-entry>stdinOpen<enter><exit>" "Open html email in std browser"
-

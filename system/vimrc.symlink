@@ -6,14 +6,11 @@ call pathogen#infect()
 call pathogen#helptags() " generate helptags for everything in 'runtimepath'
 filetype plugin indent on
 
-set grepprg=grep\ -nH\ $*
-let g:tex_flavour = 'latex'
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Ctrl-p plugin
+"""" Ctrl-p plugin
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 "let g:ctrlp_map = '<leader>t'
 let g:ctrlp_match_window_bottom = 0
@@ -25,18 +22,27 @@ let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPMixed'
 
-" default to opening in new tab
+"default to opening in new tab
 let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<c-t>'],
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
     \ }
 
-" UltiSnips Plugin
+"""" UltiSnips Plugin
 let g:UltiSnipsSnippetsDir = "~/.vim/bundle/ultisnips.vim/UltiSnips"
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" Airline Status
+let g:airline_right_sep=''
+let g:airline_left_sep=''
+let g:airline_theme='badwolf'
+
+"""" Latex-Box
+let g:tex_flavour = 'latex'
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -184,6 +190,9 @@ set lazyredraw
 
 " For regular expressions turn magic on
 set magic
+
+" Program to use for grep
+set grepprg=grep\ -nH\ $*
 
 " Show matching brackets when text indicator is over them
 set showmatch
