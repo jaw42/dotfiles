@@ -22,3 +22,9 @@
 [submodule "vim.symlink/bundle/airline.vim"]
 	path = vim.symlink/bundle/airline.vim
 	url = https://github.com/bling/vim-airline.git
+[submodule "vim.symlink/bundle/tabular.vim"]
+	path = vim.symlink/bundle/tabular.vim
+	url = https://github.com/godlygeek/tabular.git
+[submodule "vim.symlink/bundle/tagbar.vim"]
+	path = vim.symlink/bundle/tagbar.vim
+	url = https://github.com/majutsushi/tagbar.git

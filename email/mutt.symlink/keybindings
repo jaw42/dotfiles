@@ -1,4 +1,3 @@
-#
 # KeyBindings -------------------------------------------------------------------
 
 # Get me out off here
@@ -50,7 +49,7 @@ macro pager x <sync-mailbox>q
 bind index,pager X imap-fetch-mail
 
 bind pager \n noop
-bind pager P noop # I don't have a printer. Save the trees :P
+bind pager P noop # I don't have a printer. Save the trees
 
 bind compose <return> send-message
 
@@ -64,8 +63,10 @@ macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
 macro index,pager gs "<change-folder>=[Gmail]/Sent Mail<enter>" "Go to my sent messages"
 
 macro index c "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox" # Saner copy/move dialogs
-macro index s "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
-bind index,pager S save-message
+macro index,pager s "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
+#bind index,pager S save-message
 
 # Use stdinOpen to open html part of email in browser
 macro index,pager V "<view-attachments><search>html<enter><pipe-entry>stdinOpen<enter><exit>" "Open html email in std browser"
+#
+# vim: ft=muttrc
