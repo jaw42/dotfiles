@@ -1,1 +1,1 @@
-/home/josh/dotfiles/script/scripts.symlink/dwm/config.h
+/home/josh/.scripts/dwm/config.h

@@ -10,7 +10,7 @@ static const char selfgcolor[]      = "#eeeeee";
 #include <X11/XF86keysym.h>
 
 /* appearance */
-static const char font[]            = "-*-inconsolata-medium-r-*-*-14-*-*-*-*-*-*-*";
+static const char font[]            = "-*-terminusmod-medium-r-normal-*-12-*-*-*-*-*-*-*";
 #define NUMCOLORS 9
 static const char colors[NUMCOLORS][ColLast][9] = {
 // border foreground background
@@ -131,4 +131,3 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
-
