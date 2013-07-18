@@ -1,10 +1,63 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " Pathogen
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-filetype off " Pathogen needs to run before plugin indent on
-call pathogen#infect()
-call pathogen#helptags() " generate helptags for everything in 'runtimepath'
-filetype plugin indent on
+"filetype off " Pathogen needs to run before plugin indent on
+"call pathogen#infect()
+"call pathogen#helptags() " generate helptags for everything in 'runtimepath'
+"filetype plugin indent on
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vundle
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let VundleInstalled=1
+let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+
+if !filereadable(vundle_readme)
+	echo "Installing Vundle.."
+	echo ""
+	silent !mkdir -p ~/.vim/bundle
+	silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+	let VundleInstalled=0
+endif
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+"             Add your Bundles Here              "
+""""""""""""""""""""""""""""""""""""""""""""""""""
+"Code tag view and navigation
+Bundle 'majutsushi/tagbar'
+"Align text to arbitary regexs
+Bundle 'godlygeek/tabular.git'
+"Lightweight status bar with colors and info
+Bundle 'bling/vim-airline.git'
+"Git change gutter info
+Bundle 'mhinz/vim-signify.git'
+"Snippet management
+Bundle 'SirVer/ultisnips.git'
+"Super tab completion
+Bundle 'ervandew/supertab.git'
+"Latex tools, completion and build scripts
+Bundle 'LaTeX-Box-Team/LaTeX-Box.git'
+"Filesystem explorer
+Bundle 'scrooloose/nerdtree.git'
+"Fuzzy file finder
+Bundle 'kien/ctrlp.vim.git'
+"...All your other bundles...
+
+if VundleInstalled == 0
+	echo "Installing Bundles, please ignore key map error messages"
+	echo ""
+	:BundleInstall
+endif
+
+set nocompatible
+filetype off
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
