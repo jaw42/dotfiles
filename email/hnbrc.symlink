@@ -145,9 +145,9 @@
 		
 		bind esc menu
 #		bind ^Q 'context quitsave'
-		bind ^Q save
+	bind ^Q save
         bind .. quit
-		
+	
 		bind f5 'commandline'
 		bind .. 'status --clear'
 		
@@ -210,7 +210,7 @@
 
         bind ^R save_state
         bind .. "sort -r"
-		
+	
 		bind backspace	backspace
 		bind backspace2	backspace
 		
@@ -282,7 +282,7 @@
         bind return save
         bind .. quit 
 
-		bind Y  save
+	bind Y  save
 		bind .. quit
 		
 		bind y  save
