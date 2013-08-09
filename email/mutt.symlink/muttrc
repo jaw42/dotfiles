@@ -28,8 +28,10 @@ mailboxes "=imaps://imap.gmail.com/[Gmail]/Inbox"		# The default location to loa
    set reverse_alias = yes
 source $alias_file
 
+# Hooks ------------------------------------------------------------------------
 # Reply from the address to which the email was sent.
-send-hook '~t ^jaw097@bham\.ac\.uk$' 'my_hdr From: jaw097@bham.ac.uk'
+send-hook '~t ^jaw097@bham\.ac\.uk$' 'my_hdr From: Josh Wainwright <jaw097@bham.ac.uk>'
+send-hook '~t @bham\.ac\.uk' 'my_hdr From: Josh Wainwright <jaw097@bham.ac.uk>'
 
 # Header Options -----------------------------------------------------------------
    set edit_headers = yes
@@ -54,19 +56,19 @@ alternative_order text/plain text/html *
 #  set editor="vim \"+set nonumber\" \"+set spell\" +/^$/ +9"
    set editor='vim + -c "set textwidth=72" -c "set wrap" -c "set nocp" -c "?^$"'
    set fast_reply
- unset mark_old				# don't mark unread messages as Old
- unset menu_scroll			# scroll menu a page on last line
-   set pager_stop			# don't go to next message at end of message
+ unset mark_old                                # don't mark unread messages as Old
+   set menu_scroll                             # for smooth scrolling
+   set pager_stop                              # don't go to next message at end of message
    set pager_index_lines="15"
-   set sleep_time = 0		# speed up connection and change folder
-   set markers=no 			# don't put '+' at the beginning of wrapped lines
-   set smart_wrap            # don't wrap words mid line
+   set sleep_time = 0                          # speed up connection and change folder
+   set markers=no                              # don't put '+' at the beginning of wrapped lines
+   set smart_wrap                              # don't wrap words mid line
    set header_cache=~/.mutt/cache/headers
    set message_cachedir=~/.mutt/cache/bodies
    set certificate_file=~/.mutt/certificates
-   set move = no             # stop asking to move messages
+   set move = no                               # stop asking to move messages
    set include
-   set sort = 'threads'		# default sort method
+   set sort = 'threads'                        # default sort method
    set sort_aux = 'reverse-last-date-received' # append reverse to sort in other direction
    set auto_tag = yes
    set send_charset="utf-8"

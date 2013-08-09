@@ -48,6 +48,12 @@ Bundle 'LaTeX-Box-Team/LaTeX-Box.git'
 Bundle 'scrooloose/nerdtree.git'
 "Fuzzy file finder
 Bundle 'kien/ctrlp.vim.git'
+"Todo.txt highlighting and shortcuts
+Bundle 'freitass/todo.txt-vim'
+"Easy changing, adding and removing of surround objects
+Bundle 'tpope/vim-surround'
+"Closing of brackets, tags, quotes etc.
+Bundle 'Raimondi/delimitMate'
 "...All your other bundles...
 
 if VundleInstalled == 0
@@ -82,7 +88,9 @@ let g:ctrlp_prompt_mappings = {
     \ }
 
 """" UltiSnips Plugin
-let g:UltiSnipsSnippetsDir = "~/.vim/bundle/ultisnips.vim/UltiSnips"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "mySnippets"]
+let g:UltiSnipsSnippetsDir = "~/.vim/custom/Ultisnips"
+let g:UltiSnipsEditSplit = "vertical"
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
@@ -273,10 +281,12 @@ set undodir=~/.vim/undodir
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Gvim
 if has("gui_running")
-	set guioptions-=m     "remove menu bar
-	set guioptions-=T     "remove tool bar
-	set guioptions-=r     "remove left scroll
-	set guioptions-=l     "remove right scroll
+	set guioptions+=m     "remove menu bar
+	set guioptions+=T     "remove tool bar
+	set guioptions+=r     "remove left scroll
+	set guioptions+=l     "remove right scroll
+	set guioptions+=P     "allow visual selection to be accessed in system paste
+	set guioptions+=c     "use console dialogues
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -305,8 +315,8 @@ set noexpandtab
 set copyindent
 set preserveindent
 set softtabstop=0
-set shiftwidth=0
-set tabstop=2
+set shiftwidth=4
+set tabstop=4
 
 "Don't add empty new lines at the end of files
 set noeol
@@ -386,10 +396,6 @@ au! bufwritepost .vimrc source ~/.vimrc | echo "vimrc has been sourced"
 " Fast saving
 nmap <leader>w :w!<cr>
 
-noremap <leader>o <Esc>:CommandT<CR>
-noremap <leader>O <Esc>:CommandTFlush<CR>
-noremap <leader>m <Ese>:CommandTBuffer<CR>
-
 " Toggle line numbers for the current file
 nmap <leader>l :setlocal number!<CR>
 
@@ -422,3 +428,18 @@ inoremap <S-ScrollWheelUp>   <C-O><C-Y>
 inoremap <S-ScrollWheelDown> <C-O><C-E>
 inoremap <C-ScrollWheelUp>   <C-O><C-U>
 inoremap <C-ScrollWheelDown> <C-O><C-D>
+
+" Tabular auto table
+inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
+
+function! s:align()
+  let p = '^.*|.*|.*$'
+  "if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+  if exists(':Tabularize') && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+    let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
+    let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
+    Tabularize/|/l1
+    normal! 0
+    call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
+  endif
+endfunction
