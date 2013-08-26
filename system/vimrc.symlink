@@ -43,7 +43,7 @@ Bundle 'SirVer/ultisnips.git'
 "Super tab completion
 Bundle 'ervandew/supertab.git'
 "Latex tools, completion and build scripts
-Bundle 'LaTeX-Box-Team/LaTeX-Box.git'
+"Bundle 'LaTeX-Box-Team/LaTeX-Box.git'
 "Filesystem explorer
 Bundle 'scrooloose/nerdtree.git'
 "Fuzzy file finder
@@ -54,6 +54,14 @@ Bundle 'freitass/todo.txt-vim'
 Bundle 'tpope/vim-surround'
 "Closing of brackets, tags, quotes etc.
 Bundle 'Raimondi/delimitMate'
+"Override detection of .md files to markdown
+Bundle 'tpope/vim-markdown'
+"NERDTree in all tabs - like ST sidebar
+Bundle 'jistr/vim-nerdtree-tabs'
+"dwm-like arrangement of windows
+"Bundle 'spolu/dwm.vim'
+"Solarised theme
+Bundle 'altercation/vim-colors-solarized'
 "...All your other bundles...
 
 if VundleInstalled == 0
@@ -83,9 +91,9 @@ let g:ctrlp_cmd = 'CtrlPMixed'
 
 "default to opening in new tab
 let g:ctrlp_prompt_mappings = {
-    \ 'AcceptSelection("e")': ['<c-t>'],
-    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
-    \ }
+	\ 'AcceptSelection("e")': ['<c-t>'],
+	\ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+	\ }
 
 """" UltiSnips Plugin
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "mySnippets"]
@@ -99,7 +107,7 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " Airline Status
 let g:airline_right_sep=''
 let g:airline_left_sep=''
-let g:airline_theme='badwolf'
+"let g:airline_theme='badwolf'
 
 """" Latex-Box
 let g:tex_flavour = 'latex'
@@ -107,10 +115,6 @@ let g:tex_flavour = 'latex'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function! <SID>TrimBlankLines()
-	:silent! %!cat -s
-endfunction
-
 " Remove empty line at the end of page
 function! <SID>TrimEndLines()
 	let save_cursor = getpos(".")
@@ -150,27 +154,23 @@ function! VisualSearch(direction) range
 	let @" = l:saved_reg
 endfunction
 
-" Smart tab completion and tab insert
-function! Smart_TabComplete()
-	let line = getline('.')                         " current line
+" Tabular auto table
+inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
 
-	let substr = strpart(line, -1, col('.')+1)      " from the start of the current
-		                                              " line to one character right
-		                                              " of the cursor
-	let substr = matchstr(substr, "[^ \t]*$")       " word till cursor
-	if (strlen(substr)==0)                          " nothing to match on empty string
-		return "\<tab>"
-	endif
-	let has_period = match(substr, '\.') != -1      " position of period, if any
-	let has_slash = match(substr, '\/') != -1       " position of slash, if any
-	if (!has_period && !has_slash)
-		return "\<C-X>\<C-P>"                         " existing text matching
-	elseif ( has_slash )
-		return "\<C-X>\<C-F>"                         " file matching
-	else
-		return "\<C-X>\<C-O>"                         " plugin matching
-	endif
+function! s:align()
+  let p = '^.*|.*|.*$'
+  "if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+  if exists(':Tabularize') && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+	let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
+	let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
+	Tabularize/|/l1
+	normal! 0
+	call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
+  endif
 endfunction
+
+" View the difference between the buffer and the file the last time it was saved
+command! DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis | wincmd p | diffthis
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 set encoding=utf-8
@@ -182,11 +182,11 @@ filetype indent on
 "Auto read when a file changes from the outside
 set autoread
 
+"Include the parent directory in the path to search, eg for 'gf'
+set path+=../**
+
 "Show line numbers
 set number
-
-"let g:indentLine_char = ':'
-"let g:indentLine_color_term = 239
 
 " Highlight the line the cursor is currently on
 set cursorline
@@ -205,7 +205,7 @@ set laststatus=2
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Specify the behavior when switching between buffers
 set switchbuf=usetab
-set stal=2
+set showtabline=1
 
 " Set 7 lines to the cursor - when moving vertically using j/k
 set scrolloff=3
@@ -221,9 +221,6 @@ set ruler
 
 " Height of the command bar
 set cmdheight=1
-
-" A buffer becomes hidden when it is abandoned
-set hid
 
 " Show “invisible” characters
 "set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
@@ -281,10 +278,10 @@ set undodir=~/.vim/undodir
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Gvim
 if has("gui_running")
-	set guioptions+=m     "remove menu bar
-	set guioptions+=T     "remove tool bar
-	set guioptions+=r     "remove left scroll
-	set guioptions+=l     "remove right scroll
+	set guioptions-=m     "remove menu bar
+	set guioptions-=T     "remove tool bar
+	set guioptions-=r     "remove left scroll
+	set guioptions-=l     "remove right scroll
 	set guioptions+=P     "allow visual selection to be accessed in system paste
 	set guioptions+=c     "use console dialogues
 endif
@@ -294,9 +291,6 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use and read modelines in files
 set modeline
-
-" Use spaces instead of tabs
-"set expandtab
 
 " Be smart when using tabs
 set smarttab
@@ -318,15 +312,19 @@ set softtabstop=0
 set shiftwidth=4
 set tabstop=4
 
+" split and be active in split instead of original
+set splitbelow
+set splitright
+
 "Don't add empty new lines at the end of files
 set noeol
 
-"set guioptions=ac
-
 " Auto remove when saving
-autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
-autocmd BufWritePre * :call <SID>TrimEndLines()
-" autocmd BufWritePre * :call <SID>TrimBlankLines()
+augroup Clean
+	autocmd!
+	autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+	autocmd BufWritePre * :call <SID>TrimEndLines()
+augroup END
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
@@ -344,22 +342,17 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>>
 syntax on
 set synmaxcol=2048
 
-if has('gui_running')
-	colorscheme molokai
-else
-	colorscheme monokai
-endif
+syntax enable
+set background=dark
+colorscheme solarized
 
-highlight Normal ctermbg=235
+"if has('gui_running')
+"	colorscheme molokai
+"else
+"	colorscheme monokai
+"endif
 
-
-" Returns true if paste mode is enabled
-function! HasPaste()
-	if &paste
-		return 'PASTE MODE  '
-	en
-	return ''
-endfunction
+"highlight Normal ctermbg=235
 
 """""""""""""""""""""""""""""
 " => Files and filetypes
@@ -387,14 +380,14 @@ nmap j gj
 nmap k gk
 
 map <leader>rc :e! ~/.vimrc<CR>
-au! bufwritepost .vimrc source ~/.vimrc | echo "vimrc has been sourced"
-
-" Tab completion of commands
-"imap <Tab> <C-N>
-"inoremap <tab> <c-r>=Smart_TabComplete()<CR>
+augroup reload_vimrc
+	autocmd!
+	autocmd BufWritePost $MYVIMRC source $MYVIMRC | echo "vimrc has been sourced"
+augroup END
 
 " Fast saving
 nmap <leader>w :w!<cr>
+cmap w!! w !sudo tee > /dev/null %
 
 " Toggle line numbers for the current file
 nmap <leader>l :setlocal number!<CR>
@@ -428,18 +421,3 @@ inoremap <S-ScrollWheelUp>   <C-O><C-Y>
 inoremap <S-ScrollWheelDown> <C-O><C-E>
 inoremap <C-ScrollWheelUp>   <C-O><C-U>
 inoremap <C-ScrollWheelDown> <C-O><C-D>
-
-" Tabular auto table
-inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
-
-function! s:align()
-  let p = '^.*|.*|.*$'
-  "if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
-  if exists(':Tabularize') && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
-    let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
-    let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
-    Tabularize/|/l1
-    normal! 0
-    call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
-  endif
-endfunction

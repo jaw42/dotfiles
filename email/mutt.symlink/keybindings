@@ -71,5 +71,7 @@ macro index,pager s "<save-message>?<toggle-mailboxes>" "move a message to a mai
 
 # Use stdinOpen to open html part of email in browser
 macro index,pager V "<view-attachments><search>html<enter><pipe-entry>stdinOpen<enter><exit>" "Open html email in std browser"
+
+macro index <esc>m "T~N<enter>;WNT~O<enter>;WO\CT~T<enter>" "mark all messages read"
 #
 # vim: ft=muttrc
