@@ -97,7 +97,8 @@ subscribe mutt-users arch-announce hnb-general nail-devel
    set followup_to=yes
 
 # Colours -----------------------------------------------------------------------
-source ~/.mutt/colors
+#source ~/.mutt/colors
+source /home/josh/.mutt/mutt-colors-solarized-master/mutt-colors-solarized-light-16.muttrc
 
 #source ~/.mutt/mailboxes
 source ~/.mutt/keybindings
