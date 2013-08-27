@@ -79,21 +79,19 @@ filetype off
 
 """" Ctrl-p plugin
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-"let g:ctrlp_map = '<leader>t'
 let g:ctrlp_match_window_bottom = 0
 let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_working_path_mode = 0
+let g:ctrlp_use_caching = 1
 let g:ctrlp_dotfiles = 1
+let g:ctrlp_switch_buffer = 'Et'
 let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
+let g:ctrlp_max_depth = 10
+let g:ctrlp_lazy_update = 1
 
-let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPMixed'
-
-"default to opening in new tab
-let g:ctrlp_prompt_mappings = {
-	\ 'AcceptSelection("e")': ['<c-t>'],
-	\ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
-	\ }
+"let g:ctrlp_map = '<c-p>'
+let g:ctrlp_map = '<leader>t'
 
 """" UltiSnips Plugin
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "mySnippets"]
@@ -215,6 +213,7 @@ set wildmenu
 
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*        "Ignore VCS
 
 "Always show current position
 set ruler
@@ -282,6 +281,7 @@ if has("gui_running")
 	set guioptions-=T     "remove tool bar
 	set guioptions-=r     "remove left scroll
 	set guioptions-=l     "remove right scroll
+	set guioptions-=L     "left hand toolbar isn't present
 	set guioptions+=P     "allow visual selection to be accessed in system paste
 	set guioptions+=c     "use console dialogues
 endif

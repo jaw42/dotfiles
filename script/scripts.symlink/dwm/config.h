@@ -14,15 +14,26 @@ static const char font[]            = "-*-terminusmod-medium-r-normal-*-12-*-*-*
 #define NUMCOLORS 9
 static const char colors[NUMCOLORS][ColLast][9] = {
 // border foreground background
-{ "#444444", "#999999", "#222222" }, // 0 = normal
-{ "#005577", "#eeeeee", "#005577" }, // 1 = selected
-{ "#212121", "#DC322F", "#222222" }, // 2 = red
-{ "#212121", "#A6E22E", "#222222" }, // 3 = green
-{ "#212121", "#FFFF55", "#222222" }, // 4 = yellow
-{ "#212121", "#1E6FA8", "#222222" }, // 5 = blue
-{ "#212121", "#EB2657", "#222222" }, // 6 = magenta
-{ "#212121", "#66D9EF", "#222222" }, // 7 = cyan
-{ "#212121", "#AAAAAA", "#222222" }, // 8 = grey
+  /*{ "#444444", "#999999", "#222222" }, // 0 = normal
+	{ "#005577", "#eeeeee", "#005577" }, // 1 = selected
+	{ "#212121", "#DC322F", "#222222" }, // 2 = red
+	{ "#212121", "#A6E22E", "#222222" }, // 3 = green
+	{ "#212121", "#FFFF55", "#222222" }, // 4 = yellow
+	{ "#212121", "#1E6FA8", "#222222" }, // 5 = blue
+	{ "#212121", "#EB2657", "#222222" }, // 6 = magenta
+	{ "#212121", "#66D9EF", "#222222" }, // 7 = cyan
+	{ "#212121", "#AAAAAA", "#222222" }, // 8 = grey*/
+
+	//Solarized - Dark
+	{ "#444444", "#999999", "#222222" }, // 0 = normal
+	{ "#005577", "#eeeeee", "#268bd2" }, // 1 = selected
+	{ "#212121", "#dc322f", "#222222" }, // 2 = red
+	{ "#212121", "#859900", "#222222" }, // 3 = green
+	{ "#212121", "#b58900", "#222222" }, // 4 = yellow
+	{ "#212121", "#268bd2", "#222222" }, // 5 = blue
+	{ "#212121", "#d33682", "#222222" }, // 6 = magenta
+	{ "#212121", "#2aa198", "#222222" }, // 7 = cyan
+	{ "#212121", "#AAAAAA", "#222222" }, // 8 = grey
 };
 static const unsigned int panelpadding  = 4;    /* padding from fonts on panel */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
@@ -67,7 +78,7 @@ static const Layout layouts[] = {
 /* commands */
 // static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char  *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", colors[0][ColBG], "-nf", colors[0][ColFG], "-sb", colors[1][ColBG], "-sf", colors[1][ColFG], NULL };
-static const char *termcmd[]  = { "xfce4-terminal", NULL };
+static const char *termcmd[]  = { "xterm", NULL };
 
 static const char *volumedown[] = { "amixer", "-q", "set", "Master", "2%-", "unmute", NULL };
 static const char *volumeup[] = { "amixer", "-q", "set", "Master", "2%+", "unmute", NULL };
