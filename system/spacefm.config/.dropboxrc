@@ -1,0 +1,19 @@
+## configuration file for dropbox spacefm plugin
+
+# set your dropbox folder here
+DROPBOXFOLDER=/home/josh/Dropbox
+
+# set/choose your clipboard command here
+#CLIPBOARDCMD="parcellite -c"
+#CLIPBOARDCMD="xclip -i -selection clipboard"
+CLIPBOARDCMD="xclip -i -selection clipboard"
+
+# set your BROWSER here
+# if not set uses env BROWSER var or xdg-open
+BROWSERSFM="chromium"
+
+# path to dropbox-cli python script
+# make sure it's executable and you use python2
+#DRPBOX_CLI="/home/josh/.config/spacefm/.dropbox-cli.py"
+#DROPBOX_CLI="/usr/bin/dropbox-cli"
+DROPBOX_CLI="/home/josh/.config/spacefm/.dropbox-cli.py"
