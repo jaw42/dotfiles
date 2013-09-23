@@ -1,3 +1,4 @@
+source ~/.mutt/aliases_auto
 alias adm-sfhreceptiondesk ADM-sfhreceptiondesk <sfhreceptiondesk@contacts.bham.ac.uk>
 alias aaron_vinsent Aaron Vinsent <aaron_s_vincent@hotmail.co.uk>
 alias abigail_davis Abigail Davis <abby_davis@hotmail.co.uk>
@@ -11,7 +12,6 @@ alias alex_baker Alex Baker <alexneilbaker@gmail.com>
 alias alex_nel Alex Nel <lexibabe22@hotmail.com>
 alias alex_owen Alex Owen <alex.owen@baesystemsdetica.com>
 alias alex_ritchings Alex Ritchings <smudgemail@hotmail.co.uk>
-alias alexander_burgess Alexander Burgess <alex_burgess_@hotmail.com>
 alias alice_palmer Alice Palmer <alice.of.palmer@googlemail.com>
 alias alice_wood Alice Wood <alicerwood@aol.com>
 alias alison_thurgood Alison Thurgood <alison.thurgood@talktalk.net>
@@ -95,6 +95,7 @@ alias david_thurgood David Thurgood <davidthurgood@telco4u.net>
 alias david_weston David Weston <wasindear@live.co.uk>
 alias dawn_rose Dawn Rose <dawn.rose91@hotmail.com>
 alias dimitri_alldridge Dimitri Alldridge <dimitri_alldridge@yahoo.com>
+alias dinopc.com DinoPC.com <enquiries@dinopc.com>
 alias dominic-frederick_bowman Dominic-Frederick Bowman <dbowman.234@googlemail.com>
 alias dorothy_stonell Dorothy Stonell <dotty-doo@hotmail.com>
 alias ed_freemantle Ed Freemantle <apedix@live.co.uk>
@@ -277,9 +278,10 @@ alias michael_crumpton Michael Crumpton <mikecrumpton@btconnect.com>
 alias michael_duffy Michael Duffy <mikeduffy21@hotmail.co.uk>
 alias michael_jermy Michael Jermy <m1ch4elj@hotmail.co.uk>
 alias michael_packham Michael Packham <michael.packham@talktalk.net>
-alias michael_richardson Michael Richardson <mike.richardson.96@hotmail.co.uk>
+alias michael_richardson Michael Richardson <mike_4_arsenal@hotmail.co.uk>
 alias michael_steel Michael Steel <gargleyark@talktalk.net>
 alias mike_church Mike Church <mjc@star.sr.bham.ac.uk>
+alias mike_tresham Mike Tresham <mjtresham@aol.com>
 alias mikki_burns Mikki Burns <MBU@sandon.essex.sch.uk>
 alias miranda_hardwicke Miranda Hardwicke <x-miss-miranda-connie-x@hotmail.co.uk>
 alias miriam_pike Miriam Pike <miriam@city-church.org.uk>
@@ -423,6 +425,7 @@ alias tony_edridge Tony Edridge <tj.edridge@hotmail.co.uk>
 alias trisha_manuel Trisha Manuel <odd_girl11@hotmail.co.uk>
 alias vale_reception Vale Reception <ADM-ValeRecept@adf.bham.ac.uk>
 alias warran_fawcett Warran Fawcett <warran_fawcett@ntm.org.uk>
+alias wendy_pearson Wendy Pearson <wlpearson@btinternet.com>
 alias will_thorogood Will Thorogood <williamthorogood8@hotmail.com>
 alias yi_chong Yi Chong <chongyixueclever@gmail.com>
 alias yvette_frost Yvette Frost <yvette.f@hotmail.co.uk>

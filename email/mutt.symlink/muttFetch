@@ -1,3 +1,4 @@
+# vim: ft=muttrc
 # A basic .muttrc for use with Gmail
 
 # Gmail Account Details ------------------------------------------------------------
@@ -13,21 +14,44 @@ source ~/.mutt/.muttpass
    set smtp_url 	= "smtp://wainwright.ja@smtp.gmail.com:587/"
    set smtp_pass 	= $imap_pass									# use same password as imap_user
 
+# Maildir Setup
+set mbox_type=Maildir
+set spoolfile="~/Mail"
+set folder="~/Mail"
+set mask=".*"
+set record="+.Sent"
+set postponed="+.Drafts"
+
+ mailboxes ! + `\\
+
+ for file in ~/Maildir/.*; do \\
+
+   box=$(basename "$file"); \\
+
+   if [ ! "$box" = '.' -a ! "$box" = '..' -a ! "$box" = '.customflags' \\
+
+       -a ! "$box" = '.subscriptions' ]; then \\
+
+     echo -n "\"+$box\" "; \\
+
+   fi; \\
+
+ done`
+
 # Gmail Folder Setup ------------------------------------------------------------
-   set hostname = gmail.com
-mailboxes "=imaps://imap.gmail.com/[Gmail]/Inbox"        # The default location to load and check for new mails
-   set postponed="imaps://imap.gmail.com/[Gmail]/Drafts" # Location for unfinished drafts
-# set record = "+[GMail]/Sent Mail"
- unset record                                            # Gmail automatically saves sent emails so unset this
-   set folder = "imaps://imap.gmail.com:993"
-   set spoolfile = "+INBOX"
+#   set hostname = gmail.com
+#mailboxes "=imaps://imap.gmail.com/[Gmail]/Inbox"        # The default location to load and check for new mails
+#   set postponed="imaps://imap.gmail.com/[Gmail]/Drafts" # Location for unfinished drafts
+## set record = "+[GMail]/Sent Mail"
+# unset record                                            # Gmail automatically saves sent emails so unset this
+#   set folder = "imaps://imap.gmail.com:993"
+#   set spoolfile = "+INBOX"
 
 # Aliases (For Address Book) -----------------------------------------------------
    set alias_file = "~/.mutt/aliases"
    set sort_alias = alias
    set reverse_alias = yes
 source $alias_file
-   set display_filter = ~/.mutt/autoAlias.sh
 
 # Hooks ------------------------------------------------------------------------
 # Reply from the address to which the email was sent.
@@ -35,7 +59,6 @@ send-hook '~t ^jaw097@bham\.ac\.uk$' 'my_hdr From: Josh Wainwright <jaw097@bham.
 send-hook '~t @bham\.ac\.uk' 'my_hdr From: Josh Wainwright <jaw097@bham.ac.uk>'
 
 # Header Options -----------------------------------------------------------------
-   set text_flowed = yes
    set edit_headers = yes
 ignore *                                # ignore all headers
 unignore from: to: cc: date: subject:   # show only these
@@ -62,7 +85,6 @@ alternative_order text/plain text/html *
    set menu_scroll                                        # for smooth scrolling
    set pager_stop                                         # don't go to next message at end of message
    set pager_index_lines="15"
-   set wrapmargin = 3
    set sleep_time = 0                                     # speed up connection and change folder
    set markers=no                                         # don't put '+' at the beginning of wrapped lines
    set smart_wrap                                         # don't wrap words mid line
