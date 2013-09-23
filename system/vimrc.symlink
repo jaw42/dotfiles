@@ -58,10 +58,8 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'tpope/vim-markdown'
 "NERDTree in all tabs - like ST sidebar
 Bundle 'jistr/vim-nerdtree-tabs'
-"dwm-like arrangement of windows
-"Bundle 'spolu/dwm.vim'
 "Solarised theme
-Bundle 'altercation/vim-colors-solarized'
+Bundle 'tomasr/molokai'
 "...All your other bundles...
 
 if VundleInstalled == 0
@@ -94,21 +92,24 @@ let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_map = '<leader>t'
 
 """" UltiSnips Plugin
-let g:UltiSnipsSnippetDirectories=["UltiSnips", "mySnippets"]
-let g:UltiSnipsSnippetsDir = "~/.vim/custom/Ultisnips"
+set runtimepath^=~/.vim/custom
+let g:UltiSnipsSnippetsDir = "~/.vim/custom/mysnippets"
+let g:UltiSnipsSnippetDirectories=["UltiSnips","mysnippets"]
 let g:UltiSnipsEditSplit = "vertical"
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
-" Airline Status
+"""" Airline Status
 let g:airline_right_sep=''
 let g:airline_left_sep=''
-"let g:airline_theme='badwolf'
 
 """" Latex-Box
 let g:tex_flavour = 'latex'
+
+"""" Molokai Theme
+let g:molokai_original = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Functions
@@ -122,6 +123,10 @@ endfunction
 
 " Remove trailing spaces
 function! <SID>StripTrailingWhitespaces()
+	if exists('b:noStripWhitespace')
+        return
+    endif
+
 	" Preparation: save last search, and cursor position.
 	let _s=@/
 	let l = line(".")
@@ -132,6 +137,7 @@ function! <SID>StripTrailingWhitespaces()
 	let @/=_s
 	call cursor(l, c)
 endfunction
+
 " from an idea by michael naumann
 function! VisualSearch(direction) range
 	let l:saved_reg = @"
@@ -156,15 +162,15 @@ endfunction
 inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
 
 function! s:align()
-  let p = '^.*|.*|.*$'
-  "if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
-  if exists(':Tabularize') && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
-	let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
-	let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
-	Tabularize/|/l1
-	normal! 0
-	call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
-  endif
+	let p = '^.*|.*|.*$'
+	"if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+	if exists(':Tabularize') && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+		let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
+		let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
+		Tabularize/|/l1
+		normal! 0
+		call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
+	endif
 endfunction
 
 " View the difference between the buffer and the file the last time it was saved
@@ -184,10 +190,13 @@ set autoread
 set path+=../**
 
 "Show line numbers
-set number
+set relativenumber
 
 " Highlight the line the cursor is currently on
 set cursorline
+
+"Hide buffers instead of closing them
+set hidden
 
 """"""""""""""""""""""""""""""
 " => Status line
@@ -254,7 +263,7 @@ set grepprg=grep\ -nH\ $*
 " Show matching brackets when text indicator is over them
 set showmatch
 " How many tenths of a second to blink when matching brackets
-set mat=8
+set matchtime=8
 
 " Give visual feedback when the <leader> key is pressed
 set showcmd
@@ -286,6 +295,9 @@ if has("gui_running")
 	set guioptions+=c     "use console dialogues
 endif
 
+set colorcolumn=+1
+set formatoptions+=j
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -301,8 +313,8 @@ set linebreak
 " Wrap text but don't automatically add linebreaks.
 set textwidth=80 wrapmargin=0
 
-set ai "Auto indent
-set si "Smart indent
+set autoindent "Auto indent
+set smartindent "Smart indent
 set wrap "Wrap lines
 
 set noexpandtab
@@ -326,6 +338,8 @@ augroup Clean
 	autocmd BufWritePre * :call <SID>TrimEndLines()
 augroup END
 
+autocmd FileType mail,markdown let b:noStripWhitespace=1
+
 """"""""""""""""""""""""""""""
 " => Visual mode related
 """"""""""""""""""""""""""""""
@@ -342,15 +356,11 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>>
 syntax on
 set synmaxcol=2048
 
-syntax enable
-set background=dark
-colorscheme solarized
-
-"if has('gui_running')
-"	colorscheme molokai
-"else
-"	colorscheme monokai
-"endif
+if has('gui_running')
+	colorscheme molokai
+else
+	colorscheme molokai
+endif
 
 "highlight Normal ctermbg=235
 
@@ -391,6 +401,12 @@ cmap w!! w !sudo tee > /dev/null %
 
 " Toggle line numbers for the current file
 nmap <leader>l :setlocal number!<CR>
+
+"Toggle NERDTree sidebar
+nmap <F7> :NERDTreeToggle<CR>
+imap <F7> :NERDTreeToggle<CR>
+nmap <S-F7> :NERDTreeFind<CR>
+imap <S-F7> :NERDTreeFind<CR>
 
 " Unset highlighting of a search
 nmap <leader>q :nohlsearch<CR>

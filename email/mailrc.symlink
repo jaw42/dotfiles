@@ -33,14 +33,14 @@ account bham {
 set sendmail="/usr/bin/msmtp"
 set ttycharset=utf8
 set showlast
-retain to from date subject cc 
+retain to from date subject cc
 set autosort=date
 set prompt="=> "
 set autothread
 set headline="%>%a%m %24f | %16d %4l/%-8o|  %i%-s"
 set quiet
 set EDITOR=vim
-set PAGER=vimpager
+set PAGER=less
 set imap-cache=/tmp
 set imap-list-depth=5
 set bsdcompat
