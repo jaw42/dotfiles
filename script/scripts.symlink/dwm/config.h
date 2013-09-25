@@ -35,15 +35,15 @@ static const char colors[NUMCOLORS][ColLast][9] = {
 	{ "#212121", "#2aa198", "#222222" }, // 7 = cyan
 	{ "#212121", "#AAAAAA", "#222222" }, // 8 = grey
 };
-static const unsigned int panelpadding  = 4;    /* padding from fonts on panel */
+static const unsigned int panelpadding  = 10;    /* padding from fonts on panel */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
-static const Bool showsystray       = True;     /* False means no systray */
+static const Bool showsystray       = False;    /* False means no systray */
 static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = True;     /* False means bottom bar */
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3"};
+static const char *tags[] = { "1", "2", "3", "4"};
 
 static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
