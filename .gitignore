@@ -1,3 +1,4 @@
+.git/
 *.log
 *.pid
 log
@@ -12,4 +13,3 @@ internet/dwb.config/default/session
 internet/dwb.config/default/cookies*
 media/mpdscribble.symlink/lastfm.journal
 system/xfce4.config/xfconf/xfce-perchannel-xml/thunar.xml
-
