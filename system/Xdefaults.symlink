@@ -4,8 +4,10 @@ Xcursor*theme: Adwaita
 ! Xterm settings ----------------------------------
 
 XTerm*locale: true
-XTerm*faceName: Inconsolatanti:alias=falsea
+XTerm*faceName: Inconsolatanti:alias=false
 XTerm*faceSize: 10
+xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+XTerm*selectToClipboard: true
 ! terminal colors ----------------------------------
 
 ! Monokai scheme
