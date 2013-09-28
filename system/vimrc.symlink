@@ -60,6 +60,8 @@ Bundle 'tpope/vim-markdown'
 Bundle 'jistr/vim-nerdtree-tabs'
 "Solarised theme
 Bundle 'tomasr/molokai'
+"Batch rename files inside vim
+Bundle 'vim-scripts/renamer.vim'
 "...All your other bundles...
 
 if VundleInstalled == 0
@@ -189,14 +191,20 @@ set autoread
 "Include the parent directory in the path to search, eg for 'gf'
 set path+=../**
 
-"Show line numbers
+"Show line numbers relative and absolute
 set relativenumber
+set number
 
 " Highlight the line the cursor is currently on
 set cursorline
 
 "Hide buffers instead of closing them
 set hidden
+
+"Use the same buffer for all clipboard related things
+if has('unnamedplus')
+	set clipboard=unnamedplus
+endif
 
 """"""""""""""""""""""""""""""
 " => Status line
