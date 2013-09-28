@@ -60,7 +60,8 @@ bind compose <return> send-message
 
 # Gmail-style keyboard shortcuts
 #macro index,pager d "<save-message>=[Gmail]/Bin<enter>" "Move message to trash"
-macro index,pager d "<clear-flag>N<Up><save-message>=[Gmail]/Bin<enter>" "Move message to trash"
+#macro index,pager d "<clear-flag>N<Up><save-message>=[Gmail]/Bin<enter>" "Move message to trash"
+macro index,pager d "<clear-flag>N<Up>s<Down><enter><enter>" "Move message to trash"
 macro index,pager e "<clear-flag>N<Up><delete-message>" "Archive message"
 macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox"
 macro index,pager ga "<change-folder>=[Gmail]/All<quote-char> Mail<enter>" "Go to all mail"
