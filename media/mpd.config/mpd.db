@@ -11266,6 +11266,7 @@ mtime: 1327744920
 song_end
 end: Dave Matthews Band/Under the Table and Dreaming
 end: Dave Matthews Band
+<<<<<<< HEAD
 directory: David Arnold and Michael Price
 mtime: 1380526566
 begin: David Arnold and Michael Price
@@ -11483,6 +11484,8 @@ mtime: 1380457961
 song_end
 end: David Arnold and Michael Price/Sherlock
 end: David Arnold and Michael Price
+=======
+>>>>>>> 01679a82f096c1c3ed6d753bd647764d77344b5a
 directory: David Bowie
 mtime: 1327739448
 begin: David Bowie

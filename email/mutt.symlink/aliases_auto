@@ -136,6 +136,7 @@ alias desk-service Service Desk <servicedesk@contacts.bham.ac.uk>
 alias GotQuestions.org <noreply@gotquestions.org>
 alias birmingham-university University of Birmingham <students@contacts.bham.ac.uk>
 alias campbell-charles Charles Campbell <Charles.E.Campbell@nasa.gov>
+<<<<<<< HEAD
 alias bohannon-aaron Aaron Bohannon <aaron678@gmail.com>
 alias zarges-christine Christine Zarges <C.Zarges@cs.bham.ac.uk>
 alias rowe-jon Jon Rowe <j.e.rowe@cs.bham.ac.uk>
@@ -144,3 +145,5 @@ alias gray-larry Larry Gray <13c1a8109872@gmail.com>
 alias wainwright-brodie Brodie Wainwright <brodie.wainwright@gmail.com>
 alias Welfare <welfare@cs.bham.ac.uk>
 alias rowe-jonathan Jonathan Rowe <j.e.rowe@cs.bham.ac.uk>
+=======
+>>>>>>> 01679a82f096c1c3ed6d753bd647764d77344b5a

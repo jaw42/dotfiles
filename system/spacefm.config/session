@@ -367,7 +367,11 @@ main_exit-key=113
 main_exit-keymod=4
 main_exit-icon=gtk-quit
 main_exit-label=E_xit
+<<<<<<< HEAD
 panel1_show-s=////tmp
+=======
+panel1_show-s=////home/josh
+>>>>>>> 01679a82f096c1c3ed6d753bd647764d77344b5a
 panel1_show-x=0
 panel1_show-key=49
 panel1_show-keymod=4
@@ -543,9 +547,13 @@ task_columns-label=_Columns
 task_popups-label=_Popups
 task_pop_all-label=Popup _All Tasks
 task_pop_all-b=2
+<<<<<<< HEAD
 task_pop_top-s=669
 task_pop_top-x=765
 task_pop_top-y=1055
+=======
+task_pop_top-s=1150
+>>>>>>> 01679a82f096c1c3ed6d753bd647764d77344b5a
 task_pop_top-z=1055
 task_pop_top-label=Stay On _Top
 task_pop_top-b=2
@@ -1199,9 +1207,15 @@ editor-b=2
 root_editor-s=sudoedit
 root_editor-b=1
 config_version-s=17
+<<<<<<< HEAD
 panel1_slider_positions-s=118
 panel1_slider_positions-x=284
 panel1_slider_positions-y=141
+=======
+panel1_slider_positions-s=132
+panel1_slider_positions-x=284
+panel1_slider_positions-y=90
+>>>>>>> 01679a82f096c1c3ed6d753bd647764d77344b5a
 panel_sliders-x=1027
 panel_sliders-z=857
 panel2_slider_positions-s=0
@@ -1222,6 +1236,9 @@ app_dlg-s=451
 app_dlg-x=357
 app_dlg-y=420
 app_dlg-z=357
+<<<<<<< HEAD
 file_dlg-x=780
 file_dlg-y=585
+=======
+>>>>>>> 01679a82f096c1c3ed6d753bd647764d77344b5a
 

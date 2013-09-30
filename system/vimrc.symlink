@@ -202,9 +202,15 @@ set cursorline
 set hidden
 
 "Use the same buffer for all clipboard related things
+<<<<<<< HEAD
 "if has('unnamedplus')
 "	set clipboard=unnamedplus
 "endif
+=======
+if has('unnamedplus')
+	set clipboard=unnamedplus
+endif
+>>>>>>> 01679a82f096c1c3ed6d753bd647764d77344b5a
 
 """"""""""""""""""""""""""""""
 " => Status line
@@ -304,7 +310,11 @@ if has("gui_running")
 endif
 
 set colorcolumn=+1
+<<<<<<< HEAD
 set formatoptions=tcqjc
+=======
+set formatoptions+=j
+>>>>>>> 01679a82f096c1c3ed6d753bd647764d77344b5a
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
@@ -318,8 +328,13 @@ set smarttab
 " Don't break across words
 set linebreak
 
+<<<<<<< HEAD
 " Wrap text
 set textwidth=79 wrapmargin=0
+=======
+" Wrap text but don't automatically add linebreaks.
+set textwidth=80 wrapmargin=0
+>>>>>>> 01679a82f096c1c3ed6d753bd647764d77344b5a
 
 set autoindent "Auto indent
 set smartindent "Smart indent

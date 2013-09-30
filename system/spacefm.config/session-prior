@@ -30,6 +30,7 @@ toolbar_help-icon=gtk-help
 toolbar_help-label=H_elp
 tool_dirtree-icon=gtk-directory
 tool_dirtree-label=Tree
+<<<<<<< HEAD
 tool_dirtree-b=2
 tool_dirtree-tool=1
 tool_book-icon=gtk-jump-to
@@ -39,6 +40,17 @@ tool_book-tool=1
 tool_device-icon=gtk-harddisk
 tool_device-label=Devices
 tool_device-b=2
+=======
+tool_dirtree-b=1
+tool_dirtree-tool=1
+tool_book-icon=gtk-jump-to
+tool_book-label=Bookmarks
+tool_book-b=1
+tool_book-tool=1
+tool_device-icon=gtk-harddisk
+tool_device-label=Devices
+tool_device-b=1
+>>>>>>> 01679a82f096c1c3ed6d753bd647764d77344b5a
 tool_device-tool=1
 tool_newtab-icon=gtk-add
 tool_newtab-label=New Tab
@@ -72,6 +84,7 @@ tool_default-label=Default
 tool_default-tool=1
 rtool_dirtree-icon=gtk-directory
 rtool_dirtree-label=Tree
+<<<<<<< HEAD
 rtool_dirtree-b=2
 rtool_dirtree-tool=2
 rtool_book-icon=gtk-jump-to
@@ -81,6 +94,17 @@ rtool_book-tool=2
 rtool_device-icon=gtk-harddisk
 rtool_device-label=Devices
 rtool_device-b=2
+=======
+rtool_dirtree-b=1
+rtool_dirtree-tool=2
+rtool_book-icon=gtk-jump-to
+rtool_book-label=Bookmarks
+rtool_book-b=1
+rtool_book-tool=2
+rtool_device-icon=gtk-harddisk
+rtool_device-label=Devices
+rtool_device-b=1
+>>>>>>> 01679a82f096c1c3ed6d753bd647764d77344b5a
 rtool_device-tool=2
 rtool_newtab-icon=gtk-add
 rtool_newtab-label=New Tab
@@ -328,7 +352,11 @@ move_as_root-label=_As Root
 move_as_root-b=1
 move_dlg_font-x=600
 move_dlg_font-y=432
+<<<<<<< HEAD
 move_dlg_font-z=0
+=======
+move_dlg_font-z=4
+>>>>>>> 01679a82f096c1c3ed6d753bd647764d77344b5a
 move_dlg_font-icon=gtk-select-font
 move_dlg_font-label=_Font
 move_dlg_help-icon=gtk-help
@@ -367,13 +395,21 @@ main_exit-key=113
 main_exit-keymod=4
 main_exit-icon=gtk-quit
 main_exit-label=E_xit
+<<<<<<< HEAD
 panel1_show-s=////usr/share/vim/vim74/doc////home/josh/.vim
+=======
+panel1_show-s=////home/josh
+>>>>>>> 01679a82f096c1c3ed6d753bd647764d77344b5a
 panel1_show-x=0
 panel1_show-key=49
 panel1_show-keymod=4
 panel1_show-label=Panel _1
 panel1_show-b=1
+<<<<<<< HEAD
 panel2_show-s=////home/josh/Web
+=======
+panel2_show-s=////home/josh
+>>>>>>> 01679a82f096c1c3ed6d753bd647764d77344b5a
 panel2_show-x=0
 panel2_show-key=50
 panel2_show-keymod=4
@@ -1009,7 +1045,11 @@ panel1_font_status-label=_Font
 panel1_icon_status-icon=gtk-yes
 panel1_icon_status-label=_Icon
 panel1_detcol_name-x=0
+<<<<<<< HEAD
 panel1_detcol_name-y=1128
+=======
+panel1_detcol_name-y=1132
+>>>>>>> 01679a82f096c1c3ed6d753bd647764d77344b5a
 panel1_detcol_name-label=_Name
 panel1_detcol_name-b=1
 panel1_detcol_size-x=1
@@ -1197,10 +1237,17 @@ editor-b=2
 root_editor-s=sudoedit
 root_editor-b=1
 config_version-s=17
+<<<<<<< HEAD
 panel1_slider_positions-s=127
 panel1_slider_positions-x=284
 panel1_slider_positions-y=87
 panel_sliders-x=1027
+=======
+panel1_slider_positions-s=132
+panel1_slider_positions-x=284
+panel1_slider_positions-y=90
+panel_sliders-x=426
+>>>>>>> 01679a82f096c1c3ed6d753bd647764d77344b5a
 panel_sliders-z=857
 panel2_slider_positions-s=0
 panel2_slider_positions-y=0

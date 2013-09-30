@@ -7,7 +7,11 @@
 [General]
 
 [Window]
+<<<<<<< HEAD
 width=1343
+=======
+width=1918
+>>>>>>> 01679a82f096c1c3ed6d753bd647764d77344b5a
 height=1055
 maximized=0
 
@@ -543,7 +547,11 @@ task_columns-label=_Columns
 task_popups-label=_Popups
 task_pop_all-label=Popup _All Tasks
 task_pop_all-b=2
+<<<<<<< HEAD
 task_pop_top-s=669
+=======
+task_pop_top-s=1150
+>>>>>>> 01679a82f096c1c3ed6d753bd647764d77344b5a
 task_pop_top-z=1055
 task_pop_top-label=Stay On _Top
 task_pop_top-b=2
@@ -1009,7 +1017,11 @@ panel1_font_status-label=_Font
 panel1_icon_status-icon=gtk-yes
 panel1_icon_status-label=_Icon
 panel1_detcol_name-x=0
+<<<<<<< HEAD
 panel1_detcol_name-y=557
+=======
+panel1_detcol_name-y=1132
+>>>>>>> 01679a82f096c1c3ed6d753bd647764d77344b5a
 panel1_detcol_name-label=_Name
 panel1_detcol_name-b=1
 panel1_detcol_size-x=1
@@ -1197,9 +1209,15 @@ editor-b=2
 root_editor-s=sudoedit
 root_editor-b=1
 config_version-s=17
+<<<<<<< HEAD
 panel1_slider_positions-s=122
 panel1_slider_positions-x=284
 panel1_slider_positions-y=143
+=======
+panel1_slider_positions-s=132
+panel1_slider_positions-x=284
+panel1_slider_positions-y=90
+>>>>>>> 01679a82f096c1c3ed6d753bd647764d77344b5a
 panel_sliders-x=1027
 panel_sliders-z=857
 panel2_slider_positions-s=0
