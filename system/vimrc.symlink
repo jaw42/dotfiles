@@ -193,7 +193,7 @@ set autoread
 set path+=../**
 
 "Show line numbers relative and absolute
-if has("relativenumber")
+if exists("&relativenumber")
 	set relativenumber
 endif
 set number
@@ -306,7 +306,7 @@ if has("gui_running")
 	set guioptions+=c     "use console dialogues
 endif
 
-if has("colorcolumn")
+if exists("&colorcolumn")
 	set colorcolumn=+1
 endif
 set formatoptions=tcqc
