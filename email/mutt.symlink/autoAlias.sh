@@ -11,10 +11,6 @@ if [[ "$NEWALIAS" != *facebook* ]]; then
 	else
     	echo "$NEWALIAS" >> $HOME/.mutt/aliases_auto
 	fi
-if grep -Fxq "$NEWALIAS" $HOME/.mutt/aliases_auto; then
-    :
-else
-    echo "$NEWALIAS" >> $HOME/.mutt/aliases_auto
 fi
 
 echo "${MESSAGE}"
