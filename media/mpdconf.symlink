@@ -12,3 +12,16 @@ playlist_directory "/home/josh/.config/mpd/playlists"
 port "6600"
 state_file "/home/josh/.config/mpd/mpdstate"
 user "josh"
+
+audio_output {
+   type            "fifo"
+   name            "my_fifo"
+   path            "/tmp/mpd.fifo"
+   format          "44100:16:1"
+}
+
+audio_output {
+        type            "alsa"
+        name            "My Sound Card"
+        mixer_type      "software"      # optional
+}
