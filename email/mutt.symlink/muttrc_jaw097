@@ -9,7 +9,7 @@
 alternates "jaw097@bham.ac.uk|wainwright.ja@gmail.com"
 
 ##Keep password out of repo##
-source ~/.mutt/.muttpass
+#source ~/.mutt/.muttpass
 
    set smtp_url 	= "smtp://auth-smtp.bham.ac.uk:465/"
    #set smtp_pass 	= $imap_pass									# use same password as imap_user

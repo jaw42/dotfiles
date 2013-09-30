@@ -13,8 +13,5 @@ internet/dwb.config/default/session
 internet/dwb.config/default/cookies*
 media/mpdscribble.symlink/lastfm.journal
 system/xfce4.config/xfconf/xfce-perchannel-xml/thunar.xml
-<<<<<<< HEAD
 .imappass
 .muttpass
-=======
->>>>>>> 01679a82f096c1c3ed6d753bd647764d77344b5a

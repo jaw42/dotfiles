@@ -12,7 +12,6 @@ playlist_directory "/home/josh/.config/mpd/playlists"
 port "6600"
 state_file "/home/josh/.config/mpd/mpdstate"
 user "josh"
-<<<<<<< HEAD
 
 audio_output {
    type            "fifo"
@@ -26,5 +25,3 @@ audio_output {
         name            "My Sound Card"
         mixer_type      "software"      # optional
 }
-=======
->>>>>>> 01679a82f096c1c3ed6d753bd647764d77344b5a
