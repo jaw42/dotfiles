@@ -120,10 +120,10 @@ static Key keys[] = {
 	{ 0, 		XF86XK_AudioRaiseVolume,	   spawn, 			{ .v = volumeup } },
 	{ 0, 		XF86XK_AudioPlay,			   spawn, 			{ .v = mediaplay } },
 	{ 0, 		XF86XK_Sleep,				   spawn, 			{ .v = systemsuspend } },
-	{ MODKEY,                       XK_n,      spawn,    		SHCMD("notify-send \"$(mpc -f 'Artist: %artist%\nAlbum:  %album%\nTitle:  %title%')\n\n$(mpc playlist|head)\"") },
-	{ MODKEY, 						XK_p, 	   spawn, 			SHCMD("dmenu-mpd -a") },
-	{ MODKEY|ShiftMask,				XK_p, 	   spawn, 			SHCMD("dmenu-mpd -t") },
-	{ MODKEY|ShiftMask|ControlMask,	XK_p, 	   spawn, 			SHCMD("dmenu-mpd -l") },
+	{ MODKEY,                       XK_n,      spawn,    		SHCMD("~/Bin/dmenu-mpd -j") },
+	{ MODKEY, 						XK_p, 	   spawn, 			SHCMD("~/Bin/dmenu-mpd -a") },
+	{ MODKEY|ShiftMask,				XK_p, 	   spawn, 			SHCMD("~/Bin/dmenu-mpd -t") },
+	{ MODKEY|ShiftMask|ControlMask,	XK_p, 	   spawn, 			SHCMD("~/Bin/dmenu-mpd -l") },
 };
 
 /* button definitions */

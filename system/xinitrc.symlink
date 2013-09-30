@@ -13,7 +13,7 @@ fi
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 ~/.screenlayout/monitor.sh &
-setxkbmap &
+setxkbmap gb &
 setxkbmap -option caps:escape
 xset +fp /usr/share/fonts/local
 xset fp rehash

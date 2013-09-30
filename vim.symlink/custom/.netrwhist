@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='scp://jaw097@tw.cs.bham.ac.uk//'
+let g:netrw_dirhist_2='scp://jaw097@tw.cs.bham.ac.uk//home/'
+let g:netrw_dirhist_3='scp://jaw097@tw.cs.bham.ac.uk//home/students/'

@@ -61,6 +61,8 @@ Bundle 'jistr/vim-nerdtree-tabs'
 "Solarised theme
 Bundle 'tomasr/molokai'
 Bundle 'scrooloose/syntastic'
+"Batch rename files inside vim
+Bundle 'vim-scripts/renamer.vim'
 "...All your other bundles...
 
 if VundleInstalled == 0
@@ -190,7 +192,10 @@ set autoread
 "Include the parent directory in the path to search, eg for 'gf'
 set path+=../**
 
-"Show line numbers
+"Show line numbers relative and absolute
+if has("relativenumber")
+	set relativenumber
+endif
 set number
 
 " Highlight the line the cursor is currently on
@@ -198,6 +203,11 @@ set cursorline
 
 "Hide buffers instead of closing them
 set hidden
+
+"Use the same buffer for all clipboard related things
+"if has('unnamedplus')
+"	set clipboard=unnamedplus
+"endif
 
 """"""""""""""""""""""""""""""
 " => Status line
@@ -296,8 +306,10 @@ if has("gui_running")
 	set guioptions+=c     "use console dialogues
 endif
 
-"set colorcolumn=+1
-"set formatoptions+=j
+if has("colorcolumn")
+	set colorcolumn=+1
+endif
+set formatoptions=tcqc
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
@@ -311,8 +323,8 @@ set smarttab
 " Don't break across words
 set linebreak
 
-" Wrap text but don't automatically add linebreaks.
-set textwidth=80 wrapmargin=0
+" Wrap text
+set textwidth=79 wrapmargin=0
 
 set autoindent "Auto indent
 set smartindent "Smart indent
