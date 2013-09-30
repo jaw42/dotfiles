@@ -142,7 +142,7 @@ set smarthome
 set smooth
 
 ## Enable soft line wrapping (AKA full line display).
-set softwrap
+# set softwrap
 
 ## Use this spelling checker instead of the internal one.  This option
 ## does not properly have a default value.
@@ -234,37 +234,37 @@ set tabsize 4
 
 
 ## Nanorc files
- include "/usr/share/nano/nanorc.nanorc"
+#include "/usr/share/nano/nanorc.nanorc"
 
 ## C/C++
-include "/usr/share/nano/c.nanorc"
+#include "/usr/share/nano/c.nanorc"
 
 ## Makefiles
-include "/usr/share/nano/makefile.nanorc"
+#include "/usr/share/nano/makefile.nanorc"
 
 ## Cascading Style Sheets
-include "/usr/share/nano/css.nanorc"
+#include "/usr/share/nano/css.nanorc"
 
 ## Debian files
-include "/usr/share/nano/debian.nanorc"
+#include "/usr/share/nano/debian.nanorc"
 
 ## Gentoo files
-include "/usr/share/nano/gentoo.nanorc"
+#include "/usr/share/nano/gentoo.nanorc"
 
 ## HTML
-include "/usr/share/nano/html.nanorc"
+#include "/usr/share/nano/html.nanorc"
 
 ## PHP
-include "/usr/share/nano/php.nanorc"
+#include "/usr/share/nano/php.nanorc"
 
 ## TCL
-include "/usr/share/nano/tcl.nanorc"
+#include "/usr/share/nano/tcl.nanorc"
 
 ## TeX
-include "/usr/share/nano/tex.nanorc"
+#include "/usr/share/nano/tex.nanorc"
 
 ## Quoted emails (under e.g. mutt)
-include "/usr/share/nano/mutt.nanorc"
+#include "/usr/share/nano/mutt.nanorc"
 
 ## Patch files
 include "/usr/share/nano/patch.nanorc"

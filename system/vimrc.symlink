@@ -31,7 +31,7 @@ Bundle 'gmarik/vundle'
 "             Add your Bundles Here              "
 """"""""""""""""""""""""""""""""""""""""""""""""""
 "Code tag view and navigation
-Bundle 'majutsushi/tagbar'
+"Bundle 'majutsushi/tagbar'
 "Align text to arbitary regexs
 Bundle 'godlygeek/tabular.git'
 "Lightweight status bar with colors and info
@@ -39,7 +39,7 @@ Bundle 'bling/vim-airline.git'
 "Git change gutter info
 Bundle 'mhinz/vim-signify.git'
 "Snippet management
-Bundle 'SirVer/ultisnips.git'
+"Bundle 'SirVer/ultisnips.git'
 "Super tab completion
 Bundle 'ervandew/supertab.git'
 "Latex tools, completion and build scripts
@@ -60,6 +60,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'jistr/vim-nerdtree-tabs'
 "Solarised theme
 Bundle 'tomasr/molokai'
+Bundle 'scrooloose/syntastic'
 "...All your other bundles...
 
 if VundleInstalled == 0
@@ -190,7 +191,7 @@ set autoread
 set path+=../**
 
 "Show line numbers
-set relativenumber
+set number
 
 " Highlight the line the cursor is currently on
 set cursorline
@@ -278,8 +279,8 @@ set tm=500
 set mouse=a
 
 " Undo
-set undofile
-set undodir=~/.vim/undodir
+"set undofile
+"set undodir=~/.vim/undodir
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => UI
@@ -295,8 +296,8 @@ if has("gui_running")
 	set guioptions+=c     "use console dialogues
 endif
 
-set colorcolumn=+1
-set formatoptions+=j
+"set colorcolumn=+1
+"set formatoptions+=j
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
