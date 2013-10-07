@@ -31,8 +31,9 @@ source $alias_file
 
 # Hooks ------------------------------------------------------------------------
 # Reply from the address to which the email was sent.
-send-hook '~t ^jaw097@bham\.ac\.uk$' 'my_hdr From: Josh Wainwright <jaw097@bham.ac.uk>'
-send-hook '~t bham\.ac\.uk' 'my_hdr From: Josh Wainwright <jaw097@bham.ac.uk>'
+#send-hook '~t ^jaw097@bham\.ac\.uk$' 'my_hdr From: Josh Wainwright <jaw097@bham.ac.uk>'
+#send-hook '~t bham\.ac\.uk' 'my_hdr From: Josh Wainwright <jaw097@bham.ac.uk>'
+send-hook '~t bham.ac.uk' 'source ~/.mutt/muttrc_jaw097'
 
 # Header Options -----------------------------------------------------------------
    set text_flowed = yes

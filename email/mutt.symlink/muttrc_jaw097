@@ -11,7 +11,7 @@ alternates "jaw097@bham.ac.uk|wainwright.ja@gmail.com"
 ##Keep password out of repo##
 #source ~/.mutt/.muttpass
 
-   set smtp_url 	= "smtps://auth-smtp.bham.ac.uk:465/"
+   set smtp_url 	= "smtps://jaw097@auth-smtp.bham.ac.uk:465/"
    set smtp_pass 	= "Y335441s"									# use same password as imap_user
    set imap_pass 	= $smtp_pass
 
@@ -23,13 +23,6 @@ alternates "jaw097@bham.ac.uk|wainwright.ja@gmail.com"
 # set record = "+[GMail]/Sent Mail"
  unset record                                            # Gmail automatically saves sent emails so unset this
    set spoolfile = "+INBOX"
-
-# Aliases (For Address Book) -----------------------------------------------------
-   set alias_file = "~/.mutt/aliases"
-   set sort_alias = alias
-   set reverse_alias = yes
-source $alias_file
-   set display_filter = ~/.mutt/autoAlias.sh
 
 # Hooks ------------------------------------------------------------------------
 # Reply from the address to which the email was sent.
@@ -95,11 +88,6 @@ auto_view text/html image/*
 ignore "Authentication-Results:"
 ignore "DomainKey-Signature:"
 ignore "DKIM-Signature:"
-
-# Mailing Lists ----------------------------------------------------------------
-lists mutt-users arch-announce hnb-general nail-devel vim_use vim todotxt
-subscribe mutt-users arch-announce hnb-general nail-devel vim_use vim todotxt
-   set followup_to=yes
 
 # Colours -----------------------------------------------------------------------
 #source ~/.mutt/colors
