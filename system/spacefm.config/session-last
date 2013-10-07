@@ -7,8 +7,8 @@
 [General]
 
 [Window]
-width=1150
-height=1055
+width=1054
+height=353
 maximized=0
 
 [Desktop]
@@ -325,7 +325,7 @@ move_as_root-label=_As Root
 move_as_root-b=1
 move_dlg_font-x=600
 move_dlg_font-y=309
-move_dlg_font-z=4
+move_dlg_font-z=0
 move_dlg_font-icon=gtk-select-font
 move_dlg_font-label=_Font
 move_dlg_help-icon=gtk-help
@@ -364,7 +364,7 @@ main_exit-key=113
 main_exit-keymod=4
 main_exit-icon=gtk-quit
 main_exit-label=E_xit
-panel1_show-s=////home/josh/Documents/CompSci/Stats
+panel1_show-s=////home/josh/Documents/CompSci/SoftwareWorkshop/Worksheet0
 panel1_show-x=0
 panel1_show-key=49
 panel1_show-keymod=4
