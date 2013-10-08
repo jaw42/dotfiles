@@ -39,11 +39,11 @@ Bundle 'bling/vim-airline.git'
 "Git change gutter info
 Bundle 'mhinz/vim-signify.git'
 "Snippet management
-"Bundle 'SirVer/ultisnips.git'
+Bundle 'SirVer/ultisnips.git'
 "Super tab completion
 Bundle 'ervandew/supertab.git'
 "Latex tools, completion and build scripts
-"Bundle 'LaTeX-Box-Team/LaTeX-Box.git'
+Bundle 'LaTeX-Box-Team/LaTeX-Box.git'
 "Filesystem explorer
 Bundle 'scrooloose/nerdtree.git'
 "Fuzzy file finder
@@ -60,6 +60,7 @@ Bundle 'tpope/vim-markdown'
 "Bundle 'jistr/vim-nerdtree-tabs'
 "Solarised theme
 Bundle 'tomasr/molokai'
+"Syntax checking for a wide range of languages
 Bundle 'scrooloose/syntastic'
 "Batch rename files inside vim
 Bundle 'vim-scripts/renamer.vim'
@@ -343,6 +344,15 @@ set splitright
 
 "Don't add empty new lines at the end of files
 set noeol
+
+"Automatically change to directory of working file
+"if exists("+autochdir")
+"	set autochdir
+"endif
+augroup Path
+	autocmd!
+	autocmd BufEnter * silent! lcd %:p:h
+augroup END
 
 " Auto remove when saving
 augroup Clean

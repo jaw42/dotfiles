@@ -11266,7 +11266,6 @@ mtime: 1327744920
 song_end
 end: Dave Matthews Band/Under the Table and Dreaming
 end: Dave Matthews Band
-<<<<<<< HEAD
 directory: David Arnold and Michael Price
 mtime: 1380526566
 begin: David Arnold and Michael Price
@@ -54543,6 +54542,140 @@ mtime: 1327743660
 song_end
 end: Non-Album/Will Young
 end: Non-Album
+directory: Norah Jones
+mtime: 1381075682
+begin: Norah Jones
+directory: Come Away With Me
+mtime: 1381075595
+begin: Norah Jones/Come Away With Me
+song_begin: 01.Dont_Know_Why.mp3
+Time: 186
+Artist: Norah Jones
+Title: Don't Know Why
+Album: Come Away With Me
+Track: 01/14
+Genre: (8)Jazz
+mtime: 1381075596
+song_end
+song_begin: 02.Seven_Years.mp3
+Time: 145
+Artist: Norah Jones
+Title: Seven Years
+Album: Come Away With Me
+Track: 02/14
+Genre: (8)Jazz
+mtime: 1381075594
+song_end
+song_begin: 03.Cold_Cold_Heart.mp3
+Time: 219
+Artist: Norah Jones
+Title: Cold Cold Heart
+Album: Come Away With Me
+Track: 03/14
+Genre: (8)Jazz
+mtime: 1381075595
+song_end
+song_begin: 04.Feelin_The_Same_Way.mp3
+Time: 177
+Artist: Norah Jones
+Title: Feelin' The Same Way
+Album: Come Away With Me
+Track: 04/14
+Genre: (8)Jazz
+mtime: 1381075595
+song_end
+song_begin: 05.Come_Away_With_Me.mp3
+Time: 198
+Artist: Norah Jones
+Title: Come Away With Me
+Album: Come Away With Me
+Track: 05/14
+Genre: (8)Jazz
+mtime: 1381075595
+song_end
+song_begin: 06.Shoot_The_Moon.mp3
+Time: 237
+Artist: Norah Jones
+Title: Shoot The Moon
+Album: Come Away With Me
+Track: 06/14
+Genre: (8)Jazz
+mtime: 1381075595
+song_end
+song_begin: 07.Turn_Me_On.mp3
+Time: 155
+Artist: Norah Jones
+Title: Turn Me On
+Album: Come Away With Me
+Track: 07/14
+Genre: (8)Jazz
+mtime: 1381075594
+song_end
+song_begin: 08.Lonestar.mp3
+Time: 186
+Artist: Norah Jones
+Title: Lonestar
+Album: Come Away With Me
+Track: 08/14
+Genre: (8)Jazz
+mtime: 1381075594
+song_end
+song_begin: 09.Ive_Got_To_See_You_Again.mp3
+Time: 253
+Artist: Norah Jones
+Title: I've Got To See You Again
+Album: Come Away With Me
+Track: 09/14
+Genre: (8)Jazz
+mtime: 1381075594
+song_end
+song_begin: 10.Painter_Song.mp3
+Time: 162
+Artist: Norah Jones
+Title: Painter Song
+Album: Come Away With Me
+Track: 10/14
+Genre: (8)Jazz
+mtime: 1381075594
+song_end
+song_begin: 11.One_Flight_Down.mp3
+Time: 186
+Artist: Norah Jones
+Title: One Flight Down
+Album: Come Away With Me
+Track: 11/14
+Genre: (8)Jazz
+mtime: 1381075593
+song_end
+song_begin: 12.Nightingale.mp3
+Time: 252
+Artist: Norah Jones
+Title: Nightingale
+Album: Come Away With Me
+Track: 12/14
+Genre: (8)Jazz
+mtime: 1381075593
+song_end
+song_begin: 13.The_Long_Day_Is_Over.mp3
+Time: 165
+Artist: Norah Jones
+Title: The Long Day Is Over
+Album: Come Away With Me
+Track: 13/14
+Genre: (8)Jazz
+mtime: 1381075595
+song_end
+song_begin: 14.The_Nearness_Of_You.mp3
+Time: 188
+Artist: Norah Jones
+Title: The Nearness Of You
+Album: Come Away With Me
+Track: 14/14
+Genre: (8)Jazz
+mtime: 1381075594
+song_end
+end: Norah Jones/Come Away With Me
+end: Norah Jones
 directory: OK Go
 mtime: 1327742372
 begin: OK Go

@@ -2,8 +2,8 @@
 # A basic .muttrc for use with Gmail
 
 # Gmail Account Details ------------------------------------------------------------
-   set imap_user	= "jaw097@bham.ac.uk"							# Username of the email account
-   set from 		= $imap_user									# Use same username for sent emails
+   set imap_user	= "jaw097"										# Username of the email account
+   set from 		= $imap_user"@bham.ac.uk"						# Use same username for sent emails
    set realname 	= "Josh Wainwright"								# My name to add to sent emails
    set reverse_name
 alternates "jaw097@bham.ac.uk|wainwright.ja@gmail.com"
@@ -11,24 +11,18 @@ alternates "jaw097@bham.ac.uk|wainwright.ja@gmail.com"
 ##Keep password out of repo##
 #source ~/.mutt/.muttpass
 
-   set smtp_url 	= "smtp://auth-smtp.bham.ac.uk:465/"
-   #set smtp_pass 	= $imap_pass									# use same password as imap_user
+   set smtp_url 	= "smtps://jaw097@auth-smtp.bham.ac.uk:465/"
+   set smtp_pass 	= "Y335441s"									# use same password as imap_user
+   set imap_pass 	= $smtp_pass
 
 # Gmail Folder Setup ------------------------------------------------------------
-   set hostname = gmail.com
+   set folder = "imaps://mail.bham.ac.uk:993"
+   set hostname = bham.ac.uk
 #mailboxes "=imaps://imap.gmail.com/[Gmail]/Inbox"        # The default location to load and check for new mails
-   set postponed="imaps://imap.gmail.com/[Gmail]/Drafts" # Location for unfinished drafts
+#   set postponed="imaps://imap.gmail.com/[Gmail]/Drafts" # Location for unfinished drafts
 # set record = "+[GMail]/Sent Mail"
  unset record                                            # Gmail automatically saves sent emails so unset this
-   set folder = "imaps://mailhost.cs.bham.ac.uk"
    set spoolfile = "+INBOX"
-
-# Aliases (For Address Book) -----------------------------------------------------
-   set alias_file = "~/.mutt/aliases"
-   set sort_alias = alias
-   set reverse_alias = yes
-source $alias_file
-   set display_filter = ~/.mutt/autoAlias.sh
 
 # Hooks ------------------------------------------------------------------------
 # Reply from the address to which the email was sent.
@@ -94,11 +88,6 @@ auto_view text/html image/*
 ignore "Authentication-Results:"
 ignore "DomainKey-Signature:"
 ignore "DKIM-Signature:"
-
-# Mailing Lists ----------------------------------------------------------------
-lists mutt-users arch-announce hnb-general nail-devel vim_use vim todotxt
-subscribe mutt-users arch-announce hnb-general nail-devel vim_use vim todotxt
-   set followup_to=yes
 
 # Colours -----------------------------------------------------------------------
 #source ~/.mutt/colors
