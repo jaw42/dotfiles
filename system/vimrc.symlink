@@ -57,7 +57,7 @@ Bundle 'Raimondi/delimitMate'
 "Override detection of .md files to markdown
 Bundle 'tpope/vim-markdown'
 "NERDTree in all tabs - like ST sidebar
-Bundle 'jistr/vim-nerdtree-tabs'
+"Bundle 'jistr/vim-nerdtree-tabs'
 "Solarised theme
 Bundle 'tomasr/molokai'
 Bundle 'scrooloose/syntastic'
@@ -369,11 +369,11 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>>
 syntax on
 set synmaxcol=2048
 
-if has('gui_running')
-	colorscheme molokai
-else
-	colorscheme molokai
-endif
+colorscheme molokai
+"if has('gui_running')
+"else
+"	colorscheme molokai
+"endif
 
 "highlight Normal ctermbg=235
 
@@ -412,6 +412,8 @@ augroup END
 nmap <leader>w :w!<cr>
 cmap w!! w !sudo tee > /dev/null %
 
+" Save the current file and run the make program
+map <F9> :w<CR>:make<CR>
 " Toggle line numbers for the current file
 nmap <leader>l :setlocal number!<CR>
 
