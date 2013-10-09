@@ -310,7 +310,7 @@ endif
 if exists("&colorcolumn")
 	set colorcolumn=+1
 endif
-set formatoptions=tcqc
+set formatoptions=tcroql
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related

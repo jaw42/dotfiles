@@ -7,8 +7,8 @@
 [General]
 
 [Window]
-width=1054
-height=353
+width=1918
+height=1055
 maximized=0
 
 [Desktop]
@@ -364,7 +364,7 @@ main_exit-key=113
 main_exit-keymod=4
 main_exit-icon=gtk-quit
 main_exit-label=E_xit
-panel1_show-s=////home/josh/Documents/CompSci/SoftwareWorkshop/Worksheet0
+panel1_show-s=////home/josh/Web
 panel1_show-x=0
 panel1_show-key=49
 panel1_show-keymod=4
@@ -1187,4 +1187,6 @@ panel_sliders-x=488
 panel_sliders-z=300
 panel2_slider_positions-s=0
 panel2_slider_positions-y=0
+app_dlg-x=357
+app_dlg-y=420
 
