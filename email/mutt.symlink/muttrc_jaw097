@@ -21,7 +21,8 @@ alternates "jaw097@bham.ac.uk|wainwright.ja@gmail.com"
 #mailboxes "=imaps://imap.gmail.com/[Gmail]/Inbox"        # The default location to load and check for new mails
 #   set postponed="imaps://imap.gmail.com/[Gmail]/Drafts" # Location for unfinished drafts
 # set record = "+[GMail]/Sent Mail"
- unset record                                            # Gmail automatically saves sent emails so unset this
+   set postponed = "=Drafts"
+   set record    = "=Sent"
    set spoolfile = "+INBOX"
 
 # Hooks ------------------------------------------------------------------------
