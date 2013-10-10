@@ -14,12 +14,12 @@ source ~/.mutt/.muttpass
    set smtp_pass 	= $imap_pass									# use same password as imap_user
 
 # Gmail Folder Setup ------------------------------------------------------------
-   set hostname = gmail.com
 mailboxes "=imaps://imap.gmail.com/[Gmail]/Inbox"        # The default location to load and check for new mails
-   set postponed="imaps://imap.gmail.com/[Gmail]/Drafts" # Location for unfinished drafts
-# set record = "+[GMail]/Sent Mail"
+   set hostname  = gmail.com
+   set postponed = "imaps://imap.gmail.com/[Gmail]/Drafts" # Location for unfinished drafts
  unset record                                            # Gmail automatically saves sent emails so unset this
-   set folder = "imaps://imap.gmail.com:993"
+   set record    = "+[GMail]/Sent Mail"
+   set folder    = "imaps://imap.gmail.com:993"
    set spoolfile = "+INBOX"
 
 # Aliases (For Address Book) -----------------------------------------------------
