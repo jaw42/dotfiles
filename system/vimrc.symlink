@@ -56,14 +56,13 @@ Bundle 'tpope/vim-surround'
 Bundle 'Raimondi/delimitMate'
 "Override detection of .md files to markdown
 Bundle 'tpope/vim-markdown'
-"NERDTree in all tabs - like ST sidebar
-"Bundle 'jistr/vim-nerdtree-tabs'
 "Solarised theme
 Bundle 'tomasr/molokai'
 "Syntax checking for a wide range of languages
 Bundle 'scrooloose/syntastic'
 "Batch rename files inside vim
 Bundle 'vim-scripts/renamer.vim'
+Bundle 'tpope/vim-commentary'
 "...All your other bundles...
 
 if VundleInstalled == 0
