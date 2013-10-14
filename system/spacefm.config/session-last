@@ -7,7 +7,7 @@
 [General]
 
 [Window]
-width=1054
+width=1918
 height=1055
 maximized=0
 
@@ -364,7 +364,7 @@ main_exit-key=113
 main_exit-keymod=4
 main_exit-icon=gtk-quit
 main_exit-label=E_xit
-panel1_show-s=////home/josh/Documents/CompSci/SoftwareWorkshop/Worksheet1
+panel1_show-s=////home/josh/Documents/CompSci/SoftwareWorkshop/Worksheet1/Ex5
 panel1_show-x=0
 panel1_show-key=49
 panel1_show-keymod=4
@@ -534,8 +534,10 @@ task_hide_manager-b=1
 font_task-icon=gtk-select-font
 font_task-label=_Font
 task_columns-label=_Columns
+task_popups-s=600
 task_popups-x=650
 task_popups-y=334
+task_popups-z=259
 task_popups-label=_Popups
 task_pop_all-label=Popup _All Tasks
 task_pop_all-b=2
