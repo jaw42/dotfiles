@@ -17,10 +17,10 @@ source ~/.mutt/.muttpass
 mailboxes "=imaps://imap.gmail.com/[Gmail]/Inbox"        # The default location to load and check for new mails
    set hostname  = gmail.com
    set postponed = "imaps://imap.gmail.com/[Gmail]/Drafts" # Location for unfinished drafts
- unset record                                            # Gmail automatically saves sent emails so unset this
-   set record    = "+[GMail]/Sent Mail"
+ #unset record                                            # Gmail automatically saves sent emails so unset this
    set folder    = "imaps://imap.gmail.com:993"
    set spoolfile = "+INBOX"
+   set record    = "+[Gmail]/Sent Mail"
 
 # Aliases (For Address Book) -----------------------------------------------------
    set alias_file = "~/.mutt/aliases"
@@ -59,7 +59,7 @@ alternative_order text/plain text/html *
    set editor="vim \"+set nonumber\" \"+set spell\" +/^$/ +9"
 #  set editor='vim + -c "set textwidth=72" -c "set wrap" -c "set nocp" -c "?^$"'
 #  set editor="vim \"+set nonumber\" \"+set spell\" +/^$/ +9"
-   set editor='vim + -c "set textwidth=72" -c "set wrap" -c "set ft=mail" -c "?^$"'
+   set editor='vim + -c "set textwidth=72" -c "set spell" -c "set ft=mail" -c "?^$"'
    set fast_reply
  unset mark_old                                           # don't mark unread messages as Old
    set menu_scroll                                        # for smooth scrolling

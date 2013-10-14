@@ -20,7 +20,7 @@
    set hostname = bham.ac.uk
 #mailboxes "=imaps://imap.gmail.com/[Gmail]/Inbox"        # The default location to load and check for new mails
 #   set postponed="imaps://imap.gmail.com/[Gmail]/Drafts" # Location for unfinished drafts
-   set record    = "+[Gmail]/Sent Mail"
+   set record    = "imaps://imap.gmail.com/[Gmail]/Sent Mail"
 #   set postponed = "=Drafts"
 #   set record    = "=Sent"
 #   set spoolfile = "+INBOX"
