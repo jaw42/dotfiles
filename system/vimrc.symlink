@@ -39,7 +39,7 @@ Bundle 'bling/vim-airline.git'
 "Git change gutter info
 Bundle 'mhinz/vim-signify.git'
 "Snippet management
-Bundle 'SirVer/ultisnips.git'
+"Bundle 'SirVer/ultisnips.git'
 "Super tab completion
 Bundle 'ervandew/supertab.git'
 "Latex tools, completion and build scripts
@@ -65,6 +65,7 @@ Bundle 'vim-scripts/renamer.vim'
 "Easy commenting/uncommenting of code.
 Bundle 'tpope/vim-commentary'
 Bundle 'krisajenkins/vim-pipe'
+Bundle 'krisajenkins/vim-postgresql-syntax'
 "...All your other bundles...
 
 if VundleInstalled == 0
@@ -116,6 +117,10 @@ let g:tex_flavour = 'latex'
 """" Molokai Theme
 let g:molokai_original = 1
 
+"""" Vim-Pipe
+augroup psql
+	autocmd FileType sql :let b:vimpipe_command="psql -h dbteach2 -d fundamentals"
+	autocmd FileType sql :let b:vimpipe_filetype="postgresql"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
