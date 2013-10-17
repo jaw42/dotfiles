@@ -15,4 +15,4 @@ media/mpdscribble.symlink/lastfm.journal
 system/xfce4.config/xfconf/xfce-perchannel-xml/thunar.xml
 .imappass
 .muttpass
-vim.symlink/bundle/*
+vim.symlink/bundle/
