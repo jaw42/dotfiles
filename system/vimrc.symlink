@@ -62,7 +62,9 @@ Bundle 'tomasr/molokai'
 Bundle 'scrooloose/syntastic'
 "Batch rename files inside vim
 Bundle 'vim-scripts/renamer.vim'
+"Easy commenting/uncommenting of code.
 Bundle 'tpope/vim-commentary'
+Bundle 'krisajenkins/vim-pipe'
 "...All your other bundles...
 
 if VundleInstalled == 0
