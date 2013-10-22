@@ -3,8 +3,6 @@
 *.pid
 log
 mpdstate
-sublime2/User/Package\ Control.sublime-settings
-sublime2/User/Package Control.last-run
 git/gitconfig.symlink
 email/mutt.symlink/cache/
 internet/dwb.config/default/history
