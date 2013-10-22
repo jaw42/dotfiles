@@ -50,6 +50,7 @@ macro pager x <sync-mailbox>q
 bind index,pager X imap-fetch-mail
 
 bind index,pager F change-folder
+bind index,pager \Cs save-message
 
 bind pager \n noop
 bind pager P noop # I don't have a printer. Save the trees
