@@ -17,10 +17,10 @@ source ~/.mutt/.muttpass
 mailboxes "=imaps://imap.gmail.com/[Gmail]/Inbox"        # The default location to load and check for new mails
    set hostname  = gmail.com
    set postponed = "imaps://imap.gmail.com/[Gmail]/Drafts" # Location for unfinished drafts
- #unset record                                            # Gmail automatically saves sent emails so unset this
+ unset record                                            # Gmail automatically saves sent emails so unset this
    set folder    = "imaps://imap.gmail.com:993"
    set spoolfile = "+INBOX"
-   set record    = "+[Gmail]/Sent Mail"
+   #set record    = "+[Gmail]/Sent Mail"
 
 # Aliases (For Address Book) -----------------------------------------------------
    set alias_file = "~/.mutt/aliases"
@@ -53,6 +53,8 @@ alternative_order text/plain text/html *
    set uncollapse_jump # don't collapse on an unread message
    set sort_re         # thread based on regex
    set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
+# set index_format="%4C %Z %{%b %d} %-15.15L (%4c) %s"
+   set index_format="[%Z] %4C %{%b %d} %-15.15L (%4c) %s"
 
 # General Settings ---------------------------------------------------------------
    set wait_key = no
@@ -78,8 +80,6 @@ alternative_order text/plain text/html *
    set sort_aux = 'reverse-last-date-received'            # append reverse to sort in other direction
    set auto_tag = yes
    set send_charset="utf-8"
-# set index_format="%4C %Z %{%b %d} %-15.15L (%4c) %s"
-   set index_format="[%Z] %4C %{%b %d} %-15.15L (%4c) %s"
  unset mark_old                                           # read/new is good enough for me
    set beep_new                                           # bell on new mails
    set pipe_decode                                        # strip headers and eval mimes when piping
