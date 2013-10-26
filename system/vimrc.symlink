@@ -244,6 +244,7 @@ set wildmenu
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.class        "Ignore VCS
+set wildignorecase
 
 "Always show current position
 set ruler
