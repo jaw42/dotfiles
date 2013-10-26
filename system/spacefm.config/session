@@ -7,7 +7,7 @@
 [General]
 
 [Window]
-width=1054
+width=1918
 height=1055
 maximized=0
 
@@ -364,7 +364,7 @@ main_exit-key=113
 main_exit-keymod=4
 main_exit-icon=gtk-quit
 main_exit-label=E_xit
-panel1_show-s=////home/josh
+panel1_show-s=////home/josh/.cache
 panel1_show-x=0
 panel1_show-key=49
 panel1_show-keymod=4
@@ -544,8 +544,10 @@ task_popups-z=259
 task_popups-label=_Popups
 task_pop_all-label=Popup _All Tasks
 task_pop_all-b=2
-task_pop_top-x=958
+task_pop_top-s=958
+task_pop_top-x=1054
 task_pop_top-y=1055
+task_pop_top-z=1055
 task_pop_top-label=Stay On _Top
 task_pop_top-b=2
 task_pop_above-label=A_bove Others
