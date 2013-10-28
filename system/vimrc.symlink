@@ -66,7 +66,6 @@ Bundle 'vim-scripts/renamer.vim'
 Bundle 'tpope/vim-commentary'
 Bundle 'krisajenkins/vim-pipe'
 Bundle 'krisajenkins/vim-postgresql-syntax'
-Bundle 'terryma/vim-multiple-cursors'
 "...All your other bundles...
 
 if VundleInstalled == 0
@@ -244,7 +243,9 @@ set wildmenu
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.class        "Ignore VCS
-set wildignorecase
+if exists("&wildignorecase")
+	set wildignorecase
+endif
 
 "Always show current position
 set ruler
@@ -479,3 +480,7 @@ inoremap <C-ScrollWheelUp>   <C-O><C-U>
 inoremap <C-ScrollWheelDown> <C-O><C-D>
 
 nmap <leader>b :ls<CR>:buffer<Space>
+
+map <F9> :make<Return>
+map <F10> :copen<Return>:cprevious<Return>
+map <F11> :copen<Return>:cnext<Return>
