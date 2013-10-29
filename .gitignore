@@ -5,6 +5,7 @@ log
 mpdstate
 git/gitconfig.symlink
 email/mutt.symlink/cache/
+email/mutt.symlink/aliases_auto
 internet/dwb.config/default/history
 internet/dwb.config/default/*.history
 internet/dwb.config/default/session
