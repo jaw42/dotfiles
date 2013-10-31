@@ -64,8 +64,12 @@ Bundle 'scrooloose/syntastic'
 Bundle 'vim-scripts/renamer.vim'
 "Easy commenting/uncommenting of code.
 Bundle 'tpope/vim-commentary'
+"Run an arbitary command and catch output into buffer
 Bundle 'krisajenkins/vim-pipe'
+"Syntax highlighting for postgresql commands and results
 Bundle 'krisajenkins/vim-postgresql-syntax'
+"JavaDoc creation from templates based on cursor position
+Bundle 'JLimperg/jcommenter.vim'
 "...All your other bundles...
 
 if VundleInstalled == 0
@@ -119,6 +123,7 @@ let g:molokai_original = 1
 
 """" Vim-Pipe
 augroup psql
+	autocmd!
 	autocmd FileType sql :let b:vimpipe_command="psql -h dbteach2 -d fundamentals"
 	autocmd FileType sql :let b:vimpipe_filetype="postgresql"
 augroup END
@@ -434,6 +439,7 @@ augroup END
 nmap <leader>w :w!<cr>
 cmap w!! w !sudo tee > /dev/null %
 augroup Save
+	autocmd!
 	au FocusLost * :wa
 augroup END
 
