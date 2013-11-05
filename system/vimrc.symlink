@@ -268,7 +268,6 @@ set cmdheight=1
 "set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set lcs=tab:·\ ,trail:▸,nbsp:_
 set list
-match Error /\s\+$/
 
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
@@ -397,7 +396,7 @@ vnoremap <silent> # :call VisualSearch('b')<CR>
 vnoremap <silent> gv :call VisualSearch('gv')<CR>
 
 " Replace selected text
-vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>>
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 syntax on
 set synmaxcol=2048
