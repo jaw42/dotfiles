@@ -246,7 +246,7 @@ set switchbuf=usetab
 set showtabline=1
 
 " Set 7 lines to the cursor - when moving vertically using j/k
-set scrolloff=3
+set scrolloff=999
 
 " Turn on the WiLd menu
 set wildmenu
