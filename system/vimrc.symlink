@@ -203,6 +203,12 @@ filetype indent on
 "Auto read when a file changes from the outside
 set autoread
 
+"Save files automatically before acting on them, eg make
+set autowrite
+
+"Make the default make program as make
+set makeprg=make
+
 "Include the parent directory in the path to search, eg for 'gf'
 set path+=../**
 
