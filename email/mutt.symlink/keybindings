@@ -49,7 +49,7 @@ bind index x sync-mailbox
 macro pager x <sync-mailbox>q
 bind index,pager X imap-fetch-mail
 
-bind index,pager F change-folder
+macro index,pager F "<change-folder>?<toggle-mailboxes>/"
 
 bind pager \n noop
 bind pager P noop # I don't have a printer. Save the trees
@@ -65,7 +65,7 @@ macro index,pager e "<clear-flag>N<Up><delete-message>" "Archive message"
 macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox"
 macro index,pager ga "<change-folder>=[Gmail]/All<quote-char> Mail<enter>" "Go to all mail"
 macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
-macro index,pager gs "<change-folder>=[Gmail]/Sent Mail<enter>" "Go to my sent messages"
+macro index,pager gs "<change-folder>=[Gmail]/Sent<quote-char> Mail<enter>" "Go to my sent messages"
 
 macro index,pager S "<save-message>=[Gmail]/Spam<enter>" "Move message to spam folder"
 
