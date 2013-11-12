@@ -70,7 +70,6 @@ Bundle 'krisajenkins/vim-pipe'
 Bundle 'krisajenkins/vim-postgresql-syntax'
 "JavaDoc creation from templates based on cursor position
 Bundle 'JLimperg/jcommenter.vim'
-"...All your other bundles...
 
 if VundleInstalled == 0
 	echo "Installing Bundles, please ignore key map error messages"
@@ -402,12 +401,6 @@ syntax on
 set synmaxcol=2048
 
 colorscheme molokai
-"if has('gui_running')
-"else
-"	colorscheme molokai
-"endif
-
-"highlight Normal ctermbg=235
 
 """""""""""""""""""""""""""""
 " => Files and filetypes
