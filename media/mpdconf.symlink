@@ -11,7 +11,7 @@ pid_file "/home/josh/.config/mpd/mpd.pid"
 playlist_directory "/home/josh/.config/mpd/playlists"
 port "6600"
 state_file "/home/josh/.config/mpd/mpdstate"
-user "josh"
+#user "josh"
 
 audio_output {
    type            "fifo"
