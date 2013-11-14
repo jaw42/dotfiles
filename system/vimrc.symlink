@@ -37,7 +37,7 @@ Bundle 'godlygeek/tabular.git'
 "Lightweight status bar with colors and info
 Bundle 'bling/vim-airline.git'
 "Git change gutter info
-Bundle 'mhinz/vim-signify.git'
+" Bundle 'mhinz/vim-signify.git'
 "Snippet management
 Bundle 'SirVer/ultisnips.git'
 "Super tab completion
@@ -70,6 +70,8 @@ Bundle 'krisajenkins/vim-pipe'
 Bundle 'krisajenkins/vim-postgresql-syntax'
 "JavaDoc creation from templates based on cursor position
 Bundle 'JLimperg/jcommenter.vim'
+Bundle 'vim-scripts/taglist.vim'
+Bundle 'fholgado/minibufexpl.vim'
 
 if VundleInstalled == 0
 	echo "Installing Bundles, please ignore key map error messages"
@@ -121,10 +123,21 @@ let g:tex_flavour = 'latex'
 let g:molokai_original = 1
 
 """" Vim-Pipe
-augroup psql
+augroup Psql
 	autocmd!
 	autocmd FileType sql :let b:vimpipe_command="psql -h dbteach2 -d fundamentals"
 	autocmd FileType sql :let b:vimpipe_filetype="postgresql"
+augroup END
+
+"""" TagList
+let Tlist_Use_Right_Window = 1
+let Tlist_Enable_Fold_Column = 0
+let Tlist_File_Fold_Auto_Close = 1
+let Tlist_Sort_Type = "order"
+augroup RemoveNumbers
+	autocmd!
+	autocmd FileType taglist,minibufexpl set norelativenumber
+	autocmd FileType taglist,minibufexpl set nonumber
 augroup END
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -245,9 +258,9 @@ set switchbuf=usetab
 set showtabline=1
 
 " Set 7 lines to the cursor - when moving vertically using j/k
-set scrolloff=999
+set scrolloff=3
 
-" Turn on the WiLd menu
+" Turn on the Wild menu
 set wildmenu
 
 " Ignore compiled files
@@ -370,10 +383,10 @@ set noeol
 "if exists("+autochdir")
 "	set autochdir
 "endif
-augroup Path
-	autocmd!
-	autocmd BufEnter * silent! lcd %:p:h
-augroup END
+"augroup Path
+"	autocmd!
+"	autocmd BufEnter * silent! lcd %:p:h
+"augroup END
 
 " Auto remove when saving
 augroup Clean
@@ -428,7 +441,7 @@ nmap j gj
 nmap k gk
 
 map <leader>rc :e! ~/.vimrc<CR>
-augroup reload_vimrc
+augroup Reload_vimrc
 	autocmd!
 	autocmd BufWritePost $MYVIMRC source $MYVIMRC | echo "vimrc has been sourced"
 augroup END
@@ -441,11 +454,15 @@ augroup Save
 	au FocusLost * :wa
 augroup END
 
-" Save the current file and run the make program
-map <F9> :w<CR>:make<CR>
-
 " Toggle line numbers for the current file
 nmap <leader>l :setlocal number!<CR>
+
+" Save the current file and run the make program
+nmap <F9> :w<CR>:make<CR>
+imap <F9> <ESC>:w<CR>:make<CR>
+
+" Open the taglist sidebar
+nnoremap <silent> <F8> :TlistToggle<CR>
 
 "Toggle NERDTree sidebar
 nmap <F7> :NERDTreeToggle<CR>
