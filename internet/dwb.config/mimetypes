@@ -1,2 +1,5 @@
 text/x-diff gvim
-application/pdf open -f
+application/postscript open -f
+application/x-download open -f
+"image/png" open
+application/pdf epdfview

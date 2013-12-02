@@ -143,6 +143,19 @@ augroup END
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" generate markdown on save
+"autocmd BufWritePost *.markdown call RunMarkdown()
+
+function! RunMarkdown()
+    let l:htmlFile = shellescape(expand("%:t:r") . ".html")
+    let l:markdownFile = shellescape(expand("%"))
+    let l:htmlContent = shellescape('<\!DOCTYPE html><html><head><meta charset="UTF-8" /><link rel=stylesheet href="css.css" /></head><body>')
+    let l:reloadCommand = shellescape('dwb -x reload')
+    let l:command = printf("silent !echo %s > %s && markdown %s >> %s && dwb -x reload", l:htmlContent, l:htmlFile, l:markdownFile, l:htmlFile)
+    execute l:command
+endfunction
+
 " Remove empty line at the end of page
 function! <SID>TrimEndLines()
 	let save_cursor = getpos(".")
@@ -462,6 +475,8 @@ nmap <leader>l :setlocal number!<CR>
 " Save the current file and run the make program
 nmap <F9> :w<CR>:make<CR>
 imap <F9> <ESC>:w<CR>:make<CR>
+nmap <S-F9> :w<CR>:silent make<CR>
+imap <S-F9> <ESC>:w<CR>:silent make<CR>
 
 " Open the taglist sidebar
 nnoremap <silent> <F8> :TlistToggle<CR>
