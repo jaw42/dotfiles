@@ -48,8 +48,6 @@ Bundle 'ervandew/supertab.git'
 Bundle 'scrooloose/nerdtree.git'
 "Fuzzy file finder
 Bundle 'kien/ctrlp.vim.git'
-"Todo.txt highlighting and shortcuts
-Bundle 'freitass/todo.txt-vim'
 "Easy changing, adding and removing of surround objects
 Bundle 'tpope/vim-surround'
 "Closing of brackets, tags, quotes etc.
@@ -357,7 +355,7 @@ endif
 if exists("&colorcolumn")
 	set colorcolumn=+1
 endif
-set formatoptions=tcroql
+set formatoptions=tcroqlj
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
