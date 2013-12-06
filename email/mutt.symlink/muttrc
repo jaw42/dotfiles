@@ -27,7 +27,7 @@ mailboxes "=imaps://imap.gmail.com/[Gmail]/Inbox"        # The default location 
    set sort_alias = alias
    set reverse_alias = yes
 source $alias_file
-   set display_filter = "~/.mutt/t-prot -cemt -M=mutt"
+   #set display_filter = "~/.mutt/t-prot -cemt -M=mutt"
 
 # Hooks ------------------------------------------------------------------------
 # Reply from the address to which the email was sent.
