@@ -26,7 +26,6 @@ call vundle#rc()
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""
 "             Add your Bundles Here              "
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -173,6 +172,7 @@ function! <SID>StripTrailingWhitespaces()
 	let c = col(".")
 	" Do the business:
 	%s/\s\+$//e
+	%s/\n\{3,}/\r\r/e
 	" Clean up: restore previous search history, and cursor position
 	let @/=_s
 	call cursor(l, c)
@@ -357,7 +357,7 @@ if exists("&colorcolumn")
 else
 	:mat ErrorMsg '\%81v.\+'
 endif
-set formatoptions=tcroql
+set formatoptions=tcroqlj
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
@@ -408,7 +408,13 @@ augroup Clean
 	autocmd BufWritePre * :call <SID>TrimEndLines()
 augroup END
 
-autocmd FileType mail,markdown let b:noStripWhitespace=1
+augroup Whitespace
+	autocmd FileType mail,markdown let b:noStripWhitespace=1
+augroup END
+
+augroup Rout
+	autocmd BufEnter,BufNew *.rout,*.Rout set ft=r
+augroup END
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
