@@ -48,8 +48,6 @@ Bundle 'ervandew/supertab.git'
 Bundle 'scrooloose/nerdtree.git'
 "Fuzzy file finder
 Bundle 'kien/ctrlp.vim.git'
-"Todo.txt highlighting and shortcuts
-Bundle 'freitass/todo.txt-vim'
 "Easy changing, adding and removing of surround objects
 Bundle 'tpope/vim-surround'
 "Closing of brackets, tags, quotes etc.
@@ -124,7 +122,7 @@ let g:molokai_original = 1
 """" Vim-Pipe
 augroup Psql
 	autocmd!
-	autocmd FileType sql :let b:vimpipe_command="psql -h dbteach2 -d fundamentals"
+	autocmd FileType sql :let b:vimpipe_command="psql -h dbteach2"
 	autocmd FileType sql :let b:vimpipe_filetype="postgresql"
 augroup END
 
@@ -516,6 +514,14 @@ inoremap <S-ScrollWheelUp>   <C-O><C-Y>
 inoremap <S-ScrollWheelDown> <C-O><C-E>
 inoremap <C-ScrollWheelUp>   <C-O><C-U>
 inoremap <C-ScrollWheelDown> <C-O><C-D>
+map <MiddleMouse> <LeftMouse>
+imap <MiddleMouse> <LeftMouse>
+map <2-MiddleMouse> <LeftMouse>
+imap <2-MiddleMouse> <LeftMouse>
+map <3-MiddleMouse> <LeftMouse>
+imap <3-MiddleMouse> <LeftMouse>
+map <4-MiddleMouse> <LeftMouse>
+imap <4-MiddleMouse> <LeftMouse>
 
 nmap <leader>b :ls<CR>:buffer<Space>
 
