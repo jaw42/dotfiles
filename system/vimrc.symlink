@@ -357,7 +357,8 @@ if exists("&colorcolumn")
 else
 	:mat ErrorMsg '\%81v.\+'
 endif
-set formatoptions=tcroqlj
+set formatoptions=tcroql
+silent! set formatoptions+=j
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
