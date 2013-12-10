@@ -456,6 +456,11 @@ nnoremap ; :
 " Make j and k move to the next row on screen rather
 nmap j gj
 nmap k gk
+nnoremap n nzz
+nnoremap p pzz
+
+nnoremap Q <nop>
+nnoremap K <nop>
 
 map <leader>rc :e! ~/.vimrc<CR>
 augroup Reload_vimrc
