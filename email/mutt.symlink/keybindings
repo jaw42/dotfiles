@@ -9,11 +9,13 @@ bind index  <up> previous-entry
 bind index  <down> next-entry
 macro index <right> <display-message> "Display message"
 macro index <left> <sync-mailbox><change-folder>?<toggle-mailboxes> "Go to the folder menu"
+macro index h      <sync-mailbox><change-folder>?<toggle-mailboxes> "Go to the folder menu"
 
 bind index  - previous-page
 bind index  <space> next-page
 
 macro pager <left>     <exit>
+macro pager h          <exit>
 macro pager <right>    <noop>
 macro pager <up>       <previous-line>
 macro pager <down>     <next-line>
@@ -36,6 +38,7 @@ bind pager R group-reply
 
 #macro index   <tab>      <next-unread><enter>
 bind index <tab>    sync-mailbox
+macro pager H <display-toggle-weed>
 
 macro browser <right>    <select-entry>
 macro browser <left>     <home><return> "Goto previous folder"
