@@ -68,6 +68,8 @@ Bundle 'krisajenkins/vim-postgresql-syntax'
 "JavaDoc creation from templates based on cursor position
 Bundle 'JLimperg/jcommenter.vim'
 Bundle 'vim-scripts/taglist.vim'
+Bundle 'tommcdo/vim-exchange'
+Bundle 'osyo-manga/vim-over'
 
 if VundleInstalled == 0
 	echo "Installing Bundles, please ignore key map error messages"
@@ -90,7 +92,7 @@ let g:ctrlp_working_path_mode = 0
 let g:ctrlp_use_caching = 1
 let g:ctrlp_dotfiles = 1
 let g:ctrlp_switch_buffer = 'Et'
-let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
+let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
 let g:ctrlp_max_depth = 10
 let g:ctrlp_lazy_update = 1
 
