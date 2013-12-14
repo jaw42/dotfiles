@@ -11,10 +11,10 @@ map <M-c> :call JCommentWriter()<CR>
 imap <M-c> <esc>:call JCommentWriter()<CR>
 
 " map searching for invalid comments. meta-n for next invalid comment, meta-p
-" for previous. "Invalid" in this case means that the "main" comments are missing
-" or the tag description is missing. Handy when searching for missing comments
-" or when jumping to next tag (no need to use cursor keys (yuck!) or quit insert
-" mode).
+" for previous. "Invalid" in this case means that the "main" comments are
+" missing or the tag description is missing. Handy when searching for missing
+" comments or when jumping to next tag (no need to use cursor keys (yuck!) or
+" quit insert mode).
 map <M-n> :call SearchInvalidComment(0)<cr>
 imap <M-n> <esc>:call SearchInvalidComment(0)<cr>a
 map <M-p> :call SearchInvalidComment(1)<cr>
@@ -96,10 +96,10 @@ let b:jcommenter_file_noautotime = 0
 let b:jcommenter_update_comments = 1
 
 " If you want to put some text where the parameter text, return text etc. would
-" normally go, uncomment and add the wanted text to these variables (this feature
-" is considered "unsupported", which means it will not work perfectly with every
-" other aspect of this script. For example, this will break the logic used to
-" find "invalid" comments, see mappings above):
+" normally go, uncomment and add the wanted text to these variables (this
+" feature is considered "unsupported", which means it will not work perfectly
+" with every other aspect of this script. For example, this will break the
+" logic used to find "invalid" comments, see mappings above):
 "let b:jcommenter_default_param  = ''
 "let b:jcommenter_default_return = ''
 "let b:jcommenter_default_throw  = ''
@@ -121,7 +121,7 @@ let b:jcommenter_remove_tags_on_update = 1
 
 " Whether to prepend an empty line before the generated comment, if the
 " line just above the comment would otherwise be non-empty.
-let b:jcommenter_add_empty_line = 1
+let b:jcommenter_add_empty_line = 0
 
 " Uncomment and modify if you're not happy with the default file
 " comment-template:
