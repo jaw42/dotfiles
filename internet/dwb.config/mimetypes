@@ -2,4 +2,4 @@ text/x-diff gvim
 application/postscript open -f
 application/x-download open -f
 "image/png" open
-application/pdf epdfview
+application/pdf open -f
