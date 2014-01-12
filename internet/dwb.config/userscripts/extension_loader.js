@@ -21,3 +21,20 @@
 //
 //});
 //>adblock_subscriptions___SCRIPT
+//<simplyread___SCRIPT
+extensions.load("simplyread", {
+//<simplyread___CONFIG
+// Shortcut to toggle simplyread
+shortcut : "SR",
+
+// Command to toggle simplyread
+command : "simplyread",
+
+// Whether to use a stylesheet
+nostyle : false,
+
+// Whether to show links
+nolinks : true
+//>simplyread___CONFIG
+});
+//>simplyread___SCRIPT

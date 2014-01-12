@@ -29,10 +29,10 @@ Bundle 'gmarik/vundle'
 """"""""""""""""""""""""""""""""""""""""""""""""""
 "             Add your Bundles Here              "
 """"""""""""""""""""""""""""""""""""""""""""""""""
-"Code tag view and navigation
-"Bundle 'majutsushi/tagbar'
+"Code tag view and navigation with ctags tags
+Bundle 'majutsushi/tagbar'
 "Align text to arbitary regexs
-Bundle 'godlygeek/tabular.git'
+"Bundle 'godlygeek/tabular.git'
 "Lightweight status bar with colors and info
 Bundle 'bling/vim-airline.git'
 "Git change gutter info
@@ -41,8 +41,6 @@ Bundle 'bling/vim-airline.git'
 Bundle 'SirVer/ultisnips.git'
 "Super tab completion
 Bundle 'ervandew/supertab.git'
-"Latex tools, completion and build scripts
-" Bundle 'LaTeX-Box-Team/LaTeX-Box.git'
 "Filesystem explorer
 Bundle 'scrooloose/nerdtree.git'
 "Fuzzy file finder
@@ -53,7 +51,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'Raimondi/delimitMate'
 "Override detection of .md files to markdown
 Bundle 'tpope/vim-markdown'
-"Solarised theme
+"Molokai theme ported from TextMate
 Bundle 'tomasr/molokai'
 "Syntax checking for a wide range of languages
 Bundle 'scrooloose/syntastic'
@@ -67,9 +65,11 @@ Bundle 'krisajenkins/vim-pipe'
 Bundle 'krisajenkins/vim-postgresql-syntax'
 "JavaDoc creation from templates based on cursor position
 Bundle 'JLimperg/jcommenter.vim'
-Bundle 'vim-scripts/taglist.vim'
+"Swap selection or movement between two locations
 Bundle 'tommcdo/vim-exchange'
+"Substitute preview
 Bundle 'osyo-manga/vim-over'
+Bundle 'tommcdo/vim-lion'
 
 if VundleInstalled == 0
 	echo "Installing Bundles, please ignore key map error messages"
@@ -86,15 +86,15 @@ filetype off
 
 """" Ctrl-p plugin
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-let g:ctrlp_match_window_bottom = 0
+let g:ctrlp_match_window_bottom   = 0
 let g:ctrlp_match_window_reversed = 0
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_use_caching = 1
-let g:ctrlp_dotfiles = 1
-let g:ctrlp_switch_buffer = 'Et'
-let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
-let g:ctrlp_max_depth = 10
-let g:ctrlp_lazy_update = 1
+let g:ctrlp_working_path_mode     = 0
+let g:ctrlp_use_caching           = 1
+let g:ctrlp_dotfiles              = 1
+let g:ctrlp_switch_buffer         = 'Et'
+let g:ctrlp_custom_ignore         = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
+let g:ctrlp_max_depth             = 10
+let g:ctrlp_lazy_update           = 1
 
 let g:ctrlp_cmd = 'CtrlPMixed'
 "let g:ctrlp_map = '<c-p>'
@@ -102,17 +102,17 @@ let g:ctrlp_map = '<leader>t'
 
 """" UltiSnips Plugin
 set runtimepath^=~/.vim/custom
-let g:UltiSnipsSnippetsDir = "~/.vim/custom/mysnippets"
-let g:UltiSnipsSnippetDirectories=["UltiSnips","mysnippets"]
-let g:UltiSnipsEditSplit = "vertical"
+let g:UltiSnipsSnippetsDir        = "~/.vim/custom/mysnippets"
+let g:UltiSnipsSnippetDirectories =["UltiSnips","mysnippets"]
+let g:UltiSnipsEditSplit          = "vertical"
 
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsExpandTrigger      ="<tab>"
+let g:UltiSnipsJumpForwardTrigger ="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 """" Airline Status
 let g:airline_right_sep=''
-let g:airline_left_sep=''
+let g:airline_left_sep =''
 
 """" Latex-Box
 let g:tex_flavour = 'latex'
@@ -123,15 +123,15 @@ let g:molokai_original = 1
 """" Vim-Pipe
 augroup Psql
 	autocmd!
-	autocmd FileType sql :let b:vimpipe_command="psql -h dbteach2"
-	autocmd FileType sql :let b:vimpipe_filetype="postgresql"
+	autocmd FileType sql :let b:vimpipe_command = "psql -h dbteach2"
+	autocmd FileType sql :let b:vimpipe_filetype= "postgresql"
 augroup END
 
 """" TagList
-let Tlist_Use_Right_Window = 1
-let Tlist_Enable_Fold_Column = 0
+let Tlist_Use_Right_Window     = 1
+let Tlist_Enable_Fold_Column   = 0
 let Tlist_File_Fold_Auto_Close = 1
-let Tlist_Sort_Type = "order"
+let Tlist_Sort_Type            = "order"
 
 augroup RemoveNumbers
 	autocmd!
@@ -147,11 +147,11 @@ augroup END
 "autocmd BufWritePost *.markdown call RunMarkdown()
 
 function! RunMarkdown()
-    let l:htmlFile = shellescape(expand("%:t:r") . ".html")
-    let l:markdownFile = shellescape(expand("%"))
-    let l:htmlContent = shellescape('<\!DOCTYPE html><html><head><meta charset="UTF-8" /><link rel=stylesheet href="css.css" /></head><body>')
+    let l:htmlFile      = shellescape(expand("%:t:r") . ".html")
+    let l:markdownFile  = shellescape(expand("%"))
+    let l:htmlContent   = shellescape('<\!DOCTYPE html><html><head><meta charset="UTF-8" /><link rel=stylesheet href="css.css" /></head><body>')
     let l:reloadCommand = shellescape('dwb -x reload')
-    let l:command = printf("silent !echo %s > %s && markdown %s >> %s && dwb -x reload", l:htmlContent, l:htmlFile, l:markdownFile, l:htmlFile)
+    let l:command       = printf("silent !echo %s > %s && markdown %s >> %s && dwb -x reload", l:htmlContent, l:htmlFile, l:markdownFile, l:htmlFile)
     execute l:command
 endfunction
 
@@ -470,15 +470,19 @@ nnoremap K <nop>
 map <leader>rc :e! ~/.vimrc<CR>
 augroup Reload_vimrc
 	autocmd!
-	autocmd BufWritePost $MYVIMRC source $MYVIMRC | echo "vimrc has been sourced"
+	autocmd BufWritePost $MYVIMRC source $MYVIMRC | echo "vimrc is sourced"
 augroup END
+
+"Inserting blank lines without entering insert mode.
+nnoremap <C-J> m`o<Esc>``
+nnoremap <C-K> m`O<Esc>``
 
 " Fast saving
 nmap <leader>w :w!<cr>
 cmap w!! w !sudo tee > /dev/null %
 augroup Save
 	autocmd!
-	au FocusLost * :wa
+	au FocusLost * :silent! wa
 augroup END
 
 " Toggle line numbers for the current file
@@ -491,11 +495,11 @@ nmap <S-F9> :w<CR>:silent make<CR>
 imap <S-F9> <ESC>:w<CR>:silent make<CR>
 
 " Open the taglist sidebar
-nnoremap <silent> <F8> :TlistToggle<CR>
+nnoremap <silent> <F8> :TagbarToggle<CR>
 
 "Toggle NERDTree sidebar
-nmap <F7> :NERDTreeToggle<CR>
-imap <F7> :NERDTreeToggle<CR>
+nmap <F7>   :NERDTreeToggle<CR>
+imap <F7>   :NERDTreeToggle<CR>
 nmap <S-F7> :NERDTreeFind<CR>
 imap <S-F7> :NERDTreeFind<CR>
 
@@ -516,29 +520,29 @@ imap <leader>v <ESC>"+gPa
 "           Scroll Wheel = Up/Down 4 lines
 "   Shift + Scroll Wheel = Up/Down 1 page
 " Control + Scroll Wheel = Up/Down 1/2 page
-noremap <ScrollWheelUp>     6<C-Y>
-noremap <ScrollWheelDown>   6<C-E>
-noremap <S-ScrollWheelUp>   <C-Y>
-noremap <S-ScrollWheelDown> <C-E>
-noremap <C-ScrollWheelUp>   <C-U>
-noremap <C-ScrollWheelDown> <C-D>
+noremap  <ScrollWheelUp>    6<C-Y>
+noremap  <ScrollWheelDown>  6<C-E>
+noremap  <S-ScrollWheelUp>   <C-Y>
+noremap  <S-ScrollWheelDown> <C-E>
+noremap  <C-ScrollWheelUp>   <C-U>
+noremap  <C-ScrollWheelDown> <C-D>
 inoremap <ScrollWheelUp>     <C-O>4<C-Y>
 inoremap <ScrollWheelDown>   <C-O>4<C-E>
 inoremap <S-ScrollWheelUp>   <C-O><C-Y>
 inoremap <S-ScrollWheelDown> <C-O><C-E>
 inoremap <C-ScrollWheelUp>   <C-O><C-U>
 inoremap <C-ScrollWheelDown> <C-O><C-D>
-map <MiddleMouse> <LeftMouse>
-imap <MiddleMouse> <LeftMouse>
-map <2-MiddleMouse> <LeftMouse>
-imap <2-MiddleMouse> <LeftMouse>
-map <3-MiddleMouse> <LeftMouse>
-imap <3-MiddleMouse> <LeftMouse>
-map <4-MiddleMouse> <LeftMouse>
-imap <4-MiddleMouse> <LeftMouse>
+map      <MiddleMouse>       <LeftMouse>
+imap     <MiddleMouse>       <LeftMouse>
+map      <2-MiddleMouse>     <LeftMouse>
+imap     <2-MiddleMouse>     <LeftMouse>
+map      <3-MiddleMouse>     <LeftMouse>
+imap     <3-MiddleMouse>     <LeftMouse>
+map      <4-MiddleMouse>     <LeftMouse>
+imap     <4-MiddleMouse>     <LeftMouse>
 
 nmap <leader>b :ls<CR>:buffer<Space>
 
-map <F9> :make<Return>
+map <F9>  :make<Return>
 map <F10> :copen<Return>:cprevious<Return>
 map <F11> :copen<Return>:cnext<Return>
