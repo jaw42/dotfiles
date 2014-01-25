@@ -89,6 +89,11 @@ alternative_order text/plain text/html *
 
 auto_view text/html image/*
 
+# Goobook Contacts ---------------------------------------------------------------
+
+set query_command="goobook query '%s'"
+bind editor \t complete-query ## tab completion for contacts :)
+
 # IMAP Options -------------------------------------------------------------------
    set imap_check_subscribed
    set mail_check = 120
