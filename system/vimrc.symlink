@@ -337,8 +337,12 @@ set tm=500
 set mouse=a
 
 " Undo
-"set undofile
-"set undodir=~/.vim/undodir
+set undofile
+set undodir=~/.vim/undodir
+augroup undo
+	autocmd!
+	autocmd BufWritePre /tmp/* setlocal noundofile
+augroup END
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => UI
