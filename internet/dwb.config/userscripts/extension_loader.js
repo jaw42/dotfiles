@@ -25,16 +25,17 @@
 extensions.load("simplyread", {
 //<simplyread___CONFIG
 // Shortcut to toggle simplyread
-shortcut : "SR",
+shortcut : "SR", 
 
 // Command to toggle simplyread
 command : "simplyread",
 
 // Whether to use a stylesheet
-nostyle : false,
+nostyle : false, 
 
 // Whether to show links
-nolinks : true
+nolinks : false 
+
 //>simplyread___CONFIG
 });
 //>simplyread___SCRIPT
