@@ -462,10 +462,18 @@ nnoremap ; :
 nmap j gj
 nmap k gk
 nnoremap n nzz
-nnoremap p pzz
+nnoremap N pzz
 
+" Disable ex mode and man page lookup
 nnoremap Q <nop>
 nnoremap K <nop>
+
+" Easier movement to begining/end of line
+nnoremap B ^
+nnoremap E g_
+
+" Visually select the last inserted text
+nmap gV `[v`]
 
 map <leader>rc :e! ~/.vimrc<CR>
 augroup Reload_vimrc
