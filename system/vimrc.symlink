@@ -67,8 +67,6 @@ Bundle 'krisajenkins/vim-postgresql-syntax'
 Bundle 'JLimperg/jcommenter.vim'
 "Swap selection or movement between two locations
 Bundle 'tommcdo/vim-exchange'
-"Substitute preview
-Bundle 'osyo-manga/vim-over'
 Bundle 'tommcdo/vim-lion'
 
 if VundleInstalled == 0
@@ -114,8 +112,9 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:airline_right_sep=''
 let g:airline_left_sep =''
 
-"""" Latex-Box
-let g:tex_flavour = 'latex'
+"""" Vim-Latex
+let g:Tex_CompileRule_pdf = 'pdflatex -interaction=nonstopmode $*'
+let g:Tex_DefaultTargetFormat = 'pdf'
 
 """" Molokai Theme
 let g:molokai_original = 1
@@ -291,7 +290,7 @@ set cmdheight=1
 
 " Show “invisible” characters
 "set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
-set lcs=tab:·\ ,trail:▸,nbsp:_
+set listchars=tab:·\ ,trail:▸,nbsp:#
 set list
 
 " Configure backspace so it acts as it should act
