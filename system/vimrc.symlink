@@ -423,6 +423,9 @@ augroup Rout
 	autocmd BufEnter,BufNew *.rout,*.Rout set ft=r
 augroup END
 
+" File templates
+au! BufNewFile * silent! 0r $HOME/.vim/skel/template.%:e
+
 """"""""""""""""""""""""""""""
 " => Visual mode related
 """"""""""""""""""""""""""""""
