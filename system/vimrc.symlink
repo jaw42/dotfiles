@@ -68,6 +68,7 @@ Bundle 'JLimperg/jcommenter.vim'
 "Swap selection or movement between two locations
 Bundle 'tommcdo/vim-exchange'
 Bundle 'tommcdo/vim-lion'
+Bundle 'davetron5000/java-javadoc-vim'
 
 if VundleInstalled == 0
 	echo "Installing Bundles, please ignore key map error messages"
@@ -317,6 +318,7 @@ set magic
 
 " Program to use for grep
 set grepprg=grep\ -RnH\ $*
+set keywordprg=""
 
 " Show matching brackets when text indicator is over them
 set showmatch
@@ -468,11 +470,11 @@ nnoremap ; :
 nmap j gj
 nmap k gk
 nnoremap n nzz
-nnoremap N pzz
+nnoremap N Nzz
 
 " Disable ex mode and man page lookup
 nnoremap Q <nop>
-nnoremap K <nop>
+" nnoremap K <nop>
 
 " Easier movement to begining/end of line
 nnoremap B ^
