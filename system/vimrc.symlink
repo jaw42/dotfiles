@@ -336,12 +336,14 @@ set tm=500
 set mouse=a
 
 " Undo
-set undofile
-set undodir=~/.vim/undodir
-augroup undo
-	autocmd!
-	autocmd BufWritePre /tmp/* setlocal noundofile
-augroup END
+if exists("&undofile")
+	set undofile
+	set undodir=~/.vim/undodir
+	augroup undo
+		autocmd!
+		autocmd BufWritePre /tmp/* setlocal noundofile
+	augroup END
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => UI
@@ -468,7 +470,7 @@ nnoremap ; :
 nmap j gj
 nmap k gk
 nnoremap n nzz
-nnoremap N pzz
+nnoremap N Nzz
 
 " Disable ex mode and man page lookup
 nnoremap Q <nop>
