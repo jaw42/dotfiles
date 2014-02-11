@@ -474,9 +474,7 @@ nmap k gk
 nnoremap n nzz
 nnoremap N Nzz
 
-" Disable ex mode and man page lookup
-nnoremap Q <nop>
-" nnoremap K <nop>
+nnoremap Q :normal n.<CR>
 
 " Easier movement to begining/end of line
 nnoremap B ^
@@ -504,13 +502,18 @@ augroup Save
 augroup END
 
 " Toggle line numbers for the current file
-nmap <leader>l :setlocal number!<CR>
+nmap <leader>l :setlocal relativenumber!<CR>
 
 " Save the current file and run the make program
-nmap <F9> :w<CR>:make<CR>
-imap <F9> <ESC>:w<CR>:make<CR>
-nmap <S-F9> :w<CR>:silent make<CR>
-imap <S-F9> <ESC>:w<CR>:silent make<CR>
+" nmap <F9> :w<CR>:make<CR>
+" imap <F9> <ESC>:w<CR>:make<CR>
+" nmap <S-F9> :w<CR>:silent make<CR>
+" imap <S-F9> <ESC>:w<CR>:silent make<CR>
+
+map <F9>   :make<Return>
+map <S-F9> :silent make<Return>
+map <F10>  :copen<Return>:cprevious<Return>
+map <F11>  :copen<Return>:cnext<Return>
 
 " Open the taglist sidebar
 nnoremap <silent> <F8> :TagbarToggle<CR>
@@ -534,6 +537,7 @@ nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 
 nmap <leader>v "+gP
 imap <leader>v <ESC>"+gPa
+nmap <leader>ay ggVG"+y
 
 "           Scroll Wheel = Up/Down 4 lines
 "   Shift + Scroll Wheel = Up/Down 1 page
@@ -560,7 +564,3 @@ map      <4-MiddleMouse>     <LeftMouse>
 imap     <4-MiddleMouse>     <LeftMouse>
 
 nmap <leader>b :ls<CR>:buffer<Space>
-
-map <F9>  :make<Return>
-map <F10> :copen<Return>:cprevious<Return>
-map <F11> :copen<Return>:cnext<Return>

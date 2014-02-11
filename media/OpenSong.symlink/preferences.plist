@@ -72,5 +72,25 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>style</key>
+	<dict>
+		<key>embed</key>
+		<false/>
+		<key>print</key>
+		<false/>
+		<key>value</key>
+		<string>APHRcwECAQAAAAApL29wdC9PcGVuU29uZy9PcGVuU29uZyBTZXR0aW5ncy9zdHlsZS5jc3MDAAAAAAEBBAAAAAABAAAAAAAAAA==</string>
+		<key>path</key>
+		<string>file:///opt/OpenSong/OpenSong%20Settings/style.css</string>
+	</dict>
+	<key>folder</key>
+	<dict>
+		<key>unique</key>
+		<true/>
+		<key>value</key>
+		<string></string>
+		<key>path</key>
+		<string></string>
+	</dict>
 </dict>
 </plist>
