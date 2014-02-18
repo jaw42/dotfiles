@@ -75,4 +75,4 @@ define html {
     !rm "/tmp/temp_mail.html"
 }
 
-source ~/.mailpass
+#source ~/.mailpass
