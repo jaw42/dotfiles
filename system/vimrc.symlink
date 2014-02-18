@@ -59,8 +59,6 @@ Bundle 'scrooloose/syntastic'
 Bundle 'vim-scripts/renamer.vim'
 "Easy commenting/uncommenting of code.
 Bundle 'tpope/vim-commentary'
-"Run an arbitary command and catch output into buffer
-Bundle 'krisajenkins/vim-pipe'
 "Syntax highlighting for postgresql commands and results
 Bundle 'krisajenkins/vim-postgresql-syntax'
 "JavaDoc creation from templates based on cursor position
@@ -68,7 +66,6 @@ Bundle 'JLimperg/jcommenter.vim'
 "Swap selection or movement between two locations
 Bundle 'tommcdo/vim-exchange'
 Bundle 'tommcdo/vim-lion'
-Bundle 'davetron5000/java-javadoc-vim'
 
 if VundleInstalled == 0
 	echo "Installing Bundles, please ignore key map error messages"
@@ -119,13 +116,6 @@ let g:Tex_DefaultTargetFormat = 'pdf'
 
 """" Molokai Theme
 let g:molokai_original = 1
-
-"""" Vim-Pipe
-augroup Psql
-	autocmd!
-	autocmd FileType sql :let b:vimpipe_command = "psql -h dbteach2"
-	autocmd FileType sql :let b:vimpipe_filetype= "postgresql"
-augroup END
 
 """" TagList
 let Tlist_Use_Right_Window     = 1
