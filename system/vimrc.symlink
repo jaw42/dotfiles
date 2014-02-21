@@ -42,7 +42,7 @@ Bundle 'SirVer/ultisnips.git'
 "Super tab completion
 Bundle 'ervandew/supertab.git'
 "Filesystem explorer
-Bundle 'scrooloose/nerdtree.git'
+" Bundle 'scrooloose/nerdtree.git'
 "Fuzzy file finder
 Bundle 'kien/ctrlp.vim.git'
 "Easy changing, adding and removing of surround objects
@@ -122,6 +122,15 @@ let Tlist_Use_Right_Window     = 1
 let Tlist_Enable_Fold_Column   = 0
 let Tlist_File_Fold_Auto_Close = 1
 let Tlist_Sort_Type            = "order"
+
+"""" Netrw
+let g:netrw_liststyle = 1
+let g:netrw_sort_options = 'i'
+augroup netrw
+	autocmd!
+	autocmd VimEnter * if !argc() | Explore | endif
+	autocmd VimEnter * if isdirectory(expand('<afile>')) | Explore | endif
+augroup END
 
 augroup RemoveNumbers
 	autocmd!
@@ -307,7 +316,10 @@ set lazyredraw
 set magic
 
 " Program to use for grep
-set grepprg=grep\ -RnH\ $*
+set grepprg=grep\ -RinH\ $*
+if executable('ag')
+	set grepprg=ag\ --nogroup\ --nocolor
+endif
 set keywordprg=""
 
 " Show matching brackets when text indicator is over them
@@ -470,6 +482,12 @@ nnoremap E g_
 
 " Visually select the last inserted text
 nmap gV `[v`]
+
+" Re-indent whole file
+nnoremap g= m`gg=G``zz
+
+nnoremap c] :cn<return>
+nnoremap c[ :cp<return>
 
 map <leader>rc :e! ~/.vimrc<CR>
 augroup Reload_vimrc
