@@ -40,7 +40,7 @@ Bundle 'bling/vim-airline.git'
 "Snippet management
 Bundle 'SirVer/ultisnips.git'
 "Super tab completion
-Bundle 'ervandew/supertab.git'
+"Bundle 'ervandew/supertab.git'
 "Filesystem explorer
 " Bundle 'scrooloose/nerdtree.git'
 "Fuzzy file finder
@@ -59,8 +59,6 @@ Bundle 'scrooloose/syntastic'
 Bundle 'vim-scripts/renamer.vim'
 "Easy commenting/uncommenting of code.
 Bundle 'tpope/vim-commentary'
-"Syntax highlighting for postgresql commands and results
-Bundle 'krisajenkins/vim-postgresql-syntax'
 "JavaDoc creation from templates based on cursor position
 Bundle 'JLimperg/jcommenter.vim'
 "Swap selection or movement between two locations
@@ -131,6 +129,11 @@ augroup netrw
 	autocmd VimEnter * if !argc() | Explore | endif
 	autocmd VimEnter * if isdirectory(expand('<afile>')) | Explore | endif
 augroup END
+
+"""" delimitMate
+let delimitMate_jump_expansion = 1
+let delimitMate_expand_cr = 2
+let delimitMate_expand_space = 1
 
 augroup RemoveNumbers
 	autocmd!
@@ -340,12 +343,14 @@ set tm=500
 set mouse=a
 
 " Undo
-set undofile
-set undodir=~/.vim/undodir
-augroup undo
-	autocmd!
-	autocmd BufWritePre /tmp/* setlocal noundofile
-augroup END
+if exists("&undofile")
+	set undofile
+	set undodir=~/.vim/undodir
+	augroup undo
+		autocmd!
+		autocmd BufWritePre /tmp/* setlocal noundofile
+	augroup END
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => UI
