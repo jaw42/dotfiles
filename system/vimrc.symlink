@@ -40,7 +40,7 @@ Bundle 'bling/vim-airline.git'
 "Snippet management
 Bundle 'SirVer/ultisnips.git'
 "Super tab completion
-"Bundle 'ervandew/supertab.git'
+Bundle 'ervandew/supertab.git'
 "Filesystem explorer
 " Bundle 'scrooloose/nerdtree.git'
 "Fuzzy file finder
@@ -64,6 +64,7 @@ Bundle 'JLimperg/jcommenter.vim'
 "Swap selection or movement between two locations
 Bundle 'tommcdo/vim-exchange'
 Bundle 'tommcdo/vim-lion'
+Bundle 'tpope/vim-fugitive'
 
 if VundleInstalled == 0
 	echo "Installing Bundles, please ignore key map error messages"
@@ -127,7 +128,7 @@ let g:netrw_sort_options = 'i'
 augroup netrw
 	autocmd!
 	autocmd VimEnter * if !argc() | Explore | endif
-	autocmd VimEnter * if isdirectory(expand('<afile>')) | Explore | endif
+	" autocmd VimEnter * if isdirectory(expand('<afile>')) | Explore | endif
 augroup END
 
 """" delimitMate
@@ -144,43 +145,6 @@ augroup END
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" generate markdown on save
-"autocmd BufWritePost *.markdown call RunMarkdown()
-
-function! RunMarkdown()
-    let l:htmlFile      = shellescape(expand("%:t:r") . ".html")
-    let l:markdownFile  = shellescape(expand("%"))
-    let l:htmlContent   = shellescape('<\!DOCTYPE html><html><head><meta charset="UTF-8" /><link rel=stylesheet href="css.css" /></head><body>')
-    let l:reloadCommand = shellescape('dwb -x reload')
-    let l:command       = printf("silent !echo %s > %s && markdown %s >> %s && dwb -x reload", l:htmlContent, l:htmlFile, l:markdownFile, l:htmlFile)
-    execute l:command
-endfunction
-
-" Remove empty line at the end of page
-function! <SID>TrimEndLines()
-	let save_cursor = getpos(".")
-	:silent! %s#\($\n\s*\)\+\%$##
-	call setpos('.', save_cursor)
-endfunction
-
-" Remove trailing spaces
-function! <SID>StripTrailingWhitespaces()
-	if exists('b:noStripWhitespace')
-        return
-    endif
-
-	" Preparation: save last search, and cursor position.
-	let _s=@/
-	let l = line(".")
-	let c = col(".")
-	" Do the business:
-	%s/\s\+$//e
-	%s/\n\{3,}/\r\r/e
-	" Clean up: restore previous search history, and cursor position
-	let @/=_s
-	call cursor(l, c)
-endfunction
 
 " from an idea by michael naumann
 function! VisualSearch(direction) range
@@ -200,21 +164,6 @@ function! VisualSearch(direction) range
 
 	let @/ = l:pattern
 	let @" = l:saved_reg
-endfunction
-
-" Tabular auto table
-inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
-
-function! s:align()
-	let p = '^.*|.*|.*$'
-	"if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
-	if exists(':Tabularize') && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
-		let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
-		let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
-		Tabularize/|/l1
-		normal! 0
-		call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
-	endif
 endfunction
 
 " View the difference between the buffer and the file the last time it was saved
@@ -251,19 +200,11 @@ set cursorline
 "Hide buffers instead of closing them
 set hidden
 
-"Use the same buffer for all clipboard related things
-"if has('unnamedplus')
-"	set clipboard=unnamedplus
-"endif
-
 """"""""""""""""""""""""""""""
 " => Status line
 """"""""""""""""""""""""""""""
 " Always show the status line
 set laststatus=2
-
-" Format the status line --- Now in separate plugin
-"set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -273,7 +214,7 @@ set switchbuf=usetab
 set showtabline=1
 
 " Set 7 lines to the cursor - when moving vertically using j/k
-set scrolloff=3
+set scrolloff=5
 
 " Turn on the Wild menu
 set wildmenu
@@ -300,16 +241,12 @@ set list
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
-" Ignore case when searching
-set ignorecase
-
 " When searching try to be smart about cases
+set ignorecase
 set smartcase
 
 " Highlight search results
 set hlsearch
-
-" Makes search act like search in modern browsers
 set incsearch
 
 " Don't redraw while executing macros (good performance config)
@@ -319,9 +256,10 @@ set lazyredraw
 set magic
 
 " Program to use for grep
-set grepprg=grep\ -RinH\ $*
 if executable('ag')
 	set grepprg=ag\ --nogroup\ --nocolor
+else
+	set grepprg=grep\ -RinH\ $*
 endif
 set keywordprg=""
 
@@ -362,7 +300,7 @@ if has("gui_running")
 	set guioptions-=r     "remove left scroll
 	set guioptions-=l     "remove right scroll
 	set guioptions-=L     "left hand toolbar isn't present
-	set guioptions+=P     "allow visual selection to be accessed in system paste
+	" set guioptions+=P     "allow visual selection to be accessed in system paste
 	set guioptions+=c     "use console dialogues
 endif
 
@@ -416,17 +354,6 @@ set noeol
 "	autocmd BufEnter * silent! lcd %:p:h
 "augroup END
 
-" Auto remove when saving
-augroup Clean
-	autocmd!
-	autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
-	autocmd BufWritePre * :call <SID>TrimEndLines()
-augroup END
-
-augroup Whitespace
-	autocmd FileType mail,markdown let b:noStripWhitespace=1
-augroup END
-
 augroup Rout
 	autocmd BufEnter,BufNew *.rout,*.Rout set ft=r
 augroup END
@@ -448,7 +375,7 @@ vnoremap <silent> gv :call VisualSearch('gv')<CR>
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 syntax on
-set synmaxcol=2048
+set synmaxcol=1024
 
 colorscheme molokai
 
@@ -457,10 +384,6 @@ colorscheme molokai
 """""""""""""""""""""""""""""
 " Use unix as the standard filetype
 set ffs=unix,dos,mac
-
-" Don't create swp files
-"set noswapfile
-"set nobackup
 
 " backup to ~/.tmp
 set backup
@@ -489,7 +412,7 @@ nnoremap E g_
 nmap gV `[v`]
 
 " Re-indent whole file
-nnoremap g= m`gg=G``zz
+nnoremap g+ :call Preserve("normal gg=G")<CR>
 
 nnoremap c] :cn<return>
 nnoremap c[ :cp<return>
@@ -516,11 +439,6 @@ augroup END
 nmap <leader>l :setlocal relativenumber!<CR>
 
 " Save the current file and run the make program
-" nmap <F9> :w<CR>:make<CR>
-" imap <F9> <ESC>:w<CR>:make<CR>
-" nmap <S-F9> :w<CR>:silent make<CR>
-" imap <S-F9> <ESC>:w<CR>:silent make<CR>
-
 map <F9>   :make<Return>
 map <S-F9> :silent make<Return>
 map <F10>  :copen<Return>:cprevious<Return>
@@ -542,12 +460,8 @@ nmap <leader>q :nohlsearch<CR>
 nmap <C-n> :bnext<CR>
 nmap <C-p> :bprev<CR>
 
-" Change size of window split
-nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
-nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
-
 nmap <leader>v "+gP
-imap <leader>v <ESC>"+gPa
+imap <leader>v <ESC>"+gpa
 nmap <leader>ay ggVG"+y
 
 "           Scroll Wheel = Up/Down 4 lines
