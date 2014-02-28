@@ -125,6 +125,7 @@ let Tlist_Sort_Type            = "order"
 """" Netrw
 let g:netrw_liststyle = 1
 let g:netrw_sort_options = 'i'
+let g:netrw_list_hide= '.*\.class$'
 augroup netrw
 	autocmd!
 	autocmd VimEnter * if !argc() | Explore | endif
