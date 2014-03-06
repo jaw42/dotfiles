@@ -39,6 +39,7 @@ Bundle 'bling/vim-airline.git'
 " Bundle 'mhinz/vim-signify.git'
 "Snippet management
 Bundle 'SirVer/ultisnips.git'
+Bundle 'honza/vim-snippets'
 "Super tab completion
 Bundle 'ervandew/supertab.git'
 "Filesystem explorer
