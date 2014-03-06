@@ -17,3 +17,4 @@ vim.symlink/undodir/
 **/.muttpass
 vim.symlink/bundle/
 system/spacefm.config/session*
+.netrwhist
