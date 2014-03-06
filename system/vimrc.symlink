@@ -134,8 +134,11 @@ augroup netrw
 	" autocmd VimEnter * if isdirectory(expand('<afile>')) | Explore | endif
 augroup END
 
+""" Supertab
+let g:SuperTabCrMapping = 0
+
 """" delimitMate
-let delimitMate_jump_expansion = 1
+let delimitMate_jump_expansion = 0
 let delimitMate_expand_cr = 2
 let delimitMate_expand_space = 1
 
