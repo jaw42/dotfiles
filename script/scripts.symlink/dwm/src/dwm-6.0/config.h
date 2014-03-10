@@ -79,6 +79,7 @@ static const Layout layouts[] = {
 // static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char  *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", colors[0][ColBG], "-nf", colors[0][ColFG], "-sb", colors[1][ColBG], "-sf", colors[1][ColFG], NULL };
 static const char *termcmd[]  = { "xterm", NULL };
+static const char *open_dmenu[] = { "open", "\"$(ag", "-g", "\"\"", "|", "dmenu", "-i", "-l", "20", "-p", "open)\"", NULL };
 
 static const char *volumedown[] = { "amixer", "-q", "set", "Master", "2%-", "unmute", NULL };
 static const char *volumeup[] = { "amixer", "-q", "set", "Master", "2%+", "unmute", NULL };
@@ -100,7 +101,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
+	{ MODKEY,                       XK_o,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_d,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
@@ -124,6 +125,8 @@ static Key keys[] = {
 	{ MODKEY, 						XK_p, 	   spawn, 			SHCMD("~/Bin/dmenu-mpd -a") },
 	{ MODKEY|ShiftMask,				XK_p, 	   spawn, 			SHCMD("~/Bin/dmenu-mpd -t") },
 	{ MODKEY|ShiftMask|ControlMask,	XK_p, 	   spawn, 			SHCMD("~/Bin/dmenu-mpd -l") },
+	{ MODKEY,                       XK_f,      spawn,    		SHCMD("~/Bin/dmenuOpen -o") },
+	{ MODKEY|ShiftMask,             XK_f,      spawn,    		SHCMD("~/Bin/dmenuOpen -v") },
 };
 
 /* button definitions */
