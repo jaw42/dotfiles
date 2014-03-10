@@ -136,7 +136,9 @@ augroup netrw
 augroup END
 
 """ Supertab
-let g:SuperTabCrMapping = 0
+let g:SuperTabCrMapping = 0 "Needed to allow delimitMate_expand_cr
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabContextDefaultCompletionType = "<c-n>"
 
 """" delimitMate
 let delimitMate_jump_expansion = 0
@@ -300,6 +302,8 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => UI
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"set guifont=Inconsolata\ Medium\ 11
+set guifont=Droid\ Sans\ Mono\ 10
 " Gvim
 if has("gui_running")
 	set guioptions-=m     "remove menu bar
