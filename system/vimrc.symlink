@@ -33,9 +33,14 @@ Bundle 'gmarik/vundle'
 Bundle 'majutsushi/tagbar'
 "Align text to arbitary regexs
 "Bundle 'godlygeek/tabular.git'
+
 "Lightweight status bar with colors and info
-" Bundle 'bling/vim-airline.git'
-Bundle "t9md/vim-ezbar"
+if $USERNAME == 'jaw097'
+	Bundle 'bling/vim-airline.git'
+else
+	Bundle 't9md/vim-ezbar'
+endif
+
 "Git change gutter info
 " Bundle 'mhinz/vim-signify.git'
 "Snippet management
@@ -143,6 +148,9 @@ let g:SuperTabContextDefaultCompletionType = "<c-n>"
 let delimitMate_jump_expansion = 0
 let delimitMate_expand_cr = 2
 let delimitMate_expand_space = 1
+
+""" Ezbar
+" source '~/.vim/custom/default.vim'
 
 augroup RemoveNumbers
 	autocmd!
@@ -301,8 +309,12 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => UI
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"set guifont=Inconsolata\ Medium\ 11
-set guifont=Droid\ Sans\ Mono\ 10
+if $USERNAME == 'jaw097'
+	set guifont=DejaVu\ Sans\ Mono\ 10
+else
+	set guifont=Droid\ Sans\ Mono\ 10
+endif
+
 " Gvim
 if has("gui_running")
 	set guioptions-=m     "remove menu bar
