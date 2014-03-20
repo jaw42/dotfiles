@@ -7,7 +7,11 @@ endfunction
 " Find a file and pass it to cmd
 function! DmenuOpen(cmd)
 
-	let command = "ag -g \"\""
+	if $USERNAME == 'jaw097'
+		let command = "git ls-files"
+	else
+		let command = "ag -g \"\""
+	endif
 	let fname = Chomp(system(command . " | dmenu -b -i -l 20 -p " . a:cmd))
 	if empty(fname)
 		return
