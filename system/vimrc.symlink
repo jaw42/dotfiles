@@ -417,6 +417,7 @@ nnoremap n nzz
 nnoremap N Nzz
 
 nnoremap Q :normal n.<CR>
+nnoremap M %
 
 " Easier movement to begining/end of line
 nnoremap B ^
@@ -428,8 +429,8 @@ nmap gV `[v`]
 " Re-indent whole file
 nnoremap g+ :call Preserve("normal gg=G")<CR>
 
-nnoremap c] :cn<return>
-nnoremap c[ :cp<return>
+" nnoremap c] :cn<return>
+" nnoremap c[ :cp<return>
 
 map <leader>rc :e! ~/.vimrc<CR>
 augroup Reload_vimrc
