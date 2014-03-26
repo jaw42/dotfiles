@@ -144,6 +144,13 @@ let delimitMate_jump_expansion = 0
 let delimitMate_expand_cr = 2
 let delimitMate_expand_space = 1
 
+"""" Expand-Region
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
+call expand_region#custom_text_objects({
+	  \ '$'  :0,
+      \ })
+
 augroup RemoveNumbers
 	autocmd!
 	autocmd FileType taglist set norelativenumber
@@ -478,6 +485,11 @@ nmap <C-p> :bprev<CR>
 nmap <leader>v "+gP
 imap <leader>v <ESC>"+gpa
 nmap <leader>ay ggVG"+y
+
+" Jump to end of pasted text
+vnoremap <silent> y y`]
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]
 
 "           Scroll Wheel = Up/Down 4 lines
 "   Shift + Scroll Wheel = Up/Down 1 page
