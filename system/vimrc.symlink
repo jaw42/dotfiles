@@ -23,8 +23,17 @@ endif
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+" " let Vundle manage Vundle
+" Bundle 'gmarik/vundle'
+
+" if has('vim_starting')
+"    set nocompatible               " Be iMproved
+
+"    " Required:
+"    set runtimepath+=~/.vim/bundle/neobundle.vim/
+" endif
+" call neobundle#rc(expand('~/.vim/bundle/'))
+" BundleFetch 'Shougo/neobundle.vim'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 "             Add your Bundles Here              "
@@ -58,14 +67,18 @@ Bundle 'scrooloose/syntastic'
 Bundle 'vim-scripts/renamer.vim'
 "Easy commenting/uncommenting of code.
 Bundle 'tpope/vim-commentary'
-"JavaDoc creation from templates based on cursor position
-Bundle 'JLimperg/jcommenter.vim'
 "Swap selection or movement between two locations
 Bundle 'tommcdo/vim-exchange'
+"Simple alignment of lines
 Bundle 'tommcdo/vim-lion'
+"Git management from withing vim
 Bundle 'tpope/vim-fugitive'
-" Bundle 'spolu/dwm.vim'
+"Multiple useful keybindings
 Bundle 'tpope/vim-unimpaired'
+"Expand the visual selection by logical increments
+Bundle 'terryma/vim-expand-region'
+"Outline files for notes and bits of info.
+Bundle 'vimoutliner/vimoutliner'
 
 if VundleInstalled == 0
 	echo "Installing Bundles, please ignore key map error messages"
@@ -79,22 +92,6 @@ filetype off
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"""" Ctrl-p plugin
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-let g:ctrlp_match_window_bottom   = 0
-let g:ctrlp_match_window_reversed = 0
-let g:ctrlp_working_path_mode     = 0
-let g:ctrlp_use_caching           = 1
-let g:ctrlp_dotfiles              = 1
-let g:ctrlp_switch_buffer         = 'Et'
-let g:ctrlp_custom_ignore         = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
-let g:ctrlp_max_depth             = 10
-let g:ctrlp_lazy_update           = 1
-
-let g:ctrlp_cmd = 'CtrlPMixed'
-"let g:ctrlp_map = '<c-p>'
-let g:ctrlp_map = '<leader>t'
 
 """" UltiSnips Plugin
 set runtimepath^=~/.vim/custom
@@ -111,10 +108,6 @@ let g:airline_right_sep=''
 let g:airline_left_sep =''
 " let g:airline#extensions#tabline#enabled = 1
 
-"""" Vim-Latex
-let g:Tex_CompileRule_pdf = 'pdflatex -interaction=nonstopmode $*'
-let g:Tex_DefaultTargetFormat = 'pdf'
-
 """" Molokai Theme
 let g:molokai_original = 1
 
@@ -123,6 +116,11 @@ let Tlist_Use_Right_Window     = 1
 let Tlist_Enable_Fold_Column   = 0
 let Tlist_File_Fold_Auto_Close = 1
 let Tlist_Sort_Type            = "order"
+augroup RemoveNumbers
+	autocmd!
+	autocmd FileType taglist set norelativenumber
+	autocmd FileType taglist set nonumber
+augroup END
 
 """" Netrw
 let g:netrw_liststyle = 1
@@ -148,14 +146,8 @@ let delimitMate_expand_space = 1
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 call expand_region#custom_text_objects({
-	  \ '$'  :0,
-      \ })
-
-augroup RemoveNumbers
-	autocmd!
-	autocmd FileType taglist set norelativenumber
-	autocmd FileType taglist set nonumber
-augroup END
+	\ '$'  :0,
+	\ })
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Functions
@@ -183,119 +175,62 @@ endfunction
 
 " View the difference between the buffer and the file the last time it was saved
 command! DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis | wincmd p | diffthis
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-set encoding=utf-8
-set history=700
 
 filetype plugin on
 filetype indent on
+syntax on
 
-"Auto read when a file changes from the outside
-set autoread
+" Code Formatting
+set autoindent " copy indent from current when starting new line
+set copyindent
+set encoding=utf-8
+set ffs=unix,dos,mac
+set formatoptions=tcroql
+silent! set formatoptions+=j
+set noeol
+set noexpandtab
+set preserveindent
+set shiftwidth=4
+set smartindent
+set smarttab
+set softtabstop=0
+set tabstop=4
+set wrap
+set textwidth=79
 
-"Save files automatically before acting on them, eg make
-set autowrite
-
-"Make the default make program as make
-set makeprg=make
-
-"Include the parent directory in the path to search, eg for 'gf'
-set path+=../**
-
-"Show line numbers relative and absolute
-if exists("&relativenumber")
-	set relativenumber
-endif
-set number
-
-" Highlight the line the cursor is currently on
-set cursorline
-
-"Hide buffers instead of closing them
-set hidden
-
-""""""""""""""""""""""""""""""
-" => Status line
-""""""""""""""""""""""""""""""
-" Always show the status line
-set laststatus=2
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => VIM user interface
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Specify the behavior when switching between buffers
-set switchbuf=usetab
-set showtabline=1
-
-" Set 7 lines to the cursor - when moving vertically using j/k
-set scrolloff=5
-
-" Turn on the Wild menu
-set wildmenu
-
-" Ignore compiled files
-set wildignore=*.o,*~,*.pyc
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.class        "Ignore VCS
-if exists("&wildignorecase")
-	set wildignorecase
-endif
-
-"Always show current position
-set ruler
-
-" Height of the command bar
-set cmdheight=1
-
-" Show “invisible” characters
-"set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+"Code view
 set listchars=tab:·\ ,trail:▸,nbsp:#
+"set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
 
-" Configure backspace so it acts as it should act
-set backspace=eol,start,indent
-set whichwrap+=<,>,h,l
-
-" When searching try to be smart about cases
-set ignorecase
-set smartcase
-
-" Highlight search results
-set hlsearch
-set incsearch
-
-" Don't redraw while executing macros (good performance config)
-set lazyredraw
-
-" For regular expressions turn magic on
-set magic
-
-" Program to use for grep
+"External Prgs
+set path+=../**
 if executable('ag')
 	set grepprg=ag\ --nogroup\ --nocolor
 else
 	set grepprg=grep\ -RinH\ $*
 endif
 set keywordprg=""
+set makeprg=make
 
-" Show matching brackets when text indicator is over them
-set showmatch
-" How many tenths of a second to blink when matching brackets
+"Search
+set hlsearch
+set ignorecase
+set incsearch
+set magic
 set matchtime=8
+set showmatch
+set smartcase
 
-" Give visual feedback when the <leader> key is pressed
-set showcmd
-
-" No annoying sound on errors
-set noerrorbells
-set novisualbell
-set t_vb=
-set tm=500
-
-" Smooth scrolling with the mouse
-set mouse=a
-
-" Undo
+"History, Backup and Undo Files
+set history=700
+set backup
+set backupdir=/var/tmp,/tmp
+set directory=/var/tmp,/tmp
+set writebackup
 if exists("&undofile")
 	set undofile
 	set undodir=~/.vim/undodir
@@ -305,112 +240,79 @@ if exists("&undofile")
 	augroup END
 endif
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => UI
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Editor Setup
+set autoread  "when a file changes from the outside
+set autowrite " Auto write before make etc.
+set linebreak " Don't break across words
+set modeline
+set hidden
+set lazyredraw
+
+"Editor Styling
+set switchbuf=usetab
+set scrolloff=5
+set showcmd
+set synmaxcol=1024
+
+"User Controls
+set whichwrap+=<,>,h,l
+set backspace=eol,start,indent
+
+"Wild menu
+set wildmenu
+set wildignore=*.o,*~,*.pyc
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.class        "Ignore VCS
+if exists("&wildignorecase")
+	set wildignorecase
+endif
+
+"UI
+set wrapmargin=0 " Wrap text
+colorscheme molokai
+set showtabline=1
+set cursorline
+set cmdheight=1
+set ruler
+if exists("&relativenumber")
+	set relativenumber
+endif
+set number
+set laststatus=2
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+set mouse=a
 if $USERNAME == 'jaw097'
 	set guifont=DejaVu\ Sans\ Mono\ 10
 else
 	set guifont=Droid\ Sans\ Mono\ 10
 endif
-
-" Gvim
-if has("gui_running")
-	set guioptions-=m     "remove menu bar
-	set guioptions-=T     "remove tool bar
-	set guioptions-=r     "remove left scroll
-	set guioptions-=l     "remove right scroll
-	set guioptions-=L     "left hand toolbar isn't present
-	" set guioptions+=P     "allow visual selection to be accessed in system paste
-	set guioptions+=c     "use console dialogues
-endif
-
 if exists("&colorcolumn")
 	set colorcolumn=+1
 else
 	:mat ErrorMsg '\%81v.\+'
 endif
-set formatoptions=tcroql
-silent! set formatoptions+=j
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Text, tab and indent related
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Use and read modelines in files
-set modeline
-
-" Be smart when using tabs
-set smarttab
-
-" Don't break across words
-set linebreak
-
-" Wrap text
-set textwidth=79 wrapmargin=0
-
-set autoindent "Auto indent
-set smartindent "Smart indent
-set wrap "Wrap lines
-
-set noexpandtab
-set copyindent
-set preserveindent
-set softtabstop=0
-set shiftwidth=4
-set tabstop=4
-
-" split and be active in split instead of original
 set splitbelow
 set splitright
 
-"Don't add empty new lines at the end of files
-set noeol
+"GUI
+if has("gui_running")
+	" set guioptions+=P     "allow visual selection to be accessed in system paste
+	set guioptions+=c     "use console dialogues
+	set guioptions-=L     "left hand toolbar isn't present
+	set guioptions-=T     "remove tool bar
+	set guioptions-=l     "remove right scroll
+	set guioptions-=m     "remove menu bar
+	set guioptions-=r     "remove left scroll
+endif
 
-"Automatically change to directory of working file
-"if exists("+autochdir")
-"	set autochdir
-"endif
-"augroup Path
-"	autocmd!
-"	autocmd BufEnter * silent! lcd %:p:h
-"augroup END
-
+"""""""""""""""""""""""""""""
+" => FileTypes
+"""""""""""""""""""""""""""""
 augroup Rout
 	autocmd BufEnter,BufNew *.rout,*.Rout set ft=r
 augroup END
-
-" File templates
-au! BufNewFile * silent! 0r $HOME/.vim/skel/template.%:e
-
-""""""""""""""""""""""""""""""
-" => Visual mode related
-""""""""""""""""""""""""""""""
-"  In visual mode when you press * or # to search for the current selection
-vnoremap <silent> * :call VisualSearch('f')<CR>
-vnoremap <silent> # :call VisualSearch('b')<CR>
-
-" When you press gv you vimgrep after the selected text
-vnoremap <silent> gv :call VisualSearch('gv')<CR>
-
-" Replace selected text
-vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
-
-syntax on
-set synmaxcol=1024
-
-colorscheme molokai
-
-"""""""""""""""""""""""""""""
-" => Files and filetypes
-"""""""""""""""""""""""""""""
-" Use unix as the standard filetype
-set ffs=unix,dos,mac
-
-" backup to ~/.tmp
-set backup
-set backupdir=/var/tmp,/tmp
-set directory=/var/tmp,/tmp
-set writebackup
 
 """""""""""""""""""""""""""""
 " => Keybindings
@@ -436,8 +338,8 @@ nmap gV `[v`]
 " Re-indent whole file
 nnoremap g+ :call Preserve("normal gg=G")<CR>
 
-" nnoremap c] :cn<return>
-" nnoremap c[ :cp<return>
+" List all buffers and quickly switch to selected
+nmap <leader>b :ls<CR>:buffer<Space>
 
 map <leader>rc :e! ~/.vimrc<CR>
 augroup Reload_vimrc
@@ -445,9 +347,15 @@ augroup Reload_vimrc
 	autocmd BufWritePost $MYVIMRC source $MYVIMRC | echo "vimrc is sourced"
 augroup END
 
-"Inserting blank lines without entering insert mode.
-" nnoremap <C-J> m`o<Esc>``
-" nnoremap <C-K> m`O<Esc>``
+"  In visual mode when you press * or # to search for the current selection
+vnoremap <silent> * :call VisualSearch('f')<CR>
+vnoremap <silent> # :call VisualSearch('b')<CR>
+
+" When you press gv you vimgrep after the selected text
+vnoremap <silent> gv :call VisualSearch('gv')<CR>
+
+" Replace selected text
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 " Fast saving
 nmap <leader>w :w!<cr>
@@ -456,9 +364,6 @@ augroup Save
 	autocmd!
 	au FocusLost * :silent! wa
 augroup END
-
-" Toggle line numbers for the current file
-nmap <leader>l :setlocal relativenumber!<CR>
 
 " Save the current file and run the make program
 map <F9>   :make<Return>
@@ -514,5 +419,3 @@ map      <3-MiddleMouse>     <LeftMouse>
 imap     <3-MiddleMouse>     <LeftMouse>
 map      <4-MiddleMouse>     <LeftMouse>
 imap     <4-MiddleMouse>     <LeftMouse>
-
-nmap <leader>b :ls<CR>:buffer<Space>
