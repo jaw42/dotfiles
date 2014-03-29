@@ -14,21 +14,8 @@ state_file "/home/josh/.config/mpd/mpdstate"
 #user "josh"
 
 audio_output {
-   type            "fifo"
-   name            "my_fifo"
-   path            "/tmp/mpd.fifo"
-   format          "44100:16:1"
-}
-
-audio_output {
         type            "alsa"
         name            "My Sound Card"
         mixer_type      "software"      # optional
-}
-
-audio_output {
-	type "fifo"
-	name "Pipe"
-	path "/tmp/audio.fifo"
-	format "44100:16:2"
+        auto_resample   "no"
 }
