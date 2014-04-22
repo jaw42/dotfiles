@@ -24,7 +24,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " " let Vundle manage Vundle
-" Bundle 'gmarik/vundle'
+Bundle 'gmarik/vundle'
 
 " if has('vim_starting')
 "    set nocompatible               " Be iMproved
@@ -135,7 +135,7 @@ augroup END
 """ Supertab
 let g:SuperTabCrMapping = 0 "Needed to allow delimitMate_expand_cr
 let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabContextDefaultCompletionType = "<c-n>"
+let g:SuperTabContextDefaultCompletionType = "<c-p>"
 
 """" delimitMate
 let delimitMate_jump_expansion = 0
@@ -224,6 +224,7 @@ set magic
 set matchtime=8
 set showmatch
 set smartcase
+set gdefault
 
 "History, Backup and Undo Files
 set history=700
